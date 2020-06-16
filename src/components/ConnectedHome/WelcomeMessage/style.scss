@@ -1,0 +1,65 @@
+@import 'src/styles/vars';
+
+.connected-home-message {
+  border: 1px solid rgb(202, 198, 198);
+  width: 90%;
+  height: 55vh;
+  margin: 1em auto;
+  padding: 1em;
+  border-radius: 5px;
+  background-color: #6c7b95;
+
+  &-title {
+    font-size: 1.6em;
+    color: #8bbabb;
+  }
+
+  &-content {
+    margin: 1em 0;
+    text-align: justify;
+    color: white;
+  }
+}
+
+.connected-home-button {
+  color: rgb(155, 50, 50);
+  width: 10em;
+  height: 3em;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  bottom: 0;
+}
+
+@media (min-width: 767px) {
+  .connected-home-message {
+    border: 1px solid rgb(202, 198, 198);
+    width: 25em;
+    height: 30em;
+    margin: 2em auto;
+    padding: 1em;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 12px 1px rgba(186,182,186,1);
+    -moz-box-shadow: 0px 0px 12px 1px rgba(186,182,186,1);
+    box-shadow: 0px 0px 12px 1px rgba(186,182,186,1);
+  
+    &-title {
+      font-size: 1.6em;
+    }
+  
+    &-content {
+      margin: 1em 0;
+      text-align: justify;
+    }
+  }
+  
+  .connected-home-button {
+    color: rgb(94, 92, 92);
+    width: 10em;
+    height: 3em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+  }
+}
+

@@ -1,0 +1,39 @@
+@import 'src/styles/vars';
+
+.create-room-icon {
+  display: flex;
+  width: 4em;
+  height: 4em;
+  padding: 0.3em;
+  background-color: #c7f0db;
+  border-radius: 50%;
+  margin: 0 1em;
+
+  &-svg {
+    align-items: center;
+    margin: 0 auto;
+    color: #464159;
+  }
+
+  &:hover {
+    background-color: #8bbabb;
+  }
+}
+
+@media (min-width: 767px) {
+  .create-room-icon {
+    display: flex;
+    position: absolute;
+    width: 2em;
+    left: 20em;
+    height: 2em;
+    background-color: rgb(177, 172, 172);
+    border-radius: 50%;
+    top: 40em;
+  
+    &-svg {
+      align-items: center;
+      margin: 0 auto;
+    }
+  }
+}
