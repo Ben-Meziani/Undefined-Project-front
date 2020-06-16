@@ -1,10 +1,10 @@
-import { TOGGLE_OPEN } from '../actions';
+import { TOGGLE_OPEN } from 'src/actions';
 
 const initialState = {
   open: true,
 };
 
-const counter = (state = initialState, action = {}) => {
+const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
     case TOGGLE_OPEN:
       return {
@@ -16,4 +16,4 @@ const counter = (state = initialState, action = {}) => {
   }
 };
 
-export default counter;
+export default reducer;

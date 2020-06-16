@@ -67,7 +67,14 @@
     }
   
     &-button {
-  
+      width: 8em;
+      height: 1.6em;
+      font-size: 1.6em;
+
+      &:hover {
+        background-color: #c7f0db;
+        color: #464159;
+      }
     }
   }
   .connected-home-infos {

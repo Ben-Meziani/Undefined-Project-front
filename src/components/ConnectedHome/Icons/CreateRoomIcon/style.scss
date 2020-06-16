@@ -24,12 +24,12 @@
   .create-room-icon {
     display: flex;
     position: absolute;
-    width: 2em;
-    left: 20em;
-    height: 2em;
-    background-color: rgb(177, 172, 172);
+    width: 4em;
+    height: 4em;
+    background-color: #c7f0db;
     border-radius: 50%;
-    top: 40em;
+    top: 50em;
+    left: 20em;
   
     &-svg {
       align-items: center;

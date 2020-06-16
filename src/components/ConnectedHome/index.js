@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Header from './Header';
+import Header from '../../containers/ConnectedHome/Header';
 import WelcomeMessage from './WelcomeMessage';
 import JoinRoomIcon from './Icons/JoinRoomIcon';
 import CreateRoomIcon from './Icons/CreateRoomIcon';
@@ -8,7 +8,7 @@ import ProfileIcon from './Icons/ProfileIcon';
 
 import './style.scss';
 
-const ConnectedHome = () => (
+const ConnectedHome = ({  }) => (
   <div className="connected-home">
     <Header />
     <div className="connected-home-infos">

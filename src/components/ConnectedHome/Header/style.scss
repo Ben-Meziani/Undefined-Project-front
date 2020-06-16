@@ -1,42 +1,83 @@
 @import 'src/styles/vars';
 
-.connected-home-header {
-  display: flex;
-  justify-content: space-between;
+/* .connected-home-header {
+/*   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 5em;
-  background-color: #464159;
+  background-color: #b9986f;
+  ;
   color: #6c7b95;
 
   &-title {
-    font-size: 1.8em;
+    margin-left: 2em;
+    font-size: 1.4em;
   }
+} */
+
+.connected-home-header {
+  width: 100%;
+  top: 0;
 }
 
 .connected-home-logo {
-  width: 20%;
+  position: fixed;
+  top: 0;
+  width: 100%;
 
-  & img {
+ & img {
     width: 100%;
   }
 }
 
-.dropdown-menu-button {
-  border: none;
-  border-radius: 4px;
-  margin-right: 1em;
-  background-color: #8bbabb;
+.dropdown-menu {
+  position: relative;
+  top: 0;
+  right: 0;
+  z-index: 1;
 }
+
+.dropdown-menu-content {
+  display: none;
+
+  &--open {
+  position: absolute;
+  right: 0;
+  width: 12em;
+  background-color: #c7f0db;
+  opacity: 0.9;
+  border-radius: 5px;
+  text-align: left;
+  padding: 1em;
+  font-size: 0.9em;
+
+  & li {
+    padding: 0.5em 0;
+  }
+
+  & a {
+    text-decoration: none;
+    color: #4b4159;
+  }
+
+  & a:hover {
+    color: #8bbabb;
+    transition: color 0.3s ease;
+  }
+}
+}
+
 
 @media (min-width: 767px) {
   .connected-home-header {
     width: 100%;
-    height: 11em;
+    height: 25%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #464159;
+    background-color: none;
     color: #6c7b95;
+   
   
     &-title {
       font-size: 1.8em;
@@ -44,10 +85,14 @@
   }
 
   .connected-home-logo {
-    width: 20%;
+    display: flex;
+    position: relative;
+    top: 0;
+    width: 15em;
+    height: 8em;
   
-  /*   & img {
-      width: 100%;
-    } */
+    & img {
+      width: 10%;
+    }
   }
 }
