@@ -1,0 +1,19 @@
+ 
+.header{
+  background-color: lightgrey;
+  height: 18vh;
+  border: solid .2rem grey;
+  border-radius: 3rem;
+  margin: 0 auto;
+  width: 600px;    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+
+  &-title{
+    font-size: 3rem;
+
+  }
+}
+© 2020 GitHub, Inc.
