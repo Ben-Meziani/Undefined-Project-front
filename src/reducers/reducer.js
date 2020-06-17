@@ -1,7 +1,7 @@
 import { TOGGLE_OPEN } from 'src/actions';
 
 const initialState = {
-  open: true,
+  open: false,
 };
 
 const reducer = (state = initialState, action = {}) => {

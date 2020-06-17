@@ -1,56 +1,30 @@
 @import 'src/styles/vars';
 
 .connected-home {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   max-width: 100%;
   max-height: 100%;
   margin: 0;
   top: 0;
 
-  &-button {
-    width: 7em;
-    font-size: 0.8em;
-    background-color: #6c7b95;
+  .ui.button {
+    background: #88508c;
     color: white;
-    margin-top: 1em;
-  }
 
-  &-icons {
-    display: flex;
-    margin: 1em 0;
+    &:hover {
+      background: #da87cb;
+      transition: color 0.5s ease;
+    }
   }
 }
 .connected-home-infos {
   display: flex;
   flex-direction: column;
- 
-  &-title {
-  display: flex;
-  align-items: center;
   justify-content: center;
-  height: 4em;
-  background-color: rgb(216, 218, 191);
-  border-radius: 5px;
-  font-family: 'Fira Code', monospace;
-  font-size: 1.6em;
-  color: rgb(94, 92, 92);
-  }
-
-  &-notification {
-    margin: 2em 0;
-    opacity: 1;
-    color: #464159;
-    font-weight: 700;
-    animation: fadein 10s;
-
-    @keyframes fadein {
-      from { opacity : 0; }
-      to {opacity : 1; }
-    }
-  }
+  margin-top: 7em;
 }
 
 @media (min-width: 767px) {

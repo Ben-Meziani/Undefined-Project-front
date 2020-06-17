@@ -56,9 +56,13 @@
   "dependencies": {
     "prop-types": "*",
     "react": "*",
+    "react-css-burger": "^0.2.0",
     "react-dom": "*",
     "react-redux": "*",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
     "redux": "*",
+    "semantic-ui-react": "^0.88.2",
     "styled-components": "*"
   }
 }
