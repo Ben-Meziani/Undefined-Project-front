@@ -1,10 +1,10 @@
-export const INCREMENT_COUNTER = 'INCREMENT_COUNTER';
-export const DECREMENT_COUNTER = 'DECREMENT_COUNTER';
+//  Action types
 
-export const increment = () => ({
-  type: INCREMENT_COUNTER,
-});
+export const CHANGE_TEXT = 'CHANGE_TEXT';
 
-export const decrement = () => ({
-  type: DECREMENT_COUNTER,
+// Action creators
+
+export const sendMessage = () => ({
+  type: CHANGE_TEXT,
+  payload: value,
 });

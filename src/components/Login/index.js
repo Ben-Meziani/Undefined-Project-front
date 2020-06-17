@@ -1,9 +1,12 @@
 import React from 'react';
-import { Button } from 'semantic-ui-react';
-import LoginForm from './LoginForm';
+import { Button, Form, Grid } from 'semantic-ui-react';
+import Field from 'src/containers/Field';
 import './style.scss';
 
-const Login = () => (
+
+
+
+const Login = () =>
   <>
     <div className="login-register">
       <p>Pas encore inscrit ?</p>
@@ -16,7 +19,29 @@ const Login = () => (
       </Button>
     </div>
     <div className="login">
-      <LoginForm />
+      <Grid className="center aligned login-form">
+        <Form>
+          <Form.Field required>
+            <label>E-mail</label>
+            <Field
+              type="email"
+              placeholder="Email"
+              name="email"
+            />
+          </Form.Field>
+          <Form.Field required>
+            <label>Mot de passe</label>
+            <Field
+              type="password"
+              placeholder="Mot de passe"
+              name="password"
+            />
+          </Form.Field>
+          <Button color="grey" type="submit" className="center aligned">
+            Connectez-vous !
+          </Button>
+        </Form>
+      </Grid>
     </div>
   </>
 );
