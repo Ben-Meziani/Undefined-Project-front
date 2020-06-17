@@ -6,10 +6,6 @@
   padding: 3em;
   height: 60vh;
 
-  &-form{
-    
-  }
-
   &-register{
     p{
       display: inline-block;
@@ -17,3 +13,13 @@
     }
   }
  }
+
+ .login-form-message {
+  text-align: right;
+  margin: .3em 1em;
+}
+.login-form-logged {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}

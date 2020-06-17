@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import { change } from 'src/actions';
-
 import Field from 'src/components/Login/Field';
 
 const mapStateToProps = (state, ownProps) => {
@@ -13,18 +12,10 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   changeValue: (newValue) => {
-    // console.log('je veux changer la valeur du champ');
+    console.log('changer la valeur du champ');
     const action = change(ownProps.name, newValue);
-    // console.log(action);
+    console.log(action);
     dispatch(action);
-    // je veux
-    // dispatch()
-    // changer
-    // action
-    // la valeur
-    // newValue
-    // du champ
-    // ownProps.name
   },
 });
 
