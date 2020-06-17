@@ -1,6 +1,11 @@
 import axios from 'axios';
 
-import { LOGIN, finishLoading, connect } from 'src/actions/user';
+import {
+  LOGIN,
+  finishLoading,
+  connect,
+  CHECK,
+} from 'src/actions/user';
 
 const auth = (store) => (next) => (action) => {
   switch (action.type) {
@@ -28,6 +33,16 @@ const auth = (store) => (next) => (action) => {
       next(action);
       break;
     }
+    case CHECK:
+      axios.post('http://localhost:3001/isLogged', {}, {
+        withCredentials: true,
+      })
+        .then((response) => {
+          if (response.data.logged) {
+            store.dispatch(connect());
+          }
+        });
+      break;
     default:
       next(action);
   }
