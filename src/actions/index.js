@@ -1,10 +1,11 @@
 //  Action types
 
-export const CHANGE_TEXT = 'CHANGE_TEXT';
+export const CHANGE = 'CHANGE';
 
 // Action creators
 
-export const sendMessage = () => ({
-  type: CHANGE_TEXT,
-  payload: value,
+export const change = (key, value) => ({
+  type: CHANGE,
+  key,
+  value,
 });
