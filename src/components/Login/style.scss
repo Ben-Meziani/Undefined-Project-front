@@ -1,0 +1,15 @@
+
+.login{
+  border : solid .2rem grey;
+  margin: 0 auto;
+  margin-top: 1em;
+  padding: 3em;
+  height: 60vh;
+
+  &-register{
+    p{
+      display: inline-block;
+      margin-right: .2em;
+    }
+  }
+ }

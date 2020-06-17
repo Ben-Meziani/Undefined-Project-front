@@ -3,7 +3,7 @@ import React from 'react';
 
 // == Import
 import HeaderHome from 'src/components/HeaderHome';
-import Register from 'src/components/Login';
+import Login from 'src/components/Login';
 import './style.scss';
 
 // == Composant

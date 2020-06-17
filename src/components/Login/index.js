@@ -3,10 +3,10 @@ import { Button } from 'semantic-ui-react';
 import LoginForm from './LoginForm';
 import './style.scss';
 
-const Register = () => (
+const Login = () => (
   <>
     <div className="login-register">
-      <p>Déjà inscrit ?</p>
+      <p>Pas encore inscrit ?</p>
       <Button
         animated="fade"
         className="login-register-button"
