@@ -1,23 +1,29 @@
 import axios from 'axios';
 
-import { LOGIN } from 'src/actions';
+import { LOGIN, finishLoading, connect } from 'src/actions/user';
 
 const auth = (store) => (next) => (action) => {
   switch (action.type) {
     case LOGIN: {
       const state = store.getState();
-      console.log('connecte-toi là!!');
+      // console.log('connecte-toi là!!');
       // axios.post(url[, data[, config]])
       axios.post('http://localhost:3001/login', {
-        email: state.email,
-        password: state.password,
+        email: state.user.email,
+        password: state.user.password,
       })
         .then((response) => {
-          console.log('response', response.data);
+          // console.log('response', response.data);
+          store.dispatch(connect());
         })
         .catch((error) => {
           console.error(error);
+        })
+        .finally(() => {
+          // je veux dire que le chargement est fini
+          store.dispatch(finishLoading());
         });
+      next(action);
       break;
     }
     default:

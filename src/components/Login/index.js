@@ -12,6 +12,7 @@ const Login = ({
   handleLogout,
   isLogged,
   loggedMessage,
+  loading,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -32,7 +33,7 @@ const Login = ({
       </div>
 
       <div className="login">
-        {isLogged && (
+        {isLogged && !loading && (
           <div className="login-form-logged">
             <p className="login-form-message">
               {loggedMessage}
@@ -44,6 +45,7 @@ const Login = ({
             >
               Déconnexion
             </button>
+            <p>Ici faudra router vers le dashboard</p>
           </div>
         )}
         {!isLogged && (
@@ -75,6 +77,9 @@ const Login = ({
             </Form>
           </Grid>
         )}
+        {loading && (
+          <p>Loading</p>
+        )}
       </div>
     </>
   );
@@ -88,11 +93,13 @@ Login.propTypes = {
   handleLogout: PropTypes.func.isRequired,
   isLogged: PropTypes.bool,
   loggedMessage: PropTypes.string,
+  loading: PropTypes.bool,
 };
 
 Login.defaultProps = {
   isLogged: false,
-  loggedMessage: 'Connecté',
+  loggedMessage: 'Logged véri ouèl',
+  loading: false,
 };
 
 export default Login;

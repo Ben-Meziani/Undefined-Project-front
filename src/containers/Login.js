@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import Login from 'src/components/Login';
 import { getMessage } from 'src/selectors/user';
+import { changeValue, login, logout } from 'src/actions/user';
 
 
 const mapStateToProps = (state) => ({
@@ -8,12 +9,21 @@ const mapStateToProps = (state) => ({
   password: state.user.password,
   isLogged: state.user.logged,
   loggedMessage: getMessage(state),
+  loading: state.user.loading,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  changeField: () => {},
-  handleLogin: () => {},
-  handleLogout: () => {},
+  changeField: (value, name) => {
+    // console.log('mon zbi fait appel à changeField', value, name);
+    const action = changeValue(name, value);
+    dispatch(action);
+  },
+  handleLogin: () => {
+    dispatch(login());
+  },
+  handleLogout: () => {
+    dispatch(logout());
+  },
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login);
