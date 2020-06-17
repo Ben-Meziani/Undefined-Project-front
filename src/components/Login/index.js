@@ -3,10 +3,7 @@ import { Button, Form, Grid } from 'semantic-ui-react';
 import Field from 'src/containers/Field';
 import './style.scss';
 
-
-
-
-const Login = () =>
+const Login = () => (
   <>
     <div className="login-register">
       <p>Pas encore inscrit ?</p>
