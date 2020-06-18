@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Form, Grid } from 'semantic-ui-react';
-import Field from '../Field';
+import Field from 'src/components/Field';
 import './style.scss';
 
 const Login = ({
@@ -99,7 +99,7 @@ Login.propTypes = {
 
 Login.defaultProps = {
   isLogged: false,
-  loggedMessage: 'Logged véri ouèl',
+  loggedMessage: 'Logged',
   loading: false,
 };
 

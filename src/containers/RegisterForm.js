@@ -14,7 +14,7 @@ const mapDispatchToProps = (dispatch) => ({
     const action = changeValue(name, value);
     dispatch(action);
   },
-  handleLRegister: () => {
+  handleRegister: () => {
   },
 });
 

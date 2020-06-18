@@ -10,9 +10,7 @@ const RegisterForm = ({
   password,
   username,
   changeField,
-  submitted,
-
-  // handleRegister,
+  handleRegister,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -68,10 +66,6 @@ const RegisterForm = ({
           </Button>
         </Form>
       </Grid>
-      )}
-      {submitted && (
-        <p>Vous êtes enregistré</p>
-      )}
     </>
   );
 };
