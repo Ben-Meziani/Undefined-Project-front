@@ -8,7 +8,6 @@ import './style.scss';
 /* import logo from '../../../assets/Logo1.png'; */
 
 const Header = ({ toggleOpen, open, handleLogout }) => {
-
   return (
     <div className="connected-home-header">
       <div className="dropdown-menu-button">

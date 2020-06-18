@@ -8,17 +8,16 @@ import Plus from '../../../../assets/icons/AddRoomIcon.svg';
 
 import './style.scss';
 
-const CreateRoom = ({ handleDropdown, saveValue, playersNb }) => {
+const CreateRoom = ({ handleDropdown, saveValue, playersNb, addRoom }) => {
   const changeValue = (evt) => {
     saveValue(evt.target.value);
   };
-  const dropdownChange = (value) => {
-    console.log(playersNb);
-    handleDropdown(value);
+  const dropdownChange = (e, value) => {
+    handleDropdown(value.value);
   };
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    console.log('je lance la requête pour créer la room');
+    addRoom();
   };
   return (
     <Modal className="create-room-modal" trigger={<img src={Plus} className="create-room-icon-svg" alt="plus" />}>
@@ -56,6 +55,7 @@ CreateRoom.propTypes = {
   playersNb: PropTypes.number,
   saveValue: PropTypes.func.isRequired,
   handleDropdown: PropTypes.func.isRequired,
+  addRoom: PropTypes.func.isRequired,
 };
 
 CreateRoom.defaultProps = {

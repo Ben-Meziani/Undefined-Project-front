@@ -5,16 +5,20 @@ import { Switch, Route } from 'react-router-dom';
 import Header from '../../containers/ConnectedHome/Header';
 import NavBar from './NavBar';
 import WelcomeMessage from './WelcomeMessage';
+import EditProfile from './EditProfile';
 
 import './style.scss';
 
 const ConnectedHome = () => (
   <div className="connected-home">
+    <Header />
     <Switch>
       <Route exact path="/">
-        <Header />
         <WelcomeMessage />
         <NavBar />
+      </Route>
+      <Route exact path="/edit">
+        <EditProfile />
       </Route>
     </Switch>
   </div>
