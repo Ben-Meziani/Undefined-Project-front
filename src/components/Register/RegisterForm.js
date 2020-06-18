@@ -8,13 +8,14 @@ import { Button, Form, Grid } from 'semantic-ui-react';
 const RegisterForm = ({
   email,
   password,
+  passwordChecked,
   username,
   changeField,
   handleRegister,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    // handleRegister();
+    handleRegister();
   };
 
   return (
@@ -56,13 +57,13 @@ const RegisterForm = ({
             <Field
               type="password"
               placeholder="Mot de passe"
-              name="password"
+              name="passwordChecked"
               onChange={changeField}
-              value={password}
+              value={passwordChecked}
             />
           </Form.Field>
           <Button color="grey" type="submit" className="center aligned">
-            Connectez-vous !
+            Enregistrez-vous !
           </Button>
         </Form>
       </Grid>
@@ -73,9 +74,10 @@ const RegisterForm = ({
 RegisterForm.propTypes = {
   email: PropTypes.string.isRequired,
   password: PropTypes.string.isRequired,
+  passwordChecked: PropTypes.string.isRequired,
   username: PropTypes.string.isRequired,
   changeField: PropTypes.func.isRequired,
-  // handleRegister: PropTypes.func.isRequired,
+  handleRegister: PropTypes.func.isRequired,
 };
 
 export default RegisterForm;

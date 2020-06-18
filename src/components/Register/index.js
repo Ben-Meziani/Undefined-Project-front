@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 import RegisterAvatar from './RegisterAvatar';
 import './style.scss';
 
-const Register = ({ submitted }) => (
+const Register = ({ submitted, loading }) => (
   <>
     <div className="register-login">
       <p>Déjà inscrit ?</p>
@@ -26,7 +26,7 @@ const Register = ({ submitted }) => (
             <RegisterForm />
           </>
         )}
-        {submitted && (
+        {submitted && !loading (
           <>
             <p>Vous êtes enregistré</p>
             <NavLink
@@ -37,6 +37,9 @@ const Register = ({ submitted }) => (
             </NavLink>
           </>
         )}
+        {loading && (
+          <p>Loading</p>
+        )}
       </>
     </div>
 
@@ -46,6 +49,10 @@ const Register = ({ submitted }) => (
 
 Register.propTypes = {
   submitted: PropTypes.bool.isRequired,
+  loading: PropTypes.bool,
+};
+Register.defaultProps = {
+  loading: false,
 };
 
 export default Register;
