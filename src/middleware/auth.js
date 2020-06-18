@@ -4,16 +4,14 @@ import {
   LOGIN,
   finishLoading,
   connect,
-  CHECK,
+  LOGOUT,
 } from 'src/actions/user';
 
 const auth = (store) => (next) => (action) => {
   switch (action.type) {
     case LOGIN: {
       const state = store.getState();
-      // console.log('connecte-toi là!!');
-      // axios.post(url[, data[, config]])
-      axios.post('http://localhost:3001/login', {
+      axios.post('adresse serv : ec2-54-234-79-207.compute-1.amazonaws.com/login', {
         email: state.user.email,
         password: state.user.password,
       }, {
@@ -21,27 +19,24 @@ const auth = (store) => (next) => (action) => {
       })
         .then((response) => {
           // console.log('response', response.data);
-          store.dispatch(connect());
+          if (response.data.logged) {
+            store.dispatch(connect());
+          }
         })
         .catch((error) => {
           console.error(error);
         })
         .finally(() => {
-          // je veux dire que le chargement est fini
           store.dispatch(finishLoading());
         });
       next(action);
       break;
     }
-    case CHECK:
-      axios.post('http://localhost:3001/isLogged', {}, {
+    case LOGOUT:
+      axios.post('adresse serv : ec2-54-234-79-207.compute-1.amazonaws.com/logout', {}, {
         withCredentials: true,
-      })
-        .then((response) => {
-          if (response.data.logged) {
-            store.dispatch(connect());
-          }
-        });
+      });
+      next(action);
       break;
     default:
       next(action);

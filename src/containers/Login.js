@@ -14,7 +14,6 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   changeField: (value, name) => {
-    // console.log('mon zbi fait appel à changeField', value, name);
     const action = changeValue(name, value);
     dispatch(action);
   },
