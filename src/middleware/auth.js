@@ -11,7 +11,7 @@ const auth = (store) => (next) => (action) => {
   switch (action.type) {
     case LOGIN: {
       const state = store.getState();
-      axios.post('adresse serv : ec2-54-234-79-207.compute-1.amazonaws.com/login', {
+      axios.post('http://ec2-54-234-79-207.compute-1.amazonaws.com/login', {
         email: state.user.email,
         password: state.user.password,
       }, {
@@ -33,7 +33,7 @@ const auth = (store) => (next) => (action) => {
       break;
     }
     case LOGOUT:
-      axios.post('adresse serv : ec2-54-234-79-207.compute-1.amazonaws.com/logout', {}, {
+      axios.post('http://ec2-54-234-79-207.compute-1.amazonaws.com/logout', {}, {
         withCredentials: true,
       });
       next(action);
