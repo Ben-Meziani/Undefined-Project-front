@@ -1,0 +1,22 @@
+.register{
+  border : solid .2rem grey;
+  margin: 0 auto;
+  margin-top: .2rem;
+  padding: 3em;
+
+  &-avatar{
+    margin-bottom: 2em;
+
+    &-preview{
+      margin: 0;
+      margin-bottom: .5rem;
+    }
+  }
+
+  &-login{
+    p{
+      display: inline-block;
+      margin-right: .2em;
+    }
+  }
+}

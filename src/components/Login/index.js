@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Form, Grid } from 'semantic-ui-react';
-import Field from './Field';
+import Field from '../Field';
 import './style.scss';
 
 const Login = ({
@@ -28,7 +28,7 @@ const Login = ({
           animated="fade"
           className="login-register-button"
         >
-          <Button.Content visible>Connectez-vous</Button.Content>
+          <Button.Content visible>Inscrivez-vous</Button.Content>
           <Button.Content hidden>CURCUBITACE!</Button.Content>
         </Button>
       </div>

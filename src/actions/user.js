@@ -1,3 +1,5 @@
+// Action Types
+
 export const CHANGE_VALUE = 'CHANGE_VALUE';
 export const LOGIN = 'LOGIN';
 export const FINISH_LOADING = 'FINISH_LOADING';
@@ -10,6 +12,8 @@ export const changeValue = (name, value) => ({
   name,
   value,
 });
+
+//  Actions Creators
 
 export const login = () => ({
   type: LOGIN,

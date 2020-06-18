@@ -59,6 +59,7 @@
     "react": "*",
     "react-dom": "*",
     "react-redux": "*",
+    "react-router-dom": "^5.2.0",
     "redux": "*",
     "semantic-ui-react": "^0.88.2",
     "styled-components": "*"
