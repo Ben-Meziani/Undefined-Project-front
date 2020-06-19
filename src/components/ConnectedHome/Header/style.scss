@@ -1,0 +1,139 @@
+@import 'src/styles/vars';
+
+.connected-home-header {
+  width: 100%;
+  top: 0;
+}
+
+.connected-home-logo {
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  & img {
+      width: 100%;
+    }
+}
+
+.connected-home-title {
+  font-size: 1.4em;
+  margin-top: 1em;
+}
+
+// BURGER DROPDOWN MENU
+.dropdown-menu {
+  position: fixed;
+  z-index: 1;
+  margin-top: 5em;
+  width: 100%;
+  top: 0;
+  
+  &-button {
+    z-index: 999;
+    position: fixed;
+    margin-top: 0;
+    right: 0;
+  }
+}
+
+.burger_hamburger--spring__lGgOO {
+  margin-top: 0;
+}
+
+.dropdown-menu-content {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 40vh;
+  top: 0;
+  background-color: #7f977d;
+  opacity: 0.5;
+  display: none;
+
+  &--open {
+  display: block;
+  animation: slidein 0.5s ease;
+
+  @keyframes slidein {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  & li {
+    font-size: 1.4em;
+    text-align: left;
+    margin-top: 3em;
+    margin-left: 1em;
+  }
+
+  & a {
+    text-decoration: none;
+    color: white;
+  }
+
+  & a:hover {
+    color: white;
+    transition: color 0.3s ease;
+  }
+}
+}
+
+
+@media (min-width: 767px) {
+  .connected-home-header {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: none;
+    color: #6c7b95;
+   
+    &-title {
+      font-size: 1.8em;
+    }
+  }
+
+  .connected-home-logo {
+    display: flex;
+    position: relative;
+    top: 0;
+    width: 15em;
+    height: 8em;
+  
+    & img {
+      width: 10%;
+    }
+  }
+
+  .connected-home-title {
+    width: 100%;
+    text-align: center;
+    font-size: 5em;
+  }
+
+  // REDUCE WIDTH OF DROPDOWN MENU
+  .dropdown-menu-content {
+    width: 20%;
+    height: 100vh;
+    right: 0;
+
+    &--open {
+      display: block;
+      animation: slidein 0.5s ease;
+    
+      @keyframes slidein {
+        0% {
+          transform: translateX(+300%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+  }
+}
+}

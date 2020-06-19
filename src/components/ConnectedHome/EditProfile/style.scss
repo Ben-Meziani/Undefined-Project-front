@@ -1,0 +1,42 @@
+@import 'src/styles/vars';
+
+.edit-profile-section {
+  margin-top: 2em;
+  
+  &-title {
+    font-size: 1.4em;
+  }
+}
+
+.edit-profile-avatar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 20em;
+}
+
+.avatar-preview{
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  border: 2px solid rgb(129, 129, 129);
+}
+
+.avatar-choice-input {
+  border: none;
+}
+
+.edit-profile-form {
+  margin-top: 3em;
+
+  &-label {
+    display: flex;
+    text-align: left;
+    margin-bottom: 0.5em;
+  }
+
+  &-input {
+    margin-top: 0.5em;
+  }
+}

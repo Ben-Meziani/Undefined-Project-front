@@ -1,19 +1,24 @@
 // == Import npm
-import React from 'react';
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 
-// == Import
-import Counter from 'src/containers/Counter';
-import reactLogo from './react-logo.svg';
-import './styles.css';
+import './style.scss';
+
+// == Import containers
+import ConnectedHome from 'src/containers/ConnectedHome';
 
 // == Composant
-const App = () => (
+const App = ({ fetchUserDatas }) => {
+  useEffect(fetchUserDatas, []);
+  return (
   <div className="app">
-    <img src={reactLogo} alt="react logo" />
-    <h1>Composant : App</h1>
-    <Counter />
+    <ConnectedHome />
   </div>
-);
+)};
+
+App.propTypes = {
+  fetchUserDatas: PropTypes.func.isRequired,
+};
 
 // == Export
 export default App;
