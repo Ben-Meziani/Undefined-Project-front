@@ -1,22 +1,27 @@
 import {
-  SHOW_AVATAR,
-} from 'src/actions';
-import { SAVE_USER} from 'src/actions/user';
+  SHOW_AVATAR
+} from '../actions';
+import { SAVE_USER, LOGOUT } from '../actions/user';
 
 const initialState = {
   userDatas: [],
 };
 
-const reducer = (state = initialState, action = {}) => {
+const user = (state = initialState, action = {}) => {
   switch (action.type) {
     case SAVE_USER:
       return {
         ...state,
         userDatas: action.user,
       };
+    case LOGOUT:
+      return {
+        ...state,
+        logged: false,
+      };
     default:
       return state;
   }
 };
 
-export default reducer;
+export default user;

@@ -2,8 +2,7 @@ import {
   TOGGLE_OPEN,
   CHANGE_VALUE,
   DROPDOWN_CHANGE,
-} from 'src/actions';
-import { LOGOUT } from 'src/actions/user';
+} from '../actions';
 
 const initialState = {
   open: false,
@@ -18,11 +17,6 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         open: !state.open,
-      };
-    case LOGOUT:
-      return {
-        ...state,
-        logged: false,
       };
     case CHANGE_VALUE:
       return {

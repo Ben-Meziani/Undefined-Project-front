@@ -1,12 +1,11 @@
 import axios from 'axios';
 
-import { FETCH_USERDATAS, saveUser } from 'src/actions/user';
+import { FETCH_USERDATAS, saveUser } from '../actions/user';
 
-const user = (store) => (next) => (action) => {
+const data = (store) => (next) => (action) => {
   switch (action.type) {
     case FETCH_USERDATAS:
       console.log('je lance ma requête');
-      // this API is juste for test and will be replaced by another one
       axios.get('http://ec2-54-234-79-207.compute-1.amazonaws.com/user')
         .then(
           (response) => {
@@ -25,4 +24,4 @@ const user = (store) => (next) => (action) => {
   }
 };
 
-export default user;
+export default data;

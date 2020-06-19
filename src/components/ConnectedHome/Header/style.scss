@@ -16,8 +16,8 @@
 }
 
 .connected-home-title {
-  font-size: 1.4em;
-  margin-top: 1em;
+  font-size: 1.6em;
+  margin-top: 3em;
 }
 
 // BURGER DROPDOWN MENU
@@ -50,11 +50,11 @@
   background-color: #373837;
   opacity: 0.9;
   transition: transform 0.4s ease-in-out;
-  transform: translateX(+200%);
+  transform: translateY(-100%);
 
   &--open {
   display: block;
-  transform: translateX(0);
+  transform: translateY(0);
 
   & li {
     font-size: 1.4em;
@@ -114,19 +114,12 @@
     width: 30%;
     height: 100vh;
     right: 0;
+    transition: transform 0.4s ease-in-out;
+    transform: translateX(+200%);
 
     &--open {
       display: block;
-      animation: slidein 0.5s ease;
-    
-      @keyframes slidein {
-        0% {
-          transform: translateX(+300%);
-        }
-        100% {
-          transform: translateX(0);
-        }
-      }
+      transform: translateX(0);
   }
 }
 }

@@ -9,12 +9,13 @@ import ConnectedHome from 'src/containers/ConnectedHome';
 
 // == Composant
 const App = ({ fetchUserDatas }) => {
-  useEffect(fetchUserDatas, []);
+  /* useEffect(fetchUserDatas, []); */
   return (
-  <div className="app">
-    <ConnectedHome />
-  </div>
-)};
+    <div className="app">
+      <ConnectedHome />
+    </div>
+);
+};
 
 App.propTypes = {
   fetchUserDatas: PropTypes.func.isRequired,

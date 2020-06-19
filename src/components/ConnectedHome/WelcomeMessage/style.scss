@@ -3,10 +3,10 @@
 .connected-home-message {
   width: 90%;
   height: 45vh;
-  margin-top: 16em;
+  margin-top: 8em;
   padding: 1em;
   border-radius: 5px;
-  background-color: white;
+  background-color: rgb(109, 109, 109);
   opacity: 0.9;
   animation: fadein 5s;
 
@@ -23,7 +23,7 @@
     font-family: 'Nunito', sans-serif;
     display: inline-block;
     font-size: 1.6em;
-    color: rgb(83, 83, 83);
+    color: white;
     z-index: 999;
   }
 
@@ -31,17 +31,8 @@
     font-family: 'Nunito', sans-serif;
     margin: 1em 0;
     text-align: justify;
-    color: rgb(83, 83, 83);
+    color: white;
   }
-}
-
-.connected-home-button {
-  width: 10em;
-  height: 3em;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.2em;
-  bottom: 0;
 }
 
 @media (min-width: 767px) {
@@ -52,9 +43,6 @@
     margin: 2em auto;
     padding: 1em;
     border-radius: 5px;
-   /*  -webkit-box-shadow: 0px 0px 12px 1px rgba(186,182,186,1);
-    -moz-box-shadow: 0px 0px 12px 1px rgba(186,182,186,1);
-    box-shadow: 0px 0px 12px 1px rgba(186,182,186,1); */
   
     &-title {
       font-size: 1.6em;
@@ -64,15 +52,6 @@
       margin: 1em 0;
       text-align: justify;
     }
-  }
-  
-  .connected-home-button {
-    color: rgb(94, 92, 92);
-    width: 10em;
-    height: 3em;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2em;
   }
 }
 
