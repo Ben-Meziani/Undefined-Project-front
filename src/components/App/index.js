@@ -1,6 +1,6 @@
 // == Import npm
-import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 import './style.scss';
 
@@ -8,11 +8,17 @@ import './style.scss';
 import ConnectedHome from 'src/containers/ConnectedHome';
 
 // == Composant
-const App = () => (
+const App = ({ fetchUserDatas }) => {
+  useEffect(fetchUserDatas, []);
+  return (
   <div className="app">
     <ConnectedHome />
   </div>
-);
+)};
+
+App.propTypes = {
+  fetchUserDatas: PropTypes.func.isRequired,
+};
 
 // == Export
 export default App;

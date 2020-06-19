@@ -17,8 +17,9 @@ const CreateRoom = ({ handleDropdown, saveValue, playersNb, addRoom }) => {
   };
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    addRoom();
+    /* addRoom(); */
   };
+
   return (
     <Modal className="create-room-modal" trigger={<img src={Plus} className="create-room-icon-svg" alt="plus" />}>
       <Modal.Header>Créer une salle de jeu</Modal.Header>
@@ -55,7 +56,7 @@ CreateRoom.propTypes = {
   playersNb: PropTypes.number,
   saveValue: PropTypes.func.isRequired,
   handleDropdown: PropTypes.func.isRequired,
-  addRoom: PropTypes.func.isRequired,
+ /*  addRoom: PropTypes.func.isRequired, */
 };
 
 CreateRoom.defaultProps = {

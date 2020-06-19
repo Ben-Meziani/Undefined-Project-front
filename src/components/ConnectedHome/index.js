@@ -5,7 +5,7 @@ import { Switch, Route } from 'react-router-dom';
 import Header from '../../containers/ConnectedHome/Header';
 import NavBar from './NavBar';
 import WelcomeMessage from './WelcomeMessage';
-import EditProfile from './EditProfile';
+import EditProfile from '../../containers/ConnectedHome/EditProfile';
 
 import './style.scss';
 

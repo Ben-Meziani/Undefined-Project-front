@@ -1,4 +1,8 @@
-import { TOGGLE_OPEN, CHANGE_VALUE, DROPDOWN_CHANGE } from 'src/actions';
+import {
+  TOGGLE_OPEN,
+  CHANGE_VALUE,
+  DROPDOWN_CHANGE,
+} from 'src/actions';
 import { LOGOUT } from 'src/actions/user';
 
 const initialState = {

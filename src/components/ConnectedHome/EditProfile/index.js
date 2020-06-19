@@ -1,14 +1,17 @@
 import React from 'react';
 import { Form, Button } from 'semantic-ui-react';
+import PropTypes from 'prop-types';
 
 // import components
 
 import './style.scss';
 
-const EditProfile = () => {
-  const showAvatar = () => {
-    
-  }
+const EditProfile = ({ saveAvatar, avatarImg, userDatas }) => {
+  const showAvatar = (evt) => {
+    console.log(evt.target.files[0]);
+    saveAvatar(evt.target.files);
+  };
+  console.log(userDatas);
   return (
     <div className="edit-profile-section">
       <div className="edit-profile-section-title">
@@ -16,9 +19,9 @@ const EditProfile = () => {
       </div>
       <div className="edit-profile-avatar">
         <div className="avatar-preview">
-
+          <img src={avatarImg} alt="unknown" />
         </div>
-        <input type="file" className="avatar-choice-input" onChange={showAvatar}/>
+        <input type="file" className="avatar-choice-input" onChange={showAvatar} />
       </div>
       <div className="edit-profile-form">
         <Form>
@@ -47,6 +50,21 @@ const EditProfile = () => {
       </div>
     </div>
   );
+};
+
+EditProfile.propTypes = {
+ 
+/*   saveAvatar: PropTypes.func.isRequired,
+  avatarImg: PropTypes.string.isRequired, */
+    userDatas: PropTypes.arrayOf(
+    PropTypes.shape({
+      /* name: PropTypes.string, */
+      email: PropTypes.string,
+      mdp: PropTypes.string,
+ /*      pseudo: PropTypes.string,
+      icon: PropTypes.string, */
+    }).isRequired,
+  ).isRequired,
 };
 
 export default EditProfile;

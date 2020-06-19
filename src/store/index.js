@@ -2,8 +2,9 @@
 import { createStore, compose, applyMiddleware } from 'redux';
 
 // == Import : local
-import reducer from 'src/reducers';
+import rootReducer from 'src/reducers';
 import auth from 'src/middleware/auth';
+import user from 'src/middleware/user';
 
 // == Enhancers
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -11,13 +12,14 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const enhancers = composeEnhancers(
   applyMiddleware(
     auth,
+    user,
     // secondMiddleware,
   ),
 );
 
 // == Store
 const store = createStore(
-  reducer,
+  rootReducer,
   // preloadedState,
   enhancers,
 );
