@@ -5,7 +5,6 @@ import Burger from 'react-css-burger';
 import { Link } from 'react-router-dom';
 
 import './style.scss';
-/* import logo from '../../../assets/Logo1.png'; */
 
 const Header = ({ toggleOpen, open, handleLogout }) => {
   return (
@@ -15,7 +14,7 @@ const Header = ({ toggleOpen, open, handleLogout }) => {
           active={open}
           burger="spring"
           hoverOpacity={1}
-          color="#7f977d"
+          color="#000000"
           scale={0.8}
           onClick={toggleOpen}
         />

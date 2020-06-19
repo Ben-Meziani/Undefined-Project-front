@@ -7,7 +7,7 @@ const user = (store) => (next) => (action) => {
     case FETCH_USERDATAS:
       console.log('je lance ma requête');
       // this API is juste for test and will be replaced by another one
-      axios.get('http://localhost:3001/api/users')
+      axios.get('http://ec2-54-234-79-207.compute-1.amazonaws.com/user')
         .then(
           (response) => {
             const saveUserDatas = saveUser(response.data);
