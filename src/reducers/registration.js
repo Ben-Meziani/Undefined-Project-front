@@ -5,8 +5,7 @@ import {
 export const initialState = {
   email: '',
   password: '',
-  passwordChecked: '',
-  username: '',
+  pseudo: '',
   logged: false,
   loading: false,
   submitted: false,

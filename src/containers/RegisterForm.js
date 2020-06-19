@@ -6,8 +6,7 @@ import { changeValue, register } from 'src/actions/user';
 const mapStateToProps = (state) => ({
   email: state.registration.email,
   password: state.registration.password,
-  passwordChecked: state.registration.passwordChecked,
-  username: state.registration.username,
+  pseudo: state.registration.pseudo,
 });
 
 const mapDispatchToProps = (dispatch) => ({

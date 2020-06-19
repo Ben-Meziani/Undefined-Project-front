@@ -8,8 +8,8 @@ const register = (store) => (next) => (action) => {
       axios.post('http://ec2-54-234-79-207.compute-1.amazonaws.com/register', {
         email: state.registration.email,
         password: state.registration.password,
-        passwordChecked: state.registration.passwordChecked,
-        username: state.registration.username,
+        pseudo: state.registration.pseudo,
+        created_at: '2020/06/19',
       })
         .then((response) => {
           console.log(response, response.data);
