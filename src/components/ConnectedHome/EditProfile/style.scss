@@ -40,3 +40,12 @@
     margin-top: 0.5em;
   }
 }
+
+@media (min-width: 767px) {
+  .edit-profile-section {
+    width: 30%;
+    margin: 2em auto;
+    border: 2px solid black;
+    padding: 2em;
+  }
+}

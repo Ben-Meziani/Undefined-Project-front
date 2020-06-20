@@ -1,4 +1,4 @@
-import axios from 'axios';
+/* import axios from 'axios';
 
 import { FETCH_USERDATAS, saveUser } from '../actions/user';
 
@@ -6,11 +6,11 @@ const data = (store) => (next) => (action) => {
   switch (action.type) {
     case FETCH_USERDATAS:
       console.log('je lance ma requête');
-      axios.get('http://ec2-54-234-79-207.compute-1.amazonaws.com/user')
+      axios.get('http://ec2-54-234-79-207.compute-1.amazonaws.com/users')
         .then(
           (response) => {
             const saveUserDatas = saveUser(response.data);
-            console.log(response);
+            console.log(saveUserDatas);
             store.dispatch(saveUserDatas);
           },
         )
@@ -24,4 +24,4 @@ const data = (store) => (next) => (action) => {
   }
 };
 
-export default data;
+export default data; */

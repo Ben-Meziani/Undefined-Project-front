@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-import { LOGOUT } from '../actions/user';
+import { LOGOUT, LOGIN, REGISTER, saveUser } from '../actions/user';
+
 
 const auth = (store) => (next) => (action) => {
   switch (action.type) {

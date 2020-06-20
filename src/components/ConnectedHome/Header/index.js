@@ -31,8 +31,7 @@ const Header = ({ toggleOpen, open, handleLogout }) => {
         </div>
       </div>
     </div>
-)
-};
+  )};
 
 Header.propTypes = {
   toggleOpen: PropTypes.func.isRequired,

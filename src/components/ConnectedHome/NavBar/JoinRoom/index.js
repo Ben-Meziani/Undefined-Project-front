@@ -6,7 +6,7 @@ import Arrow from '../../../../assets/icons/JoinRoomIcon.svg';
 import './style.scss';
 
 const JoinRoomIcon = () => (
-  <Modal trigger={<img src={Arrow} className="join-room-icon-svg" alt="arrow in" />}>
+  <Modal className="join-room-modal" trigger={<div className="join-room-button">Rejoindre une room</div>}>
     <Modal.Header>Rejoindre une salle de jeu</Modal.Header>
     <Modal.Content image>
       <Modal.Description>

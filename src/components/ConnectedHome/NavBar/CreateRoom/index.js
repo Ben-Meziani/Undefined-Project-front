@@ -21,7 +21,7 @@ const CreateRoom = ({ handleDropdown, saveValue, playersNb, addRoom }) => {
   };
 
   return (
-    <Modal className="create-room-modal" trigger={<img src={Plus} className="create-room-icon-svg" alt="plus" />}>
+      <Modal className="create-room-modal" trigger={<div className="create-room-button">Créer une room</div>}>
       <Modal.Header>Créer une salle de jeu</Modal.Header>
       <Modal.Content image>
         <Modal.Description>

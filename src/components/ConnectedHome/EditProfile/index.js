@@ -15,7 +15,7 @@ const EditProfile = ({ saveAvatar, avatarImg, userDatas }) => {
   return (
     <div className="edit-profile-section">
       <div className="edit-profile-section-title">
-        <p>Editer le profil</p>
+        <p>Modifier vos informations</p>
       </div>
       <div className="edit-profile-avatar">
         <div className="avatar-preview">

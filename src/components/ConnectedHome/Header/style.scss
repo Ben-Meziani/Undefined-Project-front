@@ -16,11 +16,92 @@
 }
 
 .connected-home-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   font-size: 1.6em;
+  color: black;
+  background-color: black;
+  width: 80%;
+  height: 3em;
+  margin: 0 auto;
   margin-top: 3em;
+  transform: skew(15deg, 0.5deg);
+  animation: appearin 1s ease;
+  animation-fill-mode: forwards;
+
+  @keyframes appearin {
+    0% {
+      color: black;
+    }
+    99% {
+      color: rgb(223, 223, 223);
+    }
+    100% {
+      color: white;
+    }
+  }
+
+  & h1 {
+    transform: skew(-15deg, 0.5deg);
+  }
+}
+
+// RAINDROPS FALL ANIMATION
+
+.raindrop1 {
+  margin: 0 auto;
+  margin-top: -0.3em;
+
+  & img {
+    width: 1.8em;
+  }
+}
+
+.raindrop2 {
+  margin-top: -0.3em;
+  margin-left: -10em;
+
+  & img {
+    width: 1.3em;
+  }
+}
+.raindrop3 {
+  margin-top: -0.3em;
+  margin-left: 10em;
+
+  & img {
+    width: 1.5em;
+  }
+}
+
+.raindrop4 {
+  margin-top: -0.3em;
+  margin-left: 17em;
+
+  & img {
+    width: 1.2em;
+  }
+}
+
+.raindrop1, .raindrop2, .raindrop3, .raindrop4 {
+  position: relative;
+
+  & img {
+    transform: translateY(0);
+    animation: falldown 1.2s linear;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes falldown {
+    100% {
+      transform: translateY(+600%);
+    }
+  }
 }
 
 // BURGER DROPDOWN MENU
+
 .dropdown-menu {
   position: fixed;
   z-index: 1;
@@ -34,17 +115,12 @@
     margin-top: 0;
     right: 0;
   }
-}
 
-.burger_hamburger--spring__lGgOO {
-  margin-top: 0;
-}
-
-.dropdown-menu-content {
+  &-content {
   position: fixed;
   z-index: 1;
   width: 100%;
-  height: 40vh;
+  height: 20vh;
   top: 0;
   right: 0;
   background-color: #373837;
@@ -52,46 +128,46 @@
   transition: transform 0.4s ease-in-out;
   transform: translateY(-100%);
 
-  &--open {
-  display: block;
-  transform: translateY(0);
+    &--open {
+    display: block;
+    transform: translateY(0);
 
-  & li {
-    font-size: 1.4em;
-    text-align: left;
-    margin-top: 3em;
-    margin-left: 1em;
-  }
+    & li {
+      font-size: 1.4em;
+      text-align: left;
+      margin-top: 2em;
+      margin-left: 1em;
+      }
 
-  & a {
-    text-decoration: none;
-    color: white;
-  }
+    & a {
+      text-decoration: none;
+      color: white;
+      }
 
-  & a:hover {
-    color: white;
-    transition: color 0.3s ease;
+    & a:hover {
+      color: rgb(226, 220, 220);
+      transition: color 0.3s ease;
+      }
+    }
   }
 }
+
+.burger_hamburger--spring__lGgOO {
+  margin-top: 0;
 }
 
+// MEDIA QUERIES
 
 @media (min-width: 767px) {
+
   .connected-home-header {
     width: 100%;
     height: 25%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: none;
     color: #6c7b95;
-   
-    &-title {
-      font-size: 1.8em;
-    }
   }
 
-  .connected-home-logo {
+ /*  .connected-home-logo {
     display: flex;
     position: relative;
     top: 0;
@@ -101,12 +177,19 @@
     & img {
       width: 10%;
     }
-  }
+  } */
 
   .connected-home-title {
-    width: 100%;
-    text-align: center;
-    font-size: 3em;
+    font-size: 1.8em;
+    width: 40%;
+    height: 3em;
+    margin: 0 auto;
+    margin-top: 3em;
+   
+
+    & h1 {
+      transform: skew(-15deg);
+    }
   }
 
   // REDUCE WIDTH OF DROPDOWN MENU
@@ -120,8 +203,60 @@
     &--open {
       display: block;
       transform: translateX(0);
+    }
   }
-}
+
+  .raindrop1 {
+    margin: 0 auto;
+    margin-top: -0.3em;
+  
+    & img {
+      width: 1.8em;
+    }
+  }
+  
+  .raindrop2 {
+    margin-top: -0.3em;
+    margin-left: -10em;
+  
+    & img {
+      width: 1.3em;
+    }
+  }
+  .raindrop3 {
+    margin-top: -0.3em;
+    margin-left: 10em;
+  
+    & img {
+      width: 1.5em;
+    }
+  }
+  
+  .raindrop4 {
+    margin-top: -0.3em;
+    margin-left: 17em;
+  
+    & img {
+      width: 1.2em;
+    }
+  }
+  
+  .raindrop1, .raindrop2, .raindrop3, .raindrop4 {
+    position: relative;
+  
+    & img {
+      transform: translateY(0);
+      animation: falldown 1.2s linear;
+      animation-fill-mode: forwards;
+    }
+  
+    @keyframes falldown {
+      100% {
+        transform: translateY(+600%);
+      }
+    }
+  }
+  
 }
 
 @media (min-width: 1024px) {
