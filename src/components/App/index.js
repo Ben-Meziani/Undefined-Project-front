@@ -8,46 +8,27 @@ import ConnectedHome from 'src/containers/ConnectedHome';
 
 // == Import
 import './style.scss';
-// == Composant
-const App = ({ logged }) => {
 
 // == Composant
-const App = ({ fetchUserDatas }) => {
-  useEffect(fetchUserDatas, []);
-
-  return (
-    <div className="app">
-      {logged && (<ConnectedHome />)}
-      <ConnectedHome />
-    </div>
-);
-};
-
-App.propTypes = {
-  logged: PropTypes.bool.isRequired,
-};
-
-
+const App = () => {
+  
   return (
     <div className="app">
       <Switch>
         <Route
           exact
-          path="/"
-          component={HomePage}
-        />
+          path="/">
+          <HomePage />
+        </Route>
         <Route
           exact
-          path="/connectedHome"
-          component={ConnectedHome}
-        />
+          path="/dashboard">
+         <ConnectedHome />
+         </Route>
       </Switch>
     </div>
   );
 };
 
-App.propTypes = {
-  fetchUserDatas: PropTypes.func.isRequired,
-};
 // == Export
 export default App;

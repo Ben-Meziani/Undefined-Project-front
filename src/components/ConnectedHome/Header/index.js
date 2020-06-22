@@ -12,7 +12,7 @@ import './style.scss';
 const Header = ({ toggleOpen, open, handleLogout }) => {
   return (
     <div className="connected-home-header">
-      <Link to="/connected">
+      <Link to="/dashboard">
       <div className="home-button">
         <img src={homeIcon} alt="home" />
       </div>

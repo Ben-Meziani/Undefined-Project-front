@@ -7,8 +7,6 @@ import {
   Grid,
   Loader,
 } from 'semantic-ui-react';
-import { Route } from 'react-router-dom';
-import ConnectedHome from 'src/components/ConnectedHome';
 import Field from './Field';
 import './style.scss';
 
@@ -16,13 +14,13 @@ const Login = ({
   email,
   password,
   changeField,
-  requestConnexion,
+  login,
   userLogged,
   responseLoading,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    requestConnexion();
+    login();
   };
 
   return (
@@ -61,12 +59,8 @@ const Login = ({
         <Loader active inline="centered" />
       </>
       )}
-      {userLogged && !responseLoading && (
-        <Route
-          path="/connectedHome"
-          component={ConnectedHome}
-        />
-      )}
+      {userLogged && !responseLoading ? <Redirect to="/dashboard" /> : <Redirect to="/login" />
+      }
     </div>
   );
 };
@@ -77,7 +71,7 @@ Login.propTypes = {
   changeField: PropTypes.func.isRequired,
   userLogged: PropTypes.bool,
   responseLoading: PropTypes.bool,
-  requestConnexion: PropTypes.func.isRequired,
+  login: PropTypes.func.isRequired,
 };
 
 Login.defaultProps = {

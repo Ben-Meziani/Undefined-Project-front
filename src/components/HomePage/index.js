@@ -16,16 +16,12 @@ const HomePage = () => (
     <div className="homeDisplay">
       <Carousel />
       <Switch>
-        <Route
-          exact
-          path="/login"
-          component={Login}
-        />
-        <Route
-          exact
-          path="/register"
-          component={Register}
-        />
+        <Route exact path="/login">
+          <Login />
+        </Route>
+        <Route exact path="/register">
+          <Register />
+        </Route>
       </Switch>
     </div>
   </div>

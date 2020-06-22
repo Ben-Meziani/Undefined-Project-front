@@ -2,31 +2,28 @@ import {
   TOGGLE_OPEN,
   CHANGE_VALUE,
   DROPDOWN_CHANGE,
-} from 'src/actions';
-import { LOGOUT } from 'src/actions/user';
-
-const initialState = {
-  open: false,
-  logged: false,
-  roomName: '',
-  playersNb: 0,
   SHOW_AVATAR,
-} from '../actions';
-import {
   SAVE_USER,
   LOGOUT,
   LOGIN,
   CHANGE_INPUT_VALUE,
   REGISTER,
+  FINISH_LOADING,
+  CONNECT,
+} from 'src/actions';
 
-} from '../actions/user';
 
 const initialState = {
   users: [],
   email: '',
   password: '',
   pseudo: '',
-  logged: false,
+  logged: false,  
+  open: false,
+  roomName: '',
+  playersNb: 0,
+  responseLoading: false,
+  responseLoading: false,
 };
 
 const user = (state = initialState, action = {}) => {
@@ -51,11 +48,6 @@ const user = (state = initialState, action = {}) => {
       return {
         ...state,
         playersNb: action.selectedValue,
-
-    case SAVE_USER:
-      return {
-        ...state,
-        users: action.userDatas,
       };
     case LOGIN:
       return {
@@ -74,6 +66,16 @@ const user = (state = initialState, action = {}) => {
         email: '',
         password: '',
       };
+      case FINISH_LOADING:
+        return {
+          ...state,
+          responseLoading: false,
+        };
+        case CONNECT:
+          return {
+            ...state,
+            userLogged: true,
+          };
     default:
       return state;
   }

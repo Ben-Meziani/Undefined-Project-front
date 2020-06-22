@@ -15,13 +15,13 @@ const Register = ({
   password,
   pseudo,
   changeField,
-  requestRegistration,
+  registration,
   responseLoading,
   userRegistered,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    requestRegistration();
+    registration();
   };
 
   return (
@@ -77,6 +77,9 @@ const Register = ({
       {userRegistered && !responseLoading && (
       <>
         <p>Enregistré!</p>
+        <NavLink to="/dashboard">
+          Allez sur votre profil.
+        </NavLink>
       </>
       )}
     </div>
@@ -90,7 +93,7 @@ Register.propTypes = {
   changeField: PropTypes.func.isRequired,
   responseLoading: PropTypes.bool.isRequired,
   userRegistered: PropTypes.bool.isRequired,
-  requestRegistration: PropTypes.func.isRequired,
+  register: PropTypes.func.isRequired,
 };
 
 export default Register;

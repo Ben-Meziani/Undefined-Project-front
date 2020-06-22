@@ -1,16 +1,10 @@
 import axios from 'axios';
 
-import { LOGOUT, LOGIN, REGISTER, saveUser } from '../actions/user';
+import {} from '../actions';
 
 
 const user = (store) => (next) => (action) => {
-  switch (action.type) {
-    case LOGOUT:
-      console.log('je me déconnecte');
-      axios.get('http://ec2-54-234-79-207.compute-1.amazonaws.com/logout', {
-      });
-      next(action);
-      break;
+  switch (action.type) { 
     default:
       next(action);
   }

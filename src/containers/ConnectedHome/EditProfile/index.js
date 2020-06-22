@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import EditProfile from '../../../components/ConnectedHome/EditProfile';
 
 import { showAvatar } from '../../../actions';
-import { fetchUserDatas } from '../../../actions/user';
 
 const mapStateToProps = (state) => {
   return ({
@@ -17,10 +16,6 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchUserDatas: () => {
-    const action = fetchUserDatas();
-    dispatch(action);
-  },
   saveAvatar: (selectedFile) => {
     const action = showAvatar(selectedFile);
     dispatch(action);
