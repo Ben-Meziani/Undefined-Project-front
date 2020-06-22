@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+<<<<<<< HEAD
 import register from './register.reducer';
 import connexion from './connexion.reducer';
 import user from './user';
@@ -10,4 +11,12 @@ export default combineReducers({
   reducer,
   user,
 
+=======
+import reducer from './reducer';
+import user from './user';
+
+export default combineReducers({
+  reducer,
+  user,
+>>>>>>> master
 });

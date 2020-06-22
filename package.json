@@ -55,9 +55,9 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
-    "jwt-decode": "^2.2.0",
     "prop-types": "*",
     "react": "*",
+    "react-css-burger": "^0.2.0",
     "react-dom": "*",
     "react-redux": "*",
     "react-router-dom": "^5.2.0",

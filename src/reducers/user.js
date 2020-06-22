@@ -10,6 +10,12 @@ const initialState = {
   logged: false,
   roomName: '',
   playersNb: 0,
+  SHOW_AVATAR,
+} from 'src/actions';
+import { SAVE_USER} from 'src/actions/user';
+
+const initialState = {
+  userDatas: [],
 };
 
 const reducer = (state = initialState, action = {}) => {
@@ -33,6 +39,10 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         playersNb: action.selectedValue,
+    case SAVE_USER:
+      return {
+        ...state,
+        userDatas: action.user,
       };
     default:
       return state;
