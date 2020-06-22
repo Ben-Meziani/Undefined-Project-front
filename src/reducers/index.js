@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux';
-import user from './user';
-import registration from './registration';
+import register from './register.reducer';
+import connexion from './connexion.reducer';
 
 export default combineReducers({
-  user,
-  registration,
+  register,
+  connexion,
+
 });

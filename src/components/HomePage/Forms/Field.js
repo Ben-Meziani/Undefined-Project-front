@@ -6,10 +6,10 @@ const Field = ({
   placeholder,
   name,
   value,
-  onChange,
+  propFromActionsOnChange,
 }) => {
   const handleChange = (evt) => {
-    onChange(evt.target.value, name);
+    propFromActionsOnChange(evt.target.value, name);
   };
 
   return (
@@ -25,13 +25,12 @@ const Field = ({
   );
 };
 
-
 Field.propTypes = {
   type: PropTypes.string,
   placeholder: PropTypes.string,
   value: PropTypes.string,
   name: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
+  propFromActionsOnChange: PropTypes.func.isRequired,
 };
 
 Field.defaultProps = {
@@ -39,6 +38,5 @@ Field.defaultProps = {
   placeholder: '',
   value: '',
 };
-
 
 export default Field;

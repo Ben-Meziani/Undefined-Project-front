@@ -1,15 +1,12 @@
 import { connect } from 'react-redux';
-import Login from 'src/components/Login';
-import { getMessage } from 'src/selectors/user';
-import { changeValue, login, logout } from 'src/actions/user';
-
+import Login from 'src/components/HomePage/Forms/Login';
+import { changeValue, requestConnexion } from 'src/actions';
 
 const mapStateToProps = (state) => ({
-  email: state.user.email,
-  password: state.user.password,
-  isLogged: state.user.logged,
-  loggedMessage: getMessage(state),
-  loading: state.user.loading,
+  email: state.connexion.email,
+  password: state.connexion.password,
+  userLogged: state.connexion.userLogged,
+  responseLoading: state.connexion.responseLoading,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -17,11 +14,9 @@ const mapDispatchToProps = (dispatch) => ({
     const action = changeValue(name, value);
     dispatch(action);
   },
-  handleLogin: () => {
-    dispatch(login());
-  },
-  handleLogout: () => {
-    dispatch(logout());
+  requestConnexion: () => {
+    const action = requestConnexion();
+    dispatch(action);
   },
 });
 

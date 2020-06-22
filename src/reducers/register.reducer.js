@@ -1,16 +1,23 @@
+// register.reducer : cases linked to the user's registration
+
 import {
   CHANGE_VALUE,
-  LOGIN,
+  REGISTER_REQUEST,
   FINISH_LOADING,
-  CONNECT,
-  LOGOUT,
-} from 'src/actions/user';
+  REGISTERED,
+} from 'src/actions';
 
 export const initialState = {
+
   email: '',
+  pseudo: '',
   password: '',
-  logged: false,
-  loading: false,
+
+  responseLoading: false,
+  userRegistered: false,
+
+  userLogged: false,
+  // TODO user registrated immediatly logged and can go to his account.
 };
 
 const reducer = (state = initialState, action = {}) => {
@@ -20,27 +27,20 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
         [action.name]: action.value,
       };
-    case LOGIN:
+    case REGISTER_REQUEST:
       return {
         ...state,
-        loading: true,
-      };
-    case LOGOUT:
-      return {
-        ...state,
-        logged: false,
-        email: '',
-        password: '',
+        responseLoading: true,
       };
     case FINISH_LOADING:
       return {
         ...state,
-        loading: false,
+        responseLoading: false,
       };
-    case CONNECT:
+    case REGISTERED:
       return {
         ...state,
-        logged: true,
+        userRegistered: true,
       };
     default:
       return state;

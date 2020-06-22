@@ -1,19 +1,30 @@
 // == Import npm
-import React from 'react';
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import { Route } from 'react-router-dom';
+import HomePage from 'src/components/HomePage';
+import Dashboard from 'src/components/Dashboard';
 
 // == Import
-import HeaderHome from 'src/components/HeaderHome';
-import Login from 'src/containers/Login';
-import Register from 'src/containers/Register';
 import './style.scss';
 
 // == Composant
-const App = () => (
-  <div className="app">
-    <HeaderHome />
-    <Register />
-  </div>
-);
+const App = ({ checkUserLogged }) => {
 
+useEffect(checkUserLogged, []);
+
+  return (
+    <div className="app">
+      <Route
+        path="/"
+        component={HomePage}
+      />
+    </div>
+  );
+};
+
+App.propTypes = {
+  checkUserLogged: PropTypes.func.isRequired,
+};
 // == Export
 export default App;
