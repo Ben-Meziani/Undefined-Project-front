@@ -19,20 +19,49 @@
     transform: scale(1.1);
     cursor: pointer;
   }
+
+  .ui.modal {
+    margin-top: -20em;
+  }
 }
 
 @media (min-width: 767px) {
+  .join-room-button {
+    width: 12em;
+    height: 5em;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@media (min-width: 1024px) {
   .join-room-button {
     display: flex;
     position: absolute;
     width: 12em;
     height: 5em;
-    left: 20em;
-    top: 30em;
-  
-    &-svg {
-      align-items: center;
-      margin: 0 auto;
+    top: 40em;
+    left: 5em;
+    
+  &:hover {
+    transform: scale(1.1);
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .join-room-button {
+    display: flex;
+    position: absolute;
+    width: 12em;
+    height: 5em;
+    top: 40em;
+    left: 10em;
+    
+  &:hover {
+    transform: scale(1.1);
     }
   }
 }

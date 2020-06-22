@@ -2,6 +2,7 @@
 
 .edit-profile-section {
   margin-top: 2em;
+  background-color: white;
   
   &-title {
     font-size: 1.4em;
@@ -16,11 +17,11 @@
   height: 20em;
 }
 
-.avatar-preview{
+.avatar-preview img{
   width: 10em;
   height: 10em;
-  border-radius: 50%;
-  border: 2px solid rgb(129, 129, 129);
+ /*  border-radius: 50%; */
+  /* border: 2px solid rgb(129, 129, 129); */
 }
 
 .avatar-choice-input {
@@ -43,9 +44,24 @@
 
 @media (min-width: 767px) {
   .edit-profile-section {
-    width: 30%;
+    width: 50%;
     margin: 2em auto;
     border: 2px solid black;
     padding: 2em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .edit-profile-section {
+    width: 50%;
+    margin: 2em auto;
+    border: 2px solid black;
+    padding: 2em;
+  }
+}
+
+@media (min-width: 1600px) {
+  .edit-profile-section {
+    width: 40%;
   }
 }

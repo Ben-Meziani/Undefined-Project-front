@@ -7,6 +7,7 @@ import { changeValue, dropdownChange } from '../../../actions';
 const mapStateToProps = (state) => ({
   roomName: '',
   playersNb: 0,
+  
 });
 
 const mapDispatchToProps = (dispatch) => ({

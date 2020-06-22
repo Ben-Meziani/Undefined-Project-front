@@ -43,7 +43,7 @@ const CreateRoom = ({ handleDropdown, saveValue, playersNb, addRoom }) => {
               value={playersNb}
             />
             <div className="field">
-              <button className="ui button" type="submit" onSubmit={handleSubmit}>Créer la salle</button>
+              <button className="ui button create-room-submit" type="submit" onSubmit={handleSubmit}>Créer la salle</button>
             </div>
           </form>
         </Modal.Description>

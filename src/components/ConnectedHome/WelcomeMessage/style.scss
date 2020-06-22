@@ -64,6 +64,31 @@
     width: 25em;
     height: 30em;
     margin: 2em auto;
+    margin-top: 5em;
+    padding: 1em;
+    border-radius: 3px;
+  
+    &-title {
+      flex: 1;
+      font-size: 1.6em;
+    }
+  
+    &-content {
+      flex: 2;
+      margin: 1em 0;
+      text-align: justify;
+    }
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .connected-home-message {
+    display: flex;
+    flex-direction: column;
+    width: 25em;
+    height: 30em;
+    margin: 6em auto;
     padding: 1em;
     border-radius: 3px;
   

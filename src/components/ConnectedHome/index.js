@@ -1,5 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 // import components
 import Header from '../../containers/ConnectedHome/Header';
@@ -10,7 +11,9 @@ import EditProfile from '../../containers/ConnectedHome/EditProfile';
 
 import './style.scss';
 
-const ConnectedHome = () => (
+const ConnectedHome = ({ fetchUserDatas }) => {
+/*   useEffect(fetchUserDatas, []); */
+  return (
   <div className="connected-home">
     <Switch>
       <Route exact path="/connected">
@@ -19,12 +22,17 @@ const ConnectedHome = () => (
         <WelcomeMessage />
         <NavBar />
       </Route>
-      <Route exact path="/edit">
+      <Route exact path="/user/:userId/edit">
       <Header />
         <EditProfile />
       </Route>
     </Switch>
   </div>
-);
+)};
+
+/* ConnectedHome.propTypes = {
+  fetchUserDatas: PropTypes.func.isRequired,
+}; */
+
 
 export default ConnectedHome;

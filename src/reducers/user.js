@@ -11,7 +11,7 @@ import {
 } from '../actions/user';
 
 const initialState = {
-  userDatas: [],
+  users: [],
   email: '',
   password: '',
   pseudo: '',
@@ -28,7 +28,7 @@ const user = (state = initialState, action = {}) => {
     case SAVE_USER:
       return {
         ...state,
-        userDatas: action.user,
+        users: action.userDatas,
       };
     case LOGIN:
       return {

@@ -4,6 +4,7 @@ export const LOGOUT = 'LOGOUT';
 export const REGISTER = 'REGISTER';
 export const FETCH_USERDATAS = 'FETCH_USERDATAS';
 export const SAVE_USER = 'SAVE_USER';
+export const EDIT_USER = 'EDIT_USER';
 
 export const changeInputValue = (value, name) => ({
   type: CHANGE_INPUT_VALUE,
@@ -29,5 +30,10 @@ export const fetchUserDatas = () => ({
 
 export const saveUser = (userDatas) => ({
   type: SAVE_USER,
+  userDatas,
+});
+
+export const editUser = (userDatas) => ({
+  type: EDIT_USER,
   userDatas,
 });

@@ -21,21 +21,57 @@
   }
 }
 
-.create-room-modal {
-  margin-top: 0;
+.create-room-submit {
+  
 }
+
+.ui.modal {
+  margin-top: -20em;
+}
+
+// MEDIA QUERIES
+
 @media (min-width: 767px) {
+  .create-room-button {
+    width: 12em;
+    height: 5em;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@media (min-width: 1024px) {
   .create-room-button {
     display: flex;
     position: absolute;
     width: 12em;
     height: 5em;
-    top: 40em;
-    left: 20em;
-  
-    &-svg {
-      align-items: center;
-      margin: 0 auto;
+    top: 30em;
+    left: 5em;
+
+    &:hover {
+      transform: scale(1.1);
     }
+  }
+}
+
+@media (min-width: 1600px) {
+  .create-room-button {
+    display: flex;
+    position: absolute;
+    width: 12em;
+    height: 5em;
+    top: 30em;
+    left: 10em;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .ui.modal {
+    margin-top: -20em;
   }
 }

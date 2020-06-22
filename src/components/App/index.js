@@ -1,5 +1,5 @@
 // == Import npm
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import './style.scss';
@@ -8,8 +8,8 @@ import './style.scss';
 import ConnectedHome from '../../containers/ConnectedHome';
 
 // == Composant
-const App = ({ fetchUserDatas, logged }) => {
-  /* useEffect(fetchUserDatas, []); */
+const App = ({ logged }) => {
+ 
   return (
     <div className="app">
       {logged && (<ConnectedHome />)}
@@ -20,7 +20,6 @@ const App = ({ fetchUserDatas, logged }) => {
 
 App.propTypes = {
   logged: PropTypes.bool.isRequired,
-  fetchUserDatas: PropTypes.func.isRequired,
 };
 
 // == Export
