@@ -1,0 +1,8 @@
+// scss permet d'utiliser des mixin, https://sass-lang.com/documentation/at-rules/mixin, c'est à dire des instructions réutilisables et paramétrables
+// le css écrit à l'intérieur du mixin sera retourné quand on l'incluera
+
+@mixin mq($size: 767px) {
+  @media (min-width: $size) {
+    @content;
+  }
+}

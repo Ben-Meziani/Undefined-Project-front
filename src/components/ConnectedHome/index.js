@@ -3,11 +3,15 @@ import { Switch, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 // import components
-import Header from '../../containers/ConnectedHome/Header';
+
+
 import RainDropAnimation from './RaindropAnimation';
+
+import Header from 'src/containers/ConnectedHome/Header';
+import EditProfile from 'src/containers/ConnectedHome/EditProfile';
+
 import NavBar from './NavBar';
 import WelcomeMessage from './WelcomeMessage';
-import EditProfile from '../../containers/ConnectedHome/EditProfile';
 
 import './style.scss';
 
@@ -16,9 +20,11 @@ const ConnectedHome = ({ fetchUserDatas }) => {
   return (
   <div className="connected-home">
     <Switch>
+
       <Route exact path="/connected">
         <Header />
         <RainDropAnimation />
+
         <WelcomeMessage />
         <NavBar />
       </Route>

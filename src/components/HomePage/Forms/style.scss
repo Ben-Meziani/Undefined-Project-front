@@ -1,0 +1,38 @@
+// General styles
+
+// Field
+
+// Login
+
+.login {
+  border : solid .1em black;
+  margin: 0 auto;
+  margin-top: .2em;
+  padding: 3.1em;
+}
+
+// Register
+
+.register{
+  border : solid .1em black;
+  margin: 0 auto;
+  margin-top: .2em;
+  padding: 3.1em;
+  
+  // RegisterAvatar
+
+  &-avatar{
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: center;
+
+
+    &-preview{
+      margin-bottom: .5em;
+      justify-content: center;
+    }
+  }
+
+}
+
+
