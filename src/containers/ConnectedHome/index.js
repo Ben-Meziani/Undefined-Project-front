@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import ConnectedHome from '../../components/ConnectedHome';
+import ConnectedHome from 'src/components/ConnectedHome';
 
 const mapStateToProps = (state) => ({
 });

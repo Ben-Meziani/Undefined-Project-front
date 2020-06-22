@@ -1,7 +1,7 @@
 // == Import npm
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import HomePage from 'src/components/HomePage';
 import ConnectedHome from 'src/containers/ConnectedHome';
 
@@ -10,19 +10,22 @@ import './style.scss';
 
 // == Composant
 const App = ({ fetchUserDatas }) => {
-
   useEffect(fetchUserDatas, []);
 
   return (
     <div className="app">
-      <Route
-        path="/"
-        component={HomePage}
-      />
-      <Route
-        path="/connectedHome"
-        component={ConnectedHome}
-      />
+      <Switch>
+        <Route
+          exact
+          path="/"
+          component={HomePage}
+        />
+        <Route
+          exact
+          path="/connectedHome"
+          component={ConnectedHome}
+        />
+      </Switch>
     </div>
   );
 };

@@ -13,7 +13,7 @@ const ConnectedHome = () => (
   <div className="connected-home">
     <Header />
     <Switch>
-      <Route exact path="/">
+      <Route exact path="/connectedHome">
         <WelcomeMessage />
         <NavBar />
       </Route>
