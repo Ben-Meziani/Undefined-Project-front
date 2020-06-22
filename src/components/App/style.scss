@@ -1,12 +1,9 @@
+// Mobile-first size : 375(w)*667(h)
+
 .app {
-  /*   width: 500px; */
-   /*  margin: 1em auto; */
-    text-align: center;
+  margin: 0 auto;
+  // text-align: center;
+  text-align: center;
   /*   background-image: url('../../../src/assets/CaptureGris.PNG'); */
     background-size: cover;
-  }
-  
-  /* .app img {
-    max-width: 150px;
-  } */
-  
+}

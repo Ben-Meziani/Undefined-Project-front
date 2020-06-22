@@ -1,3 +1,11 @@
+ 
+import {
+  SHOW_AVATAR,
+} from 'src/actions';
+import { SAVE_USER} from 'src/actions/user';
+
+const initialState = {
+  userDatas: [],
 import {
   TOGGLE_OPEN,
   CHANGE_VALUE,
@@ -14,6 +22,10 @@ const initialState = {
 
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
+    case SAVE_USER:
+      return {
+        ...state,
+        userDatas: action.user,
     case TOGGLE_OPEN:
       return {
         ...state,

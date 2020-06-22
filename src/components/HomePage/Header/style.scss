@@ -1,0 +1,15 @@
+.home-page-header{
+  background-color: black;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  padding : 1.5em;
+  padding-top: 2em;
+
+  &-title{
+    color: white;
+    font-size: 2.3em;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+  }
+}
