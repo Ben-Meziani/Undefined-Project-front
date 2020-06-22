@@ -3,15 +3,15 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Route } from 'react-router-dom';
 import HomePage from 'src/components/HomePage';
-import Dashboard from 'src/components/Dashboard';
+import ConnectedHome from 'src/containers/ConnectedHome';
 
 // == Import
 import './style.scss';
 
 // == Composant
-const App = ({ checkUserLogged }) => {
+const App = ({ fetchUserDatas }) => {
 
-useEffect(checkUserLogged, []);
+  useEffect(fetchUserDatas, []);
 
   return (
     <div className="app">
@@ -19,12 +19,16 @@ useEffect(checkUserLogged, []);
         path="/"
         component={HomePage}
       />
+      <Route
+        path="/connectedHome"
+        component={ConnectedHome}
+      />
     </div>
   );
 };
 
 App.propTypes = {
-  checkUserLogged: PropTypes.func.isRequired,
+  fetchUserDatas: PropTypes.func.isRequired,
 };
 // == Export
 export default App;

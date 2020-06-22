@@ -8,7 +8,7 @@ import {
   Loader,
 } from 'semantic-ui-react';
 import { Route } from 'react-router-dom';
-import Dashboard from 'src/components/Dashboard';
+import ConnectedHome from 'src/components/ConnectedHome';
 import Field from './Field';
 import './style.scss';
 
@@ -63,8 +63,8 @@ const Login = ({
       )}
       {userLogged && !responseLoading && (
         <Route
-          path="/dashboard"
-          component={Dashboard}
+          path="/connectedHome"
+          component={ConnectedHome}
         />
       )}
     </div>
