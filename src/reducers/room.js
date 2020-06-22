@@ -1,16 +1,6 @@
- 
 import {
-  SHOW_AVATAR,
-} from 'src/actions';
-import { SAVE_USER} from 'src/actions/user';
-
-const initialState = {
-  userDatas: [],
-import {
-  TOGGLE_OPEN,
-  CHANGE_VALUE,
-  DROPDOWN_CHANGE,
-} from '../actions';
+  CREATE_ROOM
+} from '../actions/room';
 
 const initialState = {
   open: false,
@@ -21,14 +11,11 @@ const initialState = {
 
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
-    case SAVE_USER:
+    case CREATE_ROOM:
       return {
         ...state,
-        userDatas: action.user,
-    case TOGGLE_OPEN:
-      return {
-        ...state,
-        open: !state.open,
+        roomName: 'testRoom',
+        playersNb: 0,
       };
     case CHANGE_VALUE:
       return {
@@ -46,3 +33,4 @@ const reducer = (state = initialState, action = {}) => {
 };
 
 export default reducer;
+

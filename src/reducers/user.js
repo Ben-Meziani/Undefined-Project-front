@@ -11,15 +11,27 @@ const initialState = {
   roomName: '',
   playersNb: 0,
   SHOW_AVATAR,
-} from 'src/actions';
-import { SAVE_USER} from 'src/actions/user';
+} from '../actions';
+import {
+  SAVE_USER,
+  LOGOUT,
+  LOGIN,
+  CHANGE_INPUT_VALUE,
+  REGISTER,
+
+} from '../actions/user';
 
 const initialState = {
-  userDatas: [],
+  users: [],
+  email: '',
+  password: '',
+  pseudo: '',
+  logged: false,
 };
 
-const reducer = (state = initialState, action = {}) => {
+const user = (state = initialState, action = {}) => {
   switch (action.type) {
+
     case TOGGLE_OPEN:
       return {
         ...state,
@@ -39,14 +51,34 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         playersNb: action.selectedValue,
+
     case SAVE_USER:
       return {
         ...state,
-        userDatas: action.user,
+        users: action.userDatas,
+      };
+    case LOGIN:
+      return {
+        ...state,
+        logged: true,
+      };
+    case REGISTER:
+      return {
+        ...state,
+        logged: true,
+      };
+    case LOGOUT:
+      return {
+        ...state,
+        logged: false,
+        email: '',
+        password: '',
       };
     default:
       return state;
   }
 };
 
-export default reducer;
+
+export default user;
+

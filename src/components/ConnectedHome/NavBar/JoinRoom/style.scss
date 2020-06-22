@@ -1,34 +1,67 @@
 @import 'src/styles/vars';
 
-.join-room-icon-svg {
+.join-room-button {
   position: relative;
-  background: #7f977d;
+  background: black;
+  color: white;
+  font-weight: 700;
   display: flex;
   justify-content: center;
-  border-radius: 5px;
-  width: 4.5em;
-  height: 4.5em;
+  align-items: center;
+  border-radius: 3px;
+  width: 8em;
+  height: 4.3em;
   margin: 0 3em;
   padding: 0.3em;
   border: none;
   
   &:hover {
-    background-color: #88508c;
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  .ui.modal {
+    margin-top: -20em;
   }
 }
 
 @media (min-width: 767px) {
-  .join-room-icon-svg {
+  .join-room-button {
+    width: 12em;
+    height: 5em;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .join-room-button {
     display: flex;
     position: absolute;
-    width: 5em;
+    width: 12em;
     height: 5em;
-    left: 20em;
-    top: 30em;
-  
-    &-svg {
-      align-items: center;
-      margin: 0 auto;
+    top: 40em;
+    left: 5em;
+    
+  &:hover {
+    transform: scale(1.1);
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .join-room-button {
+    display: flex;
+    position: absolute;
+    width: 12em;
+    height: 5em;
+    top: 40em;
+    left: 10em;
+    
+  &:hover {
+    transform: scale(1.1);
     }
   }
 }
