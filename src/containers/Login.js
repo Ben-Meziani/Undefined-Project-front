@@ -1,23 +1,25 @@
 import { connect } from 'react-redux';
-import Login from 'src/components/HomePage/Forms/Login';
-import { changeValue, requestConnexion } from 'src/actions';
+// eslint-disable-next-line import/extensions
+import Login from '../components/HomePage/Forms/Login';
+import { changeValue, login } from '../actions';
 
 const mapStateToProps = (state) => ({
-  email: state.connexion.email,
-  password: state.connexion.password,
-  userLogged: state.connexion.userLogged,
-  responseLoading: state.connexion.responseLoading,
+  email: state.user.email,
+  password: state.user.password,
+  logged: state.user.logged,
+  loading: state.user.loading,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  changeField: (value, name) => {
+  changeValue: (value, name) => {
     const action = changeValue(name, value);
     dispatch(action);
   },
-  requestConnexion: () => {
-    const action = requestConnexion();
+  login: () => {
+    const action = login();
     dispatch(action);
   },
+
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login);

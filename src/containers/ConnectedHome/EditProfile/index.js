@@ -2,27 +2,15 @@ import { connect } from 'react-redux';
 
 import EditProfile from '../../../components/ConnectedHome/EditProfile';
 
-import { showAvatar } from '../../../actions';
-import { fetchUserDatas } from '../../../actions/user';
+import { changeFile } from '../../../actions';
 
-const mapStateToProps = (state) => {
-  return ({
-  /* id: state.user.users.id,
-  email: state.user.users.email,
-  password: state.user.users.password,
-  pseudo: state.user.users.pseudo,
-  avatar: state.user.users.avatar, */
-  users: state.user.users,
+const mapStateToProps = (state) => ({
+  avatarImg: state.user.avatarImg,
 });
-};
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchUserDatas: () => {
-    const action = fetchUserDatas();
-    dispatch(action);
-  },
-  saveAvatar: (selectedFile) => {
-    const action = showAvatar(selectedFile);
+  changeFile: (selectedFile) => {
+    const action = changeFile(selectedFile);
     dispatch(action);
   },
 });

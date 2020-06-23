@@ -3,17 +3,8 @@ import { createStore, compose, applyMiddleware } from 'redux';
 
 // == Import : local
 import rootReducer from 'src/reducers';
-
-
-import registrationMiddleware from '../middleware/registrationMiddleware';
-import connexionMiddleware from '../middleware/connexionMiddleware';
-
-
-
 import auth from 'src/middleware/auth';
-import data from 'src/middleware/data';
 import user from 'src/middleware/user';
-
 import room from 'src/middleware/room';
 
 
@@ -22,13 +13,9 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const enhancers = composeEnhancers(
   applyMiddleware(
-    registrationMiddleware,
-    connexionMiddleware,
     auth,
-    data,
     user,
     room,
-    // secondMiddleware,
   ),
 );
 

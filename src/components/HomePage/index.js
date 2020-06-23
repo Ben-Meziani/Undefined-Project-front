@@ -1,8 +1,8 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import Header from 'src/components/HomePage/Header';
-import Login from 'src/containers/Login';
-import Register from 'src/containers/Register';
+import { Route } from 'react-router-dom';
+import Header from './Header';
+import Login from '../../containers/Login';
+import Register from '../../containers/Register';
 import ButtonsNav from './ButtonsNav';
 import CarouselMenu from './Carousel/CarouselMenu';
 import Carousel from './Carousel';
@@ -15,18 +15,12 @@ const HomePage = () => (
     <CarouselMenu />
     <div className="homeDisplay">
       <Carousel />
-      <Switch>
-        <Route
-          exact
-          path="/login"
-          component={Login}
-        />
-        <Route
-          exact
-          path="/register"
-          component={Register}
-        />
-      </Switch>
+      <Route path="/home/login">
+        <Login />
+      </Route>
+      <Route path="/home/register">
+        <Register />
+      </Route>
     </div>
   </div>
 );

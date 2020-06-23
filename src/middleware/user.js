@@ -1,16 +1,20 @@
 import axios from 'axios';
 
-import { LOGOUT, LOGIN, REGISTER, saveUser } from '../actions/user';
+import { SEND_AVATAR } from '../actions';
 
+const serverURI = 'http://ec2-54-234-79-207.compute-1.amazonaws.com';
 
 const user = (store) => (next) => (action) => {
   switch (action.type) {
-    case LOGOUT:
-      console.log('je me déconnecte');
-      axios.get('http://ec2-54-234-79-207.compute-1.amazonaws.com/logout', {
+    case SEND_AVATAR: {
+      const state = store.getState();
+      console.log('j\'envoie un avatar au serveur');
+      axios.get(`${serverURI}/room/upload`, {
+        icon: state.user.avatarImg,
       });
       next(action);
       break;
+    }
     default:
       next(action);
   }

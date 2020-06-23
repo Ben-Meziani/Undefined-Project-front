@@ -1,5 +1,5 @@
 import {
-  CREATE_ROOM
+  CREATE_ROOM,
 } from '../actions/room';
 
 const initialState = {
@@ -33,4 +33,3 @@ const reducer = (state = initialState, action = {}) => {
 };
 
 export default reducer;
-

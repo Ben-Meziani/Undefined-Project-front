@@ -1,44 +1,41 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 // import components
-
-
 import RainDropAnimation from './RaindropAnimation';
-
-import Header from 'src/containers/ConnectedHome/Header';
-import EditProfile from 'src/containers/ConnectedHome/EditProfile';
-
+import Header from '../../containers/ConnectedHome/Header';
+import EditProfile from '../../containers/ConnectedHome/EditProfile';
 import NavBar from './NavBar';
 import WelcomeMessage from './WelcomeMessage';
 
 import './style.scss';
 
-const ConnectedHome = ({ fetchUserDatas }) => {
-/*   useEffect(fetchUserDatas, []); */
+const ConnectedHome = ({ logged, loading }) => {
+  console.log(logged);
   return (
-  <div className="connected-home">
-    <Switch>
+    <div className="connected-home">
+      <Switch>
+        <Route exact path="/dashboard">
+          <Header />
+          <RainDropAnimation />
+          <WelcomeMessage />
+          <NavBar />
+        </Route>
+        {/* TODO passer userId en props */}
+        <Route exact path="/dashboard/user/:userId/edit">
+          <Header />
+          <EditProfile />
+        </Route>
+      </Switch>
+      {!logged && !loading ? <Redirect to="/home" /> : <Redirect to="/dashboard" />}
+    </div>
+  );
+};
 
-      <Route exact path="/connected">
-        <Header />
-        <RainDropAnimation />
-
-        <WelcomeMessage />
-        <NavBar />
-      </Route>
-      <Route exact path="/user/:userId/edit">
-      <Header />
-        <EditProfile />
-      </Route>
-    </Switch>
-  </div>
-)};
-
-/* ConnectedHome.propTypes = {
-  fetchUserDatas: PropTypes.func.isRequired,
-}; */
-
+ConnectedHome.propTypes = {
+  logged: PropTypes.bool.isRequired,
+  loading: PropTypes.bool.isRequired,
+};
 
 export default ConnectedHome;

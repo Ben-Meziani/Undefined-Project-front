@@ -1,53 +1,30 @@
 // == Import npm
 import React from 'react';
-import PropTypes from 'prop-types';
 
-import { Route, Switch } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import HomePage from 'src/components/HomePage';
-import ConnectedHome from 'src/containers/ConnectedHome';
+import Room from 'src/components/Room';
+import ConnectedHome from '../../containers/ConnectedHome';
 
 // == Import
 import './style.scss';
-// == Composant
-const App = ({ logged }) => {
 
 // == Composant
-const App = ({ fetchUserDatas }) => {
-  useEffect(fetchUserDatas, []);
-
+const App = () => {
   return (
     <div className="app">
-      {logged && (<ConnectedHome />)}
-      <ConnectedHome />
-    </div>
-);
-};
-
-App.propTypes = {
-  logged: PropTypes.bool.isRequired,
-};
-
-
-  return (
-    <div className="app">
-      <Switch>
-        <Route
-          exact
-          path="/"
-          component={HomePage}
-        />
-        <Route
-          exact
-          path="/connectedHome"
-          component={ConnectedHome}
-        />
-      </Switch>
+      <Route path="/home">
+        <HomePage />
+      </Route>
+      <Route path="/dashboard">
+        <ConnectedHome />
+      </Route>
+      <Route path="/room">
+        <Room />
+      </Route>
     </div>
   );
 };
 
-App.propTypes = {
-  fetchUserDatas: PropTypes.func.isRequired,
-};
 // == Export
 export default App;

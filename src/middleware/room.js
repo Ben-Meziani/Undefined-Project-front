@@ -1,7 +1,6 @@
 import axios from 'axios';
 
-import { CREATE_ROOM } from '../actions/user';
-
+import { CREATE_ROOM } from '../actions/room';
 
 const room = (store) => (next) => (action) => {
   switch (action.type) {
@@ -14,12 +13,12 @@ const room = (store) => (next) => (action) => {
         theme: 'default',
         game_master: 'test',
       })
-      .then((response) => {
-       console.log(response.data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
       next(action);
       break;
     default:

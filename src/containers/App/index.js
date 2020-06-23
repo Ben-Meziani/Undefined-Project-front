@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
 
-import { fetchUserDatas } from 'src/actions/user';
-import App from 'src/components/App';
+import App from '../../components/App';
 
 const mapStateToProps = (state) => ({
   logged: state.user.logged,

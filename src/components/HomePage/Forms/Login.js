@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {
   Button,
@@ -7,27 +8,25 @@ import {
   Grid,
   Loader,
 } from 'semantic-ui-react';
-import { Route } from 'react-router-dom';
-import ConnectedHome from 'src/components/ConnectedHome';
 import Field from './Field';
 import './style.scss';
 
 const Login = ({
   email,
   password,
-  changeField,
-  requestConnexion,
-  userLogged,
-  responseLoading,
+  changeValue,
+  login,
+  logged,
+  loading,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    requestConnexion();
+    login();
   };
-
+console.log('dans Login logged' + logged);
   return (
     <div className="login">
-      {!userLogged && (
+      {!logged && (
       <Grid className="center aligned login-form">
         <Form autoComplete="off" onSubmit={handleSubmit}>
           <Form.Field required>
@@ -36,7 +35,7 @@ const Login = ({
               type="email"
               placeholder="Email"
               name="email"
-              propFromActionsOnChange={changeField}
+              changeValue={changeValue}
               value={email}
             />
           </Form.Field>
@@ -46,7 +45,7 @@ const Login = ({
               type="password"
               placeholder="Mot de passe"
               name="password"
-              propFromActionsOnChange={changeField}
+              changeValue={changeValue}
               value={password}
             />
           </Form.Field>
@@ -56,17 +55,12 @@ const Login = ({
         </Form>
       </Grid>
       )}
-      {responseLoading && (
+      {loading && (
       <>
         <Loader active inline="centered" />
       </>
       )}
-      {userLogged && !responseLoading && (
-        <Route
-          path="/connectedHome"
-          component={ConnectedHome}
-        />
-      )}
+      {logged && !loading ? <Redirect to="/dashboard" /> : <Redirect to="/home/login" />}
     </div>
   );
 };
@@ -74,15 +68,14 @@ const Login = ({
 Login.propTypes = {
   email: PropTypes.string.isRequired,
   password: PropTypes.string.isRequired,
-  changeField: PropTypes.func.isRequired,
-  userLogged: PropTypes.bool,
-  responseLoading: PropTypes.bool,
-  requestConnexion: PropTypes.func.isRequired,
+  changeValue: PropTypes.func.isRequired,
+  logged: PropTypes.bool.isRequired,
+  loading: PropTypes.bool,
+  login: PropTypes.func.isRequired,
 };
 
 Login.defaultProps = {
-  userLogged: false,
-  responseLoading: false,
+  loading: false,
 };
 
 export default Login;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './style.scss';
 
 const ButtonsNav = () => (
@@ -9,18 +9,18 @@ const ButtonsNav = () => (
       type="button"
       className=" homepage-navbutton-login"
     >
-      <NavLink to="/login">
+      <Link to="/home/login">
         Login
-      </NavLink>
+      </Link>
     </button>
 
     <button
       type="button"
       className="homepage-navbutton-register"
     >
-      <NavLink to="/register">
+      <Link to="/home/register">
         Register
-      </NavLink>
+      </Link>
     </button>
 
   </div>
