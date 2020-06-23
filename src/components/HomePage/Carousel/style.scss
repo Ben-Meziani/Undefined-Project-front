@@ -1,43 +1,44 @@
 // General Styles
-.carousel{
-  &-menu{
+.carousel {
+
+  &-menu {
     margin: 0 auto;
 
-    ul{
+    ul {
       display: flex;
       justify-content: space-around;
       width: 100%;
       margin: 0;
       padding: 0;
     }
+
     li {
       display: block;
       list-style-type: none;
     }
   }
 
-  &-show{
+  &-show {
       display:flex;
   }
-}   
+}
+
 // Team
-.item{
+.item {
   margin-top: 1em;
   height: 12em;
   display:flex;
-}
 
+  & img {
+    width: 9em;
+    height: 10em;
+    float: left;
+  }
+  
 .text{
-padding: 0 1em;
+  padding: 0 1em;
+  }
 }
+// Presentation
 
-img {
-  width: 9em;
-  height: 10em;
-  float: left;
-}
-
-
-    // Presentation
-    
-    // Demonstration
+// Demonstration

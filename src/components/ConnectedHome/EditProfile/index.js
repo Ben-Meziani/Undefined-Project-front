@@ -1,18 +1,16 @@
 import React from 'react';
 import { Form, Button } from 'semantic-ui-react';
-/* import PropTypes from 'prop-types'; */
-
-// import components
+import PropTypes from 'prop-types';
 
 import './style.scss';
 
-import avatarImg from '../../../assets/avatarDefault.png';
+/* import avatarImg from '../../../assets/avatarDefault.png'; */
 
-const EditProfile = () => {
-/*   const showAvatar = (evt) => {
+const EditProfile = ({ changeFile, avatarImg }) => {
+  const handleChange = (evt) => {
     console.log(evt.target.files[0]);
-    saveAvatar(evt.target.files);
-  }; */
+    changeFile(evt.target.files);
+  };
 
   return (
     <div className="edit-profile-section">
@@ -23,7 +21,7 @@ const EditProfile = () => {
         <div className="avatar-preview">
           <img src={avatarImg} alt="unknown" />
         </div>
-        <input type="file" className="avatar-choice-input" /* onChange={} */ />
+        <input type="file" className="avatar-choice-input" onChange={handleChange} />
       </div>
       <div className="edit-profile-form">
         <Form>
@@ -52,6 +50,11 @@ const EditProfile = () => {
       </div>
     </div>
   );
+};
+
+EditProfile.propTypes = {
+  avatarImg: PropTypes.string.isRequired,
+  changeFile: PropTypes.func.isRequired,
 };
 
 export default EditProfile;

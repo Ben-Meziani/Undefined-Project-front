@@ -1,6 +1,5 @@
 import {
   TOGGLE_OPEN,
-/*   CHANGE_VALUE, */
   DROPDOWN_CHANGE,
 } from '../actions';
 
@@ -17,11 +16,6 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
         open: !state.open,
       };
-/*     case CHANGE_VALUE:
-      return {
-        ...state,
-        roomName: action.value,
-      }; */
     case DROPDOWN_CHANGE:
       return {
         ...state,

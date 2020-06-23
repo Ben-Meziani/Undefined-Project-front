@@ -7,6 +7,7 @@ import {
   REGISTER,
   LOADING,
   CONNECT,
+  CHANGE_FILE,
 } from '../actions';
 
 const initialState = {
@@ -14,6 +15,7 @@ const initialState = {
   email: '',
   password: '',
   pseudo: '',
+  avatarImg: '',
   logged: false,
   open: false,
   roomName: '',
@@ -64,6 +66,10 @@ const user = (state = initialState, action = {}) => {
       return {
         ...state,
         logged: true,
+      };
+    case CHANGE_FILE:
+      return {
+        ...state,
       };
     default:
       return state;

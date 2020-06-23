@@ -2,7 +2,8 @@ export const LOGIN = 'LOGIN';
 export const LOGOUT = 'LOGOUT';
 export const REGISTER = 'REGISTER';
 export const EDIT_USER = 'EDIT_USER';
-export const SHOW_AVATAR = 'SHOW_AVATAR';
+export const SEND_AVATAR = 'SEND_AVATAR';
+export const CHANGE_FILE = 'CHANGE_FILE';
 export const CONNECT = 'CONNECT';
 
 export const login = () => ({
@@ -22,9 +23,13 @@ export const editUser = (userDatas) => ({
   userDatas,
 });
 
-export const showAvatar = (selectedFile) => ({
-  type: SHOW_AVATAR,
+export const changeFile = (selectedFile) => ({
+  type: CHANGE_FILE,
   selectedFile,
+});
+
+export const sendAvatar = () => ({
+  type: SEND_AVATAR,
 });
 
 export const connect = () => ({

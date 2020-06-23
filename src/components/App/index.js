@@ -3,6 +3,7 @@ import React from 'react';
 
 import { Route } from 'react-router-dom';
 import HomePage from 'src/components/HomePage';
+import Room from 'src/components/Room';
 import ConnectedHome from '../../containers/ConnectedHome';
 
 // == Import
@@ -17,6 +18,9 @@ const App = () => {
       </Route>
       <Route path="/dashboard">
         <ConnectedHome />
+      </Route>
+      <Route path="/room">
+        <Room />
       </Route>
     </div>
   );

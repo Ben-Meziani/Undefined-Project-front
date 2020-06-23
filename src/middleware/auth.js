@@ -12,7 +12,7 @@ import {
   register,
 } from '../actions';
 
-const URI = 'http://ec2-54-234-79-207.compute-1.amazonaws.com';
+const serverURI = 'http://ec2-54-234-79-207.compute-1.amazonaws.com';
 
 const auth = (store) => (next) => (action) => {
   switch (action.type) {
@@ -35,7 +35,7 @@ const auth = (store) => (next) => (action) => {
         .finally(() => {
           store.dispatch(loading());
         }); */
-      axios.post(`${URI}/login_check`, {
+      axios.post(`${serverURI}/login_check`, {
         email: state.user.email,
         password: state.user.password,
       })
@@ -51,7 +51,7 @@ const auth = (store) => (next) => (action) => {
     }
     case REGISTER: {
       const state = store.getState();
-      axios.post(`${URI}/register`, {
+      axios.post(`${serverURI}/register`, {
         email: state.user.email,
         password: state.user.password,
         pseudo: state.user.pseudo,
@@ -73,7 +73,7 @@ const auth = (store) => (next) => (action) => {
         .finally(() => {
           store.dispatch(loading());
         });
-      axios.post(`${URI}/login_check`, {
+      axios.post(`${serverURI}/login_check`, {
         email: state.user.email,
         password: state.user.password,
       })
@@ -85,7 +85,7 @@ const auth = (store) => (next) => (action) => {
     }
     case LOGOUT:
       console.log('je me déconnecte');
-      axios.get(`${URI}/logout`, {
+      axios.get(`${serverURI}/logout`, {
       });
       next(action);
       break;

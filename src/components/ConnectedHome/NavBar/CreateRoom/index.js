@@ -2,10 +2,6 @@ import React from 'react';
 import { Modal, Dropdown } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
-// import components
-
-import Plus from '../../../../assets/icons/AddRoomIcon.svg';
-
 import './style.scss';
 
 const CreateRoom = ({ handleDropdown, saveValue, playersNb, addRoom }) => {

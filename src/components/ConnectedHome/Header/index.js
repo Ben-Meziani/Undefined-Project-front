@@ -4,23 +4,24 @@ import PropTypes from 'prop-types';
 import Burger from 'react-css-burger';
 import { Link } from 'react-router-dom';
 
-import titleBackground from 'src/assets/Fondtitre.png';
-import homeIcon from 'src/assets/homeIcon.svg';
+import titleBackground from '../../../assets/Fondtitre.png';
+import homeIcon from '../../../assets/icons/homeIcon.svg';
 
 import './style.scss';
 
 const Header = ({ toggleOpen, open, handleLogout }) => {
+  console.log('open vaut' + open);
   return (
     <div className="connected-home-header">
       <Link to="/dashboard">
-      <div className="home-button">
-        <img src={homeIcon} alt="home" />
-      </div>
+        <div className="home-button">
+          <img src={homeIcon} alt="home" />
+        </div>
       </Link>
       <div className="dropdown">
         <div className="dropdown-button">
           <Burger
-            active={open}
+            Active={open}
             burger="spring"
             hoverOpacity={1}
             color="#000000"
@@ -41,9 +42,9 @@ const Header = ({ toggleOpen, open, handleLogout }) => {
         <img src={titleBackground} alt="black paint" />
         <h1>UNDEFINED::ROLE PLAY</h1>
       </div>
-      
     </div>
-  )};
+  );
+};
 
 Header.propTypes = {
   toggleOpen: PropTypes.func.isRequired,

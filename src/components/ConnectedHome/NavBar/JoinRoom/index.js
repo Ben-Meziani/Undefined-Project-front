@@ -1,8 +1,6 @@
 import React from 'react';
 import { Modal } from 'semantic-ui-react';
 
-import Arrow from '../../../../assets/icons/JoinRoomIcon.svg';
-
 import './style.scss';
 
 const JoinRoomIcon = () => (
