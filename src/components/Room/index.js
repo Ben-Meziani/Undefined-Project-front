@@ -1,18 +1,26 @@
 import React from 'react';
+import ChatRoom from './ChatRoom';
+import DicesHistory from './Dices/DicesHistory';
+import DicesThrow from './Dices/DicesThrow';
+import NavBarRoom from './NavBarRoom';
+import Players from './Players';
+import PlayerNotes from './PlayerNotes';
+import SharedFiles from './SharedFiles';
+import SharedView from './SharedView';
+
+import './style.scss';
 
 const Room = () => (
 
   <div>
-    <div>NavBar</div>
-    <div>SharedView</div>
-    <div>Players</div>
-    <div>ToolsMenu</div>
-    <div>SharedFiles</div>
-    <div>DicesHistory</div>
-    <div>Dices</div>
-    <div>PersonnalNotes</div>
-    <div>DisplayTool</div>
-    <div>Chat</div>
+    <NavBarRoom />
+    <Players />
+    <SharedView />
+    <ChatRoom />
+    <SharedFiles />
+    <DicesHistory />
+    <DicesThrow />
+    <PlayerNotes />
   </div>
 
 );
