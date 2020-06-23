@@ -1,10 +1,11 @@
 export const LOGIN = 'LOGIN';
 export const LOGOUT = 'LOGOUT';
 export const REGISTER = 'REGISTER';
-export const EDIT_USER = 'EDIT_USER';
 export const SEND_AVATAR = 'SEND_AVATAR';
+export const GET_AVATAR = 'GET_AVATAR';
 export const CHANGE_FILE = 'CHANGE_FILE';
 export const CONNECT = 'CONNECT';
+export const SAVE_USER = 'SAVE_USER';
 
 export const login = () => ({
   type: LOGIN,
@@ -18,11 +19,6 @@ export const register = () => ({
   type: REGISTER,
 });
 
-export const editUser = (userDatas) => ({
-  type: EDIT_USER,
-  userDatas,
-});
-
 export const changeFile = (selectedFile) => ({
   type: CHANGE_FILE,
   selectedFile,
@@ -32,6 +28,15 @@ export const sendAvatar = () => ({
   type: SEND_AVATAR,
 });
 
+export const getAvatar = () => ({
+  type: GET_AVATAR,
+});
+
 export const connect = () => ({
   type: CONNECT,
+});
+
+export const saveUser = (currentUser) => ({
+  type: SAVE_USER,
+  currentUser,
 });

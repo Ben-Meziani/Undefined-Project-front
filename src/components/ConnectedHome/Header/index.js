@@ -9,8 +9,7 @@ import homeIcon from '../../../assets/icons/homeIcon.svg';
 
 import './style.scss';
 
-const Header = ({ toggleOpen, open, handleLogout }) => {
-  console.log('open vaut' + open);
+const Header = ({ toggleOpen, open, handleLogout, id }) => {
   return (
     <div className="connected-home-header">
       <Link to="/dashboard">
@@ -33,7 +32,7 @@ const Header = ({ toggleOpen, open, handleLogout }) => {
           <div className="dropdown-links">
             <ul>
               <li><Link to="/home" onClick={handleLogout} onClick={toggleOpen}>Se déconnecter</Link></li>
-              <li><Link to="/dashboard/user/:userId/edit" onClick={toggleOpen}>Modifier son profil</Link></li>
+              <li><Link to={`/dashboard/user/${id}/edit`} onClick={toggleOpen}>Modifier son profil</Link></li>
             </ul>
           </div>
         </div>
@@ -49,6 +48,7 @@ const Header = ({ toggleOpen, open, handleLogout }) => {
 Header.propTypes = {
   toggleOpen: PropTypes.func.isRequired,
   open: PropTypes.bool.isRequired,
+  id: PropTypes.number.isRequired,
   handleLogout: PropTypes.func.isRequired,
 };
 

@@ -23,7 +23,6 @@ const Login = ({
     evt.preventDefault();
     login();
   };
-console.log('dans Login logged' + logged);
   return (
     <div className="login">
       {!logged && (
