@@ -4,7 +4,7 @@ export * from './user';
 export const TOGGLE_OPEN = 'TOGGLE_OPEN';
 export const CHANGE_VALUE = 'CHANGE_VALUE';
 export const DROPDOWN_CHANGE = 'DROPDOWN_CHANGE';
-export const FINISH_LOADING = 'FINISH_LOADING';
+export const LOADING = 'LOADING';
 
 export const toggleOpen = () => ({
   type: TOGGLE_OPEN,
@@ -15,12 +15,12 @@ export const dropdownChange = (selectedValue) => ({
   selectedValue,
 });
 
-export const changeValue = (value) => ({
+export const changeValue = (name, value) => ({
   type: CHANGE_VALUE,
+  name,
   value,
 });
 
-export const finishLoading = () => ({
-  type: FINISH_LOADING,
+export const loading = () => ({
+  type: LOADING,
 });
-

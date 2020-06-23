@@ -1,10 +1,9 @@
 import { connect } from 'react-redux';
 
-import { fetchUserDatas } from 'src/actions';
-import App from 'src/components/App';
+import App from '../../components/App';
 
 const mapStateToProps = (state) => ({
-  userLogged: state.user.logged,
+  logged: state.user.logged,
 });
 
 const mapDispatchToProps = (dispatch) => ({

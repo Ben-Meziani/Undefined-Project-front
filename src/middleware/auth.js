@@ -6,13 +6,11 @@ import axios from 'axios';
 import {
   LOGIN,
   LOGOUT,
-  finishLoading,
-  connectUser,
-  CHECK_CONNEXION,
-  changeValue,
-  authSuccess,
+  loading,
   REGISTER,
-} from 'src/actions';
+  connect,
+  register,
+} from '../actions';
 
 const URI = 'http://ec2-54-234-79-207.compute-1.amazonaws.com';
 
@@ -20,7 +18,7 @@ const auth = (store) => (next) => (action) => {
   switch (action.type) {
     case LOGIN: {
       const state = store.getState();
-      axios.post(`${URI}/login`, {
+     /*  axios.post(`${URI}/login`, {
         email: state.user.email,
         password: state.user.password,
       }, {
@@ -28,13 +26,25 @@ const auth = (store) => (next) => (action) => {
       })
         .then((response) => {
           console.log('response', response.data);
+          console.log(response);
           store.dispatch(connect());
         })
         .catch((error) => {
           console.error(error);
         })
         .finally(() => {
-          store.dispatch(finishLoading());
+          store.dispatch(loading());
+        }); */
+      axios.post(`${URI}/login_check`, {
+        email: state.user.email,
+        password: state.user.password,
+      })
+        .then((response) => {
+          console.log(response.status);
+          store.dispatch(connect());
+        })
+        .catch((error) => {
+          console.error(error);
         });
       next(action);
       break;
@@ -61,7 +71,14 @@ const auth = (store) => (next) => (action) => {
           console.error(error);
         })
         .finally(() => {
-          store.dispatch(finishLoading());
+          store.dispatch(loading());
+        });
+      axios.post(`${URI}/login_check`, {
+        email: state.user.email,
+        password: state.user.password,
+      })
+        .catch((response) => {
+          console.log(response.status);
         });
       next(action);
       break;

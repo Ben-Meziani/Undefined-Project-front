@@ -7,6 +7,7 @@ import {
   Grid,
   Loader,
 } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 import Field from './Field';
 import RegisterAvatar from './RegisterAvatar';
 
@@ -14,14 +15,14 @@ const Register = ({
   email,
   password,
   pseudo,
-  changeField,
-  registration,
-  responseLoading,
+  changeValue,
+  register,
+  loading,
   userRegistered,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    registration();
+    register();
   };
 
   return (
@@ -38,7 +39,7 @@ const Register = ({
                   type="text"
                   placeholder="Pseudo"
                   name="pseudo"
-                  propFromActionsOnChange={changeField}
+                  changeValue={changeValue}
                   value={pseudo}
                 />
               </Form.Field>
@@ -48,7 +49,7 @@ const Register = ({
                   type="email"
                   placeholder="Email"
                   name="email"
-                  propFromActionsOnChange={changeField}
+                  changeValue={changeValue}
                   value={email}
                 />
               </Form.Field>
@@ -58,7 +59,7 @@ const Register = ({
                   type="password"
                   placeholder="Mot de passe"
                   name="password"
-                  propFromActionsOnChange={changeField}
+                  changeValue={changeValue}
                   value={password}
                 />
               </Form.Field>
@@ -69,17 +70,17 @@ const Register = ({
           </Grid>
         </>
       )}
-      {responseLoading && (
+      {loading && (
       <>
         <Loader active inline="centered" />
       </>
       )}
-      {userRegistered && !responseLoading && (
+      {userRegistered && !loading && (
       <>
         <p>Enregistré!</p>
-        <NavLink to="/dashboard">
+        <Link to="/dashboard">
           Allez sur votre profil.
-        </NavLink>
+        </Link>
       </>
       )}
     </div>
@@ -90,8 +91,8 @@ Register.propTypes = {
   email: PropTypes.string.isRequired,
   password: PropTypes.string.isRequired,
   pseudo: PropTypes.string.isRequired,
-  changeField: PropTypes.func.isRequired,
-  responseLoading: PropTypes.bool.isRequired,
+  changeValue: PropTypes.func.isRequired,
+  loading: PropTypes.bool.isRequired,
   userRegistered: PropTypes.bool.isRequired,
   register: PropTypes.func.isRequired,
 };

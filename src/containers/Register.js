@@ -1,18 +1,18 @@
 import { connect } from 'react-redux';
-import Register from 'src/components/HomePage/Forms/Register';
-import { changeValue, register } from 'src/actions';
+import Register from '../components/HomePage/Forms/Register';
+import { changeValue, register } from '../actions';
 
 const mapStateToProps = (state) => ({
   email: state.user.email,
   password: state.user.password,
   pseudo: state.user.pseudo,
-  responseLoading: state.user.responseLoading,
+  loading: state.user.loading,
   userRegistered: state.user.userRegistered,
 
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  changeField: (value, name) => {
+  changeValue: (value, name) => {
     const action = changeValue(name, value);
     dispatch(action);
   },

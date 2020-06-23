@@ -31,8 +31,8 @@ const Header = ({ toggleOpen, open, handleLogout }) => {
         <div className={open ? 'dropdown-content dropdown-content--open' : 'dropdown-content'}>
           <div className="dropdown-links">
             <ul>
-              <li><Link to="/" onClick={handleLogout} onClick={toggleOpen}>Se déconnecter</Link></li>
-              <li><Link to="/user/:userId/edit" onClick={toggleOpen}>Modifier son profil</Link></li>
+              <li><Link to="/home" onClick={handleLogout} onClick={toggleOpen}>Se déconnecter</Link></li>
+              <li><Link to="/dashboard/user/:userId/edit" onClick={toggleOpen}>Modifier son profil</Link></li>
             </ul>
           </div>
         </div>

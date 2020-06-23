@@ -1,14 +1,14 @@
 import React from 'react';
 
-import raindrop from 'src/assets/transparent-raindrop-23.png';
+import raindrop from '../../../assets/transparent-raindrop-23.png';
 
 import './style.scss';
 
 const RainDropAnimation = () => {
   return (
-     <div className="raindrop-animation">
-     <div className="raindrop1">
-     <img src={raindrop} alt="black raindrop" />
+    <div className="raindrop-animation">
+      <div className="raindrop1">
+        <img src={raindrop} alt="black raindrop" />
       </div>
       <div className="raindrop2">
         <img src={raindrop} alt="black raindrop" />
@@ -19,7 +19,7 @@ const RainDropAnimation = () => {
       <div className="raindrop4">
         <img src={raindrop} alt="black raindrop" />
       </div>
-   </div>
+    </div>
   )};
 
 export default RainDropAnimation;

@@ -10,16 +10,16 @@ const Carousel = () => (
   <>
     <div className="carousel-show">
       <Route
-        path="/team"
+        path="/home/team"
         component={Team}
       />
       <Route
-        path="/"
         exact
+        path="/home"
         component={Presentation}
       />
       <Route
-        path="/demonstration"
+        path="/home/demonstration"
         component={Demonstration}
       />
     </div>

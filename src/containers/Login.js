@@ -1,23 +1,24 @@
 import { connect } from 'react-redux';
-import Login from 'src/components/HomePage/Forms/Login';
-import { changeValue, login } from 'src/actions';
+// eslint-disable-next-line import/extensions
+import Login from '../components/HomePage/Forms/Login';
+import { changeValue, login } from '../actions';
 
 const mapStateToProps = (state) => ({
   email: state.user.email,
   password: state.user.password,
-  userLogged: state.user.userLogged,
-  responseLoading: state.user.responseLoading,
+  logged: state.user.logged,
+  loading: state.user.loading,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  changeField: (value, name) => {
+  changeValue: (value, name) => {
     const action = changeValue(name, value);
     dispatch(action);
   },
   login: () => {
     const action = login();
     dispatch(action);
-  }
+  },
 
 });
 

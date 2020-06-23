@@ -1,19 +1,18 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Form, Button } from 'semantic-ui-react';
-import PropTypes from 'prop-types';
+/* import PropTypes from 'prop-types'; */
 
 // import components
 
 import './style.scss';
 
-import avatarImg from 'src/assets/avatarDefault.png'
+import avatarImg from '../../../assets/avatarDefault.png';
 
-const EditProfile = ({ saveAvatar, fetchUserDatas, users }) => {
-  useEffect(fetchUserDatas, []);
-  const showAvatar = (evt) => {
+const EditProfile = () => {
+/*   const showAvatar = (evt) => {
     console.log(evt.target.files[0]);
     saveAvatar(evt.target.files);
-  };
+  }; */
 
   return (
     <div className="edit-profile-section">
@@ -24,7 +23,7 @@ const EditProfile = ({ saveAvatar, fetchUserDatas, users }) => {
         <div className="avatar-preview">
           <img src={avatarImg} alt="unknown" />
         </div>
-        <input type="file" className="avatar-choice-input" onChange={showAvatar} />
+        <input type="file" className="avatar-choice-input" /* onChange={} */ />
       </div>
       <div className="edit-profile-form">
         <Form>
@@ -53,21 +52,6 @@ const EditProfile = ({ saveAvatar, fetchUserDatas, users }) => {
       </div>
     </div>
   );
-};
-
-EditProfile.propTypes = {
-    users: PropTypes.arrayOf(
-    PropTypes.shape({
-      email: PropTypes.string,
-      password: PropTypes.string,
-      pseudo: PropTypes.string,
-      avatar: PropTypes.string,
-    }).isRequired,
-  ).isRequired,
-};
-
-EditProfile.propTypes = {
- fetchUserDatas: PropTypes.func.isRequired,
 };
 
 export default EditProfile;

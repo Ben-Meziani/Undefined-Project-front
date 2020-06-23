@@ -30,4 +30,3 @@ export const showAvatar = (selectedFile) => ({
 export const connect = () => ({
   type: CONNECT,
 });
-
