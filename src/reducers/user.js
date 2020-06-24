@@ -8,14 +8,18 @@ import {
   LOADING,
   CONNECT,
   CHANGE_FILE,
+  SAVE_USER,
+  SEND_AVATAR,
+  GET_AVATAR,
 } from '../actions';
 
 const initialState = {
-  users: [],
+  currentUser: [],
   email: '',
   password: '',
   pseudo: '',
-  avatarImg: '',
+  id: 0,
+  icon: '',
   logged: false,
   open: false,
   roomName: '',
@@ -67,9 +71,27 @@ const user = (state = initialState, action = {}) => {
         ...state,
         logged: true,
       };
+    case SAVE_USER: {
+      return {
+        ...state,
+        pseudo: action.currentUser.pseudo,
+        id: action.currentUser.id,
+        icon: action.currentUser.icon,
+      };
+    }
     case CHANGE_FILE:
       return {
         ...state,
+        icon: action.selectedFile,
+      };
+    case SEND_AVATAR:
+      return {
+        ...state,
+      };
+    case GET_AVATAR:
+      return {
+        ...state,
+        icon: action.icon,
       };
     default:
       return state;

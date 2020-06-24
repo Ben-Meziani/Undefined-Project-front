@@ -1,7 +1,7 @@
+/* eslint-disable no-console */
 // Tout ce qui concerne la connexion générale de l'utilisateur
 
 import axios from 'axios';
-// import jwt from 'jwt-decode';
 
 import {
   LOGIN,
@@ -10,6 +10,7 @@ import {
   REGISTER,
   connect,
   register,
+  saveUser,
 } from '../actions';
 
 const serverURI = 'http://ec2-54-234-79-207.compute-1.amazonaws.com';
@@ -18,29 +19,16 @@ const auth = (store) => (next) => (action) => {
   switch (action.type) {
     case LOGIN: {
       const state = store.getState();
-     /*  axios.post(`${URI}/login`, {
-        email: state.user.email,
-        password: state.user.password,
-      }, {
-        withCredentials: true,
-      })
-        .then((response) => {
-          console.log('response', response.data);
-          console.log(response);
-          store.dispatch(connect());
-        })
-        .catch((error) => {
-          console.error(error);
-        })
-        .finally(() => {
-          store.dispatch(loading());
-        }); */
+
+      // CHECK THE TOKEN AND GET COOKIE ON LOGIN
+
       axios.post(`${serverURI}/login_check`, {
         email: state.user.email,
         password: state.user.password,
       })
         .then((response) => {
-          console.log(response.status);
+          const saveCurrentUser = saveUser(response.data);
+          store.dispatch(saveCurrentUser);
           store.dispatch(connect());
         })
         .catch((error) => {
@@ -49,6 +37,9 @@ const auth = (store) => (next) => (action) => {
       next(action);
       break;
     }
+
+    // SEND NEW USER'S DATA
+
     case REGISTER: {
       const state = store.getState();
       axios.post(`${serverURI}/register`, {
@@ -60,7 +51,6 @@ const auth = (store) => (next) => (action) => {
         withCredentials: true,
       })
         .then((response) => {
-          console.log('response', response.data);
           if (response.data) {
             console.log(response);
             store.dispatch(register());
@@ -73,6 +63,7 @@ const auth = (store) => (next) => (action) => {
         .finally(() => {
           store.dispatch(loading());
         });
+      // REQUETE NECESSAIRE ?
       axios.post(`${serverURI}/login_check`, {
         email: state.user.email,
         password: state.user.password,
@@ -83,6 +74,9 @@ const auth = (store) => (next) => (action) => {
       next(action);
       break;
     }
+
+    // DECONNECT A USER
+
     case LOGOUT:
       console.log('je me déconnecte');
       axios.get(`${serverURI}/logout`, {

@@ -10,6 +10,7 @@ import Header from '../../../components/ConnectedHome/Header';
 const mapStateToProps = (state) => ({
   open: state.reducer.open,
   logged: state.reducer.logged,
+  id: state.user.id,
 });
 
 const mapDispatchToProps = (dispatch) => ({

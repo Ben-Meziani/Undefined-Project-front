@@ -2,10 +2,14 @@ import { connect } from 'react-redux';
 
 import EditProfile from '../../../components/ConnectedHome/EditProfile';
 
-import { changeFile } from '../../../actions';
+import { changeFile, changeValue, sendAvatar } from '../../../actions';
 
 const mapStateToProps = (state) => ({
-  avatarImg: state.user.avatarImg,
+  email: state.user.email,
+  pseudo: state.user.pseudo,
+  icon: state.user.icon,
+  id: state.user.id,
+  password: state.user.password,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -13,6 +17,18 @@ const mapDispatchToProps = (dispatch) => ({
     const action = changeFile(selectedFile);
     dispatch(action);
   },
+  changeValue: (value, name) => {
+    const action = changeValue(name, value);
+    dispatch(action);
+  },
+  sendAvatar: () => {
+    const action = sendAvatar();
+    dispatch(action);
+  },
+ /*  getAvatar: () => {
+    const action = getAvatar();
+    dispatch(action);
+  }, */
 });
 
 export default connect(
