@@ -7,6 +7,7 @@
   flex-direction: column;
   border: solid .5em black;
   text-align: left;
+  font-family: 'Roboto Mono', monospace;
 
 }
 
@@ -16,7 +17,8 @@
 
   &-input {
     width: 100%;
-    padding: 1rem 2rem;
+    padding: .5rem .5rem;
+    border-top: solid .1em black;
   }
 
   &-button {
@@ -24,6 +26,9 @@
     line-height: 1;
     outline: none;
     background-color : transparent;
+    border: 0;
+    border-top: solid .1em black;
+    border-left: solid .1em black;
   }
 }
 
