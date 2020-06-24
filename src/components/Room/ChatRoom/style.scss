@@ -1,0 +1,47 @@
+.chatroom{
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: solid .5em black;
+  text-align: left;
+
+}
+
+.form {
+  height: 3em;
+  display: flex;
+
+  &-input {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+
+  &-button {
+    padding: 1rem 2rem;
+    display: flex;
+  }
+}
+
+.messages {
+  height: 100%;
+  padding: 1rem;
+  overflow-x: visible;
+  overflow-y: auto;
+}
+
+.message {
+  margin: 1rem;
+  &-author {
+    padding: .3rem 0;
+    color: grey;
+  }
+  &-content {
+    padding: .3rem;
+    background-color: white;
+    display: inline-block;
+    border-radius: 5px;
+  }
+}

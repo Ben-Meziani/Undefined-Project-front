@@ -3,7 +3,7 @@ import ChatMessage from './ChatMessage';
 import './style.scss';
 
 const GeneralChannel = () => (
-  <div className="message">
+  <div className="messages">
     <ChatMessage />
     <ChatMessage />
     <ChatMessage />

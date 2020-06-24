@@ -5,7 +5,7 @@ import MessageField from './MessageField';
 import './style.scss';
 
 const ChatRoom = () => (
-  <div>
+  <div className="chatroom">
     <GeneralChannel />
     <MessageField />
   </div>
