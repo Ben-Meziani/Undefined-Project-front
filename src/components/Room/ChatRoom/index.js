@@ -1,8 +1,14 @@
 import React from 'react';
+import GeneralChannel from './GeneralChannel';
+import MessageField from './MessageField';
+
 import './style.scss';
 
 const ChatRoom = () => (
-  <div>ChatRoom</div>
+  <div>
+    <GeneralChannel />
+    <MessageField />
+  </div>
 );
 
 export default ChatRoom;

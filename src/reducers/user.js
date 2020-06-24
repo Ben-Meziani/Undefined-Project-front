@@ -20,12 +20,21 @@ const initialState = {
   pseudo: '',
   id: 0,
   icon: '',
+
   logged: false,
+
   open: false,
   roomName: '',
   playersNb: 0,
+
   loading: false,
+
   userRegistered: false,
+  regPassword: '',
+  regEmail: '',
+  regPseudo: '',
+  regIcon: '',
+
 };
 
 const user = (state = initialState, action = {}) => {

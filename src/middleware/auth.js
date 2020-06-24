@@ -43,10 +43,10 @@ const auth = (store) => (next) => (action) => {
     case REGISTER: {
       const state = store.getState();
       axios.post(`${serverURI}/register`, {
-        email: state.user.email,
-        password: state.user.password,
-        pseudo: state.user.pseudo,
-        created_at: '2020/06/19',
+        email: state.user.regEmail,
+        password: state.user.regPassword,
+        pseudo: state.user.regPseudo,
+        icon: state.user.regIcon,
       }, {
         withCredentials: true,
       })
