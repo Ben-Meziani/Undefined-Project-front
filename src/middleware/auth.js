@@ -23,8 +23,8 @@ const auth = (store) => (next) => (action) => {
       // CHECK THE TOKEN AND GET COOKIE ON LOGIN
 
       axios.post(`${serverURI}/login_check`, {
-        email: state.user.email,
-        password: state.user.password,
+        email: state.user.currentEmail,
+        password: state.user.currentPassword,
       })
         .then((response) => {
           console.log(response);
@@ -47,7 +47,7 @@ const auth = (store) => (next) => (action) => {
         email: state.user.regEmail,
         password: state.user.regPassword,
         pseudo: state.user.regPseudo,
-        icon: state.user.regIcon,
+
       }, {
         withCredentials: true,
       })

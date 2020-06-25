@@ -89,8 +89,10 @@ const Register = ({
 
 Register.propTypes = {
   regEmail: PropTypes.string.isRequired,
+
   regPassword: PropTypes.string.isRequired,
   regPseudo: PropTypes.string.isRequired,
+
   changeValue: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
   userRegistered: PropTypes.bool.isRequired,

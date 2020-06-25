@@ -14,17 +14,22 @@ const EditProfile = ({
   email,
   password,
   pseudo,
-  changeValue,
   icon,
+  changeValue,
+  sendAvatarToPreview,
+  sendEditedDatas,
 }) => {
   // GET THE UPLOADED FILE
   const handleChange = (evt) => {
     changeFile(evt.target.files[0].name);
+    sendAvatarToPreview(evt.target.files[0].name);
   };
+
   // SEND THE NEW DATA
   const handleSubmit = (evt) => {
     evt.preventDefault();
     console.log('je veux envoyer les nouvelles infos du profil au serveur');
+    sendEditedDatas();
   };
 
   return (
@@ -34,12 +39,12 @@ const EditProfile = ({
       </div>
       <div className="edit-profile-avatar">
         <div className="avatar-preview">
-          <img src={{ uri: `http://localhost:8000/room/upload/${icon}` }} alt="unknown" />
+          <img src={`http://ec2-54-234-79-207.compute-1.amazonaws.com/uploads/icons/${icon}`} alt="unknown" />
         </div>
         <input type="file" className="avatar-choice-input" accept="image/*" onChange={handleChange} />
       </div>
       <div className="edit-profile-form">
-        <Form>
+        <Form onSubmit={handleSubmit}>
           <Form.Field>
             <label htmlFor="email" className="edit-profile-form-label">Email
               <Field
@@ -87,7 +92,7 @@ const EditProfile = ({
               />
             </label>
           </Form.Field>
-          <Button type="submit" onSubmit={handleSubmit}>Valider</Button>
+          <Button type="submit">Valider</Button>
         </Form>
       </div>
     </div>
@@ -101,6 +106,7 @@ EditProfile.propTypes = {
   password: PropTypes.string,
   changeFile: PropTypes.func.isRequired,
   changeValue: PropTypes.func.isRequired,
+  sendEditedDatas: PropTypes.func.isRequired,
 };
 
 EditProfile.defaultProps = {

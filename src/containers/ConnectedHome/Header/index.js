@@ -1,8 +1,7 @@
 import { connect } from 'react-redux';
 
 // import actions
-import { toggleOpen } from '../../../actions';
-import { logout } from '../../../actions/user';
+import { toggleOpen, logout } from '../../../actions';
 
 // import components
 import Header from '../../../components/ConnectedHome/Header';

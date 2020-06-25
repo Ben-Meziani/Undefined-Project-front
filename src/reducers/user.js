@@ -10,8 +10,7 @@ import {
   CHECK,
   CHANGE_FILE,
   SAVE_USER,
-  SEND_AVATAR,
-  GET_AVATAR,
+  SEND_EDITED_DATAS,
 } from '../actions';
 
 const initialState = {
@@ -100,14 +99,9 @@ const user = (state = initialState, action = {}) => {
         ...state,
         icon: action.selectedFile,
       };
-    case SEND_AVATAR:
+    case SEND_EDITED_DATAS:
       return {
         ...state,
-      };
-    case GET_AVATAR:
-      return {
-        ...state,
-        icon: action.icon,
       };
     default:
       return state;

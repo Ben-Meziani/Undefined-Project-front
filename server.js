@@ -2,11 +2,13 @@
  * Require
  */
 const express = require('express');
+
 const { Server } = require('http');
 const socket = require('socket.io');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 // const axios = require('axios')
+
 
 /*
  * Vars
@@ -15,6 +17,7 @@ const app = express();
 const server = Server(app);
 const io = socket(server);
 const port = 3001;
+
 
 // Session
 app.use(session({
@@ -140,8 +143,11 @@ io.on('connection', (socket) => {
   socket.on('disconnect', () => {
     console.log('user disconnected');
   });
+
 });
 
 server.listen(port, () => {
   console.log(`listening on *:${port}`);
+
 });
+

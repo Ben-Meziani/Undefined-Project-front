@@ -12,8 +12,8 @@ import Field from './Field';
 import './style.scss';
 
 const Login = ({
-  email,
-  password,
+  currentEmail,
+  currentPassword,
   changeValue,
   login,
   logged,
@@ -35,7 +35,7 @@ const Login = ({
               placeholder="Email"
               name="email"
               changeValue={changeValue}
-              value={email}
+              value={currentEmail}
             />
           </Form.Field>
           <Form.Field required>
@@ -45,7 +45,7 @@ const Login = ({
               placeholder="Mot de passe"
               name="password"
               changeValue={changeValue}
-              value={password}
+              value={currentPassword}
             />
           </Form.Field>
           <Button color="black" type="submit" className="center aligned">
@@ -65,8 +65,8 @@ const Login = ({
 };
 
 Login.propTypes = {
-  email: PropTypes.string.isRequired,
-  password: PropTypes.string.isRequired,
+  currentEmail: PropTypes.string.isRequired,
+  currentPassword: PropTypes.string.isRequired,
   changeValue: PropTypes.func.isRequired,
   logged: PropTypes.bool.isRequired,
   loading: PropTypes.bool,
