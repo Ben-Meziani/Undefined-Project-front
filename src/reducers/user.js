@@ -82,7 +82,7 @@ const user = (state = initialState, action = {}) => {
         ...state,
         logged: true,
       };
-      case CHECK:
+    case CHECK:
       return {
         ...state,
         logged: true,
