@@ -5,15 +5,17 @@ import './style.scss';
 
 const GeneralChannel = ({ chatMessages }) => (
   <div className="messages">
-    {chatMessages.map((message) => (
-      <ChatMessage key={message.id} {...message} />
+    {chatMessages.map((chatMessage) => (
+      <ChatMessage key={chatMessage.id} {...chatMessage} />
     ))}
   </div>
 );
 
 GeneralChannel.propTypes = {
   chatMessages: PropTypes.arrayOf(
-    PropTypes.shape({ }),
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    }),
   ).isRequired,
 };
 
