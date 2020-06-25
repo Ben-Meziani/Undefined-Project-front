@@ -1,5 +1,5 @@
 import React from 'react';
-import ChatRoom from './ChatRoom';
+import Chatroom from './Chatroom';
 import DicesHistory from './Dices/DicesHistory';
 import DicesThrow from './Dices/DicesThrow';
 import NavBarRoom from './NavBarRoom';
@@ -13,7 +13,7 @@ import './style.scss';
 const Room = () => (
 
   <div>
-    <ChatRoom />
+    <Chatroom />
   </div>
 
 );
