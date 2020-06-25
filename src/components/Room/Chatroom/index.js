@@ -1,6 +1,6 @@
 import React from 'react';
 import GeneralChannel from '../../../containers/Room/Chatroom/GeneralChannel';
-import MessageField from './MessageField';
+import MessageField from '../../../containers/Room/Chatroom/MessageField';
 
 import './style.scss';
 
