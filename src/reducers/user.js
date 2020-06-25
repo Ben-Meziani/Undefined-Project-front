@@ -70,6 +70,9 @@ const user = (state = initialState, action = {}) => {
         logged: false,
         email: '',
         password: '',
+        pseudo: '',
+        id: 0,
+        icon: '',
       };
     case LOADING:
       return {

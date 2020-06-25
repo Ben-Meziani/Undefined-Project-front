@@ -4,11 +4,11 @@ import './style.scss';
 
 const MessageField = () => (
   <div>
-    <form className="form">
-      <input className="form-input" type="text" placeholder="Veuillez saisir un message..." />
+    <form className="chatroom-form">
+      <input className="chatroom-field" type="text" placeholder="Veuillez saisir un message..." />
       <button
         type="button"
-        className="form-button"
+        className="chatroom-send"
       >
         <Icon
           name="send"
