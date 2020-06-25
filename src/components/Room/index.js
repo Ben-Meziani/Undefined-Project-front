@@ -1,5 +1,5 @@
 import React from 'react';
-import Chatroom from './Chatroom';
+import Chatroom from '../../containers/Room/Chatroom';
 import DicesHistory from './Dices/DicesHistory';
 import DicesThrow from './Dices/DicesThrow';
 import NavBarRoom from './NavBarRoom';

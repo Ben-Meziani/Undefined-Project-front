@@ -7,9 +7,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  // uneAutreProp: () => {
-  //   console.log('uneFonction pour dispatcher une action'),
-  //  },
+
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(GeneralChannel);

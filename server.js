@@ -1,13 +1,11 @@
+/* eslint-disable prefer-destructuring */
 /*
  * Require
  */
 const express = require('express');
-
-const { Server } = require('http');
-const socket = require('socket.io');
 const bodyParser = require('body-parser');
-const session = require('express-session');
-// const axios = require('axios')
+const Server = require('http').Server;
+const socket = require('socket.io');
 
 
 /*
@@ -18,111 +16,52 @@ const server = Server(app);
 const io = socket(server);
 const port = 3001;
 
-
-// Session
-app.use(session({
-  secret: 'keyboard cat',
-  resave: false,
-  saveUninitialized: true,
-  cookie: {},
-}));
+const db = {
+  users: {
+    'root@oclock.io': {
+      password: 'root',
+      username: 'ChenpeupludeROOT',
+      color: '#c23616',
+    },
+  },
+};
 
 /*
  * Express
  */
 app.use(bodyParser.json());
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'http://localhost:8080');
-  res.header('Access-Control-Allow-Credentials', true);
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+app.use((request, response, next) => {
+  response.header('Access-Control-Allow-Origin', '*');
+  // response.header('Access-Control-Allow-Credentials', true);
+  response.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  response.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
   next();
 });
 
 /*
- Database connection
+ * Theme json
  */
-const mysql = require('mysql');
+app.get('/theme/:email', (request, response) => {
+  const email = request.params.email;
+  if (!email) {
+    console.log('<< 400 BAD_REQUEST');
+    response.status(400).end();
+  }
 
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'root',
-  port: 3306,
-  database: 'chattest',
-});
+  let color;
+  if (db.users[email] && db.users[email].color) {
+    color = db.users[email].color;
+  }
 
-connection.connect((err) => {
-  if (err) throw err;
-  console.log('Connexion à la bdd ok!');
-});
-
-// function which verify the connection
-function isConnected(req, res, next) {
-  if (req.session.user) {
-    console.log('User logged in, next');
-    next();
+  // Réponse HTTP adaptée.
+  if (color) {
+    console.log('<< 200 OK', email, color);
+    response.send(color);
   }
   else {
     console.log('<< 401 UNAUTHORIZED');
-    res.status(401).end();
+    response.status(401).end();
   }
-}
-
-// check session
-app.post('/isConnected', (req, res) => {
-  console.log(req.session);
-  if (req.session.user) {
-    res.json({ logged: true, info: req.session.user });
-  }
-  else {
-    res.json({ logged: false });
-  }
-});
-
-// connection with email/password
-app.post('/login', (req, res) => {
-  console.log('>> POST /login', req.body);
-
-  const { email, password } = req.body;
-
-  connection.query('SELECT * FROM users', (err, rows) => {
-    rows.forEach((row) => {
-      let pseudo;
-      if (row.email === email && row.password === password) {
-        pseudo = row.pseudo;
-        console.log(pseudo);
-        // envoi du pseudo dans la réponse
-        if (pseudo) {
-          req.session.user = row.email;
-          console.log('<< 200 OK', req.session.user);
-          res.json({ logged: true, info: req.session.user, pseudo });
-        }
-        else {
-          console.log('<< 401 UNAUTHORIZED');
-          res.status(401).end();
-        }
-      }
-    });
-  });
-});
-
-// deconnection
-app.post('/logout', (req, res) => {
-  req.session.destroy();
-  res.json({ logged: false });
-});
-
-// Récupération des données
-app.get('/characters', (req, res) => {
-  console.log('>> GET /characters', req.body);
-
-  connection.query('SELECT * FROM characters', (err, rows) => {
-    rows.forEach((row) => {
-      console.log(`nom ${row.name} house ${row.house}`);
-    });
-    res.json(rows);
-  });
 });
 
 /*
@@ -138,16 +77,33 @@ io.on('connection', (ws) => {
   });
 });
 
-io.on('connection', (socket) => {
-  console.log('a user connected');
-  socket.on('disconnect', () => {
-    console.log('user disconnected');
-  });
+// Login avec vérification : POST /login
+app.post('/check_login', (request, response) => {
+  console.log('>> POST /check_login', request.body);
 
+  // Extraction des données de la requête provenant du client.
+  const { email, password } = request.body;
+
+  // Vérification des identifiants de connexion proposés auprès de la DB.
+  let username;
+  if (db.users[email] && db.users[email].password === password) {
+    username = db.users[email].username;
+  }
+
+  // Réponse HTTP adaptée.
+  if (username) {
+    console.log('<< 200 OK', username);
+    response.send(username);
+  }
+  else {
+    console.log('<< 401 UNAUTHORIZED');
+    response.status(401).end();
+  }
 });
 
+/*
+ * Server
+ */
 server.listen(port, () => {
   console.log(`listening on *:${port}`);
-
 });
-

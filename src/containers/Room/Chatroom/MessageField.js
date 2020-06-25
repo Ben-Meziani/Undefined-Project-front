@@ -2,7 +2,6 @@ import { connect } from 'react-redux';
 
 import MessageField from '../../../components/Room/Chatroom/MessageField';
 
-
 import { sendMessage, changeText } from '../../../actions';
 
 const mapStateToProps = (state) => ({
