@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import EditProfile from '../../../components/ConnectedHome/EditProfile';
 
 import {
-  changeIconName,
   changeIconFile,
   changeIconUrl,
   changeValue,
@@ -19,14 +18,9 @@ const mapStateToProps = (state) => ({
   id: state.user.id,
   iconFile: state.upload.iconFile,
   imgURL: state.upload.imgURL,
-  display: state.upload.display,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  changeIconName: (avatarFileName) => {
-    const action = changeIconName(avatarFileName);
-    dispatch(action);
-  },
   changeIconFile: (iconFile) => {
     const action = changeIconFile(iconFile);
     dispatch(action);

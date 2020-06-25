@@ -1,5 +1,4 @@
 import {
-  CHANGE_ICON_NAME,
   CHANGE_ICON_FILE,
   CHANGE_ICON_URL,
   SEND_AVATAR_TO_PREVIEW,
@@ -15,15 +14,10 @@ const initialState = {
 
 const upload = (state = initialState, action = {}) => {
   switch (action.type) {
-    case CHANGE_ICON_NAME:
-      return {
-        ...state,
-        icon: action.iconFileName,
-      };
     case CHANGE_ICON_FILE:
       return {
         ...state,
-        iconFile: state.upload.iconFile,
+        iconFile: action.iconFile,
       };
     case CHANGE_ICON_URL:
       return {
