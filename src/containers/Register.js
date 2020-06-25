@@ -3,9 +3,9 @@ import Register from '../components/HomePage/Forms/Register';
 import { changeValue, register } from '../actions';
 
 const mapStateToProps = (state) => ({
-  email: state.user.email,
-  password: state.user.password,
-  pseudo: state.user.pseudo,
+  regEmail: state.user.regEmail,
+  regPassword: state.user.regPassword,
+  regPseudo: state.user.regPseudo,
   loading: state.user.loading,
   userRegistered: state.user.userRegistered,
 

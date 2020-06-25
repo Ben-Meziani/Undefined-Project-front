@@ -9,6 +9,7 @@ const RegisterAvatar = () => (
       size="small"
       alt="preview uploaded avatar"
       className="register-avatar-preview"
+      name="icon"
     />
   </div>
 );
