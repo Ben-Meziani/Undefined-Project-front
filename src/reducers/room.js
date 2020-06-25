@@ -2,10 +2,12 @@ import {
   CREATE_ROOM,
   CHANGE_TEXT,
   RECEIVE_MESSAGE,
+  TOGGLE_OPEN_CHAT,
 } from '../actions';
 
 const initialState = {
   open: false,
+  chatOpen: true,
   logged: false,
   roomName: '',
   playersNb: 0,
@@ -75,6 +77,11 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         text: action.payload,
+      };
+    case TOGGLE_OPEN_CHAT:
+      return {
+        ...state,
+        chatOpen: !state.chatOpen,
       };
 
       /* case CHANGE_VALUE:

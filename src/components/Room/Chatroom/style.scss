@@ -1,11 +1,10 @@
 .chatroom{
   width: 100%;
   margin: 0 auto;
-  height: 100vh;
-  position: relative;
+/*   height: 100vh; */
   display: flex;
   flex-direction: column;
-  border: solid .5em black;
+  /* border: solid .5em black; */
   text-align: left;
   font-family: 'Roboto Mono', monospace;
 
@@ -42,6 +41,8 @@
 
 .message {
   margin: 1rem;
+  max-width: 100vw;
+
   &-author {
     padding: .3rem 0;
     color: grey;

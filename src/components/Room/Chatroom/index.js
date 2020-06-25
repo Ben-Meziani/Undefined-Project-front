@@ -5,18 +5,29 @@ import MessageField from '../../../containers/Room/Chatroom/MessageField';
 
 import './style.scss';
 
-const Chatroom = ({ webSocketConnect }) => {
+const Chatroom = ({ webSocketConnect, chatOpen, toggleOpenChat }) => {
   useEffect(webSocketConnect, []);
   return (
     <div className="chatroom">
-      <GeneralChannel />
-      <MessageField />
+      <button
+        type="button"
+        onClick={toggleOpenChat}
+        className="chatroom-button"
+      >
+        +
+      </button>
+{/*       <GeneralChannel />
+      <MessageField /> */}
     </div>
   );
 };
 
 Chatroom.propTypes = {
   webSocketConnect: PropTypes.func.isRequired,
+  chatOpen: PropTypes.bool.isRequired,
+  toggleOpenChat: PropTypes.func.isRequired,
 };
 
 export default Chatroom;
+
+/* {chatOpen ? 'chatroom chatroom--open' : 'chatroom'} */

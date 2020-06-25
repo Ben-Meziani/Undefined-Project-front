@@ -6,8 +6,6 @@ const mapStateToProps = (state) => ({
   chatMessages: state.room.chatMessages,
 });
 
-const mapDispatchToProps = (dispatch) => ({
-
-});
+const mapDispatchToProps = null;
 
 export default connect(mapStateToProps, mapDispatchToProps)(GeneralChannel);
