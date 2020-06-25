@@ -17,7 +17,7 @@ const initialState = {
   currentUser: [],
   email: '',
   password: '',
-  pseudo: '',
+  pseudo: 'Rusard',
   id: 0,
   icon: '',
 

@@ -1,9 +1,8 @@
 import {
   CREATE_ROOM,
-  SEND_MESSAGE,
   CHANGE_TEXT,
+  RECEIVE_MESSAGE,
 } from '../actions';
-import { getNextId } from '../selectors';
 
 const initialState = {
   open: false,
@@ -16,32 +15,32 @@ const initialState = {
     {
       author: 'Harry Pot-de-Terre',
       content: 'Salut.',
-      id: 1,
+      id: 456,
     },
     {
       author: 'Reun Waizlé',
       content: 'Yo.',
-      id: 2,
+      id: 4564,
     },
     {
       author: 'Ermi Grangé',
       content: 'Vous vous faites encore la gueule ?',
-      id: 3,
+      id: 56,
     },
     {
       author: 'Reun Waizlé',
       content: 'Je préfère juste ne pas parler aux traitres.',
-      id: 4,
+      id: 789,
     },
     {
       author: 'Harry Pot-de-Terre',
       content: 'T\'es juste jaloux.',
-      id: 7,
+      id: 764,
     },
     {
       author: 'Ermi Grangé',
       content: 'Vous êtes chiants.',
-      id: 5,
+      id: 786,
     },
   ],
 };
@@ -57,19 +56,18 @@ const reducer = (state = initialState, action = {}) => {
       };
 
     // CHATROOM CASES
-    case SEND_MESSAGE: {
-      const id = getNextId(state.chatMessages);
-
+    case RECEIVE_MESSAGE: {
+      console.log('reducer RECEIVE_MESSAGE', action.chatMessage);
+      const newChatMessages = [
+        ...state.chatMessages,
+      ];
+      const newChatMessage = {
+        ...action.chatMessage,
+      };
+      newChatMessages.push(newChatMessage);
       return {
         ...state,
-        chatMessages: [
-          ...state.chatMessages,
-          {
-            author: 'Neville Long-du-bras',
-            content: state.text,
-            id,
-          },
-        ],
+        chatMessages: newChatMessages,
         text: '',
       };
     }
