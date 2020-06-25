@@ -56,6 +56,10 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "lodash": "^4.17.15",
+    "mysql": "^2.18.1",
     "nodemon": "^2.0.4",
     "prop-types": "*",
     "react": "*",
@@ -65,13 +69,7 @@
     "react-router-dom": "^5.2.0",
     "redux": "*",
     "semantic-ui-react": "^0.88.2",
-    "styled-components": "*",
-    "express": "^4.17.1",
-    "express-session": "^1.17.1",
-    "mysql": "^2.18.1",
-    "socket.io": "^2.3.0"
-
+    "socket.io": "^2.3.0",
+    "styled-components": "*"
   }
-  
 }
-

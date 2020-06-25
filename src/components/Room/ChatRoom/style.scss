@@ -9,19 +9,18 @@
   text-align: left;
   font-family: 'Roboto Mono', monospace;
 
-}
-
-.form {
+&-form {
   height: 3em;
   display: flex;
+}
 
-  &-input {
+  &-field {
     width: 100%;
     padding: .5rem .5rem;
     border-top: solid .1em black;
   }
 
-  &-button {
+  &-send {
     padding: .5rem .5rem;
     line-height: 1;
     outline: none;

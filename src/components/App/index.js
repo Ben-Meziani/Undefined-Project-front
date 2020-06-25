@@ -1,8 +1,8 @@
 // == Import npm
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { Route } from 'react-router-dom';
-import HomePage from 'src/components/HomePage';
+import HomePage from '../../containers/HomePage';
 import Room from 'src/components/Room';
 import ConnectedHome from '../../containers/ConnectedHome';
 

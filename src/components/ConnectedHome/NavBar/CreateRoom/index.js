@@ -17,14 +17,24 @@ const CreateRoom = ({ handleDropdown, saveValue, playersNb, addRoom }) => {
   };
 
   return (
-      <Modal className="create-room-modal" trigger={<div className="create-room-button">Créer une room</div>}>
+    <Modal
+      className="create-room-modal"
+      trigger={<div className="create-room-button">Créer une room</div>}
+    >
       <Modal.Header>Créer une salle de jeu</Modal.Header>
       <Modal.Content image>
         <Modal.Description>
           <form className="ui form">
             <div className="field">
-              <label htmlFor="room-name">Choisissez un nom pour votre salle</label>
-              <input onChange={changeValue} type="text" name="room-name" placeholder="Nom de la salle" />
+              <label htmlFor="room-name">
+                Choisissez un nom pour votre salle
+              </label>
+              <input
+                onChange={changeValue}
+                type="text"
+                name="room-name"
+                placeholder="Nom de la salle"
+              />
             </div>
             <Dropdown
               onChange={dropdownChange}
@@ -39,7 +49,13 @@ const CreateRoom = ({ handleDropdown, saveValue, playersNb, addRoom }) => {
               value={playersNb}
             />
             <div className="field">
-              <button className="ui button create-room-submit" type="submit" onSubmit={handleSubmit}>Créer la salle</button>
+              <button
+                className="ui button create-room-submit"
+                type="submit"
+                onSubmit={handleSubmit}
+              >
+                Créer la salle
+              </button>
             </div>
           </form>
         </Modal.Description>

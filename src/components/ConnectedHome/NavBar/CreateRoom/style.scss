@@ -21,12 +21,18 @@
   }
 }
 
-.create-room-submit {
-  
+.ui.button.create-room-submit {
+  margin-top: 1em;
+  background-color: black;
+  color: white;
 }
 
 .ui.modal {
   margin-top: -20em;
+}
+
+.ui.selection.dropdown {
+  margin-top: 0.5em;
 }
 
 // MEDIA QUERIES

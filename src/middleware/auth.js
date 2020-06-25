@@ -23,8 +23,8 @@ const auth = (store) => (next) => (action) => {
       // CHECK THE TOKEN AND GET COOKIE ON LOGIN
 
       axios.post(`${serverURI}/login_check`, {
-        email: state.user.currentEmail,
-        password: state.user.currentPassword,
+        email: state.user.email,
+        password: state.user.password,
       })
         .then((response) => {
           console.log(response);
@@ -70,15 +70,16 @@ const auth = (store) => (next) => (action) => {
       break;
     }
 
-    case CHECK: {
-      axios.post('http://localhost:3001/login_check', {}, {
+    /* case CHECK: {
+      axios.post(`${serverURI}/login_check`, {}, {
         withCredentials: true,
       })
         .then((response) => {
           console.log(response.data);
-          // dans response.data.logged on me dit si oui ou non je suis connecté AVEC RESPONSE 200
+          // dans response.data on me dit si oui ou non je suis connecté AVEC RESPONSE 200
           if (response.data) {
             if (response.status === '200') {
+              console.log('réponse ok');
               store.dispatch(connect());
             }
             else {
@@ -88,7 +89,7 @@ const auth = (store) => (next) => (action) => {
         });
       next(action);
       break;
-    }
+    } */
 
     // DECONNECT A USER
     case LOGOUT:

@@ -1,5 +1,6 @@
 export * from './room';
 export * from './user';
+export * from './upload';
 
 export const TOGGLE_OPEN = 'TOGGLE_OPEN';
 export const CHANGE_VALUE = 'CHANGE_VALUE';

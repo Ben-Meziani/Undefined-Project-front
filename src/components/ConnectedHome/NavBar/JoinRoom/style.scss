@@ -25,6 +25,12 @@
   }
 }
 
+.ui.button.join-room-submit {
+  margin-top: 1em;
+  background-color: black;
+  color: white;
+}
+
 @media (min-width: 767px) {
   .join-room-button {
     width: 12em;

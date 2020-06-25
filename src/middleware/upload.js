@@ -31,8 +31,8 @@ const user = (store) => (next) => (action) => {
       const state = store.getState();
       const userId = state.user.id;
       const imageFile = new FormData();
-      imageFile.append('file', state.upload.iconFile);
-      console.log(imageFile);
+      imageFile.append('icon', state.upload.iconFile);
+      console.log(state.upload.iconFile);
       console.log('j\'envoie l\'iconFile au serveur ' + state.user.iconFile);
       axios.post(`${serverURI}/user/${userId}/icon`, {
         icon: imageFile,

@@ -10,19 +10,27 @@ import './style.scss';
 /* import avatarImg from '../../../assets/avatarDefault.png'; */
 
 const EditProfile = ({
-  changeFile,
+  changeIconName,
+  changeIconFile,
   email,
   password,
   pseudo,
   icon,
+  iconFile,
   changeValue,
   sendAvatarToPreview,
   sendEditedDatas,
 }) => {
   // GET THE UPLOADED FILE
   const handleChange = (evt) => {
-    changeFile(evt.target.files[0].name);
-    sendAvatarToPreview(evt.target.files[0].name);
+    changeIconName(evt.target.files[0].name);
+    changeIconFile(evt.target.files[0]);
+    const reader = new FileReader();
+    reader.onloaded = () => changeIconFile.onFileLoaded(reader.result);
+    reader.readAsDataURL(evt.target.files[0]);
+    console.log('//nom de l\'icon// ' + icon);
+    console.log('//nom du fichier// ' + iconFile);
+   /*  sendAvatarToPreview(evt.target.files[0]); */
   };
 
   // SEND THE NEW DATA
@@ -41,7 +49,7 @@ const EditProfile = ({
         <div className="avatar-preview">
           <img src={`http://ec2-54-234-79-207.compute-1.amazonaws.com/uploads/icons/${icon}`} alt="unknown" />
         </div>
-        <input type="file" className="avatar-choice-input" accept="image/*" onChange={handleChange} />
+        <input type="file" name="iconFile" className="avatar-choice-input" onChange={handleChange} />
       </div>
       <div className="edit-profile-form">
         <Form onSubmit={handleSubmit}>
@@ -103,10 +111,13 @@ EditProfile.propTypes = {
   email: PropTypes.string.isRequired,
   pseudo: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
+  iconFile: PropTypes.object.isRequired,
   password: PropTypes.string,
-  changeFile: PropTypes.func.isRequired,
+  changeIconName: PropTypes.func.isRequired,
+  changeIconFile: PropTypes.func.isRequired,
   changeValue: PropTypes.func.isRequired,
   sendEditedDatas: PropTypes.func.isRequired,
+  sendAvatarToPreview: PropTypes.func.isRequired,
 };
 
 EditProfile.defaultProps = {
