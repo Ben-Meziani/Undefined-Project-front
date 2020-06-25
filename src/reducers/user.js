@@ -7,6 +7,7 @@ import {
   REGISTER,
   LOADING,
   CONNECT,
+  CHECK,
   CHANGE_FILE,
   SAVE_USER,
   SEND_EDITED_DATAS,
@@ -19,16 +20,21 @@ const initialState = {
   pseudo: '',
   id: 0,
   icon: '',
+
   logged: false,
+
   open: false,
   roomName: '',
   playersNb: 0,
+
   loading: false,
+
   userRegistered: false,
   regPassword: '',
   regEmail: '',
   regPseudo: '',
   regIcon: '',
+
 };
 
 const user = (state = initialState, action = {}) => {
@@ -55,6 +61,7 @@ const user = (state = initialState, action = {}) => {
     case REGISTER:
       return {
         ...state,
+        userRegistered: true,
         logged: true,
       };
     case LOGOUT:
@@ -70,6 +77,11 @@ const user = (state = initialState, action = {}) => {
         loading: false,
       };
     case CONNECT:
+      return {
+        ...state,
+        logged: true,
+      };
+    case CHECK:
       return {
         ...state,
         logged: true,

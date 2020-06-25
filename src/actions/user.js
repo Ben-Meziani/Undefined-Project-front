@@ -5,6 +5,7 @@ export const SEND_EDITED_DATAS = 'SEND_EDITED_DATAS';
 export const CHANGE_FILE = 'CHANGE_FILE';
 export const CONNECT = 'CONNECT';
 export const SAVE_USER = 'SAVE_USER';
+export const CHECK = 'CHECK';
 
 export const login = () => ({
   type: LOGIN,
@@ -29,6 +30,10 @@ export const sendEditedDatas = () => ({
 
 export const connect = () => ({
   type: CONNECT,
+});
+
+export const check = () => ({
+  type: CHECK,
 });
 
 export const saveUser = (currentUser) => ({

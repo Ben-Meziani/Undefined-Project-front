@@ -9,7 +9,13 @@ import homeIcon from '../../../assets/icons/homeIcon.svg';
 
 import './style.scss';
 
-const Header = ({ toggleOpen, open, handleLogout, id }) => {
+const Header = ({
+  toggleOpen,
+  open,
+  handleLogout,
+  id,
+  logged }) => {
+  console.log(logged);
   return (
     <div className="connected-home-header">
       <Link to="/dashboard">

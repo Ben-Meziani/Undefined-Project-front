@@ -38,7 +38,7 @@ const Register = ({
                 <Field
                   type="text"
                   placeholder="Pseudo"
-                  name="pseudo"
+                  name="regPseudo"
                   changeValue={changeValue}
                   value={regPseudo}
                 />
@@ -48,7 +48,7 @@ const Register = ({
                 <Field
                   type="email"
                   placeholder="Email"
-                  name="email"
+                  name="regEmail"
                   changeValue={changeValue}
                   value={regEmail}
                 />
@@ -58,7 +58,7 @@ const Register = ({
                 <Field
                   type="password"
                   placeholder="Mot de passe"
-                  name="password"
+                  name="regPassword"
                   changeValue={changeValue}
                   value={regPassword}
                 />
@@ -89,8 +89,10 @@ const Register = ({
 
 Register.propTypes = {
   regEmail: PropTypes.string.isRequired,
-  password: PropTypes.string.isRequired,
-  pseudo: PropTypes.string.isRequired,
+
+  regPassword: PropTypes.string.isRequired,
+  regPseudo: PropTypes.string.isRequired,
+
   changeValue: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
   userRegistered: PropTypes.bool.isRequired,

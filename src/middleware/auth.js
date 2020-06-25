@@ -6,11 +6,11 @@ import axios from 'axios';
 import {
   LOGIN,
   LOGOUT,
-  loading,
   REGISTER,
+  loading,
   connect,
-  register,
   saveUser,
+  CHECK,
 } from '../actions';
 
 const serverURI = 'http://ec2-54-234-79-207.compute-1.amazonaws.com';
@@ -27,6 +27,7 @@ const auth = (store) => (next) => (action) => {
         password: state.user.currentPassword,
       })
         .then((response) => {
+          console.log(response);
           const saveCurrentUser = saveUser(response.data);
           store.dispatch(saveCurrentUser);
           store.dispatch(connect());
@@ -46,13 +47,16 @@ const auth = (store) => (next) => (action) => {
         email: state.user.regEmail,
         password: state.user.regPassword,
         pseudo: state.user.regPseudo,
+
       }, {
         withCredentials: true,
       })
         .then((response) => {
           if (response.data) {
             console.log(response);
-            store.dispatch(register());
+            const saveUserDatas = saveUser(response.data);
+            store.dispatch(saveUserDatas);
+            // mettre une condition pour gérer le loading
             store.dispatch(connect());
           }
         })
@@ -62,23 +66,35 @@ const auth = (store) => (next) => (action) => {
         .finally(() => {
           store.dispatch(loading());
         });
-      // REQUETE NECESSAIRE ?
-      axios.post(`${serverURI}/login_check`, {
-        email: state.user.email,
-        password: state.user.password,
+      next(action);
+      break;
+    }
+
+    case CHECK: {
+      axios.post('http://localhost:3001/login_check', {}, {
+        withCredentials: true,
       })
-        .catch((response) => {
-          console.log(response.status);
+        .then((response) => {
+          console.log(response.data);
+          // dans response.data.logged on me dit si oui ou non je suis connecté AVEC RESPONSE 200
+          if (response.data) {
+            if (response.status === '200') {
+              store.dispatch(connect());
+            }
+            else {
+            // gérer messages d'erreur
+            }
+          }
         });
       next(action);
       break;
     }
 
     // DECONNECT A USER
-
     case LOGOUT:
       console.log('je me déconnecte');
       axios.get(`${serverURI}/logout`, {
+        withCredentials: true,
       });
       next(action);
       break;
