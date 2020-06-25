@@ -13,7 +13,7 @@ import {
   CHECK,
 } from '../actions';
 
-const serverURI = 'http://ec2-54-234-79-207.compute-1.amazonaws.com';
+const serverURI = 'http://ec2-54-234-79-207.compute-1.amazonaws.com/api';
 
 const auth = (store) => (next) => (action) => {
   switch (action.type) {

@@ -6,31 +6,33 @@ import PropTypes from 'prop-types';
 import Field from '../../HomePage/Forms/Field';
 
 import './style.scss';
+import { changeIconUrl } from '../../../actions';
 
 /* import avatarImg from '../../../assets/avatarDefault.png'; */
 
 const EditProfile = ({
   changeIconName,
   changeIconFile,
+  changeIconUrl,
   email,
   password,
   pseudo,
   icon,
   iconFile,
+  imgURL,
+  display,
   changeValue,
   sendAvatarToPreview,
   sendEditedDatas,
 }) => {
   // GET THE UPLOADED FILE
   const handleChange = (evt) => {
-    changeIconName(evt.target.files[0].name);
-    changeIconFile(evt.target.files[0]);
-    const reader = new FileReader();
-    reader.onloaded = () => changeIconFile.onFileLoaded(reader.result);
-    reader.readAsDataURL(evt.target.files[0]);
-    console.log('//nom de l\'icon// ' + icon);
-    console.log('//nom du fichier// ' + iconFile);
-   /*  sendAvatarToPreview(evt.target.files[0]); */
+    evt.preventDefault();
+    /* changeIconName(evt.target.files[0].name);
+    changeIconFile(URL.createObjectURL(evt.target.files[0]));
+    console.log(URL.createObjectURL(evt.target.files[0]));
+    console.log('//nom du fichier// ' + iconFile); */
+    changeIconUrl(URL.createObjectURL(evt.target.files[0]));
   };
 
   // SEND THE NEW DATA
@@ -46,10 +48,11 @@ const EditProfile = ({
         <p>Modifier vos informations</p>
       </div>
       <div className="edit-profile-avatar">
-        <div className="avatar-preview">
-          <img src={`http://ec2-54-234-79-207.compute-1.amazonaws.com/uploads/icons/${icon}`} alt="unknown" />
-        </div>
         <input type="file" name="iconFile" className="avatar-choice-input" onChange={handleChange} />
+        <div className="avatar-preview">
+          <img className="current-avatar" src={`http://ec2-54-234-79-207.compute-1.amazonaws.com/api/uploads/icons/${icon}`} accept="image/png, image/jpeg" alt="unknown" />
+          <img className="new-avatar" src={imgURL} alt="unknown" />
+        </div>
       </div>
       <div className="edit-profile-form">
         <Form onSubmit={handleSubmit}>
@@ -111,10 +114,13 @@ EditProfile.propTypes = {
   email: PropTypes.string.isRequired,
   pseudo: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
-  iconFile: PropTypes.object.isRequired,
+  iconFile: PropTypes.string.isRequired,
+  imgURL: PropTypes.string.isRequired,
+  display: PropTypes.bool.isRequired,
   password: PropTypes.string,
   changeIconName: PropTypes.func.isRequired,
   changeIconFile: PropTypes.func.isRequired,
+  changeIconUrl: PropTypes.func.isRequired,
   changeValue: PropTypes.func.isRequired,
   sendEditedDatas: PropTypes.func.isRequired,
   sendAvatarToPreview: PropTypes.func.isRequired,

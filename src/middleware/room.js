@@ -7,7 +7,7 @@ const room = (store) => (next) => (action) => {
     case CREATE_ROOM: {
       console.log('je crée une room');
       const state = store.getState();
-      axios.post('http://ec2-54-234-79-207.compute-1.amazonaws.com/room/add', {
+      axios.post('http://ec2-54-234-79-207.compute-1.amazonaws.com/api/room/add', {
         name: state.room.roomName,
         player_number: state.room.playersNb,
         theme: 'default',

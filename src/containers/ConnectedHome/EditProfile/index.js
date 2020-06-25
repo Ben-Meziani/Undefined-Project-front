@@ -5,6 +5,7 @@ import EditProfile from '../../../components/ConnectedHome/EditProfile';
 import {
   changeIconName,
   changeIconFile,
+  changeIconUrl,
   changeValue,
   sendEditedDatas,
   sendAvatarToPreview,
@@ -17,6 +18,8 @@ const mapStateToProps = (state) => ({
   icon: state.user.icon,
   id: state.user.id,
   iconFile: state.upload.iconFile,
+  imgURL: state.upload.imgURL,
+  display: state.upload.display,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -24,9 +27,12 @@ const mapDispatchToProps = (dispatch) => ({
     const action = changeIconName(avatarFileName);
     dispatch(action);
   },
-
   changeIconFile: (iconFile) => {
     const action = changeIconFile(iconFile);
+    dispatch(action);
+  },
+  changeIconUrl: (imgURL) => {
+    const action = changeIconUrl(imgURL);
     dispatch(action);
   },
   changeValue: (value, name) => {

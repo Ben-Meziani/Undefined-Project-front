@@ -2,7 +2,7 @@ import axios from 'axios';
 
 import { SEND_EDITED_DATAS, SEND_AVATAR_TO_PREVIEW } from '../actions';
 
-const serverURI = 'http://ec2-54-234-79-207.compute-1.amazonaws.com';
+const serverURI = 'http://ec2-54-234-79-207.compute-1.amazonaws.com/api';
 
 const user = (store) => (next) => (action) => {
   switch (action.type) {
@@ -35,7 +35,7 @@ const user = (store) => (next) => (action) => {
       console.log(imageFile);
       console.log('j\'envoie l\'iconFile au serveur ' + state.user.iconFile);
       axios.post(`${serverURI}/user/${userId}/icon`, {
-        icon: imageFile,
+        body: imageFile,
       }, {
         withCredentials: true,
       })
