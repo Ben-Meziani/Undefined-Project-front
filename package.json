@@ -8,7 +8,8 @@
     "clean": "rm -rf dist",
     "clean:all": "rm -rf dist node_modules yarn.lock package-lock.json",
     "test": "cross-env NODE_PATH=./ mocha --require tests/.setup.js tests/**/*.test.js",
-    "test:watch": "cross-env NODE_PATH=./ mocha --watch --require tests/.setup.js tests/**/*.test.js"
+    "test:watch": "cross-env NODE_PATH=./ mocha --watch --require tests/.setup.js tests/**/*.test.js",
+    "devStart": "nodemon server.js"
   },
   "devDependencies": {
     "@babel/core": "7.10.2",
@@ -55,6 +56,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "nodemon": "^2.0.4",
     "prop-types": "*",
     "react": "*",
     "react-css-burger": "^0.2.0",
@@ -63,6 +65,12 @@
     "react-router-dom": "^5.2.0",
     "redux": "*",
     "semantic-ui-react": "^0.88.2",
-    "styled-components": "*"
+    "styled-components": "*",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mysql": "^2.18.1",
+    "socket.io": "^2.3.0"
   }
+  
 }
+

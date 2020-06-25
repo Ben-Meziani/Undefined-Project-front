@@ -3,12 +3,11 @@ import Register from '../components/HomePage/Forms/Register';
 import { changeValue, register } from '../actions';
 
 const mapStateToProps = (state) => ({
-  email: state.user.email,
-  password: state.user.password,
-  pseudo: state.user.pseudo,
+  regEmail: state.user.email,
+  regPassword: state.user.password,
+  regPseudo: state.user.pseudo,
   loading: state.user.loading,
   userRegistered: state.user.userRegistered,
-
 });
 
 const mapDispatchToProps = (dispatch) => ({

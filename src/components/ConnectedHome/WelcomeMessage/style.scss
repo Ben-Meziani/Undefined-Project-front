@@ -4,14 +4,19 @@
   width: 90%;
   height: 45vh;
   margin-top: 2em;
-  padding: 1em;
+  padding: 0.2em;
   border-radius: 5px;
   background-color: black;
-  opacity: 0;
+  background-repeat: no-repeat;
+  background-size: 0 2px, 0 100%, 0% 2px;
+  background-position: top center, top center, bottom center;
+  animation: drawBorderFromCenter 4s;
+  /* opacity: 0;
   animation: fadein 1s linear;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards; */
+ 
 
-  @keyframes fadein {
+/*   @keyframes fadein {
     0% {
       opacity: 0;
     }
@@ -24,7 +29,24 @@
     100% {
       opacity: 1;
     }
-  }
+  } */
+
+  @keyframes drawBorderFromCenter {
+    0% {
+      background-size: 0 2px, 0 0, 100% 100%;
+    }
+    20% {
+      background-size: 100% 2px, 100% 0, 100% 100%;
+    }
+    66%
+    {
+      background-size: 100% 2px, 100% 98%, 100% 100%;
+    }
+    99%
+    {
+      background-size: 100% 2px, 100% 98%, 0 2px;
+    }
+}
 
   &-title {
     font-family: 'Nunito', sans-serif;
@@ -43,18 +65,23 @@
         color: black;
       }
       100% {
-        color: white;
+        color: black;
       }
     }
-
   }
 
   &-content {
     font-family: 'Nunito', sans-serif;
     margin: 1em 0;
     text-align: justify;
-    color: white;
+    color: black;
   }
+}
+
+.dashboard-content {
+  background-color: white;
+  padding: 0;
+  height: 100%;
 }
 
 @media (min-width: 767px) {
@@ -80,7 +107,6 @@
     }
   }
 }
-
 
 @media (min-width: 1024px) {
   .connected-home-message {

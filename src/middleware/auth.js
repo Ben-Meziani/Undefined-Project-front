@@ -23,8 +23,8 @@ const auth = (store) => (next) => (action) => {
       // CHECK THE TOKEN AND GET COOKIE ON LOGIN
 
       axios.post(`${serverURI}/login_check`, {
-        email: state.user.email,
-        password: state.user.password,
+        email: state.user.currentEmail,
+        password: state.user.currentPassword,
       })
         .then((response) => {
           const saveCurrentUser = saveUser(response.data);
@@ -43,10 +43,9 @@ const auth = (store) => (next) => (action) => {
     case REGISTER: {
       const state = store.getState();
       axios.post(`${serverURI}/register`, {
-        email: state.user.email,
-        password: state.user.password,
-        pseudo: state.user.pseudo,
-        created_at: '2020/06/19',
+        email: state.user.regEmail,
+        password: state.user.regPassword,
+        pseudo: state.user.regPseudo,
       }, {
         withCredentials: true,
       })
@@ -55,7 +54,7 @@ const auth = (store) => (next) => (action) => {
             console.log(response);
             store.dispatch(register());
             store.dispatch(connect());
-          };
+          }
         })
         .catch((error) => {
           console.error(error);

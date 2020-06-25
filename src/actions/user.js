@@ -1,8 +1,7 @@
 export const LOGIN = 'LOGIN';
 export const LOGOUT = 'LOGOUT';
 export const REGISTER = 'REGISTER';
-export const SEND_AVATAR = 'SEND_AVATAR';
-export const GET_AVATAR = 'GET_AVATAR';
+export const SEND_EDITED_DATAS = 'SEND_EDITED_DATAS';
 export const CHANGE_FILE = 'CHANGE_FILE';
 export const CONNECT = 'CONNECT';
 export const SAVE_USER = 'SAVE_USER';
@@ -24,12 +23,8 @@ export const changeFile = (selectedFile) => ({
   selectedFile,
 });
 
-export const sendAvatar = () => ({
-  type: SEND_AVATAR,
-});
-
-export const getAvatar = () => ({
-  type: GET_AVATAR,
+export const sendEditedDatas = () => ({
+  type: SEND_EDITED_DATAS,
 });
 
 export const connect = () => ({

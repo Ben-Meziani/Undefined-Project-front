@@ -12,9 +12,9 @@ import Field from './Field';
 import RegisterAvatar from './RegisterAvatar';
 
 const Register = ({
-  email,
-  password,
-  pseudo,
+  regEmail,
+  regPassword,
+  regPseudo,
   changeValue,
   register,
   loading,
@@ -40,7 +40,7 @@ const Register = ({
                   placeholder="Pseudo"
                   name="pseudo"
                   changeValue={changeValue}
-                  value={pseudo}
+                  value={regPseudo}
                 />
               </Form.Field>
               <Form.Field required>
@@ -50,7 +50,7 @@ const Register = ({
                   placeholder="Email"
                   name="email"
                   changeValue={changeValue}
-                  value={email}
+                  value={regEmail}
                 />
               </Form.Field>
               <Form.Field required>
@@ -60,7 +60,7 @@ const Register = ({
                   placeholder="Mot de passe"
                   name="password"
                   changeValue={changeValue}
-                  value={password}
+                  value={regPassword}
                 />
               </Form.Field>
               <Button color="black" type="submit" className="center aligned">
@@ -88,7 +88,7 @@ const Register = ({
 };
 
 Register.propTypes = {
-  email: PropTypes.string.isRequired,
+  regEmail: PropTypes.string.isRequired,
   password: PropTypes.string.isRequired,
   pseudo: PropTypes.string.isRequired,
   changeValue: PropTypes.func.isRequired,

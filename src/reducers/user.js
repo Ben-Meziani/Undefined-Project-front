@@ -9,8 +9,7 @@ import {
   CONNECT,
   CHANGE_FILE,
   SAVE_USER,
-  SEND_AVATAR,
-  GET_AVATAR,
+  SEND_EDITED_DATAS,
 } from '../actions';
 
 const initialState = {
@@ -26,6 +25,10 @@ const initialState = {
   playersNb: 0,
   loading: false,
   userRegistered: false,
+  regPassword: '',
+  regEmail: '',
+  regPseudo: '',
+  regIcon: '',
 };
 
 const user = (state = initialState, action = {}) => {
@@ -84,14 +87,9 @@ const user = (state = initialState, action = {}) => {
         ...state,
         icon: action.selectedFile,
       };
-    case SEND_AVATAR:
+    case SEND_EDITED_DATAS:
       return {
         ...state,
-      };
-    case GET_AVATAR:
-      return {
-        ...state,
-        icon: action.icon,
       };
     default:
       return state;
