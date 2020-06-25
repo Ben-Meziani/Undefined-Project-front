@@ -26,7 +26,7 @@ console.log(logged);
           <Register />
         </Route>
       </div>
-      {logged ? <Redirect to="/dashboard" /> : <Redirect to="/home" />}
+{/*       {logged ? <Redirect to="/dashboard" /> : <Redirect to="/home" />} */}
     </div>
   );
 };

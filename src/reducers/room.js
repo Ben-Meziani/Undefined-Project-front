@@ -57,7 +57,7 @@ const reducer = (state = initialState, action = {}) => {
 
     // CHATROOM CASES
     case RECEIVE_MESSAGE: {
-      console.log('reducer RECEIVE_MESSAGE', action.chatMessage);
+      // console.log('reducer RECEIVE_MESSAGE', action.chatMessage);
       const newChatMessages = [
         ...state.chatMessages,
       ];
