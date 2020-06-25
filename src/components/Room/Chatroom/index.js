@@ -6,10 +6,7 @@ import MessageField from '../../../containers/Room/Chatroom/MessageField';
 import './style.scss';
 
 const Chatroom = ({ webSocketConnect }) => {
-  useEffect(() => {
-    console.log('je veux me connecter au websocket');
-    webSocketConnect();
-  }, []);
+  useEffect(webSocketConnect, []);
   return (
     <div className="chatroom">
       <GeneralChannel />

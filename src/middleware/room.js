@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { CREATE_ROOM } from '../actions/room';
+import { CREATE_ROOM } from '../actions';
 
 const room = (store) => (next) => (action) => {
   switch (action.type) {
