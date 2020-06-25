@@ -7,7 +7,6 @@ const bodyParser = require('body-parser');
 const Server = require('http').Server;
 const socket = require('socket.io');
 
-
 /*
  * Vars
  */
@@ -15,16 +14,6 @@ const app = express();
 const server = Server(app);
 const io = socket(server);
 const port = 3001;
-
-const db = {
-  users: {
-    'root@oclock.io': {
-      password: 'root',
-      username: 'ChenpeupludeROOT',
-      color: '#c23616',
-    },
-  },
-};
 
 /*
  * Express
@@ -39,37 +28,11 @@ app.use((request, response, next) => {
 });
 
 /*
- * Theme json
- */
-app.get('/theme/:email', (request, response) => {
-  const email = request.params.email;
-  if (!email) {
-    console.log('<< 400 BAD_REQUEST');
-    response.status(400).end();
-  }
-
-  let color;
-  if (db.users[email] && db.users[email].color) {
-    color = db.users[email].color;
-  }
-
-  // Réponse HTTP adaptée.
-  if (color) {
-    console.log('<< 200 OK', email, color);
-    response.send(color);
-  }
-  else {
-    console.log('<< 401 UNAUTHORIZED');
-    response.status(401).end();
-  }
-});
-
-/*
  * Socket.io
  */
 let id = 0;
 io.on('connection', (ws) => {
-  console.log('>> socket.io - connected');
+  // console.log('>> socket.io - connected');
   ws.on('send_message', (message) => {
     // eslint-disable-next-line no-plusplus
     message.id = ++id;
@@ -77,33 +40,9 @@ io.on('connection', (ws) => {
   });
 });
 
-// Login avec vérification : POST /login
-app.post('/check_login', (request, response) => {
-  console.log('>> POST /check_login', request.body);
-
-  // Extraction des données de la requête provenant du client.
-  const { email, password } = request.body;
-
-  // Vérification des identifiants de connexion proposés auprès de la DB.
-  let username;
-  if (db.users[email] && db.users[email].password === password) {
-    username = db.users[email].username;
-  }
-
-  // Réponse HTTP adaptée.
-  if (username) {
-    console.log('<< 200 OK', username);
-    response.send(username);
-  }
-  else {
-    console.log('<< 401 UNAUTHORIZED');
-    response.status(401).end();
-  }
-});
-
 /*
  * Server
  */
 server.listen(port, () => {
-  console.log(`listening on *:${port}`);
+  // console.log(`listening on *:${port}`);
 });

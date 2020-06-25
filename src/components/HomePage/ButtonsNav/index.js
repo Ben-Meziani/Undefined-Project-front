@@ -9,7 +9,7 @@ const ButtonsNav = () => (
       type="button"
       className=" homepage-navbutton-login"
     >
-      <Link to="/home/login">
+      <Link to="/login">
         Login
       </Link>
     </button>
@@ -18,7 +18,7 @@ const ButtonsNav = () => (
       type="button"
       className="homepage-navbutton-register"
     >
-      <Link to="/home/register">
+      <Link to="/register">
         Register
       </Link>
     </button>

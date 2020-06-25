@@ -79,7 +79,7 @@ const Register = ({
       <>
         <p>Enregistré!</p>
         <Link to="/dashboard">
-          Allez sur votre profil.
+          <p>Allez sur votre profil.</p>
         </Link>
       </>
       )}

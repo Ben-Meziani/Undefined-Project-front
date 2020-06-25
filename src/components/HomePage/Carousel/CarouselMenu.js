@@ -5,9 +5,9 @@ const CarouselMenu = () => (
 
   <div className="carousel-menu">
     <ul className="carousel-menu-list">
-      <li><Link to="/home/demonstration">Démo</Link></li>
-      <li><Link to="/home">Présentation</Link></li>
-      <li><Link to="/home/team">Team</Link></li>
+      <li><Link to="/demonstration">Démo</Link></li>
+      <li><Link to="/">Présentation</Link></li>
+      <li><Link to="/team">Team</Link></li>
     </ul>
   </div>
 );
