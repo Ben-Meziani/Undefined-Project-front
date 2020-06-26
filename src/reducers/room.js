@@ -10,6 +10,7 @@ const initialState = {
   chatOpen: true,
   logged: false,
   roomName: '',
+  roomId: '',
   playersNb: 0,
 
   text: '',

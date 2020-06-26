@@ -17,7 +17,7 @@ const initialState = {
   currentUser: [],
   email: '',
   password: '',
-  pseudo: '',
+  pseudo: 'Undefined',
   id: 0,
   icon: '',
 
@@ -25,6 +25,7 @@ const initialState = {
 
   open: false,
   roomName: '',
+  roomId: '',
   playersNb: 0,
 
   loading: false,
