@@ -13,12 +13,12 @@ import {
 
 const initialState = {
   currentUser: [],
-  email: '',
-  password: '',
+  email: 'root@oclock.io',
+  password: 'root',
   pseudo: 'Undefined',
   id: 0,
   icon: '',
-  logged: false,
+  logged: true,
   open: false,
   roomName: '',
   roomId: '',

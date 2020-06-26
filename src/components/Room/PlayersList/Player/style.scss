@@ -1,0 +1,16 @@
+@import 'src/styles/vars';
+
+.player {
+  max-width: 15%;
+  margin: 0 1em;
+  flex-grow: 3;
+  
+  &-icon {
+    height: 3em;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+}

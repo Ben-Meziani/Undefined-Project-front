@@ -1,0 +1,12 @@
+@import 'src/styles/vars';
+
+.players-list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2em;
+
+}

@@ -19,13 +19,13 @@ import DicesThrow from '../Room/Dices/DicesThrow';
 import PlayerNotes from '../Room/PlayerNotes';
 import SharedFiles from '../Room/SharedFiles';
 import SharedViewForm from '../Room/SharedView/SharedViewForm';
+import PlayersList from '../../containers/Room/PlayersList';
 
 // == Import
 import './style.scss';
 
 // == Composant
 const App = () => (
-/*   useEffect(checkIsLogged, []); */
   <div className="app">
     <Switch>
 
@@ -82,6 +82,14 @@ const App = () => (
         <RoomStatic />
         <div className="displayTools">
           <p>Utilisez le menu ci-dessus pour accéder à vos outils de jeu</p>
+        </div>
+        <Chatroom />
+      </Route>
+
+      <Route path="/players-list" exact>
+        <RoomStatic />
+        <div className="displayTools">
+          <PlayersList />
         </div>
         <Chatroom />
       </Route>
