@@ -3,14 +3,14 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import HomePage from '../../containers/HomePage';
-import ConnectedHome from '../../containers/ConnectedHome';
-
 import Login from '../../containers/HomePage/Login';
 import Register from '../../containers/HomePage/Register';
-
 import Presentation from '../HomePage/Carousel/Presentation';
 import Demonstration from '../HomePage/Carousel/Demonstration';
 import Team from '../HomePage/Carousel/Team';
+
+import ConnectedHome from '../../containers/ConnectedHome';
+import EditProfile from '../../containers/ConnectedHome/EditProfile';
 
 import RoomStatic from '../Room/RoomStatic';
 import Chatroom from '../../containers/Room/Chatroom';
@@ -72,6 +72,10 @@ const App = () => (
 
       <Route path="/dashboard" exact>
         <ConnectedHome />
+      </Route>
+
+      <Route path="/dashboard/user/2/edit" exact>
+        <EditProfile />
       </Route>
 
       <Route path="/room" exact>

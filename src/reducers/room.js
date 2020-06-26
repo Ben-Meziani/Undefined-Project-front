@@ -10,39 +10,15 @@ const initialState = {
   chatOpen: true,
   logged: false,
   roomName: '',
+  roomId: '',
   playersNb: 0,
 
   text: '',
   chatMessages: [
     {
-      author: 'Harry Pot-de-Terre',
-      content: 'Salut.',
-      id: 456,
-    },
-    {
-      author: 'Reun Waizlé',
-      content: 'Yo.',
-      id: 4564,
-    },
-    {
-      author: 'Ermi Grangé',
-      content: 'Vous vous faites encore la gueule ?',
-      id: 56,
-    },
-    {
-      author: 'Reun Waizlé',
-      content: 'Je préfère juste ne pas parler aux traitres.',
-      id: 789,
-    },
-    {
-      author: 'Harry Pot-de-Terre',
-      content: 'T\'es juste jaloux.',
-      id: 764,
-    },
-    {
-      author: 'Ermi Grangé',
-      content: 'Vous êtes chiants.',
-      id: 786,
+      author: '',
+      content: '',
+      id: '',
     },
   ],
 };
