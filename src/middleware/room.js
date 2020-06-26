@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import axios from 'axios';
 
 import { CREATE_ROOM } from '../actions/room';
@@ -11,10 +12,13 @@ const room = (store) => (next) => (action) => {
         name: state.room.roomName,
         player_number: state.room.playersNb,
         theme: 'default',
-        game_master: 'id',
+        game_master: state.user.id,
       })
         .then((response) => {
           console.log(response.data);
+          // récupérer l'id unique de la room
+          const saveRoomId = saveRoomId(response.data);
+          store.dispatch(saveRoomId);
         })
         .catch((error) => {
           console.error(error);

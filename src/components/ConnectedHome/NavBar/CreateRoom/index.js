@@ -1,19 +1,27 @@
+/* eslint-disable no-console */
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import { Modal, Dropdown } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
+import Field from '../../../HomePage/Forms/Field';
+
 import './style.scss';
 
-const CreateRoom = ({ handleDropdown, saveValue, playersNb, addRoom }) => {
-  const changeValue = (evt) => {
-    saveValue(evt.target.value);
-  };
+const CreateRoom = ({
+  changeValue,
+  handleDropdown,
+  roomName,
+  playersNb,
+  createRoom,
+}) => {
   const dropdownChange = (e, value) => {
     handleDropdown(value.value);
   };
   const handleSubmit = (evt) => {
+    console.log('je lance la requête de création de room');
     evt.preventDefault();
-    /* addRoom(); */
+    createRoom();
   };
 
   return (
@@ -24,16 +32,18 @@ const CreateRoom = ({ handleDropdown, saveValue, playersNb, addRoom }) => {
       <Modal.Header>Créer une salle de jeu</Modal.Header>
       <Modal.Content image>
         <Modal.Description>
-          <form className="ui form">
+          <form className="ui form" onSubmit={handleSubmit}>
             <div className="field">
               <label htmlFor="room-name">
                 Choisissez un nom pour votre salle
               </label>
-              <input
-                onChange={changeValue}
+              <Field
+                className="create-room-form-input"
                 type="text"
-                name="room-name"
                 placeholder="Nom de la salle"
+                name="roomName"
+                changeValue={changeValue}
+                value={roomName}
               />
             </div>
             <Dropdown
@@ -52,7 +62,6 @@ const CreateRoom = ({ handleDropdown, saveValue, playersNb, addRoom }) => {
               <button
                 className="ui button create-room-submit"
                 type="submit"
-                onSubmit={handleSubmit}
               >
                 Créer la salle
               </button>
@@ -65,10 +74,11 @@ const CreateRoom = ({ handleDropdown, saveValue, playersNb, addRoom }) => {
 };
 
 CreateRoom.propTypes = {
+  changeValue: PropTypes.func.isRequired,
   playersNb: PropTypes.number,
-  saveValue: PropTypes.func.isRequired,
+  roomName: PropTypes.string.isRequired,
   handleDropdown: PropTypes.func.isRequired,
- /*  addRoom: PropTypes.func.isRequired, */
+  createRoom: PropTypes.func.isRequired,
 };
 
 CreateRoom.defaultProps = {

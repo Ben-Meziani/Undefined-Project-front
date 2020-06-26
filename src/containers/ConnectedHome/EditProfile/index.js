@@ -1,13 +1,14 @@
 import { connect } from 'react-redux';
 
+// Import components
 import EditProfile from '../../../components/ConnectedHome/EditProfile';
 
+// import actions
 import {
   changeIconFile,
   changeIconUrl,
   changeValue,
   sendEditedDatas,
-  sendAvatarToPreview,
 } from '../../../actions';
 
 const mapStateToProps = (state) => ({
@@ -35,10 +36,6 @@ const mapDispatchToProps = (dispatch) => ({
   },
   sendEditedDatas: () => {
     const action = sendEditedDatas();
-    dispatch(action);
-  },
-  sendAvatarToPreview: (iconFile) => {
-    const action = sendAvatarToPreview(iconFile);
     dispatch(action);
   },
 });

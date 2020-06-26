@@ -1,7 +1,7 @@
 /* eslint-disable prefer-template */
 /* eslint-disable no-console */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Form, Button } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
@@ -21,31 +21,22 @@ const EditProfile = ({
   iconFile,
   imgURL,
   changeValue,
-  sendAvatarToPreview,
   sendEditedDatas,
 }) => {
-  // PREVIEW THE NEW AVATAR
+// PREVIEW THE NEW AVATAR
   const handleChange = (evt) => {
     evt.preventDefault();
+    console.log('File récupéré au onChange ' + evt.target.files[0]);
     const newIconUrl = URL.createObjectURL(evt.target.files[0]);
-    const reader = new FileReader();
-    
-    /* changeIconFile(evt.target.files[0]); */
-    changeIconUrl(newIconUrl);
+    const newIconFile = evt.target.files[0];
+    changeIconUrl('+++ NewIconUrl vaut' + newIconUrl);
+    console.log('+++ NewIconFile vaut' + newIconFile);
   };
-
- /*  const handleUpload = (evt) => {
-    console.log(evt.target.files);
-    changeIconFile(evt.target.files);
-    const formData = new FormData();
-   /*  formData.append('avatar', iconFile, iconFile.name); */
-   /*  console.log(formData);
-  }; */
 
   // SEND THE NEW DATA
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    console.log('je veux envoyer les nouvelles infos du profil au serveur email ' + email + 'pseudo ' + pseudo + 'file ' + iconFile);
+    console.log('je veux envoyer les nouvelles infos du profil au serveur email : ' + email + ' pseudo : ' + pseudo + ' file : ' + iconFile);
     sendEditedDatas();
   };
 
@@ -127,7 +118,6 @@ EditProfile.propTypes = {
   changeIconUrl: PropTypes.func.isRequired,
   changeValue: PropTypes.func.isRequired,
   sendEditedDatas: PropTypes.func.isRequired,
-  sendAvatarToPreview: PropTypes.func.isRequired,
 };
 
 EditProfile.defaultProps = {

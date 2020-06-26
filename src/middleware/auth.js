@@ -25,7 +25,7 @@ const auth = (store) => (next) => (action) => {
       axios.post(`${serverURI}/login_check`, {
         email: state.user.email,
         password: state.user.password,
-      })
+      }, { withCredentials: true })
         .then((response) => {
           console.log(response);
           const saveCurrentUser = saveUser(response.data);
@@ -48,8 +48,6 @@ const auth = (store) => (next) => (action) => {
         password: state.user.regPassword,
         pseudo: state.user.regPseudo,
 
-      }, {
-        withCredentials: true,
       })
         .then((response) => {
           if (response.data) {

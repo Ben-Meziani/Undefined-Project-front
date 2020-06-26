@@ -1,58 +1,41 @@
+/* eslint-disable prefer-template */
+/* eslint-disable no-console */
 import axios from 'axios';
 
-import { SEND_EDITED_DATAS, SEND_AVATAR_TO_PREVIEW } from '../actions';
+import { SEND_EDITED_DATAS } from '../actions';
 
 const serverURI = 'http://ec2-54-234-79-207.compute-1.amazonaws.com/api';
 
 const user = (store) => (next) => (action) => {
   switch (action.type) {
     case SEND_EDITED_DATAS: {
+      // ACCESS TO THE STATE TO GET THE USER ID
       const state = store.getState();
       const userId = state.user.id;
-      console.log(state.upload);
-      console.log('j\'envoie les données modifiées au serveur');
-      const config = {
-        headers: {'content-type': 'multipart/form-data'}};
-      axios.post(`${serverURI}/user/${userId}/edit`, {
-        email: state.user.email,
-        password: state.user.password,
-        pseudo: state.user.pseudo,
-        icon: state.user.icon,
-      }, config)
-        .then((response) => {
-          console.log(response);
-        });
-      if (state.upload.iconFile) 
-      {axios.post(`${serverURI}/user/${userId}/edit`, {
-        email: state.user.email,
-        password: state.user.password,
-        pseudo: state.user.pseudo,
-      })
-        .then((response) => {
-          console.log(response);
-        }),
-      }
-      next(action);
-      break;
-    }
-    case SEND_AVATAR_TO_PREVIEW: {
-      const state = store.getState();
-      const userId = state.user.id;
-      const imageFile = new FormData();
-      imageFile.append('icon', state.upload.iconFile);
-      console.log(state.upload.iconFile);
-      console.log('j\'envoie l\'iconFile au serveur ' + state.user.iconFile);
+      console.log('++++ iconFile dans le middleware upload ++++' + state.upload.iconFile);
+      console.log('++++ requête : j\'envoie les données modifiées au serveur ++++');
+      // DEFINE THE TYPE OF DATA
+      /* const config = {
+        headers: {
+          'content-type': 'multipart/form-data',
+        },
+      }; */
+
       axios.post(`${serverURI}/user/${userId}/icon`, {
-        icon: imageFile,
+        icon: state.upload.iconFile,
       }, {
         withCredentials: true,
       })
         .then((response) => {
           console.log(response);
+        })
+        .catch((error) => {
+          console.log(error);
         });
       next(action);
       break;
     }
+
     default:
       next(action);
   }

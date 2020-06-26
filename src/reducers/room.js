@@ -1,11 +1,15 @@
 import {
+  CHANGE_VALUE,
   CREATE_ROOM,
-} from '../actions/room';
+  DROPDOWN_CHANGE,
+  SAVE_ROOM_ID,
+} from '../actions';
 
 const initialState = {
   open: false,
   logged: false,
   roomName: '',
+  roomId: 0,
   playersNb: 0,
 };
 
@@ -14,13 +18,18 @@ const reducer = (state = initialState, action = {}) => {
     case CREATE_ROOM:
       return {
         ...state,
-        roomName: 'testRoom',
-        playersNb: 0,
+        roomName: action.roomName,
+        playersNb: action.playersNb,
+      };
+    case SAVE_ROOM_ID:
+      return {
+        ...state,
+        roomId: action.roomId,
       };
     case CHANGE_VALUE:
       return {
         ...state,
-        roomName: action.value,
+        [action.name]: action.value,
       };
     case DROPDOWN_CHANGE:
       return {
