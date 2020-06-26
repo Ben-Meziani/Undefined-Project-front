@@ -18,11 +18,10 @@ export const createRoom = () => ({
   type: CREATE_ROOM,
 });
 
-<<<<<<< HEAD
 export const saveRoomId = (roomId) => ({
   type: SAVE_ROOM_ID,
   roomId,
-=======
+});
 // CHATROOM
 export const sendMessage = () => ({
   type: SEND_MESSAGE,
@@ -40,5 +39,4 @@ export const receiveMessage = (chatMessage) => ({
 });
 export const toggleOpenChat = () => ({
   type: TOGGLE_OPEN_CHAT,
->>>>>>> master
 });
