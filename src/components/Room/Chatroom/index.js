@@ -16,8 +16,8 @@ const Chatroom = ({ webSocketConnect, chatOpen, toggleOpenChat }) => {
       >
         +
       </button>
-{/*       <GeneralChannel />
-      <MessageField /> */}
+      <GeneralChannel />
+      <MessageField />
     </div>
   );
 };
