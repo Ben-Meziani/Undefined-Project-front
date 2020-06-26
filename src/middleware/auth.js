@@ -10,7 +10,6 @@ import {
   loading,
   connect,
   saveUser,
-  CHECK,
 } from '../actions';
 
 const serverURI = 'http://ec2-54-234-79-207.compute-1.amazonaws.com/api';
@@ -25,7 +24,7 @@ const auth = (store) => (next) => (action) => {
       axios.post(`${serverURI}/login_check`, {
         email: state.user.email,
         password: state.user.password,
-      }, { withCredentials: true })
+      })
         .then((response) => {
           console.log(response);
           const saveCurrentUser = saveUser(response.data);
@@ -54,7 +53,6 @@ const auth = (store) => (next) => (action) => {
             console.log(response);
             const saveUserDatas = saveUser(response.data);
             store.dispatch(saveUserDatas);
-            // mettre une condition pour gérer le loading
             store.dispatch(connect());
           }
         })

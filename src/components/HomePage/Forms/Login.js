@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {
   Button,
@@ -59,7 +59,18 @@ const Login = ({
         <Loader active inline="centered" />
       </>
       )}
-      {logged && !loading ? <Redirect to="/dashboard" /> : <Redirect to="/home/login" />}
+      {/* {logged && !loading ? <Redirect to="/dashboard" /> : <Redirect to="/login" />} */}
+      {logged && !loading && (
+      <>
+        <p>Vous êtes connecté !</p>
+        <Link to="/room">
+          Allez sur la chatroom.
+        </Link>
+        <Link to="/dashboard">
+          <p>>Allez sur votre dashboard.</p>
+        </Link>
+      </>
+      )}
     </div>
   );
 };

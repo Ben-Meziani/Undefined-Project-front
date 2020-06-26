@@ -4,11 +4,9 @@ import HomePage from '../../components/HomePage';
 
 const mapStateToProps = (state) => ({
   logged: state.user.logged,
-  loading: state.user.loading,
 });
 
-const mapDispatchToProps = (dispatch) => ({
-});
+const mapDispatchToProps = null;
 
 export default connect(
   mapStateToProps,

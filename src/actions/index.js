@@ -1,6 +1,10 @@
 export * from './room';
 export * from './user';
+<<<<<<< HEAD
 export * from './upload';
+=======
+export * from './dices';
+>>>>>>> master
 
 export const TOGGLE_OPEN = 'TOGGLE_OPEN';
 export const CHANGE_VALUE = 'CHANGE_VALUE';

@@ -12,7 +12,7 @@ import WelcomeMessage from './WelcomeMessage';
 import './style.scss';
 
 const ConnectedHome = ({ logged, loading }) => {
-  console.log(logged);
+  // console.log(logged);
   return (
     <div className="connected-home">
       <Switch>
@@ -28,7 +28,7 @@ const ConnectedHome = ({ logged, loading }) => {
           <EditProfile />
         </Route>
       </Switch>
-      {!logged && !loading ? <Redirect to="/home" /> : <Redirect to="/dashboard" />}
+      {!logged && !loading ? <Redirect to="/" /> : <Redirect to="/dashboard" />}
     </div>
   );
 };

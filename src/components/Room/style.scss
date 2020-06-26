@@ -1,0 +1,12 @@
+.currentRoom{
+  display: flex;
+  flex-direction: column;
+}
+
+.displayTools{
+  border: .3em solid black;
+  height: 33vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -7,26 +7,24 @@ import Login from '../../containers/HomePage/Login';
 import Register from '../../containers/HomePage/Register';
 import ButtonsNav from './ButtonsNav';
 import CarouselMenu from './Carousel/CarouselMenu';
-import Carousel from './Carousel';
 import './style.scss';
 
-const HomePage = ({ logged, loading }) => (
-  <div>
-    <Header />
-    <ButtonsNav />
-    <CarouselMenu />
-    <div className="homeDisplay">
-      <Carousel />
-      <Route path="/home/login">
-        <Login />
-      </Route>
-      <Route path="/home/register">
-        <Register />
-      </Route>
+const HomePage = ({ logged }) => {
+console.log(logged);
+
+  return (
+    <div>
+      <Header />
+      <ButtonsNav />
+      <CarouselMenu />
+{/*       {logged ? <Redirect to="/dashboard" /> : <Redirect to="/" />} */}
     </div>
-    {!logged && !loading ? <Redirect to="/home" /> : <Redirect to="/dashboard" />}
-  </div>
-);
+  );
+};
+
+HomePage.propTypes = {
+  logged: PropTypes.bool.isRequired,
+};
 
 HomePage.propTypes = {
   logged: PropTypes.bool.isRequired,
