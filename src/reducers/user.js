@@ -17,7 +17,7 @@ const initialState = {
   currentUser: [],
   email: '',
   password: '',
-  pseudo: '',
+  pseudo: 'Rusard',
   id: 0,
   icon: '',
 
@@ -70,6 +70,9 @@ const user = (state = initialState, action = {}) => {
         logged: false,
         email: '',
         password: '',
+        pseudo: '',
+        id: 0,
+        icon: '',
       };
     case LOADING:
       return {

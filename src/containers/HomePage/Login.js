@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 // eslint-disable-next-line import/extensions
-import Login from '../components/HomePage/Forms/Login';
-import { changeValue, login } from '../actions';
+import Login from '../../components/HomePage/Forms/Login';
+import { changeValue, login } from '../../actions';
 
 const mapStateToProps = (state) => ({
   email: state.user.email,
