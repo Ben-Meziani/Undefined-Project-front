@@ -1,11 +1,9 @@
 import { connect } from 'react-redux';
 
-import ConnectedHome from '../../components/ConnectedHome';
+import App from '../../components/App';
 
 const mapStateToProps = (state) => ({
-  logged: state.user.logged,
-  loading: state.user.loading,
-  id: state.user.id,
+  /* logged: state.user.logged, */
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -14,4 +12,4 @@ const mapDispatchToProps = (dispatch) => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(ConnectedHome);
+)(App);

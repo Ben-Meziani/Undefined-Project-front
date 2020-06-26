@@ -14,8 +14,7 @@ const Header = ({
   open,
   handleLogout,
   id,
-  logged }) => {
-  console.log(logged);
+}) => {
   return (
     <div className="connected-home-header">
       <Link to="/dashboard">

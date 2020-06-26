@@ -1,5 +1,7 @@
+/* eslint-disable prefer-template */
+/* eslint-disable no-console */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Form, Button } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
@@ -10,25 +12,31 @@ import './style.scss';
 /* import avatarImg from '../../../assets/avatarDefault.png'; */
 
 const EditProfile = ({
-  changeFile,
+  changeIconFile,
+  changeIconUrl,
   email,
   password,
   pseudo,
   icon,
+  iconFile,
+  imgURL,
   changeValue,
-  sendAvatarToPreview,
   sendEditedDatas,
 }) => {
-  // GET THE UPLOADED FILE
+// PREVIEW THE NEW AVATAR
   const handleChange = (evt) => {
-    changeFile(evt.target.files[0].name);
-    sendAvatarToPreview(evt.target.files[0].name);
+    evt.preventDefault();
+    console.log('File récupéré au onChange ' + evt.target.files[0]);
+    const newIconUrl = URL.createObjectURL(evt.target.files[0]);
+    const newIconFile = evt.target.files[0];
+    changeIconUrl('+++ NewIconUrl vaut' + newIconUrl);
+    console.log('+++ NewIconFile vaut' + newIconFile);
   };
 
   // SEND THE NEW DATA
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    console.log('je veux envoyer les nouvelles infos du profil au serveur');
+    console.log('je veux envoyer les nouvelles infos du profil au serveur email : ' + email + ' pseudo : ' + pseudo + ' file : ' + iconFile);
     sendEditedDatas();
   };
 
@@ -38,10 +46,10 @@ const EditProfile = ({
         <p>Modifier vos informations</p>
       </div>
       <div className="edit-profile-avatar">
+        <input type="file" name="iconFile" className="avatar-choice-input" onChange={handleChange} />
         <div className="avatar-preview">
-          <img src={`http://ec2-54-234-79-207.compute-1.amazonaws.com/uploads/icons/${icon}`} alt="unknown" />
+          {!imgURL ? <img className="avatar" src={`http://ec2-54-234-79-207.compute-1.amazonaws.com/api/uploads/icons/${icon}`} accept="image/png, image/jpeg" alt="unknown" /> : <img className="avatar" src={imgURL} alt="unknown" />}
         </div>
-        <input type="file" className="avatar-choice-input" accept="image/*" onChange={handleChange} />
       </div>
       <div className="edit-profile-form">
         <Form onSubmit={handleSubmit}>
@@ -103,8 +111,11 @@ EditProfile.propTypes = {
   email: PropTypes.string.isRequired,
   pseudo: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
+  iconFile: PropTypes.object.isRequired,
+  imgURL: PropTypes.string.isRequired,
   password: PropTypes.string,
-  changeFile: PropTypes.func.isRequired,
+  changeIconFile: PropTypes.func.isRequired,
+  changeIconUrl: PropTypes.func.isRequired,
   changeValue: PropTypes.func.isRequired,
   sendEditedDatas: PropTypes.func.isRequired,
 };

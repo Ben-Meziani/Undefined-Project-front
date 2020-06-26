@@ -1,8 +1,10 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import Header from './Header';
 
+import { Route, Redirect } from 'react-router-dom';
+import Header from './Header';
+import Login from '../../containers/HomePage/Login';
+import Register from '../../containers/HomePage/Register';
 import ButtonsNav from './ButtonsNav';
 import CarouselMenu from './Carousel/CarouselMenu';
 import './style.scss';
@@ -22,6 +24,11 @@ console.log(logged);
 
 HomePage.propTypes = {
   logged: PropTypes.bool.isRequired,
+};
+
+HomePage.propTypes = {
+  logged: PropTypes.bool.isRequired,
+  loading: PropTypes.bool.isRequired,
 };
 
 export default HomePage;

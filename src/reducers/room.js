@@ -1,5 +1,8 @@
 import {
+  CHANGE_VALUE,
   CREATE_ROOM,
+  DROPDOWN_CHANGE,
+  SAVE_ROOM_ID,
   CHANGE_TEXT,
   RECEIVE_MESSAGE,
   TOGGLE_OPEN_CHAT,
@@ -10,7 +13,7 @@ const initialState = {
   chatOpen: true,
   logged: false,
   roomName: '',
-  roomId: '',
+  roomId: 0,
   playersNb: 0,
 
   text: '',
@@ -29,8 +32,13 @@ const reducer = (state = initialState, action = {}) => {
     case CREATE_ROOM:
       return {
         ...state,
-        roomName: 'testRoom',
-        playersNb: 0,
+        roomName: action.roomName,
+        playersNb: action.playersNb,
+      };
+    case SAVE_ROOM_ID:
+      return {
+        ...state,
+        roomId: action.roomId,
       };
 
     // CHATROOM CASES

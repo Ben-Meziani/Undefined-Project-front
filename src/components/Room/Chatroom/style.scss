@@ -8,12 +8,11 @@
   text-align: left;
   font-family: 'Roboto Mono', monospace;
 
-  &-form {
-    height: 3em;
-    display: flex;
-  
-  }
-  
+&-form {
+  height: 3em;
+  display: flex;
+}
+
   &-field {
     width: 100%;
     padding: .5rem .5rem;

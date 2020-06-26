@@ -8,9 +8,7 @@ import {
   LOADING,
   CONNECT,
   CHECK,
-  CHANGE_FILE,
   SAVE_USER,
-  SEND_EDITED_DATAS,
 } from '../actions';
 
 const initialState = {
@@ -20,16 +18,12 @@ const initialState = {
   pseudo: 'Undefined',
   id: 0,
   icon: '',
-
   logged: false,
-
   open: false,
   roomName: '',
   roomId: '',
   playersNb: 0,
-
   loading: false,
-
   userRegistered: false,
   regPassword: '',
   regEmail: '',
@@ -98,15 +92,6 @@ const user = (state = initialState, action = {}) => {
         icon: action.currentUser.icon,
       };
     }
-    case CHANGE_FILE:
-      return {
-        ...state,
-        icon: action.selectedFile,
-      };
-    case SEND_EDITED_DATAS:
-      return {
-        ...state,
-      };
     default:
       return state;
   }

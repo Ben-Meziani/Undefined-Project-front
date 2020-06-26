@@ -47,8 +47,6 @@ const auth = (store) => (next) => (action) => {
         password: state.user.regPassword,
         pseudo: state.user.regPseudo,
 
-      }, {
-        withCredentials: true,
       })
         .then((response) => {
           if (response.data) {
@@ -68,14 +66,16 @@ const auth = (store) => (next) => (action) => {
       break;
     }
 
-/*    case CHECK: {
+    /* case CHECK: {
       axios.post(`${serverURI}/login_check`, {}, {
         withCredentials: true,
       })
         .then((response) => {
           console.log(response.data);
+          // dans response.data on me dit si oui ou non je suis connecté AVEC RESPONSE 200
           if (response.data) {
             if (response.status === '200') {
+              console.log('réponse ok');
               store.dispatch(connect());
             }
             else {
