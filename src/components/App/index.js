@@ -16,7 +16,7 @@ import EditProfile from '../../containers/ConnectedHome/EditProfile';
 import RoomStatic from '../Room/RoomStatic';
 import Chatroom from '../../containers/Room/Chatroom';
 import DicesHistory from '../Room/Dices/DicesHistory';
-import DicesThrow from '../Room/Dices/DicesThrow';
+import DicesThrow from '../../containers/Room/Dices/DicesThrow';
 import PlayerNotes from '../Room/PlayerNotes';
 import SharedFiles from '../Room/SharedFiles';
 import SharedViewForm from '../Room/SharedView/SharedViewForm';

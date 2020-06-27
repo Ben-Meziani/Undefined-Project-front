@@ -13,7 +13,7 @@ import {
 } from '../actions';
 
 /* const serverURI = 'http://ec2-54-234-79-207.compute-1.amazonaws.com/api'; */
-const serverURI = 'https://undefined-project.tk';
+const serverURI = 'https://undefined-project.tk/api';
 
 const auth = (store) => (next) => (action) => {
   switch (action.type) {
@@ -25,6 +25,8 @@ const auth = (store) => (next) => (action) => {
       axios.post(`${serverURI}/login_check`, {
         email: state.user.email,
         password: state.user.password,
+      }, {
+        withCredentials: true,
       })
         .then((response) => {
           console.log(response);
