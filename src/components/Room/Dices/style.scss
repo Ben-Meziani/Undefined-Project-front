@@ -1,0 +1,21 @@
+.dices {
+  &-result{
+
+  }
+  &-throw{
+    display: inline-block;
+    width: 250px;
+    height: 90px;
+    line-height: 90px;
+    border: .1em solid black;
+    margin: 1em;
+    font-size: 42px;
+    color: black;
+    text-align: center;
+    background-color: white;
+    &:hover{
+      color: snow;
+      background: black;
+    }
+  }
+}

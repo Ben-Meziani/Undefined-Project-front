@@ -25,6 +25,8 @@ const auth = (store) => (next) => (action) => {
       axios.post(`${serverURI}/login_check`, {
         email: state.user.email,
         password: state.user.password,
+      }, {
+        withCredentials: true,
       })
         .then((response) => {
           console.log(response);
