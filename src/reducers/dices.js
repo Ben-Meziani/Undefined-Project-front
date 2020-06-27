@@ -1,28 +1,24 @@
 import {
-  DISPLAY_RESULT,
+  FETCH_RESULT,
 
 } from '../actions';
 
 const initialState = {
-  values: [
+
+  dice: [
     {
-      success: true,
-      dice: [
-        {
-          value: 4,
-          type: 'd6',
-        },
-      ],
+      value: 4,
+      type: 'd6',
     },
   ],
+
 };
 
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
-    case DISPLAY_RESULT: {
+    case FETCH_RESULT: {
       return {
         ...state,
-        values: action.values,
       };
     }
     default:

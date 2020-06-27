@@ -1,15 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import DiceValue from './DiceValue';
 import './style.scss';
 
-const DicesThrow = ({ values, displayResult }) => {
+const DicesThrow = ({ dice, fetchResult }) => {
   const handleClick = () => {
-    displayResult();
+    // fetchResult();
   };
   return (
     <div className="dices">
       <div className="dices-result">
-        {values.value}
+        {dice.map((diceItem) => (
+          <DiceValue key={diceItem.type} {...diceItem} />
+        ))}
       </div>
       <button
         label="button"
@@ -24,12 +27,10 @@ const DicesThrow = ({ values, displayResult }) => {
 };
 
 DicesThrow.propTypes = {
-  values: PropTypes.arrayOf(
-    PropTypes.shape({
-      value: PropTypes.number,
-    }),
+  dice: PropTypes.arrayOf(
+    PropTypes.shape({ }),
   ).isRequired,
-  displayResult: PropTypes.func.isRequired,
+  // fetchResult: PropTypes.func.isRequired,
 };
 
 export default DicesThrow;

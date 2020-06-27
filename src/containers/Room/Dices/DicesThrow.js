@@ -1,16 +1,16 @@
 import { connect } from 'react-redux';
 
 import DicesThrow from '../../../components/Room/Dices/DicesThrow';
-import { displayResult } from '../../../actions';
+import { fetchResult } from '../../../actions';
 
 const mapStateToProps = (state) => ({
-  values: state.dices.value,
+  dice: state.dices.dice,
 });
 
 /* const mapDispatchToProps = (dispatch) => ({
-  displayResult: () => {
-    console.log('je veux envoyer un message');
-    const action = displayResult();
+  fetchResult: () => {
+    console.log('Want to do axios request');
+    const action = fetchResult();
     dispatch(action);
   },
 }); */
