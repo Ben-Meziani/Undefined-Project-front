@@ -79,17 +79,20 @@ const App = ({ id }) => (
         <EditProfile />
       </Route>
 
-      <Route path="/chatroom" exact>
-        <RoomStatic />
-        <div className="displayTools">
-          <Chatroom />
-        </div>
-      </Route>
-
       <Route path="/room" exact>
         <RoomStatic />
         <div className="displayTools">
           <p>Utilisez le menu ci-dessus pour accéder à vos outils de jeu</p>
+        </div>
+      </Route>
+
+      <Route path="/chatroom" exact>
+        <RoomStatic />
+        <div className="container">
+          <div className="displayTools">
+            <p>Utilisez le menu ci-dessus pour accéder à vos outils de jeu</p>
+          </div>
+          <Chatroom />
         </div>
       </Route>
 

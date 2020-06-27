@@ -2,7 +2,7 @@ import React from 'react';
 
 import './style.scss';
 
-import HomeBg from '../../../assets/HomeBg-mobile.jpg';
+import HomeBg from '../../../assets/HomeBg2.jpg';
 
 const SharedView = () => (
   <div className="shared-view">

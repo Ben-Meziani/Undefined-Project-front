@@ -6,3 +6,20 @@
   overflow: hidden;
   object-fit: contain;
   }
+
+  // MEDIA QUERIES
+
+@media (min-width: 1024px) {
+
+  .shared-view {
+    width: 60vh;
+    height: 60vh;
+    margin: 0 auto;
+    margin-top: 2em;
+
+    & img {
+      max-width: 100%;
+      object-fit: contain;
+    }
+  }
+}

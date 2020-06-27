@@ -3,6 +3,7 @@
 .app {
   margin: 0 auto;
   text-align: center;
+  max-height: 100vh;
 }
 
 // ROOM
@@ -12,11 +13,18 @@
   flex-direction: column;
 }
 
+.container {
+  position: relative;
+  height: 33vh;
+}
+
 .displayTools{
+  position: absolute;
   border: .3em solid black;
   height: 33vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 }
 

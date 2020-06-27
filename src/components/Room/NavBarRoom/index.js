@@ -19,7 +19,6 @@ const NavBarRoom = ({ roomName }) => (
 
 NavBarRoom.propTypes = {
   roomName: PropTypes.string.isRequired,
-
 };
 
 export default NavBarRoom;
