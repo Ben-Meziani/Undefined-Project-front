@@ -1,5 +1,25 @@
-shared-view-img {
-  height: 50vh;
-  object-fit: cover;
-  width: 100vw;
+@import 'src/styles/vars';
+
+.shared-view {
+  max-width: 100vh;
+  max-height: 50vh;
+  overflow: hidden;
+  object-fit: contain;
+  }
+
+  // MEDIA QUERIES
+
+@media (min-width: 1024px) {
+
+  .shared-view {
+    width: 60vh;
+    height: 60vh;
+    margin: 0 auto;
+    margin-top: 2em;
+
+    & img {
+      max-width: 100%;
+      object-fit: contain;
+    }
+  }
 }

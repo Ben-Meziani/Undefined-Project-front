@@ -1,17 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import PlayersMenu from './PlayersMenu';
 import ToggleMenu from './ToggleMenu';
+
 import './style.scss';
 
-const NavBarRoom = () => (
+const NavBarRoom = ({ roomName }) => (
   <div className="navBarRoom">
     <PlayersMenu />
     <div className="navBarRoom-title">
-      <h1>Harry Pot-de-Beurre <br/> et la Chambres des Kékés.</h1>
+      <h1>{roomName}</h1>
     </div>
     <ToggleMenu />
   </div>
 
 );
+
+NavBarRoom.propTypes = {
+  roomName: PropTypes.string.isRequired,
+};
 
 export default NavBarRoom;

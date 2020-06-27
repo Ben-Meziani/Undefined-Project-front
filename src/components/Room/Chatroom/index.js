@@ -1,33 +1,27 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import GeneralChannel from '../../../containers/Room/Chatroom/GeneralChannel';
 import MessageField from '../../../containers/Room/Chatroom/MessageField';
 
 import './style.scss';
 
-const Chatroom = ({ webSocketConnect, chatOpen, toggleOpenChat }) => {
+const Chatroom = ({ webSocketConnect, chatOpen }) => {
   useEffect(webSocketConnect, []);
   return (
-    <div className="chatroom">
-      <button
-        type="button"
-        onClick={toggleOpenChat}
-        className="chatroom-button"
-      >
-        +
-      </button>
-      <GeneralChannel />
-      <MessageField />
-    </div>
+    <>
+      <div className={chatOpen ? 'chatroom chatroom--open' : 'chatroom'}>
+        <GeneralChannel />
+        <MessageField />
+      </div>
+    </>
   );
 };
 
 Chatroom.propTypes = {
   webSocketConnect: PropTypes.func.isRequired,
   chatOpen: PropTypes.bool.isRequired,
-  toggleOpenChat: PropTypes.func.isRequired,
 };
 
 export default Chatroom;
 
-/* {chatOpen ? 'chatroom chatroom--open' : 'chatroom'} */

@@ -1,14 +1,14 @@
 /* eslint-disable no-console */
 import axios from 'axios';
 
-import { CREATE_ROOM } from '../actions';
+import { CREATE_ROOM, saveRoomId } from '../actions';
 
 const room = (store) => (next) => (action) => {
   switch (action.type) {
     case CREATE_ROOM: {
       console.log('je crée une room');
       const state = store.getState();
-      axios.post('http://ec2-54-234-79-207.compute-1.amazonaws.com/api/room/add', {
+      axios.post('https://undefined-project//api/room/add', {
         name: state.room.roomName,
         player_number: state.room.playersNb,
         theme: 'default',
@@ -17,8 +17,8 @@ const room = (store) => (next) => (action) => {
         .then((response) => {
           console.log(response.data);
           // récupérer l'id unique de la room
-          const saveRoomId = saveRoomId(response.data);
-          store.dispatch(saveRoomId);
+          const saveRoomNumber = saveRoomId(response.data);
+          store.dispatch(saveRoomNumber);
         })
         .catch((error) => {
           console.error(error);

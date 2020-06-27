@@ -12,7 +12,8 @@ import {
   saveUser,
 } from '../actions';
 
-const serverURI = 'http://ec2-54-234-79-207.compute-1.amazonaws.com/api';
+/* const serverURI = 'http://ec2-54-234-79-207.compute-1.amazonaws.com/api'; */
+const serverURI = 'https://undefined-project.tk/api';
 
 const auth = (store) => (next) => (action) => {
   switch (action.type) {
@@ -46,7 +47,6 @@ const auth = (store) => (next) => (action) => {
         email: state.user.regEmail,
         password: state.user.regPassword,
         pseudo: state.user.regPseudo,
-
       })
         .then((response) => {
           if (response.data) {

@@ -12,16 +12,67 @@ const initialState = {
   open: false,
   chatOpen: true,
   logged: false,
-  roomName: '',
+  roomName: 'Harry Pot-de-Beurre et la Chambre des Kékés',
   roomId: 0,
   playersNb: 0,
-
+  playersList: [
+    {
+      pseudo: 'Groot',
+      icon: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/7987a60d-5266-4eb6-9adf-ea9f92b38af1/dclxmrl-0f31717b-ab84-4f85-b2fc-7364492d0ef9.png',
+      id: 7,
+    },
+    {
+      pseudo: 'Rocket',
+      icon: 'https://figurinepop.com/public/2019/11/rocketholiday1_1.jpg',
+      id: 8,
+    },
+    {
+      pseudo: 'Alphonse',
+      icon: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/7987a60d-5266-4eb6-9adf-ea9f92b38af1/dclxmrl-0f31717b-ab84-4f85-b2fc-7364492d0ef9.png',
+      id: 9,
+    },
+    {
+      pseudo: 'Patrick',
+      icon: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/7987a60d-5266-4eb6-9adf-ea9f92b38af1/dclxmrl-0f31717b-ab84-4f85-b2fc-7364492d0ef9.png',
+      id: 10,
+    },
+    {
+      pseudo: 'JeanMi',
+      icon: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/7987a60d-5266-4eb6-9adf-ea9f92b38af1/dclxmrl-0f31717b-ab84-4f85-b2fc-7364492d0ef9.png',
+      id: 11,
+    },
+    {
+      pseudo: 'Egmond',
+      icon: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/7987a60d-5266-4eb6-9adf-ea9f92b38af1/dclxmrl-0f31717b-ab84-4f85-b2fc-7364492d0ef9.png',
+      id: 12,
+    },
+    {
+      pseudo: 'Egmond',
+      icon: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/7987a60d-5266-4eb6-9adf-ea9f92b38af1/dclxmrl-0f31717b-ab84-4f85-b2fc-7364492d0ef9.png',
+      id: 13,
+    },
+    {
+      pseudo: 'Egmond',
+      icon: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/7987a60d-5266-4eb6-9adf-ea9f92b38af1/dclxmrl-0f31717b-ab84-4f85-b2fc-7364492d0ef9.png',
+      id: 14,
+    },
+    {
+      pseudo: 'Egmond',
+      icon: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/7987a60d-5266-4eb6-9adf-ea9f92b38af1/dclxmrl-0f31717b-ab84-4f85-b2fc-7364492d0ef9.png',
+      id: 15,
+    },
+    {
+      pseudo: 'Egmond',
+      icon: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/7987a60d-5266-4eb6-9adf-ea9f92b38af1/dclxmrl-0f31717b-ab84-4f85-b2fc-7364492d0ef9.png',
+      id: 16,
+    },
+  ],
   text: '',
   chatMessages: [
     {
       author: '',
       content: '',
-      id: '',
+      id: 0,
     },
   ],
 };

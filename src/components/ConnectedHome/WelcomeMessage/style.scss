@@ -8,7 +8,8 @@
  /*  border-radius: 5px; */
   background-color: black;
   opacity: 0;
-  animation: fadein 1s linear;
+  transform: skewY(0.5);
+/*   animation: fadein 1s linear;
   animation-fill-mode: forwards;
  
   @keyframes fadein {
@@ -24,14 +25,14 @@
     100% {
       opacity: 1;
     }
-  }
+  } */
 
   &-title {
     font-family: 'Nunito', sans-serif;
     display: inline-block;
     font-size: 1.6em;
     color: black;
-    z-index: 999;
+   /*  z-index: 999; */
     animation: appear 1s ease-in;
     animation-fill-mode: forwards;
 

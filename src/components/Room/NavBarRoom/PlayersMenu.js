@@ -1,12 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Icon } from 'semantic-ui-react';
 
 const PlayersMenu = () => (
   <div className="playersMenu">
-    <Icon
-      name="users"
-      size="large"
-    />
+    <Link to="/players-list">
+      <Icon
+        name="users"
+        size="large"
+      />
+    </Link>
   </div>
 
 );

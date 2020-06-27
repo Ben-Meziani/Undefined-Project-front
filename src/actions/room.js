@@ -22,6 +22,7 @@ export const saveRoomId = (roomId) => ({
   type: SAVE_ROOM_ID,
   roomId,
 });
+
 // CHATROOM
 export const sendMessage = () => ({
   type: SEND_MESSAGE,

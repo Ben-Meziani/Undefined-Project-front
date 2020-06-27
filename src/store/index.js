@@ -2,11 +2,11 @@
 import { createStore, compose, applyMiddleware } from 'redux';
 
 // == Import : local
-import rootReducer from 'src/reducers';
-import auth from 'src/middleware/auth';
-import user from 'src/middleware/user';
-import room from 'src/middleware/room';
-import socket from 'src/middleware/socket';
+import rootReducer from '../reducers';
+import auth from '../middleware/auth';
+import user from '../middleware/user';
+import room from '../middleware/room';
+/* import socket from '../middleware/socket'; */
 import upload from '../middleware/upload';
 
 // == Enhancers
@@ -18,7 +18,7 @@ const enhancers = composeEnhancers(
     user,
     room,
     upload,
-    socket,
+   /*  socket, */
   ),
 );
 

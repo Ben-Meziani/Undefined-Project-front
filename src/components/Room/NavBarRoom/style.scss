@@ -1,4 +1,6 @@
-.navBarRoom{
+@import 'src/styles/vars';
+
+.navBarRoom {
   display:flex;
   justify-content: space-between;
   align-items: center;
@@ -9,5 +11,24 @@
     margin: 0 auto;
     width: 75vw;
     font-weight: bold;
+  }
+}
+
+// MEDIA QUERIES
+
+@media (min-width: 1024px) {
+
+  .navBarRoom {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5em;
+    border: black solid .2em;
+    height: 6vw;
+    &-title{
+      margin: 0 auto;
+      width: 75vw;
+      font-weight: bold;
+    }
   }
 }

@@ -28,7 +28,6 @@ HomePage.propTypes = {
 
 HomePage.propTypes = {
   logged: PropTypes.bool.isRequired,
-  loading: PropTypes.bool.isRequired,
 };
 
 export default HomePage;

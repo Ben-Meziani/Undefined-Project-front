@@ -1,0 +1,62 @@
+@import 'src/styles/vars';
+
+.player {
+  max-width: 15%;
+  margin: 0 1em;
+  flex-grow: 3;
+  
+  &-icon {
+    height: 3em;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 767px) {
+
+  .player {
+    
+    &-icon {
+      height: 7em;
+      overflow: hidden;
+  
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .player {
+    
+    &-icon {
+      height: 9em;
+      overflow: hidden;
+  
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+
+  .player {
+    max-width: 10%;
+    
+    &-icon {
+      height: 10em;
+      overflow: hidden;
+  
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
