@@ -1,6 +1,7 @@
 // == Import npm
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import HomePage from '../../containers/HomePage';
 import Login from '../../containers/HomePage/Login';
@@ -25,7 +26,7 @@ import PlayersList from '../../containers/Room/PlayersList';
 import './style.scss';
 
 // == Composant
-const App = () => (
+const App = ({ id }) => (
   <div className="app">
     <Switch>
 
@@ -74,8 +75,15 @@ const App = () => (
         <ConnectedHome />
       </Route>
 
-      <Route path="/dashboard/user/2/edit" exact>
+      <Route path={`/dashboard/user/${id}/edit`} exact>
         <EditProfile />
+      </Route>
+
+      <Route path="/chatroom" exact>
+        <RoomStatic />
+        <div className="displayTools">
+          <Chatroom />
+        </div>
       </Route>
 
       <Route path="/room" exact>
@@ -83,7 +91,6 @@ const App = () => (
         <div className="displayTools">
           <p>Utilisez le menu ci-dessus pour accéder à vos outils de jeu</p>
         </div>
-        <Chatroom />
       </Route>
 
       <Route path="/players-list" exact>
@@ -91,7 +98,6 @@ const App = () => (
         <div className="displayTools">
           <PlayersList />
         </div>
-        <Chatroom />
       </Route>
 
       <Route path="/dices" exact>
@@ -99,7 +105,6 @@ const App = () => (
         <div className="displayTools">
           <DicesThrow />
         </div>
-        <Chatroom />
       </Route>
 
       <Route path="/room/history" exact>
@@ -107,7 +112,6 @@ const App = () => (
         <div className="displayTools">
           <DicesHistory />
         </div>
-        <Chatroom />
       </Route>
 
       <Route path="/room/notes" exact>
@@ -115,7 +119,6 @@ const App = () => (
         <div className="displayTools">
           <PlayerNotes />
         </div>
-        <Chatroom />
       </Route>
 
       <Route path="/room/files" exact>
@@ -123,7 +126,6 @@ const App = () => (
         <div className="displayTools">
           <SharedFiles />
         </div>
-        <Chatroom />
       </Route>
 
       <Route path="/room/share" exact>
@@ -131,17 +133,14 @@ const App = () => (
         <div className="displayTools">
           <SharedViewForm />
         </div>
-        <Chatroom />
       </Route>
-      
     </Switch>
   </div>
 );
 
-/*
 App.propTypes = {
-  checkIsLogged: PropTypes.func.isRequired,
-}; */
+  id: PropTypes.number.isRequired,
+};
 
 // == Export
 export default App;

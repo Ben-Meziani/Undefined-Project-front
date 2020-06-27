@@ -1,5 +1,8 @@
+@import 'src/styles/vars';
+
 .chatroom{
   width: 100%;
+  height: 100%;
   margin: 0 auto;
 /*   height: 100vh; */
   display: flex;
@@ -7,33 +10,42 @@
   /* border: solid .5em black; */
   text-align: left;
   font-family: 'Roboto Mono', monospace;
+  display: none;
+
+  &--open {
+    display: block;
+  }
 
 &-form {
-  height: 3em;
+  position: relative;
+  width: 100%;
+  max-height: 2em;
+  margin-top: 0.4em;
+  left: 0;
   display: flex;
 }
 
   &-field {
     width: 100%;
     padding: .5rem .5rem;
-    border-top: solid .1em black;
+    /* border: solid .1em black; */
+    border: none;
   }
 
   &-send {
-    padding: .5rem .5rem;
-    line-height: 1;
+    padding: .4rem .4rem;
+    line-height: 0.8;
     outline: none;
-    background-color : transparent;
+    background-color : black;
+    color: white;
     border: 0;
-    border-top: solid .1em black;
-    border-left: solid .1em black;
+    border-top: solid .1em rgb(167, 76, 76);
+    border-left: solid .1em rgb(146, 73, 73);
   }
-
 }
 
-
 .messages {
-  height: 100%;
+  max-height: 100%;
   overflow-x: visible;
   overflow-y: auto;
 }
