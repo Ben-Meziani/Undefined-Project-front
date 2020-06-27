@@ -11,7 +11,13 @@
 
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1024px) {
 
+  .players-list {
+    border: 1px solid black;
+    position: relative;
+    
+    max-width: 30%;
+  }
 
 }

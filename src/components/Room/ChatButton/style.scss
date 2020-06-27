@@ -3,7 +3,11 @@
 .chatroom-button {
   background-color: #506761;
   border: none;
+  height: 2em;
+  width: 2em;
+  border-radius: 4px;
   color: white;
+  font-size: 1.4em;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -14,7 +18,9 @@
   border: none;
   color: white;
   border: none;
-  height: 1.4em;
+  height: 2em;
+  width: 2em;
+  border-radius: 4px;
   top: 50%;
   left: 0;
  }

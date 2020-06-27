@@ -4,7 +4,8 @@
   font-family: 'Nunito', sans-serif;
 }
 
-.displayTools{
+.displayTools {
+  position: relative;
   border: .3em solid black;
   height: 33vh;
   display: flex;
@@ -12,3 +13,13 @@
   align-items: center;
   z-index: 1;
 }
+
+@media (min-width: 1024px) {
+
+  .static-room {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+

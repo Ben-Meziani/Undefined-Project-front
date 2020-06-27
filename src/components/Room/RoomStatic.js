@@ -4,8 +4,10 @@ import SharedView from './SharedView';
 import ChatButton from '../../containers/Room/ChatButton';
 import ToolsMenu from './ToolsMenu';
 
+import './style.scss';
+
 const RoomStatic = () => (
-  <div>
+  <div className="static-room">
     <NavBarRoom />
     <SharedView />
     <ChatButton />

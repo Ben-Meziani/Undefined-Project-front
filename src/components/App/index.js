@@ -98,7 +98,10 @@ const App = ({ id }) => (
 
       <Route path="/players-list" exact>
         <RoomStatic />
-        <div className="displayTools">
+        <div className="container">
+          <div className="displayTools">
+            <p>Utilisez le menu ci-dessus pour accéder à vos outils de jeu</p>
+          </div>
           <PlayersList />
         </div>
       </Route>
