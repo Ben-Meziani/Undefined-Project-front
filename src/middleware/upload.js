@@ -19,11 +19,12 @@ const user = (store) => (next) => (action) => {
       })
         .then((response) => {
           /* const url = window.URL.createObjectURL(new Blob([response.data])); */
-          const blob = new Blob([response.data]);
-          const reader = new FileReader();
+          const blob = new Blob([response.data], { type: 'image/jpeg' });
+          const url = URL.createObjectURL(blob);
+          /* const reader = new FileReader();
           reader.readAsDataURL(blob);
-          console.log(reader.result);
-          const saveCurrentIcon = saveIcon(reader.result);
+          console.log(reader.result); */
+          const saveCurrentIcon = saveIcon(url);
           store.dispatch(saveCurrentIcon);
         })
         .catch((error) => {
