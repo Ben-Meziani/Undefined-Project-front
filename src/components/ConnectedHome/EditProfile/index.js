@@ -29,11 +29,11 @@ const EditProfile = ({
   const handleChange = (evt) => {
     console.log('---- je récupère le nom du fichier sélectionné par le user ----');
     evt.preventDefault();
-  /*   console.log('File récupéré au onChange ' + evt.target.files[0]);
+    console.log('File récupéré au onChange ' + evt.target.files[0]);
     const newIconUrl = URL.createObjectURL(evt.target.files[0]);
     const newIconFile = evt.target.files[0];
     changeIconUrl('+++ NewIconUrl vaut' + newIconUrl);
-    console.log('+++ NewIconFile vaut' + newIconFile); */
+    console.log('+++ NewIconFile vaut' + newIconFile);
   };
 
   // SEND THE NEW DATA
