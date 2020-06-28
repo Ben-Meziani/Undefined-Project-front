@@ -19,7 +19,7 @@ const user = (store) => (next) => (action) => {
       })
         .then((response) => {
           /* const url = window.URL.createObjectURL(new Blob([response.data])); */
-          const blob = new Blob([response.data], { type: 'image/jpeg' });
+          const blob = new Blob([response.data]);
           const url = URL.createObjectURL(blob);
           /* const reader = new FileReader();
           reader.readAsDataURL(blob);
