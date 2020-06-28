@@ -15,11 +15,12 @@ const user = (store) => (next) => (action) => {
       axios.get(`${serverURI}/user/${userId}/icon`, {
       }, {
         withCredentials: true,
+        responseType: 'blob',
       })
         .then((response) => {
           console.log(' --- response data --- ' + response.data);
-
-          console.log(response.data.blob());
+          const responseToBlob = response.data;
+          console.log(responseToBlob.blob());
          /*  const saveCurrentIcon = saveIcon(response);
           store.dispatch(saveCurrentIcon); */
         })
