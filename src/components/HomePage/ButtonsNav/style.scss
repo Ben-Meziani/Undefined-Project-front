@@ -1,3 +1,5 @@
+@import 'src/styles/vars';
+
 // General styles
 .homepage-navbutton{
   
@@ -7,9 +9,20 @@
     background-color: white;
     border: solid .1em black;
     width: 100%;
+    justify-content: center;
+    background: linear-gradient(to right, black 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+    @include mq() {
+      height: 5em;
+      width: 100%;
+      display: flex;
+    };
     &:hover{
       background-color: black;
       color: white;
+      background-position: bottom left;
     }
   }
   
@@ -21,10 +34,19 @@
     font-family: 'Roboto Mono', monospace;
     width: 100%;
     justify-content: center;
-
+    background: linear-gradient(to right, black 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+    @include mq() {
+      display: flex;
+      height: 5em;
+      width: 100%;
+    };
     &:hover{
       background-color: black;
       color: white;
+      background-position: bottom left;
     }
   }
 }
