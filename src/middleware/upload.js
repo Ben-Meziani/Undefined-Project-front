@@ -12,7 +12,7 @@ const user = (store) => (next) => (action) => {
       const state = store.getState();
       const userId = state.user.id;
       console.log('++++ je récupère l\'icon du user selon son id ++++');
-      axios.get(`${serverURI}/user/${userId}/icon`, {
+      axios.get(`${serverURI}/user/${userId}/icons`, {
       }, {
         withCredentials: true,
       })
