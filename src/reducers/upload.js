@@ -2,6 +2,7 @@ import {
   CHANGE_ICON_FILE,
   CHANGE_ICON_URL,
   SEND_EDITED_DATAS,
+  SAVE_ICON,
 } from '../actions';
 
 const initialState = {
@@ -27,6 +28,12 @@ const upload = (state = initialState, action = {}) => {
       return {
         ...state,
       };
+    case SAVE_ICON: {
+      return {
+        ...state,
+        icon: action.icon,
+      };
+    }
     default:
       return state;
   }

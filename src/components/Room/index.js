@@ -8,7 +8,7 @@ import DicesThrow from '../../containers/Room/DicesThrow';
 import PlayerNotes from './PlayerNotes';
 import PlayersList from '../../containers/Room/PlayersList';
 import SharedFiles from './SharedFiles';
-import ToolsMenu from './ToolsMenu';
+import ToolsMenu from '../../containers/Room/ToolsMenu';
 
 import './style.scss';
 

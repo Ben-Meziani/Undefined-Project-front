@@ -2,7 +2,7 @@
 /* eslint-disable no-console */
 import axios from 'axios';
 
-import { SEND_EDITED_DATAS, FETCH_ICON } from '../actions';
+import { SEND_EDITED_DATAS, FETCH_ICON, saveIcon } from '../actions';
 
 const serverURI = 'https://undefined-project.tk/api';
 
@@ -17,7 +17,9 @@ const user = (store) => (next) => (action) => {
         withCredentials: true,
       })
         .then((response) => {
-          console.log(response.data);
+          console.log(response.config);
+          const saveCurrentIcon = saveIcon(response);
+          store.dispatch(saveCurrentIcon);
         })
         .catch((error) => {
           console.log(error);

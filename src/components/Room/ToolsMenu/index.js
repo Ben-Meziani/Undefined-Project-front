@@ -7,6 +7,7 @@ const ToolsMenu = ({ toggleOpenBook }) => {
   return (
     <div className="toolsMenu">
       <ul className="toolsMenu-list">
+        <button type="button" onClick={toggleOpenBook}>Book</button>
         <li><Icon onClick={toggleOpenBook} name="book" size="large" /></li>
         <li><Icon name="edit" size="large" /></li>
         <li><Icon name="bomb" size="large" /></li>

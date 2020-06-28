@@ -10,7 +10,8 @@ import {
 
 const initialState = {
   open: false,
-  chatOpen: true,
+  chatOpen: false,
+  bookOpen: false,
   logged: false,
   roomName: '',
   roomId: 0,
