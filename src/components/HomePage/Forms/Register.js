@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import {
   Button,
   Form,
-  Grid,
   Loader,
 } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
@@ -19,6 +18,7 @@ const Register = ({
   register,
   loading,
   userRegistered,
+  logged,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -28,45 +28,43 @@ const Register = ({
   return (
 
     <div className="register">
-      {!userRegistered && (
+      {!userRegistered && !logged && (
         <>
-          {/* <Grid className="center aligned register-form"> */}
-            <Form autoComplete="off" onSubmit={handleSubmit}>
-              <Form.Field required>
-                <label>Pseudonyme</label>
-                <Field
-                  type="text"
-                  placeholder="Pseudo"
-                  name="regPseudo"
-                  changeValue={changeValue}
-                  value={regPseudo}
-                />
-              </Form.Field>
-              <Form.Field required>
-                <label>E-mail</label>
-                <Field
-                  type="email"
-                  placeholder="Email"
-                  name="regEmail"
-                  changeValue={changeValue}
-                  value={regEmail}
-                />
-              </Form.Field>
-              <Form.Field required>
-                <label>Mot de passe</label>
-                <Field
-                  type="password"
-                  placeholder="Mot de passe"
-                  name="regPassword"
-                  changeValue={changeValue}
-                  value={regPassword}
-                />
-              </Form.Field>
-              <Button color="black" type="submit">
-                Enregistrez-vous !
-              </Button>
-            </Form>
-{/*           </Grid> */}
+          <Form autoComplete="off" onSubmit={handleSubmit}>
+            <Form.Field required>
+              <label>Pseudonyme</label>
+              <Field
+                type="text"
+                placeholder="Pseudo"
+                name="regPseudo"
+                changeValue={changeValue}
+                value={regPseudo}
+              />
+            </Form.Field>
+            <Form.Field required>
+              <label>E-mail</label>
+              <Field
+                type="email"
+                placeholder="Email"
+                name="regEmail"
+                changeValue={changeValue}
+                value={regEmail}
+              />
+            </Form.Field>
+            <Form.Field required>
+              <label>Mot de passe</label>
+              <Field
+                type="password"
+                placeholder="Mot de passe"
+                name="regPassword"
+                changeValue={changeValue}
+                value={regPassword}
+              />
+            </Form.Field>
+            <Button color="black" type="submit">
+              Enregistrez-vous !
+            </Button>
+          </Form>
         </>
       )}
       {loading && (
@@ -82,6 +80,14 @@ const Register = ({
         </Link>
       </>
       )}
+      {logged && !loading && (
+        <>
+          <p>Vous êtes connecté.</p>
+          <Link to="/dashboard">
+            <p>Allez sur votre profil.</p>
+          </Link>
+        </>
+      )}
     </div>
   );
 };
@@ -96,6 +102,7 @@ Register.propTypes = {
   loading: PropTypes.bool.isRequired,
   userRegistered: PropTypes.bool.isRequired,
   register: PropTypes.func.isRequired,
+  logged: PropTypes.bool.isRequired,
 };
 
 export default Register;

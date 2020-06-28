@@ -8,13 +8,13 @@
   align-items: center;
   padding: 1em;
 
-/*   animation-name: fadeIn;
-  animation-duration: 5s; */
+  animation-name: fadeIn;
+  animation-duration: 5s;
 
-/*   @keyframes fadeIn {
+  @keyframes fadeIn {
     from {background-color:white;}
     to {background-color:black;}
-  } */
+  } 
 
   @include mq() {
     margin: 0 auto;

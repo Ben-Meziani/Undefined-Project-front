@@ -22,6 +22,9 @@ console.log(logged);
       <Route path="/" exact>
         <div className="homePage">
           <Header />
+          <div className="homePage-rain">
+            <Rain />
+          </div>
           <div className="homePage-container">
             <div className="homePage-buttons">
               <ButtonsNav />
@@ -35,6 +38,7 @@ console.log(logged);
           </div>
         </div>
       </Route>
+
 
       <Route path="/login" exact>
         <div className="homePage">
