@@ -12,14 +12,16 @@ const user = (store) => (next) => (action) => {
       const state = store.getState();
       const userId = state.user.id;
       console.log('++++ je récupère l\'icon du user selon son id ++++');
-      axios.get(`${serverURI}/user/${userId}/icons`, {
+      axios.get(`${serverURI}/user/${userId}/icon`, {
       }, {
         withCredentials: true,
       })
         .then((response) => {
-          console.log(response.config);
-          const saveCurrentIcon = saveIcon(response);
-          store.dispatch(saveCurrentIcon);
+          console.log(' --- response --- ' + response);
+          console.log('--- response config --- ' + response.config);
+          console.log(' --- response data --- ' + response.data);
+          /* const saveCurrentIcon = saveIcon(response);
+          store.dispatch(saveCurrentIcon); */
         })
         .catch((error) => {
           console.log(error);
