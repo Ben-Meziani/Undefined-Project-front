@@ -15,7 +15,7 @@ const user = (store) => (next) => (action) => {
       axios.get(`${serverURI}/user/${userId}/icon`, {
       }, {
         withCredentials: true,
-        responseType: 'blob',
+        /* responseType: 'blob', */
       })
         .then((response) => {
           /* const url = window.URL.createObjectURL(new Blob([response.data])); */

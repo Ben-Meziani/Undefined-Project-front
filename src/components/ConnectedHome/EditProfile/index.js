@@ -44,6 +44,8 @@ const EditProfile = ({
   };
 
   console.log(' --- icon dans component EditProfile vaut --- ' + icon);
+  
+
   return (
     <div className="edit-profile-section">
       <div className="edit-profile-section-title">
