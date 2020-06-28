@@ -18,7 +18,8 @@ const user = (store) => (next) => (action) => {
       })
         .then((response) => {
           console.log(' --- response data --- ' + response.data);
-          console.log(response.blob());
+
+          console.log(response.data.blob());
          /*  const saveCurrentIcon = saveIcon(response);
           store.dispatch(saveCurrentIcon); */
         })
