@@ -3,16 +3,20 @@ import axios from 'axios';
 
 import { CREATE_ROOM, saveRoomId } from '../actions';
 
+const serverURI = 'https://undefined-project.tk/api';
+
 const room = (store) => (next) => (action) => {
   switch (action.type) {
     case CREATE_ROOM: {
       console.log('je crée une room');
       const state = store.getState();
-      axios.post('https://undefined-project//api/room/add', {
+      axios.post(`${serverURI}/room/add`, {
         name: state.room.roomName,
         player_number: state.room.playersNb,
         theme: 'default',
         game_master: state.user.id,
+      }, {
+        withCredentials: true,
       })
         .then((response) => {
           console.log(response.data);

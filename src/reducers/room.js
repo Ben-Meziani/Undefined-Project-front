@@ -12,7 +12,7 @@ const initialState = {
   open: false,
   chatOpen: true,
   logged: false,
-  roomName: 'Harry Pot-de-Beurre et la Chambre des Kékés',
+  roomName: '',
   roomId: 0,
   playersNb: 0,
   playersList: [
@@ -119,16 +119,16 @@ const reducer = (state = initialState, action = {}) => {
         chatOpen: !state.chatOpen,
       };
 
-      /* case CHANGE_VALUE:
+    case CHANGE_VALUE:
       return {
         ...state,
         roomName: action.value,
-      }; */
-    /* case DROPDOWN_CHANGE:
+      };
+    case DROPDOWN_CHANGE:
       return {
         ...state,
         playersNb: action.selectedValue,
-      }; */
+      };
     default:
       return state;
   }

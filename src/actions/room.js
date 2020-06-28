@@ -3,14 +3,14 @@
 // GENERAL
 export const CREATE_ROOM = 'CREATE_ROOM';
 export const SAVE_ROOM_ID = 'SAVE_ROOM';
+export const TOGGLE_OPEN_CHAT = 'TOGGLE_OPEN_CHAT';
+export const TOGGLE_OPEN_BOOK = 'TOGGLE_OPEN_BOOK';
 
 // CHATROOM
 export const SEND_MESSAGE = 'SEND_MESSAGE';
 export const CHANGE_TEXT = 'CHANGE_TEXT';
 export const WS_CONNECT = 'WS_CONNECT';
 export const RECEIVE_MESSAGE = 'RECEIVE_MESSAGE';
-export const TOGGLE_OPEN_CHAT = 'TOGGLE_OPEN_CHAT';
-export const TOGGLE_OPEN_BOOK = 'TOGGLE_OPEN_BOOK';
 
 // ACTION CREATORS
 
@@ -22,6 +22,14 @@ export const createRoom = () => ({
 export const saveRoomId = (roomId) => ({
   type: SAVE_ROOM_ID,
   roomId,
+});
+
+export const toggleOpenChat = () => ({
+  type: TOGGLE_OPEN_CHAT,
+});
+
+export const toggleOpenBook = () => ({
+  type: TOGGLE_OPEN_BOOK,
 });
 
 // CHATROOM
@@ -40,6 +48,3 @@ export const receiveMessage = (chatMessage) => ({
   chatMessage,
 });
 
-export const toggleOpenChat = () => ({
-  type: TOGGLE_OPEN_CHAT,
-});

@@ -1,4 +1,4 @@
-.0/* eslint-disable no-console */
+/* eslint-disable no-console */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import { Modal, Dropdown } from 'semantic-ui-react';
@@ -15,7 +15,7 @@ const CreateRoom = ({
   playersNb,
   createRoom,
 }) => {
-  const dropdownChange = (e, value) => {
+  const dropdownChange = (evt, value) => {
     handleDropdown(value.value);
   };
   const handleSubmit = (evt) => {

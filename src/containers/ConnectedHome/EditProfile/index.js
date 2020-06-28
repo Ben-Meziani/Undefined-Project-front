@@ -9,6 +9,7 @@ import {
   changeIconUrl,
   changeValue,
   sendEditedDatas,
+  fetchIcon,
 } from '../../../actions';
 
 const mapStateToProps = (state) => ({
@@ -36,6 +37,10 @@ const mapDispatchToProps = (dispatch) => ({
   },
   sendEditedDatas: () => {
     const action = sendEditedDatas();
+    dispatch(action);
+  },
+  fetchIcon: () => {
+    const action = fetchIcon();
     dispatch(action);
   },
 });

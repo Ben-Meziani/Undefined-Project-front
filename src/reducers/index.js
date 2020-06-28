@@ -12,5 +12,4 @@ export default combineReducers({
   upload,
   room,
   dices,
-
 });
