@@ -22,8 +22,8 @@ const user = (store) => (next) => (action) => {
           const blob = new Blob([response.data]);
           const reader = new FileReader();
           reader.readAsDataURL(blob);
-          console.log(reader.url);
-          const saveCurrentIcon = saveIcon(reader.url);
+          console.log(reader.result);
+          const saveCurrentIcon = saveIcon(reader.result);
           store.dispatch(saveCurrentIcon);
         })
         .catch((error) => {
