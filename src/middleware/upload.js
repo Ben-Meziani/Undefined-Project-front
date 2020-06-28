@@ -17,10 +17,9 @@ const user = (store) => (next) => (action) => {
         withCredentials: true,
       })
         .then((response) => {
-          console.log(' --- response --- ' + response);
-          console.log('--- response config --- ' + response.config);
           console.log(' --- response data --- ' + response.data);
-          /* const saveCurrentIcon = saveIcon(response);
+          console.log(response.blob());
+         /*  const saveCurrentIcon = saveIcon(response);
           store.dispatch(saveCurrentIcon); */
         })
         .catch((error) => {
