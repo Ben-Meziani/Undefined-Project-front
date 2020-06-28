@@ -98,8 +98,11 @@ const App = ({ id }) => (
 
       <Route path="/players-list" exact>
         <RoomStatic />
-        <div className="displayTools">
-          <PlayersList />
+        <div className="container">
+          <div className="displayTools">
+            <PlayersList />
+          </div>
+          <Chatroom />
         </div>
       </Route>
 

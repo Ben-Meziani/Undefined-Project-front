@@ -3,9 +3,12 @@ import PropTypes from 'prop-types';
 import DiceValue from './DiceValue';
 import './style.scss';
 
-const DicesThrow = ({ dice, fetchResult }) => {
+const DicesThrow = ({ dice, fetchResult, throwed, reroll }) => {
   const handleClick = () => {
-    // fetchResult();
+    fetchResult();
+  };
+  const handleReroll = () => {
+    reroll();
   };
   return (
     <div className="dices">
@@ -14,14 +17,24 @@ const DicesThrow = ({ dice, fetchResult }) => {
           <DiceValue key={diceItem.type} {...diceItem} />
         ))}
       </div>
-      <button
-        label="button"
-        type="button"
+      {!throwed && (
+      <div
         onClick={handleClick}
         className="dices-throw"
       >
-        Throw it!
-      </button>
+        Throw the dice.
+      </div>
+      )}
+      {throwed && (
+      <div
+        label="button"
+        type="button"
+        onClick={handleReroll}
+        className="dices-throw"
+      >
+        Wanna throw it again ?
+      </div>
+      )}
     </div>
   );
 };
@@ -30,7 +43,9 @@ DicesThrow.propTypes = {
   dice: PropTypes.arrayOf(
     PropTypes.shape({ }),
   ).isRequired,
-  // fetchResult: PropTypes.func.isRequired,
+  fetchResult: PropTypes.func.isRequired,
+  reroll: PropTypes.func.isRequired,
+  throwed: PropTypes.bool.isRequired,
 };
 
 export default DicesThrow;

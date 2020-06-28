@@ -1,10 +1,10 @@
 import {
   FETCH_RESULT,
-
+  REROLL,
 } from '../actions';
 
 const initialState = {
-
+  throwed: false,
   dice: [
     {
       value: 4,
@@ -19,6 +19,16 @@ const reducer = (state = initialState, action = {}) => {
     case FETCH_RESULT: {
       return {
         ...state,
+        value: action.dice.value,
+        type: action.dice.type,
+        throwed: true,
+      };
+    }
+    case REROLL: {
+      return {
+        ...state,
+        dice: [],
+        throwed: false,
       };
     }
     default:
