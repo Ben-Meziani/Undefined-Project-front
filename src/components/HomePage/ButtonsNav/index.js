@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import './style.scss';
 
 const ButtonsNav = () => (
-  <div className="homepage-navbutton">
-
+  <>
     <button
       type="button"
       className=" homepage-navbutton-login"
@@ -22,8 +21,7 @@ const ButtonsNav = () => (
         Register
       </Link>
     </button>
-
-  </div>
+  </>
 );
 
 export default ButtonsNav;

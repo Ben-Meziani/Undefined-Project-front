@@ -30,8 +30,7 @@ const Register = ({
     <div className="register">
       {!userRegistered && (
         <>
-          <RegisterAvatar />
-          <Grid className="center aligned register-form">
+          {/* <Grid className="center aligned register-form"> */}
             <Form autoComplete="off" onSubmit={handleSubmit}>
               <Form.Field required>
                 <label>Pseudonyme</label>
@@ -63,11 +62,11 @@ const Register = ({
                   value={regPassword}
                 />
               </Form.Field>
-              <Button color="black" type="submit" className="center aligned">
+              <Button color="black" type="submit">
                 Enregistrez-vous !
               </Button>
             </Form>
-          </Grid>
+{/*           </Grid> */}
         </>
       )}
       {loading && (

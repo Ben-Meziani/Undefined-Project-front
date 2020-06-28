@@ -10,7 +10,15 @@
   border : solid .1em black;
   margin: 0 auto;
   margin-top: .2em;
-  padding: 3.1em;
+  padding: 3em;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  @include mq() {
+    height: 60vh;
+    width: 100%;
+    justify-content: center;
+  };
 }
 
 // Register
@@ -19,15 +27,19 @@
   border : solid .1em black;
   margin: 0 auto;
   margin-top: .2em;
-  padding: 1.5em;
+  padding: 3em;
+  height: 60vh;
+  display: flex;
+  align-items: center;
   @include mq() {
-    margin: 0;
+    height: 60vh;
+    width: 100%;
+    justify-content: center;
   };
   
   // RegisterAvatar
 
   &-avatar{
-    display: flex;
     justify-content: center;
 
     &-preview{

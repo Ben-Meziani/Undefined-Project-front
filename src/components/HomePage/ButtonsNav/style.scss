@@ -1,15 +1,12 @@
 // General styles
 .homepage-navbutton{
-
-  margin: 0 auto;
-  font-size: 1.5em;
   
 // Button Login
   &-login{
     font-family: 'Roboto Mono', monospace;
     background-color: white;
     border: solid .1em black;
-    width: 5.8em;
+    width: 100%;
     &:hover{
       background-color: black;
       color: white;
@@ -22,7 +19,7 @@
     background-color: white;
     border: solid .1em black;
     font-family: 'Roboto Mono', monospace;
-    width: 5.8em;
+    width: 100%;
     justify-content: center;
 
     &:hover{
