@@ -20,9 +20,8 @@ const user = (store) => (next) => (action) => {
         .then((response) => {
           console.log(' --- response data --- ' + response.data);
           const responseToBlob = response.data;
-          console.log(responseToBlob.blob());
-         /*  const saveCurrentIcon = saveIcon(response);
-          store.dispatch(saveCurrentIcon); */
+          const saveCurrentIcon = saveIcon(responseToBlob);
+          store.dispatch(saveCurrentIcon);
         })
         .catch((error) => {
           console.log(error);
