@@ -54,7 +54,7 @@ const EditProfile = ({
       <div className="edit-profile-avatar">
         <input type="file" name="iconFile" className="avatar-choice-input" onChange={handleChange} />
         <div className="avatar-preview">
-          <img className="avatar" src={{ uri: icon }} alt="unknown" />
+          <img className="avatar" src={icon} alt="unknown" />
           {!imgURL ? <img className="avatar" src={icon} alt="unknown" /> : <img className="avatar" src={imgURL} alt="unknown" />}
         </div>
       </div>
