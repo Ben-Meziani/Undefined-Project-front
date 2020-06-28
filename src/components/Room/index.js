@@ -1,72 +1,31 @@
-/* import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import RoomStatic from './RoomStatic';
+import React from 'react';
+import NavBarRoom from '../../containers/Room/NavBarRoom';
+import SharedView from './SharedView';
+import ChatButton from '../../containers/Room/ChatButton';
 import Chatroom from '../../containers/Room/Chatroom';
-import DicesHistory from './Dices/DicesHistory';
-import DicesThrow from './Dices/DicesThrow';
+import DicesHistory from './DicesHistory';
+import DicesThrow from '../../containers/Room/DicesThrow';
 import PlayerNotes from './PlayerNotes';
+import PlayersList from '../../containers/Room/PlayersList';
 import SharedFiles from './SharedFiles';
-import SharedViewForm from './SharedView/SharedViewForm';
+import ToolsMenu from './ToolsMenu';
 
 import './style.scss';
 
-const Room = () => (
-
-  <div className="currentRoom">
-
-    <Switch>
-      <Route path="/room" exact>
-        <RoomStatic />
-        <div className="displayTools">
-          <p>Utilisez le menu ci-dessus pour accéder à vos outils de jeu</p>
-        </div>
-        <Chatroom />
-      </Route>
-
-      <Route path="/dices" exact>
-        <RoomStatic />
-        <div className="displayTools">
-          <DicesThrow />
-        </div>
-        <Chatroom />
-      </Route>
-
-      <Route path="/room/history" exact>
-        <RoomStatic />
-        <div className="displayTools">
-          <DicesHistory />
-        </div>
-        <Chatroom />
-      </Route>
-
-      <Route path="/room/notes" exact>
-        <RoomStatic />
-        <div className="displayTools">
-          <PlayerNotes />
-        </div>
-        <Chatroom />
-      </Route>
-
-      <Route path="/room/files" exact>
-        <RoomStatic />
-        <div className="displayTools">
-          <SharedFiles />
-        </div>
-        <Chatroom />
-      </Route>
-
-      <Route path="/room/share" exact>
-        <RoomStatic />
-        <div className="displayTools">
-          <SharedViewForm />
-        </div>
-        <Chatroom />
-      </Route>
-
-    </Switch>
+const RoomStatic = () => (
+  <div className="static-room">
+    <NavBarRoom />
+    <SharedView />
+    <ChatButton />
+    <Chatroom />
+    <DicesThrow />
+    <DicesHistory />
+    <PlayerNotes />
+    <PlayersList />
+    <SharedFiles />
+    <SharedView />
+    <ToolsMenu />
   </div>
-
 );
 
-export default Room;
- */
+export default RoomStatic;

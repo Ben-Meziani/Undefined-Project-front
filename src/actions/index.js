@@ -8,8 +8,9 @@ export const CHANGE_VALUE = 'CHANGE_VALUE';
 export const DROPDOWN_CHANGE = 'DROPDOWN_CHANGE';
 export const LOADING = 'LOADING';
 
-export const toggleOpen = () => ({
+export const toggleOpen = (value) => ({
   type: TOGGLE_OPEN,
+  value,
 });
 
 export const dropdownChange = (selectedValue) => ({

@@ -1,18 +1,24 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { Icon } from 'semantic-ui-react';
 import './style.scss';
 
-const ToolsMenu = () => (
-  <div className="toolsMenu">
-    <ul className="toolsMenu-list">
-      <li><Link to="/room/files"><Icon name="book" size="large" /></Link></li>
-      <li><Link to="/room/notes"><Icon name="edit" size="large" /></Link></li>
-      <li><Link to="/room/dices"><Icon name="bomb" size="large" /></Link></li>
-      <li><Link to="/room/history"><Icon name="bomb" size="large" /></Link></li>
-      <li><Link to="/room/share"><Icon disabled name="picture" size="large" /></Link></li>
-    </ul>
-  </div>
-);
+const ToolsMenu = ({ toggleOpenBook }) => {
+  return (
+    <div className="toolsMenu">
+      <ul className="toolsMenu-list">
+        <li><Icon onClick={toggleOpenBook} name="book" size="large" /></li>
+        <li><Icon name="edit" size="large" /></li>
+        <li><Icon name="bomb" size="large" /></li>
+        <li><Icon name="bomb" size="large" /></li>
+        <li><Icon disabled name="picture" size="large" /></li>
+      </ul>
+    </div>
+  );
+};
+
+ToolsMenu.propTypes = {
+  toogleOpenBook: PropTypes.func.isRequired,
+};
 
 export default ToolsMenu;

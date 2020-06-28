@@ -12,15 +12,7 @@ import Team from '../HomePage/Carousel/Team';
 
 import ConnectedHome from '../../containers/ConnectedHome';
 import EditProfile from '../../containers/ConnectedHome/EditProfile';
-
-import RoomStatic from '../Room/RoomStatic';
-import Chatroom from '../../containers/Room/Chatroom';
-import DicesHistory from '../Room/Dices/DicesHistory';
-import DicesThrow from '../../containers/Room/Dices/DicesThrow';
-import PlayerNotes from '../Room/PlayerNotes';
-import SharedFiles from '../Room/SharedFiles';
-import SharedViewForm from '../Room/SharedView/SharedViewForm';
-import PlayersList from '../../containers/Room/PlayersList';
+import Room from '../Room';
 
 // == Import
 import './style.scss';
@@ -80,13 +72,13 @@ const App = ({ id }) => (
       </Route>
 
       <Route path="/room" exact>
-        <RoomStatic />
+        <Room />
         <div className="displayTools">
           <p>Utilisez le menu ci-dessus pour accéder à vos outils de jeu</p>
         </div>
       </Route>
 
-      <Route path="/room/chatroom" exact>
+  {/*     <Route path="/room/chatroom" exact>
         <RoomStatic />
         <div className="container">
           <div className="displayTools">
@@ -139,7 +131,7 @@ const App = ({ id }) => (
         <div className="displayTools">
           <SharedViewForm />
         </div>
-      </Route>
+      </Route> */}
     </Switch>
   </div>
 );

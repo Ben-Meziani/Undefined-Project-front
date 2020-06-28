@@ -2,19 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './style.scss';
 
-const DicesThrow = ({ values, displayResult }) => {
-  const handleClick = () => {
+const DicesThrow = ({ /* values, displayResul */t }) => {
+/*   const handleClick = () => {
     displayResult();
-  };
+  }; */
   return (
     <div className="dices">
       <div className="dices-result">
-        {values.value}
+       {/*  {values.value} */}
       </div>
       <button
         label="button"
         type="button"
-        onClick={handleClick}
+       /*  onClick={handleClick} */
         className="dices-throw"
       >
         Throw it!
@@ -23,13 +23,13 @@ const DicesThrow = ({ values, displayResult }) => {
   );
 };
 
-DicesThrow.propTypes = {
+/* DicesThrow.propTypes = {
   values: PropTypes.arrayOf(
     PropTypes.shape({
       value: PropTypes.number,
     }),
   ).isRequired,
   displayResult: PropTypes.func.isRequired,
-};
+}; */
 
 export default DicesThrow;

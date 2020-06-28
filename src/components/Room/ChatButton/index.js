@@ -5,28 +5,25 @@ import { Link } from 'react-router-dom';
 import './style.scss';
 
 const ChatButton = ({ chatOpen, toggleOpenChat }) => {
+  console.log(chatOpen);
   return (
     <>
       {chatOpen ? (
-        <Link to="/chatroom">
-          <button
-            type="button"
-            onClick={toggleOpenChat}
-            className="chatroom-button--open"
-          >
-            x
-          </button>
-        </Link>
+        <button
+          type="button"
+          onClick={toggleOpenChat}
+          className="chatroom-button--open"
+        >
+          x
+        </button>
       ) : (
-        <Link to="/chatroom">
-          <button
-            type="button"
-            onClick={toggleOpenChat}
-            className={chatOpen ? 'chatroom-button--open' : 'chatroom-button'}
-          >
-            +
-          </button>
-        </Link>
+        <button
+          type="button"
+          onClick={toggleOpenChat}
+          className={chatOpen ? 'chatroom-button--open' : 'chatroom-button'}
+        >
+          +
+        </button>
       )}
     </>
   );

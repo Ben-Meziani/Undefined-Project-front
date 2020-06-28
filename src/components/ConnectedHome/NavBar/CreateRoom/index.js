@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+.0/* eslint-disable no-console */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import { Modal, Dropdown } from 'semantic-ui-react';
