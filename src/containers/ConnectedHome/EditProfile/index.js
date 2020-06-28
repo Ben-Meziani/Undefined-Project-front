@@ -10,6 +10,7 @@ import {
   changeValue,
   sendIcon,
   fetchIcon,
+  sendUserData,
 } from '../../../actions';
 
 const mapStateToProps = (state) => ({
@@ -41,6 +42,10 @@ const mapDispatchToProps = (dispatch) => ({
   },
   fetchIcon: () => {
     const action = fetchIcon();
+    dispatch(action);
+  },
+  sendUserData: () => {
+    const action = sendUserData();
     dispatch(action);
   },
 });

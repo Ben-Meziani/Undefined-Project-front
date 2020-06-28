@@ -21,7 +21,7 @@ const EditProfile = ({
   iconFile,
   imgURL,
   changeValue,
-  sendEditedDatas,
+  sendUserData,
   fetchIcon,
   sendIcon,
 }) => {
@@ -42,7 +42,7 @@ const EditProfile = ({
   const handleSubmit = (evt) => {
     evt.preventDefault();
     console.log('---- je veux envoyer les nouvelles infos du profil au serveur email : ' + email + ' pseudo : ' + pseudo + ' file : ' + iconFile);
-    sendEditedDatas();
+    sendUserData();
   };
 
   return (
@@ -122,7 +122,7 @@ EditProfile.propTypes = {
   changeIconFile: PropTypes.func.isRequired,
   changeIconUrl: PropTypes.func.isRequired,
   changeValue: PropTypes.func.isRequired,
-  sendEditedDatas: PropTypes.func.isRequired,
+  sendUserData: PropTypes.func.isRequired,
   fetchIcon: PropTypes.func.isRequired,
   sendIcon: PropTypes.func.isRequired,
 };

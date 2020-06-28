@@ -55,7 +55,6 @@ const user = (store) => (next) => (action) => {
       next(action);
       break;
     }
-
     default:
       next(action);
   }
