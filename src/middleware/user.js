@@ -2,7 +2,7 @@ import axios from 'axios';
 
 import { SEND_USER_DATA} from '../actions';
 
-const serverURI = 'http://ec2-54-234-79-207.compute-1.amazonaws.com/api';
+const serverURI = 'https://undefined-project.tk/api';
 
 const user = (store) => (next) => (action) => {
   switch (action.type) {
@@ -12,7 +12,7 @@ const user = (store) => (next) => (action) => {
       const userId = state.user.id;
       console.log('++++ requête : j\'envoie les données modifiées au serveur ++++');
       // DEFINE THE TYPE OF DATA
-      axios.post(`${serverURI}/user/${userId}/icon`, {
+      axios.post(`${serverURI}/user/${userId}/edit`, {
         email: state.user.email,
         password: state.user.password,
         pseudo: state.user.pseudo,
