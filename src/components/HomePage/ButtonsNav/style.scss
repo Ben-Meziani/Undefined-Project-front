@@ -1,17 +1,11 @@
 // General styles
 .homepage-navbutton{
 
-  position: relative;
-  display: flex;
-  justify-content: space-around;
   margin: 0 auto;
   font-size: 1.5em;
   
 // Button Login
   &-login{
-    position: relative;
-    top: -.7em;
-    padding: .5em;
     font-family: 'Roboto Mono', monospace;
     background-color: white;
     border: solid .1em black;
@@ -24,19 +18,16 @@
   
 // Button Register
   &-register{
-    position: relative;
-    top: -.7em;
-    padding: .5em;
-    color: white;
-    background-color: black;
-    border: solid .1em white;
+    color: black;
+    background-color: white;
+    border: solid .1em black;
     font-family: 'Roboto Mono', monospace;
     width: 5.8em;
     justify-content: center;
 
     &:hover{
-      background-color: white;
-      color: black;
+      background-color: black;
+      color: white;
     }
   }
 }

@@ -8,7 +8,7 @@ import user from '../middleware/user';
 import room from '../middleware/room';
 /* import socket from '../middleware/socket'; */
 import upload from '../middleware/upload';
-import dices from '../middleware/dices';
+/* import dices from '../middleware/dices'; */
 
 // == Enhancers
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -19,7 +19,7 @@ const enhancers = composeEnhancers(
     user,
     room,
     upload,
-    dices,
+    /* dices, */
     /*  socket, */
   ),
 );

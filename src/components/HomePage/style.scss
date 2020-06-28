@@ -1,7 +1,22 @@
-.homeDisplay{
-  border: .2em solid black;
-  margin: 0 auto;
-  width: 90vw;
-  padding: 1em;
-  margin-bottom: 1.5em;
+@import 'src/styles/vars';
+
+.homePage{
+  @include mq() {
+    padding : 2em;
+  };
+
+  &-container{
+    border: .2em solid black;
+    margin: 0 auto;
+    width: 90vw;
+    padding: 1em;
+    margin-top: 4em;
+    margin-bottom: 1.5em;
+    background-color: black;
+  }
+
+  &-display{
+    background-color: white;
+  }
 }
+

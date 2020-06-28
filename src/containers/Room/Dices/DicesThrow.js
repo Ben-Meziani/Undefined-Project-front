@@ -1,22 +1,21 @@
 import { connect } from 'react-redux';
-
 import DicesThrow from '../../../components/Room/Dices/DicesThrow';
-import { fetchResult, reroll } from '../../../actions';
+// eslint-disable-next-line import/named
+import { rollDice } from '../../../actions';
+/* import { randomRoll } from '../../../selectors'; */
 
 const mapStateToProps = (state) => ({
   dice: state.dices.dice,
-  throwed: state.dices.throwed,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchResult: () => {
-    console.log('Want to do axios request');
-    const action = fetchResult();
-    dispatch(action);
-  },
-  reroll: () => {
-    console.log('Want to reroll : empy dice, ask again for the throw');
-    const action = reroll();
+  rollDice: () => {
+    console.log('Want to fetch a result');
+
+    function randomRoll(sides = 6) {
+      return Math.floor(Math.random() * sides) + 1;
+    }
+    const action = rollDice(randomRoll());
     dispatch(action);
   },
 });

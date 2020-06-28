@@ -1,39 +1,21 @@
 import {
-  FETCH_RESULT,
-  REROLL,
+  ROLL_DICE,
 } from '../actions';
 
 const initialState = {
-  throwed: false,
-  dice: [
-    {
-      value: 4,
-      type: 'd6',
-    },
-  ],
-
+  dice: null,
 };
 
-const reducer = (state = initialState, action = {}) => {
+const diceReducer = (state = initialState, action = {}) => {
   switch (action.type) {
-    case FETCH_RESULT: {
+    case ROLL_DICE:
       return {
         ...state,
-        value: action.dice.value,
-        type: action.dice.type,
-        throwed: true,
+        dice: action.dice,
       };
-    }
-    case REROLL: {
-      return {
-        ...state,
-        dice: [],
-        throwed: false,
-      };
-    }
     default:
       return state;
   }
 };
 
-export default reducer;
+export default diceReducer;
