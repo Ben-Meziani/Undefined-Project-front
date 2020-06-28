@@ -20,6 +20,17 @@
     display: flex;
     flex-direction: column;
   }
+
+  .displayTools {
+    position: relative;
+    border: .3em solid black;
+    height: 33vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
 }
 
 

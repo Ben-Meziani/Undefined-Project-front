@@ -25,3 +25,32 @@
   left: 0;
  }
 }
+
+@media (min-width: 1024px) {
+
+  .chatroom-button {
+    background-color: #506761;
+    border: none;
+    height: 2em;
+    width: 2em;
+    border-radius: 4px;
+    color: white;
+    font-size: 1.4em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  
+   &--open {
+   /*  position: absolute; */
+    background-color: #506761;
+    border: none;
+    color: white;
+    border: none;
+    height: 2em;
+    width: 2em;
+    border-radius: 4px;
+    top: 50%;
+    left: 0;
+   }
+  }
+}

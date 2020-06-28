@@ -73,11 +73,12 @@
 
   @media (min-width: 1024px) {
 
-    .chatroom--open{
+    .chatroom .chatroom--open{
       position: absolute;
-      top: 0;
-      width: 30%;
-      height: 100%;
+      width: 25%;
+      height: 35vh;
+      margin-top: -31.5em;
+      right: 1em;
       display: flex;
       flex-direction: column;
       text-align: left;
@@ -90,12 +91,13 @@
       margin-top: 0.4em;
       left: 0;
       display: flex;
+      border: 1px solid black;
     }
     
       &-field {
         width: 100%;
         padding: .5rem .5rem;
-        border: none;
+        border: 1px solid black;
       }
     
       &-send {

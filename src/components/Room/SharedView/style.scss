@@ -9,11 +9,26 @@
 
   // MEDIA QUERIES
 
+@media (min-width: 767px) {
+
+  .shared-view {
+    width: 35vh;
+    height: 60vh;
+    margin: 0 auto;
+    margin-top: 2em;
+
+    & img {
+      max-width: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
 @media (min-width: 1024px) {
 
   .shared-view {
-    width: 60vh;
-    height: 60vh;
+    width: 35vh;
+    height: 35vh;
     margin: 0 auto;
     margin-top: 2em;
 

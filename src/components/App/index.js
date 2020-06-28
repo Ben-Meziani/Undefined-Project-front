@@ -86,7 +86,7 @@ const App = ({ id }) => (
         </div>
       </Route>
 
-      <Route path="/chatroom" exact>
+      <Route path="/room/chatroom" exact>
         <RoomStatic />
         <div className="container">
           <div className="displayTools">
@@ -96,7 +96,7 @@ const App = ({ id }) => (
         </div>
       </Route>
 
-      <Route path="/players-list" exact>
+      <Route path="/room/players-list" exact>
         <RoomStatic />
         <div className="container">
           <div className="displayTools">
@@ -106,7 +106,7 @@ const App = ({ id }) => (
         </div>
       </Route>
 
-      <Route path="/dices" exact>
+      <Route path="/room/dices" exact>
         <RoomStatic />
         <div className="displayTools">
           <DicesThrow />
