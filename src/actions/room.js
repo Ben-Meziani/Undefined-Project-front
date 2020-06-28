@@ -47,4 +47,3 @@ export const receiveMessage = (chatMessage) => ({
   type: RECEIVE_MESSAGE,
   chatMessage,
 });
-
