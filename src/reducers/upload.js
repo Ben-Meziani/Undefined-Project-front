@@ -1,7 +1,7 @@
 import {
   CHANGE_ICON_FILE,
   CHANGE_ICON_URL,
-  SEND_EDITED_DATAS,
+  SEND_ICON,
   SAVE_ICON,
 } from '../actions';
 
@@ -24,7 +24,7 @@ const upload = (state = initialState, action = {}) => {
         ...state,
         imgURL: action.imgURL,
       };
-    case SEND_EDITED_DATAS:
+    case SEND_ICON:
       return {
         ...state,
       };

@@ -23,9 +23,10 @@ const EditProfile = ({
   changeValue,
   sendEditedDatas,
   fetchIcon,
+  sendIcon,
 }) => {
   useEffect(fetchIcon, []);
-  // PREVIEW THE NEW AVATAR
+  // PREVIEW THE NEW AVATAR AND SEND TO SERVER
   const handleChange = (evt) => {
     console.log('---- je récupère le nom du fichier sélectionné par le user ----');
     evt.preventDefault();
@@ -33,10 +34,11 @@ const EditProfile = ({
     const newIconUrl = URL.createObjectURL(evt.target.files[0]);
     const newIconFile = evt.target.files[0];
     changeIconUrl(newIconUrl);
-    console.log('+++ NewIconFile vaut' + newIconFile);
+    changeIconFile(newIconFile);
+    sendIcon();
   };
 
-  // SEND THE NEW DATA
+  // SEND ALL THE NEW DATA
   const handleSubmit = (evt) => {
     evt.preventDefault();
     console.log('---- je veux envoyer les nouvelles infos du profil au serveur email : ' + email + ' pseudo : ' + pseudo + ' file : ' + iconFile);
@@ -44,7 +46,6 @@ const EditProfile = ({
   };
 
   console.log(' --- icon dans component EditProfile vaut --- ' + icon);
-  
 
   return (
     <div className="edit-profile-section">
@@ -54,7 +55,6 @@ const EditProfile = ({
       <div className="edit-profile-avatar">
         <input type="file" name="iconFile" className="avatar-choice-input" onChange={handleChange} />
         <div className="avatar-preview">
-          <img className="avatar" src={icon} alt="unknown" />
           {!imgURL ? <img className="avatar" src={icon} alt="unknown" /> : <img className="avatar" src={imgURL} alt="unknown" />}
         </div>
       </div>
@@ -126,6 +126,7 @@ EditProfile.propTypes = {
   changeValue: PropTypes.func.isRequired,
   sendEditedDatas: PropTypes.func.isRequired,
   fetchIcon: PropTypes.func.isRequired,
+  sendIcon: PropTypes.func.isRequired,
 };
 
 EditProfile.defaultProps = {
