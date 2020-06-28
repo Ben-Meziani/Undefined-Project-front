@@ -42,7 +42,7 @@ const EditProfile = ({
     console.log('---- je veux envoyer les nouvelles infos du profil au serveur email : ' + email + ' pseudo : ' + pseudo + ' file : ' + iconFile);
     sendEditedDatas();
   };
-
+  console.log(icon);
   return (
     <div className="edit-profile-section">
       <div className="edit-profile-section-title">
@@ -51,7 +51,7 @@ const EditProfile = ({
       <div className="edit-profile-avatar">
         <input type="file" name="iconFile" className="avatar-choice-input" onChange={handleChange} />
         <div className="avatar-preview">
-          {!imgURL ? <img className="avatar" src={URL.createObjectURL(`${icon}`)} accept="image/png, image/jpeg" alt="unknown" /> : <img className="avatar" src={imgURL} alt="unknown" />}
+          {!imgURL ? <img className="avatar" src={icon} accept="image/png, image/jpeg" alt="unknown" /> : <img className="avatar" src={imgURL} alt="unknown" />}
         </div>
       </div>
       <div className="edit-profile-form">

@@ -18,9 +18,9 @@ const user = (store) => (next) => (action) => {
         responseType: 'blob',
       })
         .then((response) => {
-          console.log(' --- response data --- ' + response.data);
-          const responseToBlob = response.data;
-          const saveCurrentIcon = saveIcon(responseToBlob);
+          console.log(' --- response data --- ' + response);
+          const url = window.URL.createObjectURL(new Blob([response.data]));
+          const saveCurrentIcon = saveIcon(url);
           store.dispatch(saveCurrentIcon);
         })
         .catch((error) => {
