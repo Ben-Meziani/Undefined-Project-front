@@ -35,10 +35,8 @@ const EditProfile = ({
     const newIconFile = evt.target.files[0];
     changeIconUrl(newIconUrl);
     changeIconFile(newIconFile);
-    sendIcon();
+    /* sendIcon(); */
   };
-
-  
 
   // SEND ALL THE NEW DATA
   const handleSubmit = (evt) => {

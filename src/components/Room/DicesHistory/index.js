@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './style.scss';
 
 const DicesHistory = ({ diceOpen }) => (
-  <div>DicesHistory</div>
+  <div className={!editOpen ? 'player-notes-toggle player-notes' : 'player-notes'}>DicesHistory</div>
 );
 
 DicesHistory.propTypes = {
