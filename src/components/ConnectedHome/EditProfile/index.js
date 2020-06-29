@@ -22,7 +22,6 @@ const EditProfile = ({
   imgURL,
   changeValue,
   sendUserData,
-  fetchIcon,
   sendIcon,
 }) => {
   /* useEffect(fetchIcon, []); */

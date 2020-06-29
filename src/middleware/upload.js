@@ -40,7 +40,7 @@ const user = (store) => (next) => (action) => {
       const state = store.getState();
       const userId = state.user.id;
       console.log('++++ iconFile dans le middleware upload ++++' + state.upload.iconFile);
-      console.log('++++ requête : j\'envoie les données modifiées au serveur ++++');
+      console.log('++++ requête : j\'envoie l\'icon modifié au serveur ++++');
       const formData = new FormData();
       formData.append('file', state.upload.iconFile);
       console.log('formData dans la requête vaut ' + formData);

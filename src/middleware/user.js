@@ -11,7 +11,8 @@ const user = (store) => (next) => (action) => {
       // ACCESS TO THE STATE TO GET THE USER ID
       const state = store.getState();
       const userId = state.user.id;
-      console.log('++++ requête : j\'envoie les données modifiées au serveur ++++');
+      console.log('++++ requête : j\'envoie toutes les données modifiées au serveur ++++');
+      console.log('iconFile envoyé vaut ' + state.upload.iconFile);
       // DEFINE THE TYPE OF DATA
       axios.post(`${serverURI}/user/${userId}/edit`, {
         email: state.user.email,
