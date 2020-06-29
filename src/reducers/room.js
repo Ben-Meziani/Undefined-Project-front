@@ -163,7 +163,7 @@ const reducer = (state = initialState, action = {}) => {
     case CHANGE_VALUE:
       return {
         ...state,
-        roomName: action.value,
+        [action.name]: action.value,
       };
     case DROPDOWN_CHANGE:
       return {

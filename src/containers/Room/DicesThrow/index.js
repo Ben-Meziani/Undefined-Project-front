@@ -1,8 +1,7 @@
 import { connect } from 'react-redux';
-import DicesThrow from '../../../components/Room/Dices/DicesThrow';
+import DicesThrow from '../../../components/Room/DicesThrow';
 // eslint-disable-next-line import/named
 import { rollDice } from '../../../actions';
-/* import { randomRoll } from '../../../selectors'; */
 
 const mapStateToProps = (state) => ({
   dice: state.dices.dice,
@@ -10,8 +9,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   rollDice: () => {
-    console.log('Want to fetch a result');
-
+    // console.log('Want to fetch a result');
     function randomRoll(sides = 6) {
       return Math.floor(Math.random() * sides) + 1;
     }
