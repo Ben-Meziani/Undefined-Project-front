@@ -110,7 +110,7 @@ console.log(logged);
   );
 };
 
-{/*       {logged ? <Redirect to="/dashboard" /> : <Redirect to="/" />} */}
+{/* {logged ? <Redirect to="/dashboard" /> : <Redirect to="/" />} */}
 
 /* HomePage.propTypes = {
   logged: PropTypes.bool.isRequired,

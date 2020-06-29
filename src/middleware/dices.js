@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-import axios from 'axios';
 
 /* http://roll.diceapi.com/ */
 

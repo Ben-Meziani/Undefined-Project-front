@@ -4,12 +4,6 @@ import { Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import HomePage from '../../containers/HomePage';
-import Login from '../../containers/HomePage/Login';
-import Register from '../../containers/HomePage/Register';
-import Presentation from '../HomePage/Carousel/Presentation';
-import Demonstration from '../HomePage/Carousel/Demonstration';
-import Team from '../HomePage/Carousel/Team';
-
 import ConnectedHome from '../../containers/ConnectedHome';
 import EditProfile from '../../containers/ConnectedHome/EditProfile';
 import Room from '../Room';
@@ -21,7 +15,6 @@ import './style.scss';
 const App = ({ id }) => (
   <div className="app">
     <HomePage />
-    
     <Switch>
       <Route path="/dashboard" exact>
         <ConnectedHome />
