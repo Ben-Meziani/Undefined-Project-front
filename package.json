@@ -1,6 +1,6 @@
 {
   "name": "react-modele",
-  "homepage" : ".",
+  "homepage": ".",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --config config/webpack.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
@@ -56,6 +56,7 @@
     "webpack-merge": "*"
   },
   "dependencies": {
+    "autoprefixer": "9.7.6",
     "axios": "^0.19.2",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
@@ -63,6 +64,7 @@
     "glamor": "^2.20.40",
     "mysql": "^2.18.1",
     "nodemon": "^2.0.4",
+    "postcss": "7.0.32",
     "prop-types": "*",
     "react": "*",
     "react-css-burger": "^0.2.0",

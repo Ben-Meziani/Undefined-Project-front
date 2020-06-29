@@ -24,21 +24,99 @@
 }
 
 // Team
+.title{
+    font-size: 1.5em;
+    margin: 30px 0 30px 0;
+}
+
 .item {
   margin-top: 1em;
   height: 12em;
-  display:flex;
-
+  animation: fadeIn 6s;
+  
   & img {
     width: 9em;
     height: 10em;
     float: left;
   }
   
+  
 .text{
   padding: 0 1em;
   }
 }
+@keyframes fadeIn {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
 // Presentation
+.presentation{
+  text-align: center;
+  margin: auto;
+  animation: fadeIn 6s;
 
+  &-title{
+    font-size: 1.5em;
+    margin: 30px 0 30px 0;
+  }
+
+  &-text{
+    margin: 15px;
+    text-align: left;
+  }
+  @keyframes fadeIn {
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+}
+}
 // Demonstration
+.demo{
+  animation: fadeIn 6s;
+
+  &-title{
+    font-size: 1.5em;
+    margin: 30px 0 30px 0;
+  }
+
+  &-box{
+    margin: auto;
+    padding: 20px;
+  }
+  
+  & img {
+      width: 9em;
+      height: 10em;
+    }
+  &-box1{
+      
+      margin: 15px 0;
+    }
+  &-box2{
+      
+      margin: 15px 0;
+    } 
+  &-box3{
+      
+      margin: 15px 0;
+    } 
+  &-box4{
+      
+      margin: 15px 0;
+    }
+    @keyframes fadeIn {
+      from{
+        opacity: 0;
+      }
+      to{
+        opacity: 1;
+      }
+  }
+}

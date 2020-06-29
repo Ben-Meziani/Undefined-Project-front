@@ -5,6 +5,7 @@ const src = 'https://pbs.twimg.com/profile_images/1028408684559458304/uE0XdKkL.j
 
 const Team = () => (
   <div className="carousel-show-team">
+    <h1 className="title">The Team</h1>
     <div className="item">
       <img className="carousel-show-img" src={src} alt="avatar" />
       <div className="text">
