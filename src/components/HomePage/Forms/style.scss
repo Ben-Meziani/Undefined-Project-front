@@ -61,7 +61,30 @@
       object-fit: contain;
     }
   }
+}
 
+.forgotten{
+  border : solid .1em black;
+  margin: 0 auto;
+  margin-top: .2em;
+  padding: 3em;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  @include mq() {
+    height: 50vh;
+    width: 100%;
+  };
+  &-text{
+    padding: 1em;
+    width: 25rem;
+    
+  }
+  &-confirm{
+
+  }
 }
 
 

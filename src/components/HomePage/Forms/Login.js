@@ -52,6 +52,9 @@ const Login = ({
             {errorToLog && !loading && (
               <p className="login-error">Ouille! Il semblerait que l'e-mail ou le mot de passe ne soit pas valide.</p>
             )}
+            <Link to="/forgotten">
+              <p className="login-forgotten">Mot de passe oublié ?</p>
+            </Link>
           </Form.Field>
           <Button color="black" type="submit">
             Connectez-vous !

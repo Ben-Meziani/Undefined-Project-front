@@ -5,6 +5,7 @@ import { Route, Redirect, Switch } from 'react-router-dom';
 import Header from './Header';
 import Login from '../../containers/HomePage/Login';
 import Register from '../../containers/HomePage/Register';
+import Forgotten from '../../containers/HomePage/Forgotten';
 import ButtonsNav from './ButtonsNav';
 import Presentation from '../HomePage/Carousel/Presentation';
 import Rain from '../HomePage/RaindropAnimation';
@@ -71,7 +72,28 @@ console.log(logged);
             </div>
           </div>
         </div>
+
       </Route>
+      <Route path="/forgotten" exact>
+        <div className="homePage">
+          <Header />
+          <div className="homePage-rain">
+            <Rain />
+          </div>
+          <div className="homePage-container">
+            <div className="homePage-buttons">
+              <ButtonsNav />
+            </div>
+            <div>
+              {/* <CarouselMenu /> */}
+              <div className="homePage-display">
+                <Forgotten />
+              </div>
+            </div>
+          </div>
+        </div>
+      </Route>
+      
 {/*       <Route path="/team" exact>
         <div className="homePage">
           <Header />
