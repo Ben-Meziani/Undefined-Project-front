@@ -38,6 +38,8 @@ const EditProfile = ({
     sendIcon();
   };
 
+  
+
   // SEND ALL THE NEW DATA
   const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -58,7 +60,7 @@ const EditProfile = ({
       <div className="edit-profile-avatar">
         <input type="file" name="iconFile" className="avatar-choice-input" onChange={handleChange} />
         <div className="avatar-preview">
-          {!imgURL ? <img className="avatar" src={URL.createObjectURL(`${icon}`)} alt="unknown" /> : <img className="avatar" src={imgURL} alt="unknown" />}
+          {!imgURL ? <img className="avatar" src={`https://undefined-project.tk/api/uploads/icons/${icon}`} alt="unknown" /> : <img className="avatar" src={imgURL} alt="unknown" />}
         </div>
       </div>
       <div className="edit-profile-form">
