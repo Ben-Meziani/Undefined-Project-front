@@ -23,7 +23,7 @@ const Login = ({
   const handleSubmit = (evt) => {
     evt.preventDefault();
     login();
-    console.log(errorToLog);
+    // console.log(errorToLog);
   };
   return (
     <div className="login">
@@ -50,7 +50,7 @@ const Login = ({
               value={password}
             />
             {errorToLog && !loading && (
-              <p>L'e-mail ou le mot de passe de l'utilisateur est incorrect.</p>
+              <p className="login-error">Ouille! Il semblerait que l'e-mail ou le mot de passe ne soit pas valide.</p>
             )}
           </Form.Field>
           <Button color="black" type="submit">

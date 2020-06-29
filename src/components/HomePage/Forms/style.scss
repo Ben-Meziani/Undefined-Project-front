@@ -16,6 +16,12 @@
     height: 50vh;
     width: 100%;
   };
+
+  &-error{
+    color: red;
+    font-style: italic;
+    padding: .5em;
+  }
 }
 
 // Register
@@ -37,6 +43,12 @@
     flex-direction: column;
     align-items: space-between ;
   };
+
+  &-password-int{
+    color: red;
+    font-style: italic;
+    padding-top:.5em;
+  }
   
   // RegisterAvatar
 

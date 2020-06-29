@@ -11,6 +11,8 @@ import {
   SAVE_USER,
   SEND_USER_DATA,
   ERROR_LOG,
+  ERROR_REG_PASSWORD,
+  ERROR_PASSWORD_CHECK,
 } from '../actions';
 
 const initialState = {
@@ -31,9 +33,13 @@ const initialState = {
 
   userRegistered: false,
   regPassword: '',
+  regPasswordCheck: '',
   regEmail: '',
   regPseudo: '',
   regIcon: '',
+  errorRegPass: false,
+  errorPassCheck: false,
+
 };
 
 const user = (state = initialState, action = {}) => {
@@ -62,6 +68,8 @@ const user = (state = initialState, action = {}) => {
         ...state,
         userRegistered: true,
         logged: true,
+        loading: true,
+        errorPassCheck: false,
       };
     case LOGOUT:
       return {
@@ -72,6 +80,7 @@ const user = (state = initialState, action = {}) => {
         pseudo: '',
         id: 0,
         icon: '',
+        loading: true,
       };
     case LOADING:
       return {
@@ -82,6 +91,7 @@ const user = (state = initialState, action = {}) => {
       return {
         ...state,
         logged: true,
+        errorPassCheck: false,
       };
     case CHECK:
       return {
@@ -94,6 +104,7 @@ const user = (state = initialState, action = {}) => {
         pseudo: action.currentUser.pseudo,
         id: action.currentUser.id,
         icon: action.currentUser.icon,
+        errorPassCheck: false,
       };
     }
     case SEND_USER_DATA: {
@@ -105,6 +116,25 @@ const user = (state = initialState, action = {}) => {
       return {
         ...state,
         errorToLog: true,
+        loading: true,
+      };
+    }
+    case ERROR_REG_PASSWORD: {
+      return {
+        ...state,
+        errorRegPass: true,
+        logged: false,
+        userRegistered: false,
+        loading: true,
+      };
+    }
+    case ERROR_PASSWORD_CHECK: {
+      return {
+        ...state,
+        logged: false,
+        userRegistered: false,
+        errorPassCheck: true,
+        loading: false,
       };
     }
     default:
