@@ -8,9 +8,12 @@
     height: 100vh;
     top: 0;
     background-color: white;
-    border: 0.2em solid black;
 
     button {
+      position: fixed;
+      top: 0;
+      left: 0;
+      color: #708cb3;
       height: 1em;
       background: none;
       border: none;
@@ -19,15 +22,20 @@
   &-toggle {
     display: none;
   }
+
+  img {
+    width: 4em;
+    margin: 0.5em;
+  }
 }
 
-/* @media (min-width: 767px) {
+@media (min-width: 767px) {
   
   .shared-files {
     display: flex;
     justify-content: center;
     bottom: 0;
-    background-color: rgb(240, 125, 125);
+    background-color: white;
     width: 25%;
     height: 20vh;
     left: 0;
@@ -36,7 +44,7 @@
       display: flex;
     }
   }
-} */
+}
 
 @media (min-width: 1024px) {
   
@@ -46,6 +54,7 @@
     justify-content: center;
     bottom: 0;
     background-color: white;
+    border: .1em solid grey;
     width: 25%;
     height: 30vh;
     top: 60%;
@@ -62,6 +71,11 @@
 
     button {
       display: none;
+    }
+
+    img {
+      width: 3em;
+      margin: 0.5em;
     }
   }
 }

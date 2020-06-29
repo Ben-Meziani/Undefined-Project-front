@@ -1,7 +1,6 @@
 import React from 'react';
 import NavBarRoom from '../../containers/Room/NavBarRoom';
 import SharedView from './SharedView';
-import ChatButton from '../../containers/Room/ChatButton';
 import Chatroom from '../../containers/Room/Chatroom';
 import DicesHistory from '../../containers/Room/DicesHistory';
 import DicesThrow from '../../containers/Room/DicesThrow';
@@ -16,7 +15,6 @@ const Room = () => (
   <div className="static-room">
     <NavBarRoom />
     <SharedView />
-    <ChatButton />
     <Chatroom />
     <PlayersList />
     <ToolsMenu />

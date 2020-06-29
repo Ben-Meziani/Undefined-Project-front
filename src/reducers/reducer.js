@@ -5,8 +5,6 @@ import {
 
 const initialState = {
   open: false,
-  roomName: '',
-  playersNb: 0,
 };
 
 const reducer = (state = initialState, action = {}) => {

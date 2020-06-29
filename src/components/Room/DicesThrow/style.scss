@@ -10,6 +10,14 @@
     display: none;
   }
 
+  button {
+    position: absolute;
+    background: none;
+    border: none;
+    top: 0;
+    left: 0;
+  }
+
   &-result{
     display: flex;
     align-items: center;

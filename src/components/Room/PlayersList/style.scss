@@ -2,7 +2,6 @@
 
 .players-list {
   position: absolute;
-  border: .3em solid black;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -18,6 +17,7 @@
   }
 
   button {
+    color: #708cb3;
     position: absolute;
     height: 1em;
     background: none;
