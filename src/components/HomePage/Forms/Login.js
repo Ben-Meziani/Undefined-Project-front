@@ -18,10 +18,12 @@ const Login = ({
   login,
   logged,
   loading,
+  errorToLog,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     login();
+    console.log(errorToLog);
   };
   return (
     <div className="login">
@@ -47,6 +49,9 @@ const Login = ({
               changeValue={changeValue}
               value={password}
             />
+            {errorToLog && !loading && (
+              <p>L'e-mail ou le mot de passe de l'utilisateur est incorrect.</p>
+            )}
           </Form.Field>
           <Button color="black" type="submit">
             Connectez-vous !
@@ -82,6 +87,7 @@ Login.propTypes = {
   logged: PropTypes.bool.isRequired,
   loading: PropTypes.bool,
   login: PropTypes.func.isRequired,
+  errorToLog: PropTypes.bool.isRequired,
 };
 
 Login.defaultProps = {

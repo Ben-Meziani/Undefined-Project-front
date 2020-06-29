@@ -1,13 +1,15 @@
 import { connect } from 'react-redux';
 // eslint-disable-next-line import/extensions
 import Login from '../../components/HomePage/Forms/Login';
-import { changeValue, login } from '../../actions';
+import { changeValue, login, errorLog } from '../../actions';
 
 const mapStateToProps = (state) => ({
   email: state.user.email,
   password: state.user.password,
   logged: state.user.logged,
   loading: state.user.loading,
+  /* errorFalse: state.user.errorFalse, */
+  errorToLog: state.user.errorToLog,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -19,7 +21,10 @@ const mapDispatchToProps = (dispatch) => ({
     const action = login();
     dispatch(action);
   },
-
+  errorLog: () => {
+    const action = errorLog();
+    dispatch(action);
+  },
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login);

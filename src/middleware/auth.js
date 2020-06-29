@@ -10,6 +10,7 @@ import {
   loading,
   connect,
   saveUser,
+  errorLog,
 } from '../actions';
 
 /* const serverURI = 'http://ec2-54-234-79-207.compute-1.amazonaws.com/api'; */
@@ -35,7 +36,9 @@ const auth = (store) => (next) => (action) => {
           store.dispatch(connect());
         })
         .catch((error) => {
-          console.error(error);
+          if (error.response.status === 401) {
+            store.dispatch(errorLog());// handle error: inform user, go to login, etc
+          }
         });
       next(action);
       break;

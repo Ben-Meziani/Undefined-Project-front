@@ -10,6 +10,7 @@ import {
   CHECK,
   SAVE_USER,
   SEND_USER_DATA,
+  ERROR_LOG,
 } from '../actions';
 
 const initialState = {
@@ -20,11 +21,14 @@ const initialState = {
   id: 0,
   icon: '',
   logged: false,
+  errorToLog: false,
+
   open: false,
   roomName: '',
   roomId: '',
   playersNb: 0,
   loading: false,
+
   userRegistered: false,
   regPassword: '',
   regEmail: '',
@@ -95,6 +99,12 @@ const user = (state = initialState, action = {}) => {
     case SEND_USER_DATA: {
       return {
         ...state,
+      };
+    }
+    case ERROR_LOG: {
+      return {
+        ...state,
+        errorToLog: true,
       };
     }
     default:
