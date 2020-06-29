@@ -11,15 +11,25 @@ const ToolsMenu = ({
   toggleOpenDice,
   toggleOpenPicture,
   pictureOpen,
+  masterRole,
 }) => {
   return (
     <div className="toolsMenu">
+      {!masterRole && (
+      <ul className="toolsMenu-list">
+        <button type="button" className="toolsMenu-button" onClick={toggleOpenBook}><Icon name="book" size="large" /></button>
+        <button type="button" className="toolsMenu-button" onClick={toggleOpenEdit}><Icon name="edit" size="large" /></button>
+        <button type="button" className="toolsMenu-button" onClick={toggleOpenDice}><Icon name="bomb" size="large" /></button>
+      </ul>
+      )}
+      {masterRole && (
       <ul className="toolsMenu-list">
         <button type="button" className="toolsMenu-button" onClick={toggleOpenBook}><Icon name="book" size="large" /></button>
         <button type="button" className="toolsMenu-button" onClick={toggleOpenEdit}><Icon name="edit" size="large" /></button>
         <button type="button" className="toolsMenu-button" onClick={toggleOpenDice}><Icon name="bomb" size="large" /></button>
         <button type="button" className="toolsMenu-button" onClick={toggleOpenPicture}><Icon name="picture" size="large" /></button>
       </ul>
+      )}
     </div>
   );
 };
@@ -30,6 +40,7 @@ ToolsMenu.propTypes = {
   toggleOpenDice: PropTypes.func.isRequired,
   toggleOpenPicture: PropTypes.func.isRequired,
   pictureOpen: PropTypes.bool.isRequired,
+  masterRole: PropTypes.bool.isRequired,
 };
 
 export default ToolsMenu;

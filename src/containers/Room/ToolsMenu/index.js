@@ -9,6 +9,7 @@ const mapStateToProps = (state) => ({
   bombOpen: state.room.bombOpen,
   diceOpen: state.room.diceOpen,
   pictureOpen: state.room.pictureOpen,
+  masterRole: state.user.masterRole,
 });
 
 const mapDispatchToProps = (dispatch) => ({

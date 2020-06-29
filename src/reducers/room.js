@@ -1,6 +1,7 @@
 import {
   CHANGE_VALUE,
   CREATE_ROOM,
+  JOIN_ROOM,
   DROPDOWN_CHANGE,
   SAVE_ROOM_ID,
   CHANGE_TEXT,
@@ -26,6 +27,7 @@ const initialState = {
   logged: false,
   roomName: '',
   roomId: 0,
+  masterRole: false,
   playersNb: 0,
   playersList: [
     {
@@ -99,7 +101,7 @@ const initialState = {
   ],
 };
 
-const reducer = (state = initialState, action = {}) => {
+const room = (state = initialState, action = {}) => {
   switch (action.type) {
     // GENERAL CASES
     case CREATE_ROOM:
@@ -107,6 +109,12 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
         roomName: action.roomName,
         playersNb: action.playersNb,
+        masterRole: true,
+      };
+    case JOIN_ROOM:
+      return {
+        ...state,
+        playerRole: true,
       };
     case SAVE_ROOM_ID:
       return {
@@ -185,4 +193,4 @@ const reducer = (state = initialState, action = {}) => {
   }
 };
 
-export default reducer;
+export default room;
