@@ -19,7 +19,7 @@ const enhancers = composeEnhancers(
     user,
     room,
     upload,
-/*     dices, */
+    /* dices, */
     /*  socket, */
   ),
 );

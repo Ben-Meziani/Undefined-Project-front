@@ -1,33 +1,21 @@
 import {
-  DISPLAY_RESULT,
-
+  ROLL_DICE,
 } from '../actions';
 
 const initialState = {
-  values: [
-    {
-      success: true,
-      dice: [
-        {
-          value: 4,
-          type: 'd6',
-        },
-      ],
-    },
-  ],
+  dice: null,
 };
 
-const reducer = (state = initialState, action = {}) => {
+const diceReducer = (state = initialState, action = {}) => {
   switch (action.type) {
-    case DISPLAY_RESULT: {
+    case ROLL_DICE:
       return {
         ...state,
-        values: action.values,
+        dice: action.dice,
       };
-    }
     default:
       return state;
   }
 };
 
-export default reducer;
+export default diceReducer;

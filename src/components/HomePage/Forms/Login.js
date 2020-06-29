@@ -48,7 +48,7 @@ const Login = ({
               value={password}
             />
           </Form.Field>
-          <Button color="black" type="submit" className="center aligned">
+          <Button color="black" type="submit">
             Connectez-vous !
           </Button>
         </Form>

@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import './style.scss';
 
 const Header = () => (
-  <div className="home-page-header">
-    <h1 className="home-page-header-title">
+  <div className="homePage-header">
+    <h1 className="homePage-header-title">
       <Link to="/">
         Undefined::Role-Play
       </Link>

@@ -2,34 +2,28 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './style.scss';
 
-const DicesThrow = ({ values, displayResult }) => {
+const DicesThrow = ({ dice, rollDice }) => {
   const handleClick = () => {
-    displayResult();
+    rollDice();
   };
   return (
     <div className="dices">
       <div className="dices-result">
-        {values.value}
+        {dice}
       </div>
-      <button
-        label="button"
-        type="button"
+      <div
         onClick={handleClick}
         className="dices-throw"
       >
-        Throw it!
-      </button>
+        Throw the dice.
+      </div>
     </div>
   );
 };
 
 DicesThrow.propTypes = {
-  values: PropTypes.arrayOf(
-    PropTypes.shape({
-      value: PropTypes.number,
-    }),
-  ).isRequired,
-  displayResult: PropTypes.func.isRequired,
+  dice: PropTypes.number.isRequired,
+  rollDice: PropTypes.func.isRequired,
 };
 
 export default DicesThrow;

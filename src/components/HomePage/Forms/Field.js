@@ -13,7 +13,7 @@ const Field = ({
   };
 
   return (
-    <>
+    <div className="homePage-Field">
       <input
         name={name}
         value={value}
@@ -21,7 +21,7 @@ const Field = ({
         placeholder={placeholder}
         onChange={handleChange}
       />
-    </>
+    </div>
   );
 };
 

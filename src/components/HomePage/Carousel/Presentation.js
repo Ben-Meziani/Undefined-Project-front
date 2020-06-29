@@ -2,7 +2,7 @@ import React from 'react';
 import './style.scss';
 
 const Presentation = () => (
-  <div>Presentation</div>
+  <>Presentation</>
 );
 
 export default Presentation;
