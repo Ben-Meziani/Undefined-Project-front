@@ -1,17 +1,12 @@
-.currentRoom{
+/* .currentRoom{
   display: flex;
   flex-direction: column;
   font-family: 'Nunito', sans-serif;
-}
+} */
 
 .displayTools {
   position: relative;
-  border: .3em solid black;
-  height: 33vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
+  width: 100vw;
 }
 
 @media (min-width: 1024px) {
@@ -24,12 +19,12 @@
   .displayTools {
     position: relative;
     border: .3em solid black;
-    height: 33vh;
+    height: 30vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 1;
   }
 }
 

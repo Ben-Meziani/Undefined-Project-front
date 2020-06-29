@@ -9,8 +9,6 @@ import Field from '../../HomePage/Forms/Field';
 
 import './style.scss';
 
-/* import avatarImg from '../../../assets/avatarDefault.png'; */
-
 const EditProfile = ({
   changeIconFile,
   changeIconUrl,

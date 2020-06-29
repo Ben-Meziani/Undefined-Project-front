@@ -3,7 +3,7 @@ import { Icon } from 'semantic-ui-react';
 import './style.scss';
 
 const ToggleMenu = () => (
-  <div className="playersMenu">
+  <div className="">
     <Icon
       name="chevron down"
       size="large"

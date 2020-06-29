@@ -40,7 +40,7 @@ const user = (store) => (next) => (action) => {
       const userId = state.user.id;
       console.log('++++ iconFile dans le middleware upload ++++' + state.upload.iconFile);
       console.log('++++ requête : j\'envoie les données modifiées au serveur ++++');
-      // DEFINE THE TYPE OF DATA
+
       axios.post(`${serverURI}/user/${userId}/icon`, {
         icon: state.upload.iconFile,
       }, {

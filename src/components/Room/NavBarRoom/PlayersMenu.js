@@ -1,17 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { Icon } from 'semantic-ui-react';
 
-const PlayersMenu = () => (
-  <div className="playersMenu">
-    <Link to="/players-list">
-      <Icon
-        name="users"
-        size="large"
-      />
-    </Link>
-  </div>
+const PlayersMenu = ({ toggleOpenPlayers }) => {
+  return (
+    <div className="playersMenu">
+      <button type="button" className="toolsMenu-button" onClick={toggleOpenPlayers}>
+        <Icon
+          name="users"
+          size="large"
+        />
+      </button>
+    </div>
+  );
+};
 
-);
+PlayersMenu.propTypes = {
+  toggleOpenPlayers: PropTypes.func.isRequired,
+};
 
 export default PlayersMenu;

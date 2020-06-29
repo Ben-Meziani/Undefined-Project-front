@@ -10,8 +10,7 @@
   align-items: center;
   padding: 0.2em;
   background-color: white;
-  position: relative;
-  z-index: 999;
+  bottom: 0;
 }
 
 @media (min-width: 1024px) {
@@ -19,10 +18,29 @@
   .players-list {
     border: 1px solid black;
     position: absolute;
-    width: 20%;
-    height: 60vh;
-    margin-top: -33.5em;
-    margin-left: 4em;
+    width: 25%;
+    height: 35vh;
+    top: 6em;
+    margin-left: 1em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
   }
+}
 
+@media (min-width: 1400px) {
+
+  .players-list {
+    border: 1px solid black;
+    position: absolute;
+    width: 20%;
+    height: 35vh;
+    top: 8em;
+    margin-left: 1em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

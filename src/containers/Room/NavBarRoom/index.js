@@ -1,12 +1,12 @@
 import { connect } from 'react-redux';
 
 import NavBarRoom from '../../../components/Room/NavBarRoom';
-import { } from '../../../actions';
 
 const mapStateToProps = (state) => ({
   roomName: state.room.roomName,
+  playersOpen: state.room.playersOpen,
 });
-const mapDispatchToProps = () => ({
+const mapDispatchToProps = (dispatch) => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(NavBarRoom);

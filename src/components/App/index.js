@@ -24,29 +24,7 @@ const App = ({ id }) => (
 
       <Route path="/" exact>
         <HomePage />
-        <div className="homeDisplay">
-          <div className="carousel-show">
-            <Presentation />
-          </div>
-        </div>
-      </Route>
-
-      <Route path="/demonstration" exact>
-        <HomePage />
-        <div className="homeDisplay">
-          <div className="carousel-show">
-            <Demonstration />
-          </div>
-        </div>
-      </Route>
-
-      <Route path="/team" exact>
-        <HomePage />
-        <div className="homeDisplay">
-          <div className="carousel-show">
-            <Team />
-          </div>
-        </div>
+        <div className="homeDisplay" />
       </Route>
 
       <Route path="/login" exact>
@@ -73,65 +51,7 @@ const App = ({ id }) => (
 
       <Route path="/room" exact>
         <Room />
-        <div className="displayTools">
-          <p>Utilisez le menu ci-dessus pour accéder à vos outils de jeu</p>
-        </div>
       </Route>
-
-  {/*     <Route path="/room/chatroom" exact>
-        <RoomStatic />
-        <div className="container">
-          <div className="displayTools">
-            <p>Utilisez le menu ci-dessus pour accéder à vos outils de jeu</p>
-          </div>
-          <Chatroom />
-        </div>
-      </Route>
-
-      <Route path="/room/players-list" exact>
-        <RoomStatic />
-        <div className="container">
-          <div className="displayTools">
-            <p>Utilisez le menu ci-dessus pour accéder à vos outils de jeu</p>
-          </div>
-          <PlayersList />
-        </div>
-      </Route>
-
-      <Route path="/room/dices" exact>
-        <RoomStatic />
-        <div className="displayTools">
-          <DicesThrow />
-        </div>
-      </Route>
-
-      <Route path="/room/history" exact>
-        <RoomStatic />
-        <div className="displayTools">
-          <DicesHistory />
-        </div>
-      </Route>
-
-      <Route path="/room/notes" exact>
-        <RoomStatic />
-        <div className="displayTools">
-          <PlayerNotes />
-        </div>
-      </Route>
-
-      <Route path="/room/files" exact>
-        <RoomStatic />
-        <div className="displayTools">
-          <SharedFiles />
-        </div>
-      </Route>
-
-      <Route path="/room/share" exact>
-        <RoomStatic />
-        <div className="displayTools">
-          <SharedViewForm />
-        </div>
-      </Route> */}
     </Switch>
   </div>
 );

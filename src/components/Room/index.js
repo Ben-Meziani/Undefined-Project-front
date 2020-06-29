@@ -3,29 +3,30 @@ import NavBarRoom from '../../containers/Room/NavBarRoom';
 import SharedView from './SharedView';
 import ChatButton from '../../containers/Room/ChatButton';
 import Chatroom from '../../containers/Room/Chatroom';
-import DicesHistory from './DicesHistory';
+import DicesHistory from '../../containers/Room/DicesHistory';
 import DicesThrow from '../../containers/Room/DicesThrow';
-import PlayerNotes from './PlayerNotes';
+import PlayerNotes from '../../containers/Room/PlayerNotes';
 import PlayersList from '../../containers/Room/PlayersList';
-import SharedFiles from './SharedFiles';
+import SharedFiles from '../../containers/Room/SharedFiles';
 import ToolsMenu from '../../containers/Room/ToolsMenu';
 
 import './style.scss';
 
-const RoomStatic = () => (
+const Room = () => (
   <div className="static-room">
     <NavBarRoom />
     <SharedView />
     <ChatButton />
     <Chatroom />
-    <DicesThrow />
-    <DicesHistory />
-    <PlayerNotes />
     <PlayersList />
-    <SharedFiles />
-    <SharedView />
     <ToolsMenu />
+    <div className="displayTools">
+      <SharedFiles />
+      <DicesThrow />
+      <DicesHistory />
+      <PlayerNotes />
+    </div>
   </div>
 );
 
-export default RoomStatic;
+export default Room;

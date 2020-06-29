@@ -35,28 +35,37 @@
   .player {
     
     &-icon {
-      height: 9em;
+      width: 3em;
+      height: 3em;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &-pseudo {
+      font-size: 1em;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+
+  .player {
+    max-width: 10%;
+    
+    &-icon {
+      height: 8em;
       overflow: hidden;
   
       img {
         width: 100%;
       }
     }
-  }
-}
 
-@media (min-width: 1600px) {
-
-  .player {
-    max-width: 10%;
-    
-    &-icon {
-      height: 10em;
-      overflow: hidden;
-  
-      img {
-        width: 100%;
-      }
+    &-pseudo {
+      font-size: 0.9em;
     }
   }
 }

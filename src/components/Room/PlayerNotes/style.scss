@@ -1,0 +1,31 @@
+.player-notes {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+
+  &-toggle {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  
+  .player-notes {
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    background-color: white;
+    width: 20%;
+    height: 20vh;
+    border: 1px solid green;
+    align-self: flex-end;
+
+    &-toggle {
+      display: flex;
+    }
+  }
+}

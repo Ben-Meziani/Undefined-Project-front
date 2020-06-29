@@ -1,5 +1,30 @@
-.shared-files{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+
+  .shared-files {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    background-color: white;
+
+  &-toggle {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  
+  .shared-files {
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    background-color: rgb(240, 125, 125);
+    width: 25%;
+    height: 20vh;
+    left: 0;
+
+    &-toggle {
+      display: flex;
+    }
+  }
 }

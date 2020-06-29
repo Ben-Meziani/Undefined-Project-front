@@ -5,6 +5,7 @@ import { displayResult } from '../../../actions';
 
 const mapStateToProps = (state) => ({
  /*  values: state.dices.value, */
+  diceOpen: state.room.diceOpen,
 });
 
 const mapDispatchToProps = (dispatch) => ({

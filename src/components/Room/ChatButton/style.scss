@@ -37,11 +37,11 @@
     color: white;
     font-size: 1.4em;
     position: absolute;
-    bottom: 0;
-    left: 0;
+    top: 0;
+    right: 0;
   
    &--open {
-   /*  position: absolute; */
+    position: absolute;
     background-color: #506761;
     border: none;
     color: white;
@@ -49,8 +49,8 @@
     height: 2em;
     width: 2em;
     border-radius: 4px;
-    top: 50%;
-    left: 0;
+    top: 6em;
+    left: 45em;
    }
   }
 }
