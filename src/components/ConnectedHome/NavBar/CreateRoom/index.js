@@ -15,7 +15,7 @@ const CreateRoom = ({
   playersNb,
   createRoom,
 }) => {
-  const dropdownChange = (e, value) => {
+  const dropdownChange = (evt, value) => {
     handleDropdown(value.value);
   };
   const handleSubmit = (evt) => {

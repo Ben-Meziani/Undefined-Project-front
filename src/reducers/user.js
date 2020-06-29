@@ -9,6 +9,7 @@ import {
   CONNECT,
   CHECK,
   SAVE_USER,
+  SEND_USER_DATA,
 } from '../actions';
 
 const initialState = {
@@ -29,7 +30,6 @@ const initialState = {
   regEmail: '',
   regPseudo: '',
   regIcon: '',
-
 };
 
 const user = (state = initialState, action = {}) => {
@@ -90,6 +90,11 @@ const user = (state = initialState, action = {}) => {
         pseudo: action.currentUser.pseudo,
         id: action.currentUser.id,
         icon: action.currentUser.icon,
+      };
+    }
+    case SEND_USER_DATA: {
+      return {
+        ...state,
       };
     }
     default:

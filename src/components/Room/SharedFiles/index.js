@@ -1,24 +1,31 @@
 import React from 'react';
-import './style.scss';
+import PropTypes from 'prop-types';
+
 import { Icon } from 'semantic-ui-react';
 
-const SharedFiles = () => (
-  <div>
-    <ul className="shared-files">
-      <li><Icon name="book" size="huge" /></li>
-      <li><Icon name="book" size="huge" /></li>
-      <li><Icon name="book" size="huge" /></li>
-      <li><Icon name="book" size="huge" /></li>
-      <li><Icon name="book" size="huge" /></li>
-      <li><Icon name="book" size="huge" /></li>
-      <li><Icon name="book" size="huge" /></li>
-      <li><Icon name="book" size="huge" /></li>
-      <li><Icon name="book" size="huge" /></li>
-      <li><Icon name="book" size="huge" /></li>
-      <li><Icon name="book" size="huge" /></li>
-      <li><Icon name="book" size="huge" /></li>
-    </ul>
-  </div>
-);
+import './style.scss';
+
+const SharedFiles = ({ bookOpen }) => {
+  return (
+    <div className={!bookOpen ? 'shared-files-toggle shared-files' : 'shared-files '}>
+      <div><Icon name="book" size="huge" /></div>
+      <div><Icon name="book" size="huge" /></div>
+      <div><Icon name="book" size="huge" /></div>
+      <div><Icon name="book" size="huge" /></div>
+      <div><Icon name="book" size="huge" /></div>
+      <div><Icon name="book" size="huge" /></div>
+      <div><Icon name="book" size="huge" /></div>
+      <div><Icon name="book" size="huge" /></div>
+      <div><Icon name="book" size="huge" /></div>
+      <div><Icon name="book" size="huge" /></div>
+      <div><Icon name="book" size="huge" /></div>
+      <div><Icon name="book" size="huge" /></div>
+    </div>
+  );
+};
+
+SharedFiles.propTypes = {
+  bookOpen: PropTypes.bool.isRequired,
+};
 
 export default SharedFiles;

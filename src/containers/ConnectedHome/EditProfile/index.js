@@ -8,14 +8,16 @@ import {
   changeIconFile,
   changeIconUrl,
   changeValue,
-  sendEditedDatas,
+  sendIcon,
+  fetchIcon,
+  sendUserData,
 } from '../../../actions';
 
 const mapStateToProps = (state) => ({
   email: state.user.email,
   password: state.user.password,
   pseudo: state.user.pseudo,
-  icon: state.user.icon,
+  icon: state.upload.icon,
   id: state.user.id,
   iconFile: state.upload.iconFile,
   imgURL: state.upload.imgURL,
@@ -34,8 +36,16 @@ const mapDispatchToProps = (dispatch) => ({
     const action = changeValue(name, value);
     dispatch(action);
   },
-  sendEditedDatas: () => {
-    const action = sendEditedDatas();
+  sendIcon: () => {
+    const action = sendIcon();
+    dispatch(action);
+  },
+  fetchIcon: () => {
+    const action = fetchIcon();
+    dispatch(action);
+  },
+  sendUserData: () => {
+    const action = sendUserData();
     dispatch(action);
   },
 });

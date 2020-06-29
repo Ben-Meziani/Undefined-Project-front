@@ -29,7 +29,7 @@ const auth = (store) => (next) => (action) => {
         withCredentials: true,
       })
         .then((response) => {
-          console.log(response);
+          console.log(response.data);
           const saveCurrentUser = saveUser(response.data);
           store.dispatch(saveCurrentUser);
           store.dispatch(connect());

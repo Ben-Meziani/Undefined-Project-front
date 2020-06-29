@@ -6,13 +6,25 @@ import {
   CHANGE_TEXT,
   RECEIVE_MESSAGE,
   TOGGLE_OPEN_CHAT,
+  TOGGLE_OPEN_BOOK,
+  TOGGLE_OPEN_EDIT,
+  TOGGLE_OPEN_BOMB,
+  TOGGLE_OPEN_DICE,
+  TOGGLE_OPEN_PICTURE,
+  TOGGLE_OPEN_PLAYERS,
 } from '../actions';
 
 const initialState = {
   open: false,
-  chatOpen: true,
+  chatOpen: false,
+  bookOpen: false,
+  editOpen: false,
+  bombOpen: false,
+  diceOpen: false,
+  pictureOpen: false,
+  playersOpen: false,
   logged: false,
-  roomName: 'Harry Pot-de-Beurre et la Chambre des Kékés',
+  roomName: '',
   roomId: 0,
   playersNb: 0,
   playersList: [
@@ -91,6 +103,41 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
         roomId: action.roomId,
       };
+    case TOGGLE_OPEN_CHAT:
+      return {
+        ...state,
+        chatOpen: !state.chatOpen,
+      };
+    case TOGGLE_OPEN_BOOK:
+      return {
+        ...state,
+        bookOpen: !state.bookOpen,
+      };
+    case TOGGLE_OPEN_EDIT:
+      return {
+        ...state,
+        editOpen: !state.editOpen,
+      };
+    case TOGGLE_OPEN_BOMB:
+      return {
+        ...state,
+        bombOpen: !state.bombOpen,
+      };
+    case TOGGLE_OPEN_DICE:
+      return {
+        ...state,
+        diceOpen: !state.diceOpen,
+      };
+    case TOGGLE_OPEN_PICTURE:
+      return {
+        ...state,
+        pictureOpen: !state.pictureOpen,
+      };
+    case TOGGLE_OPEN_PLAYERS:
+      return {
+        ...state,
+        playersOpen: !state.playersOpen,
+      };
 
     // CHATROOM CASES
     case RECEIVE_MESSAGE: {
@@ -113,22 +160,16 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
         text: action.payload,
       };
-    case TOGGLE_OPEN_CHAT:
-      return {
-        ...state,
-        chatOpen: !state.chatOpen,
-      };
-
-      /* case CHANGE_VALUE:
+    case CHANGE_VALUE:
       return {
         ...state,
         roomName: action.value,
-      }; */
-    /* case DROPDOWN_CHANGE:
+      };
+    case DROPDOWN_CHANGE:
       return {
         ...state,
         playersNb: action.selectedValue,
-      }; */
+      };
     default:
       return state;
   }

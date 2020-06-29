@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import PlayersMenu from './PlayersMenu';
+import PlayersMenu from '../../../containers/Room/NavBarRoom/PlayersMenu';
 import ToggleMenu from './ToggleMenu';
 
 import './style.scss';

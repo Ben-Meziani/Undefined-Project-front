@@ -1,18 +1,38 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
 import React from 'react';
-import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { Icon } from 'semantic-ui-react';
+
 import './style.scss';
 
-const ToolsMenu = () => (
-  <div className="toolsMenu">
-    <ul className="toolsMenu-list">
-      <li><Link to="/room/files"><Icon name="book" size="large" /></Link></li>
-      <li><Link to="/room/notes"><Icon name="edit" size="large" /></Link></li>
-      <li><Link to="/room/dices"><Icon name="bomb" size="large" /></Link></li>
-      <li><Link to="/room/history"><Icon name="bomb" size="large" /></Link></li>
-      <li><Link to="/room/share"><Icon disabled name="picture" size="large" /></Link></li>
-    </ul>
-  </div>
-);
+const ToolsMenu = ({
+  toggleOpenBook,
+  toggleOpenEdit,
+  toggleOpenBomb,
+  toggleOpenDice,
+  toggleOpenPicture,
+  pictureOpen,
+}) => {
+  return (
+    <div className="toolsMenu">
+      <ul className="toolsMenu-list">
+        <button type="button" className="toolsMenu-button" onClick={toggleOpenBook}><Icon name="book" size="large" /></button>
+        <button type="button" className="toolsMenu-button" onClick={toggleOpenEdit}><Icon name="edit" size="large" /></button>
+        <button type="button" className="toolsMenu-button" onClick={toggleOpenBomb}><Icon name="bomb" size="large" /></button>
+        <button type="button" className="toolsMenu-button" onClick={toggleOpenDice}><Icon name="bomb" size="large" /></button>
+        <button type="button" className="toolsMenu-button" onClick={toggleOpenPicture}><Icon name="picture" size="large" /></button>
+      </ul>
+    </div>
+  );
+};
+
+ToolsMenu.propTypes = {
+  toggleOpenBook: PropTypes.func.isRequired,
+  toggleOpenEdit: PropTypes.func.isRequired,
+  toggleOpenBomb: PropTypes.func.isRequired,
+  toggleOpenDice: PropTypes.func.isRequired,
+  toggleOpenPicture: PropTypes.func.isRequired,
+  pictureOpen: PropTypes.bool.isRequired,
+};
 
 export default ToolsMenu;
