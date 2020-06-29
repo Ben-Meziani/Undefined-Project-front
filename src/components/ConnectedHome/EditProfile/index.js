@@ -26,6 +26,7 @@ const EditProfile = ({
   sendIcon,
 }) => {
   /* useEffect(fetchIcon, []); */
+  console.log('icon vaut ' + icon);
   console.log('imgURL vaut ' + imgURL);
   console.log('iconFile vaut ' + iconFile);
   // PREVIEW THE NEW AVATAR AND SEND TO SERVER
