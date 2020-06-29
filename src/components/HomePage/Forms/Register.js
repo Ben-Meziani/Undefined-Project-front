@@ -9,20 +9,31 @@ import {
 import { Link } from 'react-router-dom';
 import Field from './Field';
 import RegisterAvatar from './RegisterAvatar';
+import { errorRegPassword } from '../../../actions';
 
 const Register = ({
   regEmail,
   regPassword,
   regPseudo,
+  regPasswordCheck,
+  errorRegPass,
   changeValue,
   register,
   loading,
   userRegistered,
   logged,
+  errorPasswordCheck,
+  errorPassCheck,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    register();
+    /* register();  */
+    if (regPassword === regPasswordCheck) {
+      register();
+    }
+    else {
+      errorPasswordCheck();
+    }
   };
 
   return (
@@ -60,6 +71,22 @@ const Register = ({
                 changeValue={changeValue}
                 value={regPassword}
               />
+              {errorRegPass && !loading && (
+                <p className="register-password-int"> Votre mot de passe doit contenir au moins un chiffre.</p>
+              )}
+            </Form.Field>
+            <Form.Field required>
+              <label>Entrez à nouveau votre mot de passe</label>
+              <Field
+                type="password"
+                placeholder="Mot de passe"
+                name="regPasswordCheck"
+                changeValue={changeValue}
+                value={regPasswordCheck}
+              />
+              {errorPassCheck && !loading && (
+                <p className="register-password-int"> Vos mots de passe doivent être identiques!</p>
+              )}
             </Form.Field>
             <Button color="black" type="submit">
               Enregistrez-vous !
@@ -68,9 +95,9 @@ const Register = ({
         </>
       )}
       {loading && (
-      <>
+      <div className="register-loader">
         <Loader active inline="centered" />
-      </>
+      </div>
       )}
       {userRegistered && !loading && (
       <>
@@ -80,23 +107,19 @@ const Register = ({
         </Link>
       </>
       )}
-      {logged && !loading && (
-        <>
-          <p>Vous êtes connecté.</p>
-          <Link to="/dashboard">
-            <p>Allez sur votre profil.</p>
-          </Link>
-        </>
-      )}
     </div>
   );
 };
 
 Register.propTypes = {
   regEmail: PropTypes.string.isRequired,
-
   regPassword: PropTypes.string.isRequired,
   regPseudo: PropTypes.string.isRequired,
+
+  regPasswordCheck: PropTypes.string.isRequired,
+  errorRegPass: PropTypes.bool.isRequired,
+  errorPasswordCheck: PropTypes.func.isRequired,
+  errorPassCheck: PropTypes.bool.isRequired,
 
   changeValue: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,

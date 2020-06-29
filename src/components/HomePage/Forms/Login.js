@@ -18,10 +18,12 @@ const Login = ({
   login,
   logged,
   loading,
+  errorToLog,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     login();
+    // console.log(errorToLog);
   };
   return (
     <div className="login">
@@ -47,6 +49,12 @@ const Login = ({
               changeValue={changeValue}
               value={password}
             />
+            {errorToLog && !loading && (
+              <p className="login-error">Ouille! Il semblerait que l'e-mail ou le mot de passe ne soit pas valide.</p>
+            )}
+            <Link to="/forgotten">
+              <p className="login-forgotten">Mot de passe oublié ?</p>
+            </Link>
           </Form.Field>
           <Button color="black" type="submit">
             Connectez-vous !
@@ -82,6 +90,7 @@ Login.propTypes = {
   logged: PropTypes.bool.isRequired,
   loading: PropTypes.bool,
   login: PropTypes.func.isRequired,
+  errorToLog: PropTypes.bool.isRequired,
 };
 
 Login.defaultProps = {

@@ -10,6 +10,8 @@ import {
   loading,
   connect,
   saveUser,
+  errorLog,
+  errorRegPassword,
 } from '../actions';
 
 /* const serverURI = 'http://ec2-54-234-79-207.compute-1.amazonaws.com/api'; */
@@ -29,13 +31,19 @@ const auth = (store) => (next) => (action) => {
         withCredentials: true,
       })
         .then((response) => {
-          console.log(response.data);
+          // console.log(response.data);
           const saveCurrentUser = saveUser(response.data);
           store.dispatch(saveCurrentUser);
           store.dispatch(connect());
         })
         .catch((error) => {
-          console.error(error);
+          if (error.response.status === 401) {
+            store.dispatch(errorLog());
+          }
+        })
+        .finally(() => {
+          // je veux dire que le chargement est fini
+          store.dispatch(loading());
         });
       next(action);
       break;
@@ -59,35 +67,18 @@ const auth = (store) => (next) => (action) => {
           }
         })
         .catch((error) => {
-          console.error(error);
+          // console.error(error);
+          if (error.response.status === 400) {
+            store.dispatch(errorRegPassword());
+          }
         })
         .finally(() => {
+          // loading is over.
           store.dispatch(loading());
         });
       next(action);
       break;
     }
-
-    /* case CHECK: {
-      axios.post(`${serverURI}/login_check`, {}, {
-        withCredentials: true,
-      })
-        .then((response) => {
-          console.log(response.data);
-          // dans response.data on me dit si oui ou non je suis connecté AVEC RESPONSE 200
-          if (response.data) {
-            if (response.status === '200') {
-              console.log('réponse ok');
-              store.dispatch(connect());
-            }
-            else {
-            // gérer messages d'erreur
-            }
-          }
-        });
-      next(action);
-      break;
-    } */
 
     // DECONNECT A USER
     case LOGOUT:

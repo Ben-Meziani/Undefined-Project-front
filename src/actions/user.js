@@ -5,6 +5,9 @@ export const CONNECT = 'CONNECT';
 export const SAVE_USER = 'SAVE_USER';
 export const CHECK = 'CHECK';
 export const SEND_USER_DATA = 'SEND_USER_DATA';
+export const ERROR_LOG = 'ERROR_LOG';
+export const ERROR_REG_PASSWORD = 'ERROR_REG_PASSWORD';
+export const ERROR_PASSWORD_CHECK = 'ERROR_PASSWORD_CHECK';
 
 export const login = () => ({
   type: LOGIN,
@@ -33,4 +36,16 @@ export const saveUser = (currentUser) => ({
 
 export const sendUserData = () => ({
   type: SEND_USER_DATA,
+});
+
+export const errorLog = () => ({
+  type: ERROR_LOG,
+});
+
+export const errorRegPassword = () => ({
+  type: ERROR_REG_PASSWORD,
+});
+
+export const errorPasswordCheck = () => ({
+  type: ERROR_PASSWORD_CHECK,
 });

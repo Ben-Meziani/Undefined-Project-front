@@ -16,6 +16,12 @@
     height: 50vh;
     width: 100%;
   };
+
+  &-error{
+    color: red;
+    font-style: italic;
+    padding: .5em;
+  }
 }
 
 // Register
@@ -37,6 +43,12 @@
     flex-direction: column;
     align-items: space-between ;
   };
+
+  &-password-int{
+    color: red;
+    font-style: italic;
+    padding-top:.5em;
+  }
   
   // RegisterAvatar
 
@@ -49,7 +61,32 @@
       object-fit: contain;
     }
   }
+}
 
+.forgotten{
+  border : solid .1em black;
+  margin: 0 auto;
+  margin-top: .2em;
+  padding: 1.5em;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  @include mq() {
+    height: 50vh;
+    width: 23em;
+  };
+  &-text{
+    padding: 1em;
+    @include mq() {
+      width: 100%;
+    };
+    
+  }
+  &-confirm{
+
+  }
 }
 
 
