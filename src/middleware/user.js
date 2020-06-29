@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import axios from 'axios';
 
-import { SEND_USER_DATA} from '../actions';
+import { SEND_USER_DATA } from '../actions';
 
 const serverURI = 'https://undefined-project.tk/api';
 
@@ -16,7 +16,6 @@ const user = (store) => (next) => (action) => {
       // DEFINE THE TYPE OF DATA
       axios.post(`${serverURI}/user/${userId}/edit`, {
         email: state.user.email,
-        password: state.user.password,
         pseudo: state.user.pseudo,
         icon: state.upload.iconFile,
       }, {

@@ -1,7 +1,7 @@
 /* eslint-disable prefer-template */
 /* eslint-disable no-console */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Form, Button } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
@@ -15,7 +15,6 @@ const EditProfile = ({
   changeIconFile,
   changeIconUrl,
   email,
-  password,
   pseudo,
   icon,
   iconFile,
@@ -24,7 +23,6 @@ const EditProfile = ({
   sendUserData,
   sendIcon,
 }) => {
-  /* useEffect(fetchIcon, []); */
   console.log('icon vaut ' + icon);
   console.log('imgURL vaut ' + imgURL);
   console.log('iconFile vaut ' + iconFile);
@@ -78,29 +76,6 @@ const EditProfile = ({
             </label>
           </Form.Field>
           <Form.Field>
-            <label htmlFor="password" className="edit-profile-form-label">Mot de passe
-              <Field
-                type="password"
-                placeholder="Mot de passe"
-                name="password"
-                changeValue={changeValue}
-                value={password}
-              />
-            </label>
-          </Form.Field>
-          <Form.Field>
-            <label htmlFor="password-confirm" className="edit-profile-form-label">Confirmer le mot de passe
-              <Field
-                className="edit-profile-form-input"
-                type="password"
-                placeholder="Mot de passe"
-                name="password"
-                changeValue={changeValue}
-                value={password}
-              />
-            </label>
-          </Form.Field>
-          <Form.Field>
             <label htmlFor="pseudo" className="edit-profile-form-label">Pseudo
               <Field
                 className="edit-profile-form-input"
@@ -125,17 +100,11 @@ EditProfile.propTypes = {
   icon: PropTypes.string.isRequired,
   iconFile: PropTypes.object.isRequired,
   imgURL: PropTypes.string.isRequired,
-  password: PropTypes.string,
   changeIconFile: PropTypes.func.isRequired,
   changeIconUrl: PropTypes.func.isRequired,
   changeValue: PropTypes.func.isRequired,
   sendUserData: PropTypes.func.isRequired,
-  fetchIcon: PropTypes.func.isRequired,
   sendIcon: PropTypes.func.isRequired,
-};
-
-EditProfile.defaultProps = {
-  password: '',
 };
 
 export default EditProfile;
