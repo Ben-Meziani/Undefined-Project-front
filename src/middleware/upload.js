@@ -43,6 +43,7 @@ const user = (store) => (next) => (action) => {
       console.log('++++ requête : j\'envoie les données modifiées au serveur ++++');
       const formData = new FormData();
       formData.append('file', state.upload.iconFile);
+      console.log('formData dans la requête vaut ' + formData);
       axios.post(`${serverURI}/user/${userId}/icon`, {
         icon: formData,
       }, {
