@@ -23,26 +23,6 @@ const App = ({ id }) => (
     <HomePage />
     
     <Switch>
-
-{/*       <Route path="/" exact>
-        <HomePage />
-        <div className="homeDisplay" />
-      </Route>
-
-      <Route path="/login" exact>
-        <HomePage />
-        <div className="homeDisplay">
-          <Login />
-        </div>
-      </Route>
-
-      <Route path="/register" exact>
-        <HomePage />
-        <div className="homeDisplay">
-          <Register />
-        </div>
-      </Route> */}
-
       <Route path="/dashboard" exact>
         <ConnectedHome />
       </Route>

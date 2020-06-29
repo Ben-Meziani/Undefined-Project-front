@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import DicesThrow from '../../../components/Room/Dices/DicesThrow';
+import DicesThrow from '../../../components/Room/DicesThrow';
 // eslint-disable-next-line import/named
 import { rollDice } from '../../../actions';
 /* import { randomRoll } from '../../../selectors'; */
