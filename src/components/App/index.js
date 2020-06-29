@@ -20,9 +20,11 @@ import './style.scss';
 // == Composant
 const App = ({ id }) => (
   <div className="app">
+    <HomePage />
+    
     <Switch>
 
-      <Route path="/" exact>
+{/*       <Route path="/" exact>
         <HomePage />
         <div className="homeDisplay" />
       </Route>
@@ -39,7 +41,7 @@ const App = ({ id }) => (
         <div className="homeDisplay">
           <Register />
         </div>
-      </Route>
+      </Route> */}
 
       <Route path="/dashboard" exact>
         <ConnectedHome />

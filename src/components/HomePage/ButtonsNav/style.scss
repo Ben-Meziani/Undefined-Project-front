@@ -1,42 +1,55 @@
+@import 'src/styles/vars';
+
 // General styles
 .homepage-navbutton{
-
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-  margin: 0 auto;
-  font-size: 1.5em;
   
 // Button Login
   &-login{
-    position: relative;
-    top: -.7em;
-    padding: .5em;
     font-family: 'Roboto Mono', monospace;
     background-color: white;
     border: solid .1em black;
-    width: 5.8em;
+    width: 100%;
+    justify-content: center;
+    background: linear-gradient(to right, black 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+    margin-bottom: .5em;
+    height: 2em;
+    @include mq() {
+      height: 5em;
+      width: 100%;
+      display: flex;
+    };
     &:hover{
       background-color: black;
       color: white;
+      background-position: bottom left;
     }
   }
   
 // Button Register
   &-register{
-    position: relative;
-    top: -.7em;
-    padding: .5em;
-    color: white;
-    background-color: black;
-    border: solid .1em white;
+    color: black;
+    background-color: white;
+    border: solid .1em black;
     font-family: 'Roboto Mono', monospace;
-    width: 5.8em;
+    width: 100%;
+    height: 2em;
     justify-content: center;
-
+    background: linear-gradient(to right, black 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+    @include mq() {
+      display: flex;
+      height: 5em;
+      width: 100%;
+    };
     &:hover{
-      background-color: white;
-      color: black;
+      background-color: black;
+      color: white;
+      background-position: bottom left;
     }
   }
 }

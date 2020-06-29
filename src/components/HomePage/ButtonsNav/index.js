@@ -3,27 +3,25 @@ import { Link } from 'react-router-dom';
 import './style.scss';
 
 const ButtonsNav = () => (
-  <div className="homepage-navbutton">
-
-    <button
-      type="button"
-      className=" homepage-navbutton-login"
-    >
-      <Link to="/login">
+  <>
+    <Link to="/login">
+      <button
+        type="button"
+        className=" homepage-navbutton-login"
+      >
         Login
-      </Link>
-    </button>
+      </button>
+    </Link>
 
-    <button
-      type="button"
-      className="homepage-navbutton-register"
-    >
-      <Link to="/register">
+    <Link to="/register">
+      <button
+        type="button"
+        className="homepage-navbutton-register"
+      >
         Register
-      </Link>
-    </button>
-
-  </div>
+      </button>
+    </Link>
+  </>
 );
 
 export default ButtonsNav;

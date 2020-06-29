@@ -1,6 +1,4 @@
-// General styles
-
-// Field
+@import 'src/styles/vars';
 
 // Login
 
@@ -8,7 +6,16 @@
   border : solid .1em black;
   margin: 0 auto;
   margin-top: .2em;
-  padding: 3.1em;
+  padding: 3em;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  @include mq() {
+    height: 50vh;
+    width: 100%;
+  };
 }
 
 // Register
@@ -17,19 +24,29 @@
   border : solid .1em black;
   margin: 0 auto;
   margin-top: .2em;
-  padding: 3.1em;
+  padding: 3em;
+  height: 50vh;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+  @include mq() {
+    height: 50vh;
+    width: 100%;
+    flex-direction: column;
+    align-items: space-between ;
+  };
   
   // RegisterAvatar
 
   &-avatar{
-    margin-bottom: 2em;
-    display: flex;
     justify-content: center;
 
-
     &-preview{
-      margin-bottom: .5em;
-      justify-content: center;
+      max-height: 30vh;
+      max-width: 30vw;
+      object-fit: contain;
     }
   }
 
