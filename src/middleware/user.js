@@ -13,13 +13,16 @@ const user = (store) => (next) => (action) => {
       const userId = state.user.id;
       console.log('++++ requête : j\'envoie toutes les données modifiées au serveur ++++');
       console.log('iconFile envoyé vaut ' + state.upload.iconFile);
-      // DEFINE THE TYPE OF DATA
+      const formData = new FormData();
+      formData.append('file', state.upload.iconFile);
       axios.post(`${serverURI}/user/${userId}/edit`, {
         email: state.user.email,
         pseudo: state.user.pseudo,
-        icon: state.upload.iconFile,
+        icon: formData,
       }, {
-        withCredentials: true,
+        headers: {
+          'content-type': 'multipart/form-data',
+        },
       })
         .then((response) => {
           console.log(response);

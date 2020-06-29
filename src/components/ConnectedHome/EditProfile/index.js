@@ -32,7 +32,7 @@ const EditProfile = ({
     evt.preventDefault();
     console.log(evt.target.files[0]);
     const newIconUrl = URL.createObjectURL(evt.target.files[0]);
-    const newIconFile = evt.target.files[0].name;
+    const newIconFile = evt.target.files[0];
     changeIconUrl(newIconUrl);
     changeIconFile(newIconFile);
     sendIcon();
