@@ -2,10 +2,10 @@
 
 .shared-view {
   width: 100vh;
-  height: 80vh;
+  height: 85vh;
   background-image: url("../../../../src/assets/HPbg-mobile.jpg");
   background-size: 60%;
-  }
+}
 
   // MEDIA QUERIES
 
@@ -25,8 +25,8 @@
 @media (min-width: 1024px) {
 
   .shared-view {
-    width: 50vh;
-    height: 50vh;
+    width: 40vh;
+    height: 40vh;
     margin: 0 auto;
     margin-top: 2em;
   
