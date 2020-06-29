@@ -26,6 +26,8 @@ const EditProfile = ({
   sendIcon,
 }) => {
   /* useEffect(fetchIcon, []); */
+  console.log('imgURL vaut ' + imgURL);
+  console.log('iconFile vaut ' + iconFile);
   // PREVIEW THE NEW AVATAR AND SEND TO SERVER
   const handleChange = (evt) => {
     console.log('---- je récupère le nom du fichier sélectionné par le user ----');
@@ -37,9 +39,6 @@ const EditProfile = ({
     changeIconFile(newIconFile);
     sendIcon();
   };
-
-  console.log('imgURL vaut ' + imgURL);
-  console.log('iconFile vaut ' + iconFile);
 
   // SEND ALL THE NEW DATA
   const handleSubmit = (evt) => {
