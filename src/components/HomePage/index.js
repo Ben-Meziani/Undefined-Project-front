@@ -39,7 +39,6 @@ console.log(logged);
         </div>
       </Route>
 
-
       <Route path="/login" exact>
         <div className="homePage">
           <Header />
