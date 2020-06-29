@@ -54,12 +54,12 @@ const initialState = {
       id: 11,
     },
     {
-      pseudo: 'Egmond',
+      pseudo: 'Edgard',
       icon: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/7987a60d-5266-4eb6-9adf-ea9f92b38af1/dclxmrl-0f31717b-ab84-4f85-b2fc-7364492d0ef9.png',
       id: 12,
     },
     {
-      pseudo: 'Egmond',
+      pseudo: 'Daphné',
       icon: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/7987a60d-5266-4eb6-9adf-ea9f92b38af1/dclxmrl-0f31717b-ab84-4f85-b2fc-7364492d0ef9.png',
       id: 13,
     },
@@ -69,12 +69,12 @@ const initialState = {
       id: 14,
     },
     {
-      pseudo: 'Egmond',
+      pseudo: 'Michelle',
       icon: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/7987a60d-5266-4eb6-9adf-ea9f92b38af1/dclxmrl-0f31717b-ab84-4f85-b2fc-7364492d0ef9.png',
       id: 15,
     },
     {
-      pseudo: 'Egmond',
+      pseudo: 'Wonder Woman',
       icon: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/7987a60d-5266-4eb6-9adf-ea9f92b38af1/dclxmrl-0f31717b-ab84-4f85-b2fc-7364492d0ef9.png',
       id: 16,
     },
@@ -82,9 +82,19 @@ const initialState = {
   text: '',
   chatMessages: [
     {
-      author: '',
-      content: '',
-      id: 0,
+      author: 'Alphonse',
+      content: 'Salut ça farte ?!',
+      id: 9,
+    },
+    {
+      author: 'Groot',
+      content: 'Ca farte ? Mais bro on dit plus ça depuis 20 ans pfff',
+      id: 9,
+    },
+    {
+      author: 'Wonder Woman',
+      content: 'Les gars, ça vous dit une virée ce soir ?',
+      id: 9,
     },
   ],
 };

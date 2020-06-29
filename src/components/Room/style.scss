@@ -1,5 +1,4 @@
 .static-room {
-  height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -7,8 +6,7 @@
 @media (min-width: 1024px) {
 
   .static-room {
-    display: flex;
-    flex-direction: column;
+
   }
 
 }

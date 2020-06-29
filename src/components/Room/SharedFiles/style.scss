@@ -48,16 +48,16 @@
     background-color: white;
     width: 25%;
     height: 30vh;
-    top: 70%;
-    bottom: 0;
-    left: 0;
+    top: 60%;
+    left: 1em;
 
     &-toggle {
       display: flex;
       position: absolute;
       margin-bottom: 0;
-      left: 0;
-      bottom: 0;
+      left: 1em;
+      height: 30vh;
+      top: 65%;
     }
 
     button {

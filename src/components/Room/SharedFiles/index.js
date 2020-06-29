@@ -10,18 +10,18 @@ const SharedFiles = ({ toggleOpenBook, bookOpen }) => {
   return (
     <div className={!bookOpen ? 'shared-files-toggle shared-files' : 'shared-files '}>
       <button type="button" onClick={toggleOpenBook}><Icon name="close" size="large" /></button>
-      <div><Icon name="book" size="huge" /></div>
-      <div><Icon name="book" size="huge" /></div>
-      <div><Icon name="book" size="huge" /></div>
-      <div><Icon name="book" size="huge" /></div>
-      <div><Icon name="book" size="huge" /></div>
-      <div><Icon name="book" size="huge" /></div>
-      <div><Icon name="book" size="huge" /></div>
-      <div><Icon name="book" size="huge" /></div>
-      <div><Icon name="book" size="huge" /></div>
-      <div><Icon name="book" size="huge" /></div>
-      <div><Icon name="book" size="huge" /></div>
-      <div><Icon name="book" size="huge" /></div>
+      <div><Icon name="book" size="large" /></div>
+      <div><Icon name="book" size="large" /></div>
+      <div><Icon name="book" size="large" /></div>
+      <div><Icon name="book" size="large" /></div>
+      <div><Icon name="book" size="large" /></div>
+      <div><Icon name="book" size="large" /></div>
+      <div><Icon name="book" size="large" /></div>
+      <div><Icon name="book" size="large" /></div>
+      <div><Icon name="book" size="large" /></div>
+      <div><Icon name="book" size="large" /></div>
+      <div><Icon name="book" size="large" /></div>
+      <div><Icon name="book" size="large" /></div>
     </div>
   );
 };

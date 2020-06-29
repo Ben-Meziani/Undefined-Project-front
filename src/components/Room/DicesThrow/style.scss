@@ -24,14 +24,14 @@
   &-throw{
     display: inline-block;
     border: .2em solid black;
-    margin: 1em;
+    /* margin: 1em; */
     padding: .5em;
     color: black;
     text-align: center;
     background-color: white;
     width: 50%;
    
-    &:hover{
+    &:hover {
       color: snow;
       background: black;
     }
@@ -41,13 +41,16 @@
 @media (min-width: 1024px) {
 
   .dices {
-    position:absolute;
+    position: absolute;
     width: 20vw;
-    height: 15vh;
-    background-color: white;
-    border: 0.1em solid black;
+    height: 30vh;
+    border: none;
     top: 70%;
     left: 51%;
+
+    button {
+      display: none;
+    }
 
     &-toggle {
       display: block;
@@ -55,29 +58,15 @@
 
     &-result {
       position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       width: 20vw;
       height: 10vh;
-      top: 85%;
-   /*    margin: 1em auto; */
       border: 0.2em solid black;
-      font-size: 1em;
+      top: 43%;
     }
   
-    &-throw{
-      position: absolute;
-      display: inline-block;
-      border: .2em solid black;
-      margin: 1em;
-      padding: .5em;
-      width: 20vw;
-      height: 5vh;
-      color: black;
-      text-align: center;
-      background-color: white;
-      bottom: 0;
+    &-throw {
+      width: 60%;
+     
      
       &:hover{
         color: snow;

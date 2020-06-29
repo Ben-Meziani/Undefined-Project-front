@@ -18,7 +18,7 @@ const ConnectedHome = ({ logged, loading, id }) => {
       <Switch>
         <Route exact path="/dashboard">
           <Header />
-          <RainDropAnimation />
+         {/*  <RainDropAnimation /> */}
           <WelcomeMessage />
           <NavBar />
         </Route>
