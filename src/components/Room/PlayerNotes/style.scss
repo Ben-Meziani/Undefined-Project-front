@@ -34,17 +34,24 @@
 @media (min-width: 1024px) {
   
   .player-notes {
+    position: absolute;
     display: flex;
     justify-content: center;
     bottom: 0;
     background-color: white;
-    width: 20%;
-    height: 20vh;
-    border: 1px solid green;
+    width: 25%;
+    height: 30vh;
+    top: 70%;
+    right: 0;
+    border: 1px solid black;
     align-self: flex-end;
 
     &-toggle {
       display: flex;
+    }
+
+    button {
+      display: none;
     }
   }
 }

@@ -7,10 +7,19 @@
   padding: .5em;
   border: black solid .2em;
   height: 12.5vw;
+
   &-title{
     margin: 0 auto;
     width: 75vw;
     font-weight: bold;
+  }
+}
+
+.playersMenu {
+
+  button {
+    background: none;
+    border: none;
   }
 }
 

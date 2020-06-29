@@ -9,5 +9,21 @@
   &-toggle {
     display: none;
   }
+}
 
+@media (min-width: 1024px) {
+
+  .dices-history {
+    position:absolute;
+    width: 20vw;
+    height: 30vh;
+    background-color: white;
+    border: 0.2em solid black;
+    top: 70%;
+    left: 30%;
+
+    &-toggle {
+      display: block;
+    }
+  }
 }

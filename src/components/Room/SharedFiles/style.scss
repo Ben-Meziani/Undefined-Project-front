@@ -21,7 +21,7 @@
   }
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 767px) {
   
   .shared-files {
     display: flex;
@@ -34,6 +34,34 @@
 
     &-toggle {
       display: flex;
+    }
+  }
+} */
+
+@media (min-width: 1024px) {
+  
+  .shared-files {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    background-color: white;
+    width: 25%;
+    height: 30vh;
+    top: 70%;
+    bottom: 0;
+    left: 0;
+
+    &-toggle {
+      display: flex;
+      position: absolute;
+      margin-bottom: 0;
+      left: 0;
+      bottom: 0;
+    }
+
+    button {
+      display: none;
     }
   }
 }

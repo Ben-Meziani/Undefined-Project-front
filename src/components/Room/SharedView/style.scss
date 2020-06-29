@@ -2,9 +2,8 @@
 
 .shared-view {
   max-width: 100vh;
-  max-height: 50vh;
+  max-height: 80vh;
   overflow: hidden;
-  object-fit: contain;
   }
 
   // MEDIA QUERIES
@@ -12,7 +11,7 @@
 @media (min-width: 767px) {
 
   .shared-view {
-    width: 35vh;
+    width: 60vh;
     height: 60vh;
     margin: 0 auto;
     margin-top: 2em;
@@ -27,15 +26,14 @@
 @media (min-width: 1024px) {
 
   .shared-view {
-    width: 35vh;
-    height: 35vh;
+    width: 50vh;
+    height: 50vh;
     margin: 0 auto;
     margin-top: 2em;
     border: 1px solid black;
-
+  
     & img {
-      max-width: 100%;
-      object-fit: contain;
+      /* max-width: 100%; */
     }
   }
 }

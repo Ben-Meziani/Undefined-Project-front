@@ -1,16 +1,30 @@
 @import 'src/styles/vars';
 
 .players-list {
+  position: absolute;
   border: .3em solid black;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 0.2em;
   background-color: white;
   bottom: 0;
+
+  &-toggle {
+    display: none;
+  }
+
+  button {
+    position: absolute;
+    height: 1em;
+    background: none;
+    border: none;
+    top: 0;
+    left: 0;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -19,13 +33,17 @@
     border: 1px solid black;
     position: absolute;
     width: 25%;
-    height: 35vh;
+    height: 50vh;
     top: 6em;
     margin-left: 1em;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+
+    button {
+     display: none;
+    }
   }
 }
 
