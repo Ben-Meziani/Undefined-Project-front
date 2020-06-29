@@ -25,7 +25,7 @@ const EditProfile = ({
   fetchIcon,
   sendIcon,
 }) => {
-  useEffect(fetchIcon, []);
+  /* useEffect(fetchIcon, []); */
   // PREVIEW THE NEW AVATAR AND SEND TO SERVER
   const handleChange = (evt) => {
     console.log('---- je récupère le nom du fichier sélectionné par le user ----');
@@ -37,6 +37,9 @@ const EditProfile = ({
     changeIconFile(newIconFile);
     sendIcon();
   };
+
+  console.log('imgURL vaut ' + imgURL);
+  console.log('iconFile vaut ' + iconFile);
 
   // SEND ALL THE NEW DATA
   const handleSubmit = (evt) => {
@@ -58,8 +61,7 @@ const EditProfile = ({
       <div className="edit-profile-avatar">
         <input type="file" name="iconFile" className="avatar-choice-input" onChange={handleChange} />
         <div className="avatar-preview">
-          <img src={`https://undefined-project.tk/api/uploads/icons/${icon}`} alt="unknown" />
-          {!imgURL ? <img className="avatar" src={icon} alt="unknown" /> : <img className="avatar" src={imgURL} alt="unknown" />}
+          {!imgURL ? <img className="avatar" src={`https://undefined-project.tk/api/uploads/icons/${icon}`} alt="unknown" /> : <img className="avatar" src={imgURL} alt="unknown" />}
         </div>
       </div>
       <div className="edit-profile-form">

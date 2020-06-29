@@ -11,8 +11,9 @@ const user = (store) => (next) => (action) => {
     case FETCH_ICON: {
       const state = store.getState();
       const userId = state.user.id;
+      const userIcon = state.user.icon;
       console.log('++++ je récupère l\'icon du user selon son id ++++');
-      axios.get(`${serverURI}/user/${userId}/icon`, {
+      axios.get(`${serverURI}/user/${userId}/icon/${userIcon}`, {
       }, {
         withCredentials: true,
         /* responseType: 'blob', */
