@@ -20,12 +20,10 @@ const Room = () => (
     <Chatroom />
     <PlayersList />
     <ToolsMenu />
-    <div className="displayTools">
-      <SharedFiles />
-      <DicesThrow />
-      <DicesHistory />
-      <PlayerNotes />
-    </div>
+    <SharedFiles />
+    <DicesThrow />
+    <DicesHistory />
+    <PlayerNotes />
   </div>
 );
 

@@ -40,11 +40,14 @@ const user = (store) => (next) => (action) => {
       const userId = state.user.id;
       console.log('++++ iconFile dans le middleware upload ++++' + state.upload.iconFile);
       console.log('++++ requête : j\'envoie les données modifiées au serveur ++++');
-
+      const formData = new FormData();
+      formData.append('file', state.upload.iconFile);
       axios.post(`${serverURI}/user/${userId}/icon`, {
-        icon: state.upload.iconFile,
+        icon: formData,
       }, {
-        withCredentials: true,
+        headers: {
+          'content-type': 'multipart/form-data',
+        },
       })
         .then((response) => {
           console.log(response);

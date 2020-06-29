@@ -2,10 +2,12 @@
 /* eslint-disable no-console */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Form, Button } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
 import Field from '../../HomePage/Forms/Field';
+import homeIcon from '../../../assets/icons/homeIcon.svg';
 
 import './style.scss';
 
@@ -45,12 +47,18 @@ const EditProfile = ({
 
   return (
     <div className="edit-profile-section">
+      <Link to="/dashboard">
+        <div className="home-button">
+          <img src={homeIcon} alt="home" />
+        </div>
+      </Link>
       <div className="edit-profile-section-title">
         <p>Modifier vos informations</p>
       </div>
       <div className="edit-profile-avatar">
         <input type="file" name="iconFile" className="avatar-choice-input" onChange={handleChange} />
         <div className="avatar-preview">
+          <img src={`https://undefined-project.tk/api/uploads/icons/${icon}`} alt="unknown" />
           {!imgURL ? <img className="avatar" src={icon} alt="unknown" /> : <img className="avatar" src={imgURL} alt="unknown" />}
         </div>
       </div>
