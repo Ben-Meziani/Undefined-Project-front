@@ -1,11 +1,13 @@
 /* eslint-disable prefer-template */
 /* eslint-disable no-console */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useEffect } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Form, Button } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
 import Field from '../../HomePage/Forms/Field';
+import homeIcon from '../../../assets/icons/homeIcon.svg';
 
 import './style.scss';
 
@@ -13,17 +15,17 @@ const EditProfile = ({
   changeIconFile,
   changeIconUrl,
   email,
-  password,
   pseudo,
   icon,
   iconFile,
   imgURL,
   changeValue,
   sendUserData,
-  fetchIcon,
   sendIcon,
 }) => {
-  useEffect(fetchIcon, []);
+  console.log('icon vaut ' + icon);
+  console.log('imgURL vaut ' + imgURL);
+  console.log('iconFile vaut ' + iconFile);
   // PREVIEW THE NEW AVATAR AND SEND TO SERVER
   const handleChange = (evt) => {
     console.log('---- je récupère le nom du fichier sélectionné par le user ----');
@@ -33,7 +35,7 @@ const EditProfile = ({
     const newIconFile = evt.target.files[0];
     changeIconUrl(newIconUrl);
     changeIconFile(newIconFile);
-    sendIcon();
+    /* sendIcon(); */
   };
 
   // SEND ALL THE NEW DATA
@@ -45,13 +47,18 @@ const EditProfile = ({
 
   return (
     <div className="edit-profile-section">
+      <Link to="/dashboard">
+        <div className="home-button">
+          <img src={homeIcon} alt="home" />
+        </div>
+      </Link>
       <div className="edit-profile-section-title">
         <p>Modifier vos informations</p>
       </div>
       <div className="edit-profile-avatar">
         <input type="file" name="iconFile" className="avatar-choice-input" onChange={handleChange} />
         <div className="avatar-preview">
-          {!imgURL ? <img className="avatar" src={icon} alt="unknown" /> : <img className="avatar" src={imgURL} alt="unknown" />}
+          {!imgURL ? <img className="avatar" src={`https://undefined-project.tk/api/uploads/icons/${icon}`} alt="unknown" /> : <img className="avatar" src={imgURL} alt="unknown" />}
         </div>
       </div>
       <div className="edit-profile-form">
@@ -65,29 +72,6 @@ const EditProfile = ({
                 name="email"
                 changeValue={changeValue}
                 value={email}
-              />
-            </label>
-          </Form.Field>
-          <Form.Field>
-            <label htmlFor="password" className="edit-profile-form-label">Mot de passe
-              <Field
-                type="password"
-                placeholder="Mot de passe"
-                name="password"
-                changeValue={changeValue}
-                value={password}
-              />
-            </label>
-          </Form.Field>
-          <Form.Field>
-            <label htmlFor="password-confirm" className="edit-profile-form-label">Confirmer le mot de passe
-              <Field
-                className="edit-profile-form-input"
-                type="password"
-                placeholder="Mot de passe"
-                name="password"
-                changeValue={changeValue}
-                value={password}
               />
             </label>
           </Form.Field>
@@ -116,17 +100,11 @@ EditProfile.propTypes = {
   icon: PropTypes.string.isRequired,
   iconFile: PropTypes.object.isRequired,
   imgURL: PropTypes.string.isRequired,
-  password: PropTypes.string,
   changeIconFile: PropTypes.func.isRequired,
   changeIconUrl: PropTypes.func.isRequired,
   changeValue: PropTypes.func.isRequired,
   sendUserData: PropTypes.func.isRequired,
-  fetchIcon: PropTypes.func.isRequired,
   sendIcon: PropTypes.func.isRequired,
-};
-
-EditProfile.defaultProps = {
-  password: '',
 };
 
 export default EditProfile;

@@ -17,7 +17,7 @@ const mapStateToProps = (state) => ({
   email: state.user.email,
   password: state.user.password,
   pseudo: state.user.pseudo,
-  icon: state.upload.icon,
+  icon: state.user.icon,
   id: state.user.id,
   iconFile: state.upload.iconFile,
   imgURL: state.upload.imgURL,

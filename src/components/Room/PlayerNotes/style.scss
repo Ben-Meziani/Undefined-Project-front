@@ -4,8 +4,27 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  top: 0;
   background-color: white;
+  border: 0.2em solid black;
+  padding: 0.2em;
+
+  button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1em;
+    width: 1em;
+    background: none;
+    border: none;
+  }
+
+  &-notes {
+    height: 80vh;
+    border: 0.1em solid black;
+    padding: 0.2em;
+  }
 
   &-toggle {
     display: none;
@@ -15,17 +34,24 @@
 @media (min-width: 1024px) {
   
   .player-notes {
+    position: absolute;
     display: flex;
     justify-content: center;
     bottom: 0;
     background-color: white;
-    width: 20%;
-    height: 20vh;
-    border: 1px solid green;
+    width: 25%;
+    height: 30vh;
+    top: 65%;
+    right: 1em;
+    border: 1px solid black;
     align-self: flex-end;
 
     &-toggle {
       display: flex;
+    }
+
+    button {
+      display: none;
     }
   }
 }

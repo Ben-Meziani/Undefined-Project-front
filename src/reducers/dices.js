@@ -3,7 +3,7 @@ import {
 } from '../actions';
 
 const initialState = {
-  dice: null,
+  dice: 0,
 };
 
 const diceReducer = (state = initialState, action = {}) => {

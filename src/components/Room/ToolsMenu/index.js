@@ -8,7 +8,6 @@ import './style.scss';
 const ToolsMenu = ({
   toggleOpenBook,
   toggleOpenEdit,
-  toggleOpenBomb,
   toggleOpenDice,
   toggleOpenPicture,
   pictureOpen,
@@ -18,7 +17,6 @@ const ToolsMenu = ({
       <ul className="toolsMenu-list">
         <button type="button" className="toolsMenu-button" onClick={toggleOpenBook}><Icon name="book" size="large" /></button>
         <button type="button" className="toolsMenu-button" onClick={toggleOpenEdit}><Icon name="edit" size="large" /></button>
-        <button type="button" className="toolsMenu-button" onClick={toggleOpenBomb}><Icon name="bomb" size="large" /></button>
         <button type="button" className="toolsMenu-button" onClick={toggleOpenDice}><Icon name="bomb" size="large" /></button>
         <button type="button" className="toolsMenu-button" onClick={toggleOpenPicture}><Icon name="picture" size="large" /></button>
       </ul>
@@ -29,7 +27,6 @@ const ToolsMenu = ({
 ToolsMenu.propTypes = {
   toggleOpenBook: PropTypes.func.isRequired,
   toggleOpenEdit: PropTypes.func.isRequired,
-  toggleOpenBomb: PropTypes.func.isRequired,
   toggleOpenDice: PropTypes.func.isRequired,
   toggleOpenPicture: PropTypes.func.isRequired,
   pictureOpen: PropTypes.bool.isRequired,

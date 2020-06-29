@@ -1,0 +1,77 @@
+.dices {
+  position: absolute;
+  width: 100vw;
+  height: 50vh;
+  background-color: white;
+  border: 0.2em solid black;
+  top: 0;
+
+  &-toggle {
+    display: none;
+  }
+
+  &-result{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60vw;
+    height: 20vh;
+    margin: 1em auto;
+    border: 0.2em solid black;
+    font-size: 1em;
+  }
+
+  &-throw{
+    display: inline-block;
+    border: .2em solid black;
+    /* margin: 1em; */
+    padding: .5em;
+    color: black;
+    text-align: center;
+    background-color: white;
+    width: 50%;
+   
+    &:hover {
+      color: snow;
+      background: black;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .dices {
+    position: absolute;
+    width: 20vw;
+    height: 30vh;
+    border: none;
+    top: 70%;
+    left: 51%;
+
+    button {
+      display: none;
+    }
+
+    &-toggle {
+      display: block;
+    }
+
+    &-result {
+      position: absolute;
+      width: 20vw;
+      height: 10vh;
+      border: 0.2em solid black;
+      top: 43%;
+    }
+  
+    &-throw {
+      width: 60%;
+     
+     
+      &:hover{
+        color: snow;
+        background: black;
+      }
+    }
+  }
+}

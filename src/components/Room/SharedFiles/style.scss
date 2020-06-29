@@ -5,14 +5,23 @@
     flex-wrap: wrap;
     justify-content: center;
     max-width: 100%;
+    height: 100vh;
+    top: 0;
     background-color: white;
+    border: 0.2em solid black;
+
+    button {
+      height: 1em;
+      background: none;
+      border: none;
+    }
 
   &-toggle {
     display: none;
   }
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 767px) {
   
   .shared-files {
     display: flex;
@@ -25,6 +34,34 @@
 
     &-toggle {
       display: flex;
+    }
+  }
+} */
+
+@media (min-width: 1024px) {
+  
+  .shared-files {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    background-color: white;
+    width: 25%;
+    height: 30vh;
+    top: 60%;
+    left: 1em;
+
+    &-toggle {
+      display: flex;
+      position: absolute;
+      margin-bottom: 0;
+      left: 1em;
+      height: 30vh;
+      top: 65%;
+    }
+
+    button {
+      display: none;
     }
   }
 }

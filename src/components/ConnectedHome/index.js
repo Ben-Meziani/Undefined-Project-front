@@ -11,19 +11,19 @@ import WelcomeMessage from './WelcomeMessage';
 
 import './style.scss';
 
-const ConnectedHome = ({ logged, loading }) => {
+const ConnectedHome = ({ logged, loading, id }) => {
   // console.log(logged);
   return (
     <div className="connected-home">
       <Switch>
         <Route exact path="/dashboard">
           <Header />
-          <RainDropAnimation />
+         {/*  <RainDropAnimation /> */}
           <WelcomeMessage />
           <NavBar />
         </Route>
         {/* TODO passer userId en props */}
-        <Route exact path="/dashboard/user/:userId/edit">
+        <Route exact path={`/dashboard/user/${id}/edit`}>
           <Header />
           <EditProfile />
         </Route>
@@ -36,6 +36,7 @@ const ConnectedHome = ({ logged, loading }) => {
 ConnectedHome.propTypes = {
   logged: PropTypes.bool.isRequired,
   loading: PropTypes.bool.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 export default ConnectedHome;

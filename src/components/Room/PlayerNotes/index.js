@@ -1,13 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { Icon } from 'semantic-ui-react';
+
 import './style.scss';
 
-const PlayerNotes = ({ editOpen }) => {
+const PlayerNotes = ({ editOpen, toggleOpenEdit }) => {
   return (
     <div
       className={!editOpen ? 'player-notes-toggle player-notes' : 'player-notes'}
     >
+      <button type="button" onClick={toggleOpenEdit}><Icon name="close" size="large" /></button>
       <div className="player-notes-notes">
         <p>Player Notes</p>
       </div>
@@ -18,6 +21,7 @@ const PlayerNotes = ({ editOpen }) => {
 
 PlayerNotes.propTypes = {
   editOpen: PropTypes.bool.isRequired,
+  toggleOpenEdit: PropTypes.func.isRequired,
 };
 
 export default PlayerNotes;

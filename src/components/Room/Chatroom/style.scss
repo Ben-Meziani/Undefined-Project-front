@@ -3,28 +3,30 @@
 .chatroom {
   position: absolute;
   width: 100%;
-  height: 33vh;
+ /*  height: 50vh; */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   border: solid .1em black;
   text-align: left;
   font-family: 'Nunito', msans-serif;
-  z-index: 1000;
+  top: 0;
+/*   z-index: 1000; */
   display: none;
 
   &--open {
     display: block;
     position: absolute;
-    z-index: 999;
+    /* z-index: 999; */
   }
 
 &-form {
-  width: 98%;
-  max-height: 2em;
-  margin-top: 0.4em;
+  width: 100%;
+  height: 6vh;
   left: 0;
+  bottom: 0;
   display: flex;
+  border-top: 1px solid black;
 }
 
   &-field {
@@ -40,13 +42,11 @@
     background-color : black;
     color: white;
     border: 0;
-    border-top: solid .1em rgb(167, 76, 76);
-    border-left: solid .1em rgb(146, 73, 73);
   }
 }
 
 .messages {
-  max-height: 100%;
+  height: 94vh;
   overflow-x: visible;
   overflow-y: auto;
   background-color: white;
@@ -76,7 +76,7 @@
     .chatroom, .chatroom--open{
       position: absolute;
       width: 25%;
-      height: 35vh;
+      height: 50vh;
       top: 6em;
       right: 1em;
       display: flex;
@@ -91,13 +91,11 @@
       margin-top: 0.4em;
       left: 0;
       display: flex;
-      border: 1px solid black;
     }
     
       &-field {
         width: 100%;
         padding: .5rem .5rem;
-        border: 1px solid black;
       }
     
       &-send {
@@ -107,8 +105,6 @@
         background-color : black;
         color: white;
         border: 0;
-        border-top: solid .1em rgb(167, 76, 76);
-        border-left: solid .1em rgb(146, 73, 73);
       }
     }
     

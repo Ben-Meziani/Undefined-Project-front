@@ -1,20 +1,29 @@
-.dices {
-  width: 80vw;
+.dices-history {
+  position:absolute;
+  width: 100vw;
+  height: 50vh;
+  background-color: white;
+  border: 0.2em solid black;
+  top: 50%;
 
-  &-result{
-
+  &-toggle {
+    display: none;
   }
-  &-throw{
-    display: inline-block;
-    border: .2em solid black;
-    margin: 1em;
-    padding: .5em;
-    color: black;
-    text-align: center;
+}
+
+@media (min-width: 1024px) {
+
+  .dices-history {
+    position:absolute;
+    width: 20vw;
+    height: 30vh;
     background-color: white;
-    &:hover{
-      color: snow;
-      background: black;
+    border: 0.2em solid black;
+    top: 65%;
+    left: 30%;
+
+    &-toggle {
+      display: block;
     }
   }
 }
