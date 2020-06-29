@@ -1,9 +1,10 @@
 @import 'src/styles/vars';
 
 .shared-view {
-  max-width: 100vh;
-  max-height: 80vh;
-  overflow: hidden;
+  width: 100vh;
+  height: 80vh;
+  background-image: url("../../../../src/assets/HPbg-mobile.jpg");
+  background-size: 60%;
   }
 
   // MEDIA QUERIES
@@ -15,11 +16,9 @@
     height: 60vh;
     margin: 0 auto;
     margin-top: 2em;
+    background-image: url("../../../../src/assets/HPbg1.jpg");
+    background-size: cover;
 
-    & img {
-      max-width: 100%;
-      object-fit: contain;
-    }
   }
 }
 
@@ -30,10 +29,6 @@
     height: 50vh;
     margin: 0 auto;
     margin-top: 2em;
-    border: 1px solid black;
   
-    & img {
-      /* max-width: 100%; */
-    }
   }
 }

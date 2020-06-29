@@ -23,7 +23,7 @@
   border-radius: 4px;
   top: 0;
   left: 0;
-
+  z-index: 1002;
  }
 }
 
@@ -37,12 +37,12 @@
     border-radius: 4px;
     color: white;
     font-size: 1.4em;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
   
    &--open {
-    position: absolute;
+    position: fixed;
     background-color: #506761;
     border: none;
     color: white;
@@ -52,7 +52,7 @@
     border-radius: 4px;
     top: 0;
     left: 0;
-    z-index: 1001;
+    z-index: 1002;
    }
   }
 }
