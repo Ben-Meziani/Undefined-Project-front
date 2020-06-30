@@ -12,9 +12,9 @@ const PlayerNotes = ({ editOpen, toggleOpenEdit }) => {
     >
       <button type="button" onClick={toggleOpenEdit}><Icon name="close" size="large" /></button>
       <div className="player-notes-notes">
-        <p>Player Notes</p>
+        <p className="player-notes-title">Player Notes</p>
       </div>
-      <input type="text" />
+      <input type="text" placeholder="Write your notes here..."/>
     </div>
   );
 };

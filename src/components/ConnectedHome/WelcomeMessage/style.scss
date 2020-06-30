@@ -5,10 +5,13 @@
   height: 45vh;
   margin-top: 3em;
   padding: 0em;
+  display: flex;
+  flex-direction: column;
+ /*  border-radius: 5px; */
   background-color: black;
   opacity: 0;
   transform: skewY(0.5);
-  animation: fadein 1s linear;
+  animation: fadein 4s linear;
   animation-fill-mode: forwards;
  
   @keyframes fadein {
@@ -46,7 +49,9 @@
       }
     }
   }
+}
 
+<<<<<<< HEAD
   &-content {
     font-family: 'Nunito', sans-serif;
     margin: 0.5em 0;
@@ -54,6 +59,14 @@
     text-align: justify;
     color: black;
   }
+=======
+.dashboard-content {
+  font-family: 'Nunito', sans-serif;
+  margin: 2em 0;
+  text-align: justify;
+  color: black;
+  align-self: center;
+>>>>>>> master
 }
 
 .connected-home-message-border {

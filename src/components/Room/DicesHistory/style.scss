@@ -3,11 +3,31 @@
   width: 100vw;
   height: 50vh;
   background-color: white;
-  border: 0.2em solid black;
+  border: 0.2em solid #708cb3;
   top: 50%;
 
   &-toggle {
     display: none;
+  }
+}
+
+@media (min-width: 767px) {
+
+  .dices-history {
+    position:absolute;
+    width: 20vw;
+    height: 20vh;
+    background-color: white;
+    border: 0.2em solid #708cb3;
+    top: 80%;
+    left: 60%;
+    padding: 0.5em;
+    color: #708cb3;
+    font-weight: bold;
+
+    &-toggle {
+      display: none;
+    }
   }
 }
 
@@ -18,7 +38,7 @@
     width: 20vw;
     height: 30vh;
     background-color: white;
-    border: 0.2em solid black;
+    border: 0.2em solid #708cb3;
     top: 65%;
     left: 30%;
 

@@ -16,11 +16,11 @@ const Header = ({
 }) => {
   return (
     <div className="connected-home-header">
-      <Link to="/dashboard">
+     {/*  <Link to="/dashboard">
         <div className="home-button">
           <img src={homeIcon} alt="home" />
         </div>
-      </Link>
+      </Link> */}
       <div className="dropdown">
         <div className="dropdown-button">
           <Burger
