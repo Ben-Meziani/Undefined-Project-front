@@ -1,13 +1,12 @@
 import React from 'react';
 import { Icon } from 'semantic-ui-react';
+
+import Chevron from '../../../assets/icons/chevron.svg';
 import './style.scss';
 
 const ToggleMenu = () => (
-  <div className="">
-    <Icon
-      name="chevron down"
-      size="large"
-    />
+  <div className="toggle-menu">
+    <img src={Chevron} alt="book" />
   </div>
 );
 

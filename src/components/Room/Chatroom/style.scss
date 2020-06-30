@@ -3,31 +3,41 @@
 .chatroom {
   position: absolute;
   width: 100%;
- /*  height: 50vh; */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  border: solid .1em black;
   text-align: left;
   font-family: 'Nunito', msans-serif;
   top: 0;
-/*   z-index: 1000; */
   display: none;
 
-  &--open {
+  &-toggle {
     display: block;
     position: absolute;
-    /* z-index: 999; */
+
+    .close-button {
+      background: none;
+      border: none;
+      position: absolute;
+      color: #708cb3;
+      top: 0;
+      right: 0;
+      z-index: 1000;
+    }
   }
 
-&-form {
-  width: 100%;
-  height: 6vh;
-  left: 0;
-  bottom: 0;
-  display: flex;
-  border-top: 1px solid black;
-}
+  button {
+    background-color: #708cb3;
+  }
+
+  &-form {
+    width: 100%;
+    height: 6vh;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    border-top: 0.2em solid #aca5b3;
+  }
 
   &-field {
     width: 100%;
@@ -39,7 +49,7 @@
     padding: .4rem .4rem;
     line-height: 0.8;
     outline: none;
-    background-color : black;
+    background-color : #aca5b3;
     color: white;
     border: 0;
   }
@@ -50,6 +60,7 @@
   overflow-x: visible;
   overflow-y: auto;
   background-color: white;
+  font-family: 'Nunito', msans-serif;
 }
 
 .message {
@@ -71,18 +82,106 @@
 
   // MEDIA QUERIES
 
+  @media (min-width: 767px) {
+
+    .chatroom {
+      width: 50vh;
+      height: 50vh;
+      left: 8em;
+      top: 6em;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      display: none;
+
+      &-toggle {
+        margin: 0 auto;
+        display: block;
+    
+      .close-button {
+        background: none;
+        border: none;
+        position: absolute;
+        color: #708cb3;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+      }
+    }
+    
+    &-form {
+      position: relative;
+      width: 100%;
+      max-height: 3em;
+      left: 0;
+      display: flex;
+    }
+    
+      &-field {
+        width: 100%;
+        padding: .5rem .5rem;
+      }
+    
+      &-send {
+        padding: .4rem .4rem;
+        line-height: 0.8;
+        outline: none;
+        background-color : #aca5b3;
+        color: white;
+        border: 0;
+      }
+    }
+    
+    .messages {
+      max-height: 100%;
+      overflow-x: visible;
+      overflow-y: auto;
+    }
+    
+    .message {
+      margin: 1rem;
+      max-width: 100vw;
+    
+      &-author {
+        padding: .3rem 0;
+        color: grey;
+      }
+      &-content {
+        padding-left: 1rem;
+        background-color: white;
+        display: inline-block;
+        border-radius: 5px;
+        line-height: 1.3em;
+      }
+    }
+  }
+
   @media (min-width: 1024px) {
 
-    .chatroom, .chatroom--open{
+    .chatroom {
       position: absolute;
       width: 25%;
       height: 50vh;
       top: 6em;
-      right: 1em;
       display: flex;
       flex-direction: column;
       text-align: left;
-      font-family: 'Roboto Mono', monospace;
+      border: 0.1em solid #708cb3;
+
+      &-toggle {
+      position: absolute;
+      width: 25%;
+      height: 50vh;
+      top: 6em;
+      left: 49em;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      }
+
+      .close-button {
+        display: none;
+      }
     
     &-form {
       position: relative;
@@ -134,16 +233,27 @@
 
   @media (min-width: 1400px) {
 
-    .chatroom, .chatroom--open{
+    .chatroom {
       position: absolute;
       width: 25%;
-      height: 35vh;
-      top: 8em;
-      right: 1em;
+      height: 50vh;
+      top: 9.5em;
+      margin-right: 2em;
+      left: 75%;
       display: flex;
       flex-direction: column;
       text-align: left;
-      font-family: 'Roboto Mono', monospace;
+
+      &-toggle {
+        position: absolute;
+        width: 25%;
+        height: 50vh;
+        top: 9.5em;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        }
     
     &-form {
       position: relative;
@@ -152,24 +262,21 @@
       margin-top: 0.4em;
       left: 0;
       display: flex;
-      border: 1px solid black;
+      border-top: 1px solid #96b1d6;
     }
     
       &-field {
         width: 100%;
         padding: .5rem .5rem;
-        border: 1px solid black;
       }
     
       &-send {
         padding: .4rem .4rem;
         line-height: 0.8;
         outline: none;
-        background-color : black;
+        background-color : #96b1d6;
         color: white;
         border: 0;
-        border-top: solid .1em rgb(167, 76, 76);
-        border-left: solid .1em rgb(146, 73, 73);
       }
     }
     
@@ -197,3 +304,28 @@
     }
   }
 
+  @media (min-width: 1400px) {
+
+    .chatroom {
+      position: absolute;
+      width: 25%;
+      height: 45vh;
+      top: 9em;
+      margin-right: 2em;
+      left: 73%;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+
+      &-toggle {
+        position: absolute;
+        width: 25%;
+        height: 45vh;
+        top: 9em;
+        margin-right: 2em;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        }
+      }
+  }

@@ -1,7 +1,14 @@
 import { connect } from 'react-redux';
 
 import ToolsMenu from '../../../components/Room/ToolsMenu';
-import { toggleOpenBook, toggleOpenEdit, toggleOpenBomb, toggleOpenDice, toggleOpenPicture } from '../../../actions';
+import {
+  toggleOpenBook,
+  toggleOpenEdit,
+  toggleOpenBomb,
+  toggleOpenDice,
+  toggleOpenPicture,
+  toggleOpenChat,
+} from '../../../actions';
 
 const mapStateToProps = (state) => ({
   bookOpen: state.room.bookOpen,
@@ -9,6 +16,7 @@ const mapStateToProps = (state) => ({
   bombOpen: state.room.bombOpen,
   diceOpen: state.room.diceOpen,
   pictureOpen: state.room.pictureOpen,
+  chatOpen: state.room.chatOpen,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -30,6 +38,10 @@ const mapDispatchToProps = (dispatch) => ({
   },
   toggleOpenPicture: () => {
     const action = toggleOpenPicture();
+    dispatch(action);
+  },
+  toggleOpenChat: () => {
+    const action = toggleOpenChat();
     dispatch(action);
   },
 });

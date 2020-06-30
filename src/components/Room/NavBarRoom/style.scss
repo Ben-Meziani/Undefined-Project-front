@@ -5,13 +5,15 @@
   justify-content: space-between;
   align-items: center;
   padding: .5em;
-  border: black solid .2em;
+  background: #708cb3;
   height: 12.5vw;
 
   &-title{
     margin: 0 auto;
     width: 75vw;
     font-weight: bold;
+    font-size: 1.2em;
+    color: white;
   }
 }
 
@@ -20,20 +22,31 @@
   button {
     background: none;
     border: none;
+
+    img {
+      width: 2em;
+    }
   }
+}
+
+.toggle-menu {
+
+  img {
+    width: 2em;
+  }
+
 }
 
 // MEDIA QUERIES
 
-@media (min-width: 1024px) {
+@media (min-width: 767px) {
 
   .navBarRoom {
     display:flex;
     justify-content: space-between;
     align-items: center;
     padding: .5em;
-    border: black solid .2em;
-    height: 6vw;
+    height: 5vh;
     &-title{
       margin: 0 auto;
       width: 75vw;
@@ -42,8 +55,49 @@
   }
 
   .playersMenu {
-    position: relative;
-    top: 7em;
-    left: 30em;
+    position: absolute;
+    top: 0.5em;
+    left: 0;
+
+    img {
+      width: 2em;
+    }
   }
+}
+
+
+@media (min-width: 1024px) {
+
+  .navBarRoom {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5em;
+    height: 6vw;
+    &-title{
+      margin: 0 auto;
+      width: 75vw;
+      font-weight: bold;
+    }
+
+    &-title{
+      margin: 0 auto;
+      width: 75vw;
+      font-weight: bold;
+      font-size: 1.8em;
+      color: white;
+    }
+  }
+
+  .playersMenu {
+    position: relative;
+    top: 0.5em;
+    left: 0;
+
+    img {
+      width: 2em;
+    }
+  }
+
+ 
 }
