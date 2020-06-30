@@ -16,28 +16,17 @@ const ToolsMenu = ({
   toggleOpenDice,
   toggleOpenPicture,
   pictureOpen,
-  masterRole,
   toggleOpenChat,
 
 }) => {
   return (
     <div className="toolsMenu">
-      {!masterRole && (
-      <ul className="toolsMenu-list">
-        <button type="button" className="toolsMenu-button" onClick={toggleOpenBook}><Icon name="book" size="large" /></button>
-        <button type="button" className="toolsMenu-button" onClick={toggleOpenEdit}><Icon name="edit" size="large" /></button>
-        <button type="button" className="toolsMenu-button" onClick={toggleOpenDice}><Icon name="bomb" size="large" /></button>
-      </ul>
-      )}
-      {masterRole && (
       <ul className="toolsMenu-list">
         <button type="button" className="toolsMenu-button" onClick={toggleOpenBook}><img src={Book} alt="book" /></button>
         <button type="button" className="toolsMenu-button" onClick={toggleOpenEdit}><img src={Notes} alt="write" /></button>
         <button type="button" className="toolsMenu-button" onClick={toggleOpenDice}><img src={Dice} alt="dice" /></button>
-        <button type="button" className="toolsMenu-button" onClick={toggleOpenPicture}><img src={Pictures} alt="cards" /></button>
         <button type="button" className="toolsMenu-button" onClick={toggleOpenChat}><img src={Chat} alt="message" /></button>
       </ul>
-      )}
     </div>
   );
 };
@@ -49,7 +38,6 @@ ToolsMenu.propTypes = {
   toggleOpenChat: PropTypes.func.isRequired,
   toggleOpenPicture: PropTypes.func.isRequired,
   pictureOpen: PropTypes.bool.isRequired,
-  masterRole: PropTypes.bool.isRequired,
 
 };
 

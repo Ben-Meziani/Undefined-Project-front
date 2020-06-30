@@ -8,6 +8,7 @@ export const SEND_USER_DATA = 'SEND_USER_DATA';
 export const ERROR_LOG = 'ERROR_LOG';
 export const ERROR_REG_PASSWORD = 'ERROR_REG_PASSWORD';
 export const ERROR_PASSWORD_CHECK = 'ERROR_PASSWORD_CHECK';
+export const SEND_EMAIL = 'SEND_EMAIL';
 
 export const login = () => ({
   type: LOGIN,
@@ -48,4 +49,8 @@ export const errorRegPassword = () => ({
 
 export const errorPasswordCheck = () => ({
   type: ERROR_PASSWORD_CHECK,
+});
+
+export const sendEmail = () => ({
+  type: SEND_EMAIL,
 });
