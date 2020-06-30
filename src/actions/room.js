@@ -2,6 +2,7 @@
 
 // GENERAL
 export const CREATE_ROOM = 'CREATE_ROOM';
+export const JOIN_ROOM = 'JOIN_ROOM';
 export const SAVE_ROOM_ID = 'SAVE_ROOM';
 export const TOGGLE_OPEN_CHAT = 'TOGGLE_OPEN_CHAT';
 export const TOGGLE_OPEN_BOOK = 'TOGGLE_OPEN_BOOK';
@@ -22,6 +23,10 @@ export const RECEIVE_MESSAGE = 'RECEIVE_MESSAGE';
 // GENERAL
 export const createRoom = () => ({
   type: CREATE_ROOM,
+});
+
+export const joinRoom = () => ({
+  type: JOIN_ROOM,
 });
 
 export const saveRoomId = (roomId) => ({

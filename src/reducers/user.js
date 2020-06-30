@@ -13,6 +13,7 @@ import {
   ERROR_LOG,
   ERROR_REG_PASSWORD,
   ERROR_PASSWORD_CHECK,
+  CREATE_ROOM,
 } from '../actions';
 
 const initialState = {
@@ -39,6 +40,8 @@ const initialState = {
   regIcon: '',
   errorRegPass: false,
   errorPassCheck: false,
+
+  masterRole: false,
 
 };
 
@@ -137,6 +140,11 @@ const user = (state = initialState, action = {}) => {
         loading: false,
       };
     }
+    case CREATE_ROOM:
+      return {
+        ...state,
+        masterRole: true,
+      };
     default:
       return state;
   }

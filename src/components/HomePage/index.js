@@ -9,7 +9,7 @@ import Forgotten from '../../containers/HomePage/Forgotten';
 import ButtonsNav from './ButtonsNav';
 import Presentation from '../HomePage/Carousel/Presentation';
 import Rain from '../HomePage/RaindropAnimation';
-import Video from '../HomePage/Video';
+import Video from '../../containers/Video';
 /* import Demonstration from '../HomePage/Carousel/Demonstration';
 import CarouselMenu from './Carousel/CarouselMenu';
 import Team from '../HomePage/Carousel/Team'; */
@@ -153,5 +153,6 @@ console.log(logged);
 HomePage.propTypes = {
   logged: PropTypes.bool.isRequired,
 }; */
+
 
 export default HomePage;

@@ -16,7 +16,9 @@ const mapStateToProps = (state) => ({
   bombOpen: state.room.bombOpen,
   diceOpen: state.room.diceOpen,
   pictureOpen: state.room.pictureOpen,
+  masterRole: state.user.masterRole,
   chatOpen: state.room.chatOpen,
+
 });
 
 const mapDispatchToProps = (dispatch) => ({
