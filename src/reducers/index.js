@@ -5,7 +5,7 @@ import reducer from './reducer';
 import upload from './upload';
 import room from './room';
 import dices from './dices';
-import sharedVideos from './sharedVideos';
+import videos from './videos';
 
 export default combineReducers({
   reducer,
@@ -13,5 +13,5 @@ export default combineReducers({
   upload,
   room,
   dices,
-  sharedVideos,
+  videos,
 });
