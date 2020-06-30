@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import Burger from 'react-css-burger';
 import { Link } from 'react-router-dom';
 
-import titleBackground from '../../../assets/Fondtitre.png';
 import homeIcon from '../../../assets/icons/homeIcon.svg';
 
 import './style.scss';
@@ -43,7 +42,6 @@ const Header = ({
         </div>
       </div>
       <div className="connected-home-title">
-        <img src={titleBackground} alt="black paint" />
         <h1>UNDEFINED::ROLE PLAY</h1>
       </div>
     </div>
