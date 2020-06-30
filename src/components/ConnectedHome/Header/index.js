@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Burger from 'react-css-burger';
 import { Link } from 'react-router-dom';
 
-import homeIcon from '../../../assets/icons/homeIcon.svg';
+import homeIcon from '../../../assets/icons/home.svg';
 
 import './style.scss';
 

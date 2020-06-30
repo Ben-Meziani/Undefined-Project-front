@@ -3,9 +3,8 @@
 .connected-home-message {
   width: 90%;
   height: 45vh;
-  margin-top: 2em;
+  margin-top: 3em;
   padding: 0em;
- /*  border-radius: 5px; */
   background-color: black;
   opacity: 0;
   transform: skewY(0.5);
@@ -32,7 +31,6 @@
     display: inline-block;
     font-size: 1.6em;
     color: black;
-   /*  z-index: 999; */
     animation: appear 1s ease-in;
     animation-fill-mode: forwards;
 
@@ -52,6 +50,7 @@
   &-content {
     font-family: 'Nunito', sans-serif;
     margin: 0.5em 0;
+    margin-top: 1.5em;
     text-align: justify;
     color: black;
   }
