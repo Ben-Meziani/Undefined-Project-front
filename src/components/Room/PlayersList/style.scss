@@ -30,7 +30,8 @@
 @media (min-width: 1024px) {
 
   .players-list {
-    border: 1px solid black;
+    border: 1px solid #708cb3;
+    border-radius: 2px;
     position: absolute;
     width: 25%;
     height: 50vh;
@@ -49,11 +50,27 @@
 @media (min-width: 1400px) {
 
   .players-list {
-    border: 1px solid black;
+    border: 1px solid #96b1d6;
     position: absolute;
-    width: 20%;
-    height: 35vh;
-    top: 8em;
+    width: 25%;
+    height: 50vh;
+    top: 9.5em;
+    margin-left: 1em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1600px) {
+
+  .players-list {
+    border: 1px solid #96b1d6;
+    position: absolute;
+    width: 25%;
+    height: 48vh;
+    top: 9em;
     margin-left: 1em;
     display: flex;
     flex-flow: row wrap;

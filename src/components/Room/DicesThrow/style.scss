@@ -46,40 +46,98 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 767px) {
 
   .dices {
     position: absolute;
-    width: 20vw;
-    height: 30vh;
+    width: 50%;
+    height: 20vh;
     border: none;
-    top: 70%;
-    left: 51%;
+    top: 80%;
+    left: 0;
 
     button {
-      display: none;
+      position: absolute;
+      color: #708cb3;
+      background: none;
+      border: none;
+      top: 0;
+      left: 0;
     }
 
     &-toggle {
-      display: block;
+      display: none;
     }
 
     &-result {
       position: absolute;
       width: 20vw;
       height: 10vh;
-      border: 0.2em solid black;
+      border: 0.2em solid #708cb3;
+      left: 30%;
+      top: 43%;
+    }
+  
+    &-throw {
+      position: absolute;
+      left: 30%;
+      color: #708cb3;
+      width: 20vw;
+      border: 0.2em solid #708cb3;
+     
+      &:hover{
+        color: snow;
+        background: #708cb3;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .dices {
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #708cb3;
+    width: 20vw;
+    height: 30vh;
+    border: none;
+    top: 70%;
+    left: 50%;
+
+    &-toggle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid #708cb3;
+      width: 20vw;
+      height: 30vh;
+      border: none;
+      top: 70%;
+      left: 50%;
+    }
+
+    &-result {
+      width: 15vw;
+      height: 10vh;
+      border: 0.2em solid #708cb3;
       top: 43%;
     }
   
     &-throw {
       width: 60%;
      
-     
       &:hover{
         color: snow;
-        background: black;
+        background: #708cb3;
       }
+    }
+
+    button {
+      display: none;
     }
   }
 }

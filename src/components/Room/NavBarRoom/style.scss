@@ -5,14 +5,14 @@
   justify-content: space-between;
   align-items: center;
   padding: .5em;
-  background-color: #708cb3;
+  background: #708cb3;
   height: 12.5vw;
 
   &-title{
     margin: 0 auto;
     width: 75vw;
     font-weight: bold;
-    font-size: 1.8em;
+    font-size: 1.2em;
     color: white;
   }
 }
@@ -79,6 +79,14 @@
       width: 75vw;
       font-weight: bold;
     }
+
+    &-title{
+      margin: 0 auto;
+      width: 75vw;
+      font-weight: bold;
+      font-size: 1.8em;
+      color: white;
+    }
   }
 
   .playersMenu {
@@ -90,4 +98,6 @@
       width: 2em;
     }
   }
+
+ 
 }

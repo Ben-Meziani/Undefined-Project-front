@@ -32,16 +32,34 @@
 @media (min-width: 767px) {
   
   .shared-files {
+    position: absolute;
     display: flex;
     justify-content: center;
     bottom: 0;
     background-color: white;
-    width: 25%;
+    width: 100%;
     height: 20vh;
     left: 0;
+    top: 80%;
+    opacity: 1;
+
+    button {
+      position: fixed;
+      top: 75%;
+      left: 0;
+      color: #708cb3;
+      height: 1em;
+      background: none;
+      border: none;
+    }
 
     &-toggle {
-      display: flex;
+      display: none;
+    }
+
+    img {
+      width: 5em;
+      margin: 1em;
     }
   }
 }
