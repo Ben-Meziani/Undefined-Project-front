@@ -27,7 +27,7 @@ console.log(logged);
             <div className="homePage-buttons">
               <ButtonsNav />
             </div>
-            <div>
+            <div className="homePage-display-container">
               {/* <CarouselMenu /> */}
               <div className="homePage-display">
                 <Presentation />
