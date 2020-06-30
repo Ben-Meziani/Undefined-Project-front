@@ -9,7 +9,6 @@ import Forgotten from '../../containers/HomePage/Forgotten';
 import ButtonsNav from './ButtonsNav';
 import Presentation from '../HomePage/Carousel/Presentation';
 import Rain from '../HomePage/RaindropAnimation';
-import Video from '../../containers/Video';
 /* import Demonstration from '../HomePage/Carousel/Demonstration';
 import CarouselMenu from './Carousel/CarouselMenu';
 import Team from '../HomePage/Carousel/Team'; */
@@ -83,23 +82,6 @@ console.log(logged);
               {/* <CarouselMenu /> */}
               <div className="homePage-display">
                 <Forgotten />
-              </div>
-            </div>
-          </div>
-        </div>
-      </Route>
-
-      <Route path="/video" exact>
-        <div className="homePage">
-          <Header />
-          <div className="homePage-container">
-            <div className="homePage-buttons">
-              <ButtonsNav />
-            </div>
-            <div>
-              {/* <CarouselMenu /> */}
-              <div className="homePage-display">
-                <Video />
               </div>
             </div>
           </div>
