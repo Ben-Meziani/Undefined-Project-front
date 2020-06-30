@@ -11,7 +11,7 @@ import {
   TOGGLE_OPEN_EDIT,
   TOGGLE_OPEN_BOMB,
   TOGGLE_OPEN_DICE,
-  TOGGLE_OPEN_PICTURE,
+  TOGGLE_OPEN_SHARE,
   TOGGLE_OPEN_PLAYERS,
 } from '../actions';
 
@@ -22,7 +22,7 @@ const initialState = {
   editOpen: false,
   bombOpen: false,
   diceOpen: false,
-  pictureOpen: false,
+  shareMediaOpen: false,
   playersOpen: false,
   logged: false,
   roomName: 'Harry Pouffeur et la Chambre des Kékés',
@@ -91,12 +91,12 @@ const initialState = {
     {
       author: 'Groot',
       content: 'Ca farte ? Mais bro on dit plus ça depuis 20 ans pfff',
-      id: 9,
+      id: 7,
     },
     {
       author: 'Wonder Woman',
       content: 'Les gars, ça vous dit une virée ce soir ?',
-      id: 9,
+      id: 16,
     },
   ],
 };
@@ -145,7 +145,7 @@ const room = (state = initialState, action = {}) => {
         ...state,
         diceOpen: !state.diceOpen,
       };
-    case TOGGLE_OPEN_PICTURE:
+    case TOGGLE_OPEN_SHARE:
       return {
         ...state,
         pictureOpen: !state.pictureOpen,

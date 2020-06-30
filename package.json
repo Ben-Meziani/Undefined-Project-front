@@ -66,6 +66,7 @@
     "nodemon": "^2.0.4",
     "prop-types": "*",
     "react": "*",
+    "react-burger-menu": "^2.6.17",
     "react-css-burger": "^0.2.0",
     "react-dom": "*",
     "react-player": "^2.4.0",
@@ -73,6 +74,7 @@
     "react-router-dom": "^5.2.0",
     "react-scroll-to-bottom": "^3.0.0",
     "redux": "*",
+    "redux-burger-menu": "^0.2.8",
     "semantic-ui-react": "^0.88.2",
     "socket.io": "^2.3.0",
     "styled-components": "*"

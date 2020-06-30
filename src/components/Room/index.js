@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBarRoom from '../../containers/Room/NavBarRoom';
-import SharedView from './SharedView';
+import SharedView from '../../containers/Room/SharedView';
 import Chatroom from '../../containers/Room/Chatroom';
 import DicesHistory from '../../containers/Room/DicesHistory';
 import DicesThrow from '../../containers/Room/DicesThrow';

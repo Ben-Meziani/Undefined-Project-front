@@ -41,7 +41,7 @@ const initialState = {
   errorRegPass: false,
   errorPassCheck: false,
 
-  masterRole: false,
+  masterRole: true,
 
 };
 

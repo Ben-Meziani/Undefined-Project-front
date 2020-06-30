@@ -11,7 +11,7 @@ const Chatroom = ({ webSocketConnect, chatOpen, toggleOpenChat }) => {
   useEffect(webSocketConnect, []);
   return (
     <>
-      <div className={!chatOpen ? 'chatroom-toggle chatroom' : 'chatroom'}>
+      <div className={chatOpen ? 'chatroom-toggle chatroom' : 'chatroom'}>
         <button className="close-button" type="button" onClick={toggleOpenChat}><Icon name="close" size="large" /></button>
         <GeneralChannel />
         <MessageField />

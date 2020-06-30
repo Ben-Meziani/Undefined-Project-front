@@ -9,7 +9,7 @@ export const TOGGLE_OPEN_BOOK = 'TOGGLE_OPEN_BOOK';
 export const TOGGLE_OPEN_EDIT = 'TOGGLE_OPEN_EDIT';
 export const TOGGLE_OPEN_BOMB = 'TOGGLE_OPEN_BOMB';
 export const TOGGLE_OPEN_DICE = 'TOGGLE_OPEN_DICE';
-export const TOGGLE_OPEN_PICTURE = 'TOGGLE_OPEN_PICTURE';
+export const TOGGLE_OPEN_SHARE = 'TOGGLE_OPEN_PICTURE';
 export const TOGGLE_OPEN_PLAYERS = 'TOGGLE_OPEN_PLAYERS';
 
 // CHATROOM
@@ -54,8 +54,8 @@ export const toggleOpenDice = () => ({
   type: TOGGLE_OPEN_DICE,
 });
 
-export const toggleOpenPicture = () => ({
-  type: TOGGLE_OPEN_PICTURE,
+export const toggleOpenShare = () => ({
+  type: TOGGLE_OPEN_SHARE,
 });
 
 export const toggleOpenPlayers = () => ({

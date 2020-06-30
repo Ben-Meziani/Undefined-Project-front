@@ -18,7 +18,7 @@ const JoinRoomIcon = () => (
             <button className="ui button join-room-submit" type="submit">Rejoindre la salle</button>
           </div>
         </form> */}
-        <Link to="/room">Rejoingez la room!</Link>
+        <Link to="/room">Rejoindre la room!</Link>
       </Modal.Description>
     </Modal.Content>
   </Modal>

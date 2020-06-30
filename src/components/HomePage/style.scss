@@ -217,14 +217,13 @@
   }
 }
 
-
 @media (min-width: 1600px) {
   .homePage{
 
     &-container{
       border: .2em solid black;
       margin: 0 auto;
-      width: 100vw;
+      width: 80vw;
       padding: 2em;
       margin-top: 2em;
       margin-bottom: 1.5em;
@@ -242,7 +241,7 @@
   
     &-buttons{
       margin-bottom: 1.5em;
-      margin-right: 6em;
+      margin-right: 4em;
       font-size: 1.5em;
       @include mq() {
         display: flex;
@@ -264,7 +263,7 @@
         height: 100%;
 
         &-container {
-          width: 80vw;
+          width: 60vw;
         }
       }
     }

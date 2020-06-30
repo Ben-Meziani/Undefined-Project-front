@@ -6,7 +6,7 @@ import './style.scss';
 const Player = ({ pseudo, icon }) => (
   <div className="player">
     <div className="player-pseudo">
-      <p>{pseudo}</p>
+      <p>{ pseudo }</p>
     </div>
     <div className="player-icon">
       <img src={icon} alt="avatar" />

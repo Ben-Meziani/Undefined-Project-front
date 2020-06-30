@@ -2,6 +2,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { Icon } from 'semantic-ui-react';
+
 import './style.scss';
 
 import Dice from '../../../assets/icons/dice.svg';
@@ -14,7 +16,7 @@ const ToolsMenu = ({
   toggleOpenBook,
   toggleOpenEdit,
   toggleOpenDice,
-  toggleOpenPicture,
+  toggleOpenShare,
   pictureOpen,
   masterRole,
   toggleOpenChat,
@@ -24,9 +26,9 @@ const ToolsMenu = ({
     <div className="toolsMenu">
       {!masterRole && (
       <ul className="toolsMenu-list">
-        <button type="button" className="toolsMenu-button" onClick={toggleOpenBook}><Icon name="book" size="large" /></button>
-        <button type="button" className="toolsMenu-button" onClick={toggleOpenEdit}><Icon name="edit" size="large" /></button>
-        <button type="button" className="toolsMenu-button" onClick={toggleOpenDice}><Icon name="bomb" size="large" /></button>
+        <button type="button" className="toolsMenu-button" onClick={toggleOpenBook}><img src={Book} alt="book" /></button>
+        <button type="button" className="toolsMenu-button" onClick={toggleOpenEdit}><img src={Notes} alt="write" /></button>
+        <button type="button" className="toolsMenu-button" onClick={toggleOpenDice}><img src={Dice} alt="dice" /></button>
       </ul>
       )}
       {masterRole && (
@@ -34,7 +36,6 @@ const ToolsMenu = ({
         <button type="button" className="toolsMenu-button" onClick={toggleOpenBook}><img src={Book} alt="book" /></button>
         <button type="button" className="toolsMenu-button" onClick={toggleOpenEdit}><img src={Notes} alt="write" /></button>
         <button type="button" className="toolsMenu-button" onClick={toggleOpenDice}><img src={Dice} alt="dice" /></button>
-        <button type="button" className="toolsMenu-button" onClick={toggleOpenPicture}><img src={Pictures} alt="cards" /></button>
         <button type="button" className="toolsMenu-button" onClick={toggleOpenChat}><img src={Chat} alt="message" /></button>
       </ul>
       )}
@@ -47,7 +48,7 @@ ToolsMenu.propTypes = {
   toggleOpenEdit: PropTypes.func.isRequired,
   toggleOpenDice: PropTypes.func.isRequired,
   toggleOpenChat: PropTypes.func.isRequired,
-  toggleOpenPicture: PropTypes.func.isRequired,
+  toggleOpenShare: PropTypes.func.isRequired,
   pictureOpen: PropTypes.bool.isRequired,
   masterRole: PropTypes.bool.isRequired,
 

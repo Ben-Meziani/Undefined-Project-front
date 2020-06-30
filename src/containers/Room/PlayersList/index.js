@@ -6,6 +6,7 @@ import { toggleOpenPlayers } from '../../../actions';
 const mapStateToProps = (state) => ({
   playersList: state.room.playersList,
   playersOpen: state.room.playersOpen,
+  masterRole: state.user.masterRole,
 });
 const mapDispatchToProps = (dispatch) => ({
   toggleOpenPlayers: () => {
