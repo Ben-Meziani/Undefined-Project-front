@@ -4,18 +4,19 @@ import PropTypes from 'prop-types';
 
 import './style.scss';
 
-const Video = ({ content }) => {
+const Vid = ({ content, id }) => {
 // zut
   return (
     // Render a YouTube video player
     <div className="video">
-      <ReactPlayer url={content} />
+      <ReactPlayer key={id} url={content} />
     </div>
   );
 };
 
-Video.propTypes = {
+Vid.propTypes = {
   content: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
-export default Video;
+export default Vid;
