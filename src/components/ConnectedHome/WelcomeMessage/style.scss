@@ -3,7 +3,7 @@
 .connected-home-message {
   width: 90%;
   height: 45vh;
-  margin-top: 2em;
+  margin-top: 3em;
   padding: 0em;
   display: flex;
   flex-direction: column;
@@ -34,7 +34,6 @@
     display: inline-block;
     font-size: 1.6em;
     color: black;
-   /*  z-index: 999; */
     animation: appear 1s ease-in;
     animation-fill-mode: forwards;
 
@@ -52,12 +51,22 @@
   }
 }
 
+<<<<<<< HEAD
+  &-content {
+    font-family: 'Nunito', sans-serif;
+    margin: 0.5em 0;
+    margin-top: 1.5em;
+    text-align: justify;
+    color: black;
+  }
+=======
 .dashboard-content {
   font-family: 'Nunito', sans-serif;
   margin: 2em 0;
   text-align: justify;
   color: black;
   align-self: center;
+>>>>>>> master
 }
 
 .connected-home-message-border {
