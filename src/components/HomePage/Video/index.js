@@ -1,8 +1,6 @@
 import React from 'react';
-import ReactPlayer from 'react-player/youtube';
-import { Link } from 'react-router-dom';
-import Vid from './Vid';
 import PropTypes from 'prop-types';
+import Vid from './Vid';
 
 import './style.scss';
 
@@ -11,10 +9,16 @@ const Video = ({ asmrPotter }) => {
   return (
     // Render a YouTube video player
     <div className="video">
-      {asmrPotter.map((video) => (
-        <Vid key={video.id} {...video} />
-      ))}
-      <Link to="/video/video1">Cliquer</Link>
+      <ul>
+        {asmrPotter.map(({ id, author }) => (
+          <li
+            key={id}
+          >
+            {author}
+          </li>
+        ))}
+      </ul>
+      <Vid {...asmrPotter} />
     </div>
   );
 };

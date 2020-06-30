@@ -89,7 +89,7 @@ console.log(logged);
         </div>
       </Route>
 
-      <Route path="/video">
+      <Route path="/video" exact>
         <div className="homePage">
           <Header />
           <div className="homePage-container">
