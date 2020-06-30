@@ -8,7 +8,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 3px;
   width: 8em;
   height: 4.3em;
   margin: 0 3em;
@@ -48,8 +47,8 @@
     position: absolute;
     width: 12em;
     height: 5em;
-    top: 40em;
-    left: 5em;
+    top: 30em;
+    left: 2em;
     
   &:hover {
     transform: scale(1.1);

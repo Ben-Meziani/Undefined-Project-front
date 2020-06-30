@@ -1,11 +1,18 @@
 @import 'src/styles/vars';
 
 .edit-profile-section {
-  margin-top: 2em;
+  margin-top: 3em;
   background-color: white;
   
   &-title {
     font-size: 1.4em;
+    margin-bottom: 1em;
+  }
+
+  .ui.button {
+    background: black;
+    color: white;
+    margin-top: 1em;
   }
 }
 
@@ -15,6 +22,8 @@
   justify-content: space-around;
   align-items: center;
   height: 20em;
+  border: 1px solid black;
+  margin: 0.5em;
 }
 
 .avatar-preview img{
@@ -31,9 +40,11 @@
 .edit-profile-form {
   margin-top: 3em;
 
-  &-label {
+  .ui.form .field label {
     display: flex;
+    flex-direction: column;
     text-align: left;
+    margin: 0 1em;
     margin-bottom: 0.5em;
   }
 
