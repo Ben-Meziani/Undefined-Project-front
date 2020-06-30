@@ -3,6 +3,12 @@
 .connected-home-header {
   width: 100%;
   top: 0;
+  background-color: white;
+  animation: fadein 2s linear;
+  @keyframes fadeIn {
+    from {background-color:white;}
+    to {background-color:black;}
+  }
 }
 
 .home-button {
@@ -31,20 +37,7 @@
   height: 3em;
   margin: 0 auto;
   margin-top: 2em;
-  animation: appearIn 1s ease;
-  animation-fill-mode: forwards;
-
-  @keyframes appearIn {
-    0% {
-      color: black;
-    }
-    99% {
-      color: rgb(223, 223, 223);
-    }
-    100% {
-      color: white;
-    }
-  }
+  
 
   & h1 {
   position: absolute;

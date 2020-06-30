@@ -25,7 +25,7 @@ const initialState = {
   pictureOpen: false,
   playersOpen: false,
   logged: false,
-  roomName: '',
+  roomName: 'Harry Pouffeur et la Chambre des Kékés',
   roomId: 0,
   masterRole: false,
   playersNb: 0,
@@ -107,7 +107,6 @@ const room = (state = initialState, action = {}) => {
     case CREATE_ROOM:
       return {
         ...state,
-        roomName: action.roomName,
         playersNb: action.playersNb,
         masterRole: true,
       };

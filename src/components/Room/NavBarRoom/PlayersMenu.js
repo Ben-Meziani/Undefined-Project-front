@@ -1,15 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Icon } from 'semantic-ui-react';
+
+import Friends from '../../../assets/icons/teammate.svg';
 
 const PlayersMenu = ({ toggleOpenPlayers }) => {
   return (
     <div className="playersMenu">
       <button type="button" className="toolsMenu-button" onClick={toggleOpenPlayers}>
-        <Icon
-          name="users"
-          size="large"
-        />
+        <img src={Friends} alt="dude" />
       </button>
     </div>
   );

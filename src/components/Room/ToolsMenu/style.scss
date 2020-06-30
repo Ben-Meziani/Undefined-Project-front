@@ -1,6 +1,8 @@
 // General Styles
 
 .toolsMenu {
+  background-color: #708cb3;
+  height: 4em;
 
   &-list {
     height: 1em;
@@ -20,6 +22,23 @@
       border: none;
       background: none;
     }
+
+    img {
+      width: 2em;
+      color: white;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+@media (min-width: 767px) {
+
+  .toolsMenu {
+    height: 3em;
+    margin-top: 1em;
   }
 }
 
