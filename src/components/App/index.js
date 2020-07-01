@@ -24,7 +24,7 @@ const App = ({ id }) => (
         <EditProfile />
       </Route>
 
-      <Route path="/room" exact>
+      <Route path="/room">
         <Room />
       </Route>
     </Switch>
