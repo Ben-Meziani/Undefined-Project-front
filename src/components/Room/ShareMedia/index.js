@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { Link } from 'react-router-dom';
 import Media from 'src/components/Room/ShareMedia/Media';
 
 import { Icon } from 'semantic-ui-react';
@@ -37,7 +37,30 @@ const ShareMedia = ({ pictureOpen, toggleOpenShare, changeFileUrl, addFile, file
           <h1 className="share-media-videos-title">Vidéos</h1>
           <div className="share-media-videos-item" />
           <ul>
-            <li></li>
+            <li><Link to="/video/hoglib">Hogwart Library</Link></li>
+            <li><Link to="/video/charmsclass">Charms Classroom</Link></li>
+            <li><Link to="/video/gryffcommon">Gryffindor Commonroom</Link></li>
+            <li><Link to="/video/huffcommon">Hufflepuff Commonroom</Link></li>
+            <li><Link to="/video/ravcommon">Ravenclaw Commonroom</Link></li>
+            <li><Link to="/video/slythcommon">Slytherin Commonroom</Link></li>
+            <li><Link to="/video/hogtrain">Hogwart Express Train</Link></li>
+            <li><Link to="/video/potionclass">Snape's potion classroom</Link></li>
+            <li><Link to="/video/threebrooms">Three Broomstick Inn</Link></li>
+            <li><Link to="/video/diagonalley">Winter Diagon Alley</Link></li>
+            <li><Link to="/video/hagrid">Hagrid's Hut</Link></li>
+            <li><Link to="/video/lakenight">The Great Lake by night</Link></li>
+            <li><Link to="/video/lakeday">The Great Lake by day</Link></li>
+            <li><Link to="/video/prefectbath">Prefect's Bathroom</Link></li>
+            <li><Link to="/video/kitchens">Hogwart's Kitchens</Link></li>
+            <li><Link to="/video/defencedark">Defence against the dark classroom</Link></li>
+            <li><Link to="/video/firenzeclass">Firenze's Divination classroom</Link></li>
+            <li><Link to="/video/hogheadinn">Hog's Head Inn</Link></li>
+            <li><Link to="/video/hospital">Hospital Wing</Link></li>
+            <li><Link to="/video/moaningmyrtle">Moaning Myrtle's Bathroom</Link></li>
+            <li><Link to="/video/greathall">The Great Hall</Link></li>
+            <li><Link to="/video/forbiddenforestnight">Forbidden Forest by night</Link></li>
+            <li><Link to="/video/astrology">Astrology classroom</Link></li>
+            <li><Link to="/video/herbology">Herbology classroom</Link></li>
           </ul>
         </div>
       </div>
