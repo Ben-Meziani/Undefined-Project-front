@@ -17,6 +17,7 @@ padding: 0;
 z-index: 1000;
 
 @media (min-width: 1024px) {
+  position: relative;
   left: 1em;
   top: 2%;
 }
@@ -28,7 +29,7 @@ z-index: 1000;
 div {
   width: 2rem;
   height: 0.25rem;
-  background: white;
+  background: #292820;
   border-radius: 10px;
   transition: all 0.3s linear;
   position: relative;

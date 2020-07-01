@@ -38,12 +38,19 @@
 
 @media (min-width: 1600px) {
 
+  .shared-view {
+    width: 40%;
+    margin: 0 auto;
+    border: 0.2em dashed $main-color;
+    padding: .5em;
+  }
+
   .shared-view-media {
     width: 100%;
     height: 30vh;
     margin: 0 auto;
-    margin-top: 2em;
+    left: 50%;
     background-size: cover;
-    
+    border: 0.2em solid $main-color;
   }
 }

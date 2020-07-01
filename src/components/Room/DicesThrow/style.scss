@@ -1,9 +1,10 @@
+@import 'src/styles/vars';
+
 .dices {
   position: absolute;
   width: 100vw;
   height: 50vh;
   background-color: #f2e9da;
-  border-radius: 5px;
   top: 0;
 
   &-toggle {
@@ -28,8 +29,6 @@
     margin: 1em auto;
     font-size: 2em;
     color: white;
-    background-color:rgb(173, 58, 58);
-    border-radius: 5px;
   }
 
   &-throw{
@@ -67,24 +66,14 @@
 @media (min-width: 767px) {
 
   .dices {
-    position: absolute;
     width: 40%;
     height: 18%;
     border: none;
     top: 72%;
     left: 6em;
-   /*  box-shadow:
-      0 0.4px 2.2px rgba(0, 0, 0, 0.02),
-      0 1.1px 5.3px rgba(0, 0, 0, 0.028),
-      0 2px 10px rgba(0, 0, 0, 0.035),
-      0 3.6px 17.9px rgba(0, 0, 0, 0.042),
-      0 6.7px 33.4px rgba(0, 0, 0, 0.05),
-      0 16px 80px rgba(0, 0, 0, 0.07)
-      ; */
 
     button {
       position: absolute;
-      color: rgb(173, 58, 58);
       background: none;
       border: none;
       top: 0;
@@ -124,13 +113,7 @@
 @media (min-width: 1024px) {
 
   .dices {
-    /* position: absolute; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 20vw;
-    height: 30vh;
-    border: none;
+    position: relative;
 
     &-toggle {
       display: flex;
@@ -140,8 +123,6 @@
       width: 20vw;
       height: 30vh;
       border: none;
-      top: 65%;
-      left: 50%;
     }
 
     &-result {
@@ -166,50 +147,50 @@
 
 @media (min-width: 1600px) {
 
-  .dices  {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #f2e9da;
-    align-items: center;
-    width: 10vw;
+  .dices-container {
+    width: 20%;
     height: 30vh;
-    top: 65%;
-    left: 20%;
+    display: flex;
+    padding: 0.5em;
+    background-color: $main-color;
+  }
 
+  .dices  {
+   
+    display: flex;
+   
     &-toggle {
+      position: relative;
       display: flex;
-      box-shadow:
-      0 0.4px 2.2px rgba(0, 0, 0, 0.02),
-      0 1.1px 5.3px rgba(0, 0, 0, 0.028),
-      0 2px 10px rgba(0, 0, 0, 0.035),
-      0 3.6px 17.9px rgba(0, 0, 0, 0.042),
-      0 6.7px 33.4px rgba(0, 0, 0, 0.05),
-      0 16px 80px rgba(0, 0, 0, 0.07)
-      ;
+      flex-direction: column;
+      justify-content: space-between;
+      top: 0;
+      left: 0;
+      margin: 0.2em;
+      background-color: transparent;
+      align-items: center;
+      height: 98%;
+      width: 98%;
     }
 
     &-result {
       width: 80%;
       height: 10vh;
-      font-size: 1.4em;
-      color: white;
-      background-color:rgb(173, 58, 58);
-      border-radius: 5px;
+      font-size: 2em;
+      color: snow;
+      background-color: transparent;
     }
   
     &-throw {
       height: 10vh;
       width: 60%;
-      /* color: white; */
-      /* background: #bb2c0e; */
+      background-color: transparent;
      
       img {
         width: 3vw;
 
         &:hover {
           animation: shake 1s;
-         /*  animation-iteration-count: infinite; */
 
           @keyframes shake {
             0% { transform: translate(0.2em, 0.2em) rotate(0deg); }

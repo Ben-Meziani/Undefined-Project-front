@@ -42,7 +42,7 @@ const initialState = {
   playersOpen: false,
   active: false,
   logged: false,
-  roomName: 'Harry Pouffeur et la Chambre des Kékés',
+  roomName: 'Harry Pouffeur et la Chambre des Kekes',
   roomId: 0,
   masterRole: false,
   playersNb: 0,

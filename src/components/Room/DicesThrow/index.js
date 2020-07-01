@@ -18,16 +18,18 @@ const DicesThrow = ({
     rollDice();
   };
   return (
-    <div className={!diceOpen ? 'dices-toggle dices' : 'dices'}>
-      <button type="button" onClick={toggleOpenDice}><Icon name="close" size="large" /></button>
-      <div className="dices-result">
-        <div>{dice}</div>
-      </div>
-      <div
-        onClick={handleClick}
-        className="dices-throw"
-      >
-        <div><img src={Dices} alt="throw" /></div>
+    <div className="dices-container">
+      <div className={!diceOpen ? 'dices-toggle dices' : 'dices'}>
+        <button type="button" onClick={toggleOpenDice}><Icon name="close" size="large" /></button>
+        <div className="dices-result">
+          <div>{dice}</div>
+        </div>
+        <div
+          onClick={handleClick}
+          className="dices-throw"
+        >
+          <div><img src={Dices} alt="throw" /></div>
+        </div>
       </div>
     </div>
   );
