@@ -2,10 +2,10 @@ import { connect } from 'react-redux';
 
 import MessageField from '../../../components/Room/Chatroom/MessageField';
 
-import { sendMessage, changeText } from '../../../actions';
+import { sendMessage, changeTextChat } from '../../../actions';
 
 const mapStateToProps = (state) => ({
-  inputValue: state.room.text,
+  inputValue: state.room.textMessage,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -13,8 +13,8 @@ const mapDispatchToProps = (dispatch) => ({
     // console.log('send Message');
     dispatch(sendMessage());
   },
-  changeText: (value) => {
-    const action = changeText(value);
+  changeTextChat: (value) => {
+    const action = changeTextChat(value);
     dispatch(action);
   },
 });
