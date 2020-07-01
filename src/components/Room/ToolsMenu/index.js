@@ -39,6 +39,7 @@ const ToolsMenu = ({
         <button type="button" className="toolsMenu-button" onClick={toggleOpenDice}><img src={Dice} alt="dice" /></button>
         <button type="button" className="toolsMenu-button" onClick={toggleOpenChat}><img src={Chat} alt="message" /></button>
       </ul>
+      )}
     </div>
   );
 };
