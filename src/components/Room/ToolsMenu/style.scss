@@ -1,8 +1,17 @@
 // General Styles
 
 .toolsMenu {
-  background-color: #708cb3;
-  height: 4em;
+  position: fixed;
+  background-color: none;
+  bottom: 0;
+  width: 100vw;
+  height: 3em;
+ 
+  &:hover {
+    background-color: #494052;
+    opacity: 0.9;
+    transition: background-color 1s;
+  }
 
   &-list {
     height: 1em;
@@ -26,6 +35,7 @@
     img {
       width: 2em;
       color: white;
+      z-index: 1001;
 
       &:hover {
         transform: scale(1.1);
