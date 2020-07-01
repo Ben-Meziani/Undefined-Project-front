@@ -11,13 +11,17 @@ import Field from './Field';
 import './style.scss';
 
 const Forgotten = ({
-  email,
+  sendedEmail,
   changeValue,
   loading,
   logged,
+  send,
+  sendEmail,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
+    console.log(sendedEmail);
+    sendEmail();
   };
   return (
     <div className="forgotten">
@@ -29,9 +33,9 @@ const Forgotten = ({
             <Field
               type="email"
               placeholder="Email"
-              name="email"
+              name="sendedEmail"
               changeValue={changeValue}
-              value={email}
+              value={sendedEmail}
             />
           </Form.Field>
           <Button color="black" type="submit">
@@ -45,7 +49,7 @@ const Forgotten = ({
       </>
       )}
       {/* {logged && !loading ? <Redirect to="/dashboard" /> : <Redirect to="/login" />} */}
-{/*       {!loading && (
+{/*       {!loading && send && (
       <>
         <p className="forgotten-confirm">Un email vous a été envoyé !</p>
       </>
@@ -55,10 +59,12 @@ const Forgotten = ({
 };
 
 Forgotten.propTypes = {
-  email: PropTypes.string.isRequired,
+  sendedEmail: PropTypes.string.isRequired,
   changeValue: PropTypes.func.isRequired,
   logged: PropTypes.bool.isRequired,
   loading: PropTypes.bool,
+  send: PropTypes.bool.isRequired,
+  sendEmail: PropTypes.func.isRequired,
 };
 
 Forgotten.defaultProps = {

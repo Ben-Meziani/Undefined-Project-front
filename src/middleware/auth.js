@@ -7,11 +7,13 @@ import {
   LOGIN,
   LOGOUT,
   REGISTER,
+  SEND_EMAIL,
   loading,
   connect,
   saveUser,
   errorLog,
   errorRegPassword,
+  sendEmail,
 } from '../actions';
 
 /* const serverURI = 'http://ec2-54-234-79-207.compute-1.amazonaws.com/api'; */
@@ -71,6 +73,32 @@ const auth = (store) => (next) => (action) => {
           if (error.response.status === 400) {
             store.dispatch(errorRegPassword());
           }
+        })
+        .finally(() => {
+          // loading is over.
+          store.dispatch(loading());
+        });
+      next(action);
+      break;
+    }
+
+    // FORGOTTEN PASSWORD
+
+    case SEND_EMAIL: {
+      const state = store.getState();
+      axios.post(`${serverURI}/forgotten-pass`, {
+        email: state.user.sendedEmail,
+      })
+        .then((response) => {
+          if (response.data) {
+            console.log(response);
+          }
+        })
+        .catch((error) => {
+          console.error(error);
+          // if (error.response.status === 400) {
+          // store.dispatch(errorRegPassword());
+          // }
         })
         .finally(() => {
           // loading is over.

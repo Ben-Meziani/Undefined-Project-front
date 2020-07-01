@@ -13,6 +13,7 @@ import {
   ERROR_LOG,
   ERROR_REG_PASSWORD,
   ERROR_PASSWORD_CHECK,
+  SEND_EMAIL,
   CREATE_ROOM,
 } from '../actions';
 
@@ -40,6 +41,9 @@ const initialState = {
   regIcon: '',
   errorRegPass: false,
   errorPassCheck: false,
+
+  sendedEmail: '',
+  send: false,
 
   masterRole: true,
 
@@ -89,6 +93,7 @@ const user = (state = initialState, action = {}) => {
       return {
         ...state,
         loading: false,
+        send: true,
       };
     case CONNECT:
       return {
@@ -138,6 +143,12 @@ const user = (state = initialState, action = {}) => {
         userRegistered: false,
         errorPassCheck: true,
         loading: false,
+      };
+    }
+    case SEND_EMAIL: {
+      return {
+        ...state,
+        loading: true,
       };
     }
     case CREATE_ROOM:
