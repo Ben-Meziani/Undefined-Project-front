@@ -15,9 +15,14 @@ export const TOGGLE_OPEN_MENU = 'TOGGLE_OPEN_MENU';
 
 // CHATROOM
 export const SEND_MESSAGE = 'SEND_MESSAGE';
-export const CHANGE_TEXT = 'CHANGE_TEXT';
+export const CHANGE_TEXT_CHAT = 'CHANGE_TEXT_CHAT';
 export const WS_CONNECT = 'WS_CONNECT';
 export const RECEIVE_MESSAGE = 'RECEIVE_MESSAGE';
+
+// PLAYER'S NOTES
+export const CHANGE_TEXT_NOTE = 'CHANGE_TEXT_NOTE';
+export const SEND_NOTE = 'SEND_NOTE';
+export const RECEIVE_NOTE = 'RECEIVE_NOTE';
 
 // ACTION CREATORS
 
@@ -71,8 +76,8 @@ export const toggleOpenMenu = () => ({
 export const sendMessage = () => ({
   type: SEND_MESSAGE,
 });
-export const changeText = (value) => ({
-  type: CHANGE_TEXT,
+export const changeTextChat = (value) => ({
+  type: CHANGE_TEXT_CHAT,
   payload: value,
 });
 export const wsConnect = () => ({
@@ -81,4 +86,19 @@ export const wsConnect = () => ({
 export const receiveMessage = (chatMessage) => ({
   type: RECEIVE_MESSAGE,
   chatMessage,
+});
+
+// PLAYER'S NOTES
+
+export const changeTextNote = (value) => ({
+  type: CHANGE_TEXT_NOTE,
+  payload: value,
+});
+export const sendNote = () => ({
+  type: SEND_NOTE,
+});
+
+export const receiveNote = (note) => ({
+  type: RECEIVE_NOTE,
+  note,
 });

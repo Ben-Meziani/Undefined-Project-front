@@ -15,7 +15,7 @@ const socket = (store) => (next) => (action) => {
       // console.log('ask to send a message, I translate it how to do it in my middleware');
       const state = store.getState();
       // console.log(state);
-      socketCanal.emit('send_message', { content: state.room.text, author: state.user.pseudo });
+      socketCanal.emit('send_message', { content: state.room.textMessage, author: state.user.pseudo });
       break; }
     default:
       next(action);

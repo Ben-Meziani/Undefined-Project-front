@@ -4,8 +4,10 @@ import {
   JOIN_ROOM,
   DROPDOWN_CHANGE,
   SAVE_ROOM_ID,
-  CHANGE_TEXT,
+  CHANGE_TEXT_CHAT,
+  CHANGE_TEXT_NOTE,
   RECEIVE_MESSAGE,
+  SEND_NOTE,
   TOGGLE_OPEN_CHAT,
   TOGGLE_OPEN_BOOK,
   TOGGLE_OPEN_EDIT,
@@ -16,11 +18,24 @@ import {
   TOGGLE_OPEN_MENU,
 } from '../actions';
 
+import { getNextId } from '../selectors';
+
 const initialState = {
   open: false,
   chatOpen: false,
   bookOpen: false,
   editOpen: false,
+  playerNotes: [
+    {
+      content: 'First note',
+      id: 3,
+    },
+    {
+      content: 'Second note',
+      id: 2,
+    },
+  ],
+  textNote: '',
   bombOpen: false,
   diceOpen: false,
   pictureOpen: false,
@@ -93,7 +108,7 @@ const initialState = {
       role: '',
     },
   ],
-  text: '',
+  textMessage: '',
   chatMessages: [
     {
       author: 'Alphonse',
@@ -109,6 +124,31 @@ const initialState = {
       author: 'Wonder Woman',
       content: 'Les gars, ça vous dit une virée ce soir ?',
       id: 16,
+    },
+    {
+      author: 'Tana\'gru',
+      content: 'T\'aurais-tu besoin de tabarnak de lorem ipsum québécois au lieu de sacrament de latin ?',
+      id: 17,
+    },
+    {
+      author: 'Tana\'gru',
+      content: 'Prend-ça dans ta câlice de yeule pis achâle-moé pu.',
+      id: 18,
+    },
+    {
+      author: 'Tana\'gru',
+      content: 'Tu sais pas quessé que c\'est du lorem ipsum ? ',
+      id: 19,
+    },
+    {
+      author: 'Tana\'gru',
+      content: 'Ben déguédine, t\'as rien à crisser icite.',
+      id: 20,
+    },
+    {
+      author: 'Tana\'gru',
+      content: 'Arrête de faire la baboune tabaslack, a va fondre la slutch.',
+      id: 21,
     },
   ],
 };
@@ -173,7 +213,7 @@ const room = (state = initialState, action = {}) => {
         active: !state.active,
       };
 
-    // CHATROOM CASES
+    // CHATROOM
     case RECEIVE_MESSAGE: {
       // console.log('reducer RECEIVE_MESSAGE', action.chatMessage);
       const newChatMessages = [
@@ -186,14 +226,36 @@ const room = (state = initialState, action = {}) => {
       return {
         ...state,
         chatMessages: newChatMessages,
-        text: '',
+        textMessage: '',
       };
     }
-    case CHANGE_TEXT:
+    case CHANGE_TEXT_CHAT:
       return {
         ...state,
-        text: action.payload,
+        textMessage: action.payload,
       };
+      // PLAYER'S NOTES
+    case CHANGE_TEXT_NOTE:
+      return {
+        ...state,
+        textNote: action.payload,
+      };
+    case SEND_NOTE: {
+      const newPlayerNotes = [
+        ...state.playerNotes,
+      ];
+      const id = getNextId(state.playerNotes);
+      const newNote = {
+        content: state.textNote,
+        id,
+      };
+      newPlayerNotes.push(newNote);
+      return {
+        ...state,
+        playerNotes: newPlayerNotes,
+        textNote: '',
+      };
+    }
     case CHANGE_VALUE:
       return {
         ...state,

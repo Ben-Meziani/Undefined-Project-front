@@ -2,14 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Icon } from 'semantic-ui-react';
 import './style.scss';
+import IconSend from '../../../assets/icons/message.svg';
 
-const MessageField = ({ sendMessage, inputValue, changeText }) => {
+const MessageField = ({ sendMessage, inputValue, changeTextChat }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     sendMessage();
   };
   const handleChange = (event) => {
-    changeText(event.target.value);
+    changeTextChat(event.target.value);
   };
 
   return (
@@ -29,10 +30,8 @@ const MessageField = ({ sendMessage, inputValue, changeText }) => {
           type="submit"
           className="chatroom-send"
         >
-          <Icon
-            name="send"
-            size="large"
-          />
+          Send
+          {/* <img src={IconSend} alt="send" /> */}
         </button>
       </form>
     </div>
@@ -42,7 +41,7 @@ const MessageField = ({ sendMessage, inputValue, changeText }) => {
 MessageField.propTypes = {
   sendMessage: PropTypes.func.isRequired,
   inputValue: PropTypes.string.isRequired,
-  changeText: PropTypes.func.isRequired,
+  changeTextChat: PropTypes.func.isRequired,
 };
 
 export default MessageField;
