@@ -3,7 +3,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Icon } from 'semantic-ui-react';
-import { Dices } from '../../../assets/icons/dices4.png';
+
+import Dices from '../../../assets/icons/dices.svg';
 
 import './style.scss';
 
@@ -17,16 +18,16 @@ const DicesThrow = ({
     rollDice();
   };
   return (
-    <div className={!diceOpen ? 'dices dices-toggle' : 'dices'}>
+    <div className={!diceOpen ? 'dices-toggle dices' : 'dices'}>
       <button type="button" onClick={toggleOpenDice}><Icon name="close" size="large" /></button>
       <div className="dices-result">
-        {dice}
+        <div>{dice}</div>
       </div>
       <div
         onClick={handleClick}
         className="dices-throw"
       >
-        <img src={Dices} alt="dés" />
+        <div><img src={Dices} alt="throw" /></div>
       </div>
     </div>
   );

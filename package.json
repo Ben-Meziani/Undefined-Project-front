@@ -73,6 +73,7 @@
     "react-redux": "*",
     "react-router-dom": "^5.2.0",
     "react-scroll-to-bottom": "^3.0.0",
+    "react-sliding-side-panel": "^1.0.14",
     "redux": "*",
     "redux-burger-menu": "^0.2.8",
     "semantic-ui-react": "^0.88.2",

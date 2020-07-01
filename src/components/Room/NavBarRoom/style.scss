@@ -3,17 +3,19 @@
 .navBarRoom {
   display:flex;
   justify-content: space-between;
-  align-items: center;
-  justify-content: center;
   /* padding: .5em; */
   background: #494052;
   height: 12.5vw;
+  width: 100%;
+  top: 0;
 
   &-title {
+    width: 60vw;
+    margin-right: 1em;
     
     h1 {
     margin: 0 auto;
-    width: 75vw;
+    width: 60vw;
     font-weight: bold;
     font-size: 0.9em;
     color: white;
@@ -22,17 +24,13 @@
     .room-name {
       font-weight: bold;
       font-size: 1em;
+      color: white;
     }
-  }
-
-  .burger_hamburger--spring__lGgOO {
-    margin-top: 0;
-    right: 0;
-    z-index: 1000;
   }
 }
 
 .playersMenu {
+  align-self: flex-start;
 
   button {
     background: none;
@@ -62,7 +60,7 @@
     padding: 1em;
     flex-direction: column;
     align-items: flex-start;
-    transform: translateY(-100%);
+    transform: translateX(+100%);
     transition: transform 0.5s ease-in-out;
 
     &--open {
@@ -70,7 +68,7 @@
       flex-direction: column;
       align-items: flex-start;
       padding: 1em;
-      transform: translateY(0);
+      transform: translateX(0);
       transition: transform 0.5s ease-in-out;
 
       &-item {
@@ -142,6 +140,10 @@
     position: relative;
     top: 0.5em;
     left: 0;
+
+    button {
+      display: none;
+    }
 
     img {
       width: 2em;

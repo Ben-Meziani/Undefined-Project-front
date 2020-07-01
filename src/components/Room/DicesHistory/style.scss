@@ -2,9 +2,16 @@
   position:absolute;
   width: 100vw;
   height: 50vh;
-  background-color: white;
-  border: 0.2em solid #708cb3;
+  background-color: #f2e9da;
+  border: 0.2em solid rgb(173, 58, 58);
   top: 50%;
+
+  &-title {
+    @font-face {
+      font-family: 'Zoika';
+      src: url('../../../../src/assets/fonts/Zoika.ttf');
+    }
+  }
 
   &-toggle {
     display: none;
@@ -18,7 +25,6 @@
     width: 20vw;
     height: 20vh;
     background-color: white;
-    border: 0.2em solid #708cb3;
     top: 80%;
     left: 60%;
     padding: 0.5em;
@@ -38,7 +44,6 @@
     width: 20vw;
     height: 30vh;
     background-color: white;
-    border: 0.2em solid #708cb3;
     top: 65%;
     left: 30%;
 

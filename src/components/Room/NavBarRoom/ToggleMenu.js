@@ -1,37 +1,25 @@
 /* eslint-disable no-console */
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import Burger from 'react-css-burger';
+import React, { useState, useRef } from 'react';
+import { useOnClickOutside } from '../../../Hooks/hooks';
+
+import Burger from './Burger';
+import Menu from './Menu';
 
 import './style.scss';
 
-const ToggleMenu = ({
-  handleLogout,
-  toggleOpenMenu,
-  toggleOpenShare,
-  active,
-}) => {
-  console.log('active vaut ', active);
+const ToggleMenu = () => {
+  const [open, setOpen] = useState(false);
+  const node = useRef();
+  useOnClickOutside(node, () => setOpen(false));
+  console.log('open dans ToggleMenu vaut ', open);
   return (
     <>
-      <Burger onClick={toggleOpenMenu} active={active} burger="spring" scale={0.6} color="white" />
-      <div className="toggle-menu">
-        <div className={active ? 'toggle-menu-dropdown--open toggle-menu-dropdown' : 'toggle-menu-dropdown'}>
-          <div className="toggle-menu-dropdown--open-item"><Link to="/" onClick={handleLogout}>Se déconnecter</Link></div>
-          <div className="toggle-menu-dropdown--open-item"><Link to="/dashboard">Quitter la room</Link></div>
-          <div className="toggle-menu-dropdown--open-item"><button onClick={toggleOpenShare} className="share-media-button" type="button">Partager un media</button></div>
-        </div>
+      <div ref={node}>
+        <Burger open={open} setOpen={setOpen} />
+        <Menu open={open} setOpen={setOpen} />
       </div>
     </>
   );
-};
-
-ToggleMenu.propTypes = {
-  handleLogout: PropTypes.func.isRequired,
-  toggleOpenShare: PropTypes.func.isRequired,
-  toggleOpenMenu: PropTypes.func.isRequired,
-  active: PropTypes.bool.isRequired,
 };
 
 export default ToggleMenu;
