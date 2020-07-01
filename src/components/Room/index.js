@@ -7,6 +7,7 @@ import DicesThrow from '../../containers/Room/DicesThrow';
 import PlayerNotes from '../../containers/Room/PlayerNotes';
 import PlayersList from '../../containers/Room/PlayersList';
 import SharedFiles from '../../containers/Room/SharedFiles';
+import ShareMedia from '../../containers/Room/ShareMedia';
 import ToolsMenu from '../../containers/Room/ToolsMenu';
 
 import './style.scss';
@@ -22,6 +23,7 @@ const Room = () => (
     <DicesThrow />
     <DicesHistory />
     <PlayerNotes />
+    <ShareMedia />
   </div>
 );
 

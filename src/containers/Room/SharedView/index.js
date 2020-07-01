@@ -4,6 +4,7 @@ import SharedView from '../../../components/Room/SharedView';
 
 const mapStateToProps = (state) => ({
   masterRole: state.user.masterRole,
+  fileURL: state.upload.fileURL,
 });
 
 const mapDispatchToProps = () => ({

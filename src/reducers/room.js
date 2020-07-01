@@ -13,6 +13,7 @@ import {
   TOGGLE_OPEN_DICE,
   TOGGLE_OPEN_SHARE,
   TOGGLE_OPEN_PLAYERS,
+  TOGGLE_OPEN_MENU,
 } from '../actions';
 
 const initialState = {
@@ -22,8 +23,9 @@ const initialState = {
   editOpen: false,
   bombOpen: false,
   diceOpen: false,
-  shareMediaOpen: false,
+  pictureOpen: false,
   playersOpen: false,
+  active: false,
   logged: false,
   roomName: 'Harry Pouffeur et la Chambre des Kékés',
   roomId: 0,
@@ -34,51 +36,61 @@ const initialState = {
       pseudo: 'Groot',
       icon: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/7987a60d-5266-4eb6-9adf-ea9f92b38af1/dclxmrl-0f31717b-ab84-4f85-b2fc-7364492d0ef9.png',
       id: 7,
+      role: '',
     },
     {
       pseudo: 'Rocket',
       icon: 'https://figurinepop.com/public/2019/11/rocketholiday1_1.jpg',
       id: 8,
+      role: '',
     },
     {
       pseudo: 'Alphonse',
       icon: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/7987a60d-5266-4eb6-9adf-ea9f92b38af1/dclxmrl-0f31717b-ab84-4f85-b2fc-7364492d0ef9.png',
       id: 9,
+      role: '',
     },
     {
       pseudo: 'Patrick',
       icon: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/7987a60d-5266-4eb6-9adf-ea9f92b38af1/dclxmrl-0f31717b-ab84-4f85-b2fc-7364492d0ef9.png',
       id: 10,
+      role: '',
     },
     {
       pseudo: 'JeanMi',
       icon: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/7987a60d-5266-4eb6-9adf-ea9f92b38af1/dclxmrl-0f31717b-ab84-4f85-b2fc-7364492d0ef9.png',
       id: 11,
+      role: '',
     },
     {
       pseudo: 'Edgard',
       icon: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/7987a60d-5266-4eb6-9adf-ea9f92b38af1/dclxmrl-0f31717b-ab84-4f85-b2fc-7364492d0ef9.png',
       id: 12,
+      role: '',
     },
     {
       pseudo: 'Daphné',
       icon: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/7987a60d-5266-4eb6-9adf-ea9f92b38af1/dclxmrl-0f31717b-ab84-4f85-b2fc-7364492d0ef9.png',
       id: 13,
+      role: '',
     },
     {
       pseudo: 'Egmond',
       icon: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/7987a60d-5266-4eb6-9adf-ea9f92b38af1/dclxmrl-0f31717b-ab84-4f85-b2fc-7364492d0ef9.png',
       id: 14,
+      role: '',
     },
     {
       pseudo: 'Michelle',
       icon: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/7987a60d-5266-4eb6-9adf-ea9f92b38af1/dclxmrl-0f31717b-ab84-4f85-b2fc-7364492d0ef9.png',
       id: 15,
+      role: '',
     },
     {
       pseudo: 'Wonder Woman',
       icon: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/7987a60d-5266-4eb6-9adf-ea9f92b38af1/dclxmrl-0f31717b-ab84-4f85-b2fc-7364492d0ef9.png',
       id: 16,
+      role: '',
     },
   ],
   text: '',
@@ -154,6 +166,11 @@ const room = (state = initialState, action = {}) => {
       return {
         ...state,
         playersOpen: !state.playersOpen,
+      };
+    case TOGGLE_OPEN_MENU:
+      return {
+        ...state,
+        active: !state.active,
       };
 
     // CHATROOM CASES

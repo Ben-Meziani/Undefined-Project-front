@@ -9,8 +9,9 @@ export const TOGGLE_OPEN_BOOK = 'TOGGLE_OPEN_BOOK';
 export const TOGGLE_OPEN_EDIT = 'TOGGLE_OPEN_EDIT';
 export const TOGGLE_OPEN_BOMB = 'TOGGLE_OPEN_BOMB';
 export const TOGGLE_OPEN_DICE = 'TOGGLE_OPEN_DICE';
-export const TOGGLE_OPEN_SHARE = 'TOGGLE_OPEN_PICTURE';
+export const TOGGLE_OPEN_SHARE = 'TOGGLE_OPEN_SHARE';
 export const TOGGLE_OPEN_PLAYERS = 'TOGGLE_OPEN_PLAYERS';
+export const TOGGLE_OPEN_MENU = 'TOGGLE_OPEN_MENU';
 
 // CHATROOM
 export const SEND_MESSAGE = 'SEND_MESSAGE';
@@ -60,6 +61,10 @@ export const toggleOpenShare = () => ({
 
 export const toggleOpenPlayers = () => ({
   type: TOGGLE_OPEN_PLAYERS,
+});
+
+export const toggleOpenMenu = () => ({
+  type: TOGGLE_OPEN_MENU,
 });
 
 // CHATROOM

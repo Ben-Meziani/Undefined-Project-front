@@ -8,13 +8,17 @@ import Player from './Player';
 
 import './style.scss';
 
-const PlayersList = ({ playersList, playersOpen, toggleOpenPlayers, masterRole }) => (
+const PlayersList = ({
+  playersList,
+  playersOpen,
+  toggleOpenPlayers,
+  masterRole,
+}) => (
   <div className={!playersOpen ? 'players-list-toggle players-list' : 'players-list'}>
     <button type="button" onClick={toggleOpenPlayers}><Icon name="close" size="large" /></button>
     {playersList.map((player) => (
       <>
         <div className="master">
-          {masterRole ? `${player.pseudo}` : ''}
         </div>
         <Player key={player.id} {...player} />
       </>

@@ -16,8 +16,7 @@ const ToolsMenu = ({
   toggleOpenBook,
   toggleOpenEdit,
   toggleOpenDice,
-  toggleOpenShare,
-  pictureOpen,
+ /*  pictureOpen, */
   masterRole,
   toggleOpenChat,
 
@@ -48,8 +47,7 @@ ToolsMenu.propTypes = {
   toggleOpenEdit: PropTypes.func.isRequired,
   toggleOpenDice: PropTypes.func.isRequired,
   toggleOpenChat: PropTypes.func.isRequired,
-  toggleOpenShare: PropTypes.func.isRequired,
-  pictureOpen: PropTypes.bool.isRequired,
+/*   pictureOpen: PropTypes.bool.isRequired, */
   masterRole: PropTypes.bool.isRequired,
 
 };
