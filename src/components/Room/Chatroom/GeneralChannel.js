@@ -1,22 +1,20 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { css } from 'glamor';
 import ScrollToBottom from 'react-scroll-to-bottom';
 import ChatMessage from './ChatMessage';
 import './style.scss';
 
-/* DOC scroll-to-bottom auto
-https://github.com/compulim/react-scroll-to-bottom
-https://www.npmjs.com/package/react-scroll-to-bottom */
-
 const GeneralChannel = ({ chatMessages }) => {
-  const ROOT_CSS = css({
-    height: 600,
-  });
+  const containerElement = useRef(null);
+  useEffect(() => {
+    const scrollY = containerElement.current.scrollHeight;
+    containerElement.current.scrollTo(0, scrollY);
+  }, [chatMessages]);
 
   return (
-    <div className="messages">
-      <ScrollToBottom className={ROOT_CSS}>
+    <div ref={containerElement} className="messages">
+      <ScrollToBottom>
         {chatMessages.map((chatMessage) => (
           <ChatMessage key={chatMessage.id} {...chatMessage} />
         ))}
