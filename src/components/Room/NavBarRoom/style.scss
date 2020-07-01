@@ -1,17 +1,18 @@
 @import 'src/styles/vars';
 
 .navBarRoom {
+  width: 100%;
   display:flex;
   justify-content: space-between;
-  /* padding: .5em; */
-  background: #494052;
+  align-items: center;
+  background: #d6ad75;
   height: 12.5vw;
   width: 100%;
   top: 0;
 
   &-title {
-    width: 60vw;
-    margin-right: 1em;
+    width: 70vw;
+    align-self: center;
     
     h1 {
     margin: 0 auto;
@@ -30,7 +31,6 @@
 }
 
 .playersMenu {
-  align-self: flex-start;
 
   button {
     background: none;
@@ -46,42 +46,6 @@
   position: absolute;
   width: 100vw;
   top: 0;
-
-  // DROPDOWN MENU
-
-  &-dropdown {
-    position: absolute;
-    width: 100%;
-    height: 30vh;
-    background: rgb(241, 230, 219);
-    opacity: 0.8;
-    color: black;
-    display: flex;
-    padding: 1em;
-    flex-direction: column;
-    align-items: flex-start;
-    transform: translateX(+100%);
-    transition: transform 0.5s ease-in-out;
-
-    &--open {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 1em;
-      transform: translateX(0);
-      transition: transform 0.5s ease-in-out;
-
-      &-item {
-        margin: 1em 0;
-
-        button {
-          background: none;
-          border: none;
-          color: black;
-        }
-      }
-    }
-  }
 }
 
 // MEDIA QUERIES
@@ -93,21 +57,18 @@
     justify-content: space-between;
     align-items: center;
     padding: .5em;
-    height: 5vh;
+    height: 8vh;
     &-title{
-      margin: 0 auto;
+     
       width: 75vw;
       font-weight: bold;
+      font-size: 1.4em;
     }
   }
 
   .playersMenu {
-    position: absolute;
-    top: 0.5em;
-    left: 0;
-
     img {
-      width: 2em;
+      width: 3em;
     }
   }
 }

@@ -9,6 +9,7 @@ const SharedView = ({ masterRole }) => {
 
   return (
     <div className="shared-view">
+
       <div className="shared-view-media">
         <Switch>
           <Route path="/room/hoglib" exact>
@@ -84,6 +85,7 @@ const SharedView = ({ masterRole }) => {
             <ReactPlayer url="https://www.youtube.com/watch?v=ElG_yRX_ZqI" />
           </Route>
         </Switch>
+
       </div>
     </div>
   );

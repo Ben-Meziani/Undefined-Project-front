@@ -8,12 +8,15 @@ import './style.scss';
 
 const NavBarRoom = ({ roomName }) => (
   <div className="navBarRoom">
-    <PlayersMenu />
+    <>
+      <ToggleMenu />
+    </>
     <div className="navBarRoom-title">
-      <h1>Vous êtes dans la room : </h1>
       <div className="room-name">{roomName}</div>
     </div>
-    <ToggleMenu />
+    <>
+      <PlayersMenu />
+    </>
   </div>
 
 );

@@ -3,12 +3,12 @@ import styled from 'styled-components';
 
 export const StyledBurger = styled.button`
 position: absolute;
-top: 5%;
-left: 2rem;
+top: 1%;
+left: 0;
 display: flex;
 flex-direction: column;
 justify-content: space-around;
-width: 2rem;
+width: 3rem;
 height: 2rem;
 background: transparent;
 border: none;
@@ -16,13 +16,13 @@ cursor: pointer;
 padding: 0;
 z-index: 1000;
 
-&:focus {
-  outline: none;
+@media (min-width: 1024px) {
+  left: 1em;
+  top: 2%;
 }
 
-@media (max-width: 767px) {
-  top: 0;
-  left: 22em;
+&:focus {
+  outline: none;
 }
 
 div {

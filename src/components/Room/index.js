@@ -15,15 +15,17 @@ import './style.scss';
 const Room = () => (
   <div className="static-room">
     <NavBarRoom />
+    <PlayersList />
     <SharedView />
     <Chatroom />
-    <PlayersList />
-    <ToolsMenu />
-    <SharedFiles />
-    <DicesThrow />
-    <DicesHistory />
-    <PlayerNotes />
-    <ShareMedia />
+    <div className="tools">
+      <ToolsMenu />
+      <SharedFiles />
+      <DicesThrow />
+      <DicesHistory />
+      <PlayerNotes />
+      <ShareMedia />
+    </div>
   </div>
 );
 
