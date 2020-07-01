@@ -8,8 +8,6 @@ import {
   changeIconFile,
   changeIconUrl,
   changeValue,
-  sendIcon,
-  fetchIcon,
   sendUserData,
 } from '../../../actions';
 
@@ -34,14 +32,6 @@ const mapDispatchToProps = (dispatch) => ({
   },
   changeValue: (value, name) => {
     const action = changeValue(name, value);
-    dispatch(action);
-  },
-  sendIcon: () => {
-    const action = sendIcon();
-    dispatch(action);
-  },
-  fetchIcon: () => {
-    const action = fetchIcon();
     dispatch(action);
   },
   sendUserData: () => {

@@ -1,6 +1,6 @@
 @import 'src/styles/vars';
 
-.shared-view {
+.shared-view-media {
   width: 100vw;
   height: 85vh;
   background-image: url("../../../../src/assets/HPbg-mobile.jpg");
@@ -11,8 +11,8 @@
 
 @media (min-width: 767px) {
 
-  .shared-view {
-    width: 60vh;
+  .shared-view-media {
+    width: 40vh;
     height: 60vh;
     margin: 0 auto;
     margin-top: 2em;
@@ -23,9 +23,20 @@
 
 @media (min-width: 1024px) {
 
-  .shared-view {
-    width: 60vh;
+  .shared-view-media {
+    width: 50vh;
     height: 50vh;
+    margin: 0 auto;
+    margin-top: 2em;
+  
+  }
+}
+
+@media (min-width: 1600px) {
+
+  .shared-view-media {
+    width: 70vh;
+    height: 45vh;
     margin: 0 auto;
     margin-top: 2em;
   

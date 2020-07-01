@@ -1,7 +1,9 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
 import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Icon } from 'semantic-ui-react';
+import { Dices } from '../../../assets/icons/dices4.png';
 
 import './style.scss';
 
@@ -24,7 +26,7 @@ const DicesThrow = ({
         onClick={handleClick}
         className="dices-throw"
       >
-        Throw the dice
+        <img src={Dices} alt="dés" />
       </div>
     </div>
   );

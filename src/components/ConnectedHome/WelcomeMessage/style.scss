@@ -7,11 +7,10 @@
   padding: 0em;
   display: flex;
   flex-direction: column;
- /*  border-radius: 5px; */
   background-color: black;
   opacity: 0;
   transform: skewY(0.5);
-  animation: fadein 4s linear;
+  animation: fadein 3s linear;
   animation-fill-mode: forwards;
  
   @keyframes fadein {

@@ -69,12 +69,12 @@
     border: 1px solid #96b1d6;
     position: absolute;
     width: 25%;
-    height: 48vh;
-    top: 9em;
+    height: 45vh;
+    top: 13.5%;
     margin-left: 1em;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+    flex-flow: column wrap;
+    justify-content: flex-start;
     align-items: center;
   }
 }

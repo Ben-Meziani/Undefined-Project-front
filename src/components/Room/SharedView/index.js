@@ -1,13 +1,21 @@
 import React from 'react';
-import ReactPlayer from 'react-player/youtube';
+import PropTypes from 'prop-types';
 
 import './style.scss';
 
-const SharedView = () => (
-  <div className="shared-view">
-    {/* <input type="text" placeholder="Copiez ici le lien de votre vidéo" /> */}
-    {/* <ReactPlayer url="https://youtu.be/pAHciSqi1-8" width="100vw" /> */}
-  </div>
-);
+const SharedView = ({ masterRole }) => {
+  console.log('masterRole dans le component vaut', masterRole);
+
+  return (
+    <div className="shared-view">
+
+      <div className="shared-view-media"></div>
+    </div>
+  );
+};
+
+SharedView.propTypes = {
+  masterRole: PropTypes.bool.isRequired,
+};
 
 export default SharedView;

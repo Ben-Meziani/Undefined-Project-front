@@ -10,6 +10,7 @@
   font-family: 'Nunito', msans-serif;
   top: 0;
   display: none;
+  border: 0.2m solid #e7cdaa;
 
   &-toggle {
     display: block;
@@ -49,7 +50,7 @@
     padding: .4rem .4rem;
     line-height: 0.8;
     outline: none;
-    background-color : #aca5b3;
+    background-color : #2f544c;
     color: white;
     border: 0;
   }
@@ -61,6 +62,7 @@
   overflow-y: auto;
   background-color: white;
   font-family: 'Nunito', msans-serif;
+  border: 0.2m solid #e7cdaa;
 }
 
 .message {
@@ -126,7 +128,7 @@
         padding: .4rem .4rem;
         line-height: 0.8;
         outline: none;
-        background-color : #aca5b3;
+        background-color : #2f544c;
         color: white;
         border: 0;
       }
@@ -163,10 +165,10 @@
       width: 25%;
       height: 50vh;
       top: 6em;
+      left: 73%;
       display: flex;
       flex-direction: column;
       text-align: left;
-      border: 0.1em solid #708cb3;
 
       &-toggle {
       position: absolute;
@@ -201,7 +203,7 @@
         padding: .4rem .4rem;
         line-height: 0.8;
         outline: none;
-        background-color : black;
+        background-color : #2f544c;
         color: white;
         border: 0;
       }
@@ -262,7 +264,7 @@
       margin-top: 0.4em;
       left: 0;
       display: flex;
-      border-top: 1px solid #96b1d6;
+      border-top: 1px solid #f2e9da;
     }
     
       &-field {
@@ -274,7 +276,7 @@
         padding: .4rem .4rem;
         line-height: 0.8;
         outline: none;
-        background-color : #96b1d6;
+        background-color : #2f544c;
         color: white;
         border: 0;
       }
@@ -304,13 +306,13 @@
     }
   }
 
-  @media (min-width: 1400px) {
+  @media (min-width: 1600px) {
 
     .chatroom {
       position: absolute;
       width: 25%;
       height: 45vh;
-      top: 9em;
+      top: 13.5%;
       margin-right: 2em;
       left: 73%;
       display: flex;
@@ -321,7 +323,7 @@
         position: absolute;
         width: 25%;
         height: 45vh;
-        top: 9em;
+        top: 13.5%;
         margin-right: 2em;
         display: flex;
         flex-direction: column;
