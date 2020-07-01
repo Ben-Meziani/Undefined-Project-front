@@ -16,6 +16,7 @@
   &-toggle {
     display: block;
     position: absolute;
+    z-index: 1001;
 
     .close-button {
       background: none;
@@ -162,21 +163,17 @@
   @media (min-width: 1024px) {
 
     .chatroom {
-      position: absolute;
       width: 25%;
-      height: 50vh;
+      height: 30vh;
       top: 6em;
-      left: 73%;
       display: flex;
       flex-direction: column;
       text-align: left;
 
       &-toggle {
-      position: absolute;
       width: 25%;
-      height: 50vh;
+      height: 30vh;
       top: 6em;
-      left: 49em;
       display: flex;
       flex-direction: column;
       text-align: left;
@@ -237,20 +234,17 @@
   @media (min-width: 1400px) {
 
     .chatroom {
-      position: absolute;
-      width: 25%;
-      height: 50vh;
+      width: 15%;
+      height: 30vh;
       top: 9.5em;
       margin-right: 2em;
-      left: 75%;
       display: flex;
       flex-direction: column;
       text-align: left;
 
       &-toggle {
-        position: absolute;
-        width: 25%;
-        height: 50vh;
+        width: 15%;
+        height: 30vh;
         top: 9.5em;
         right: 0;
         display: flex;
@@ -310,25 +304,25 @@
   @media (min-width: 1600px) {
 
     .chatroom {
-      position: absolute;
-      width: 25%;
-      height: 45vh;
+      width: 15%;
+      height: 30vh;
       top: 13.5%;
       margin-right: 2em;
-      left: 73%;
       display: flex;
       flex-direction: column;
       text-align: left;
+      display: none;
 
       &-toggle {
-        position: absolute;
-        width: 25%;
-        height: 45vh;
+
+        width: 15%;
+        height: 30vh;
         top: 13.5%;
         margin-right: 2em;
         display: flex;
         flex-direction: column;
         text-align: left;
+        display: none;
         }
       }
   }

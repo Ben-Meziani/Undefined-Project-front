@@ -9,7 +9,9 @@ const SharedView = ({ masterRole }) => {
   return (
     <div className="shared-view">
 
-      <div className="shared-view-media"></div>
+      <div className="shared-view-media">
+
+      </div>
     </div>
   );
 };

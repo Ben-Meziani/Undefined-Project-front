@@ -6,7 +6,10 @@ import { Icon } from 'semantic-ui-react';
 import Book2 from '../../../assets/icons/recipe-book.svg';
 import Papyrus from '../../../assets/icons/papyrus.svg';
 import Album from '../../../assets/icons/photo-album.svg';
-import OpenBook from '../../../assets/icons/open-book.svg';
+import News from '../../../assets/icons/news.png';
+import ReadingBook from '../../../assets/icons/reading-book.svg';
+import Story from '../../../assets/icons/story.png';
+import Book5 from '../../../assets/icons/book5.png';
 
 import './style.scss';
 
@@ -15,15 +18,14 @@ const SharedFiles = ({ toggleOpenBook, bookOpen }) => {
     <div className={!bookOpen ? 'shared-files-toggle shared-files' : 'shared-files '}>
       <button type="button" onClick={toggleOpenBook}><Icon name="close" size="large" /></button>
       <div><img src={Book2} alt="book" /></div>
-      <div><img src={Papyrus} alt="book" /></div>
+      <div><img src={Book5} alt="book" /></div>
       <div><img src={Album} alt="book" /></div>
-      <div><img src={OpenBook} alt="book" /></div>
+      <div><img src={News} alt="book" /></div>
       <div><img src={Book2} alt="book" /></div>
       <div><img src={Papyrus} alt="book" /></div>
-      <div><img src={Album} alt="book" /></div>
-      <div><img src={OpenBook} alt="book" /></div>
+      <div><img src={Story} alt="book" /></div>
       <div><img src={Book2} alt="book" /></div>
-      <div><img src={Papyrus} alt="book" /></div>
+      <div><img src={ReadingBook} alt="book" /></div>
     </div>
   );
 };

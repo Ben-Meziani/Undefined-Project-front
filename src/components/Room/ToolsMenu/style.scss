@@ -47,9 +47,24 @@
 @media (min-width: 767px) {
 
   .toolsMenu {
-    height: 3em;
+   
+    height: 6em;
     margin-top: 1em;
+    background-color: #494052;
+
+    &-list {
+      height: 6em;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      img {
+        width: 3em;
+        color: white;
+        z-index: 1001;
+    }
   }
+}
 }
 
 @media (min-width: 1024px) {
