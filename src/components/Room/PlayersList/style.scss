@@ -15,6 +15,11 @@
     display: none;
   }
 
+  &-title {
+    font-family: 'Zoika';
+    font-size: 2em;
+  }
+
   button {
     color: #708cb3;
     position: absolute;
@@ -62,12 +67,65 @@
 
   .players-list {
     background-color: none;
-    width: 18%;
-    height: 30vh;
     top: 17%;
     display: flex;
     flex-flow: column wrap;
     justify-content: flex-start;
     align-items: center;
+    &-toggle {
+      width: 98%;
+      height: 80%;
+    }
+
+    &-container h1 {
+      max-width: 100%;
+      font-family: 'Zoika';
+      position: relative;
+      z-index: 3;
+    }
+    &-container h1:before {
+      content: "";
+      display: block;
+      width: 18%;
+      height: 0.2em;
+      position: absolute;
+      background: black;
+      left: 0;
+      top: 13%;
+      z-index: 1;
+    }
+
+    &-container h1:after {
+      content: "";
+      display: block;
+      width: 18%;
+      height: 0.2em;
+      position: absolute;
+      background: black;
+      right: 0;
+      top: 13%;
+      z-index: 1;
+    }
+    span {
+      background: #fff;
+    }
+
+    &-title {
+      display: inline-block;
+      margin: 0 auto;
+      height: 3em;
+      width: 100%;
+    }
+
+    &-container {
+      position: absolute;
+      width: 17%;
+      height: 40%;
+      top: 18%;
+      display: flex; 
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 }

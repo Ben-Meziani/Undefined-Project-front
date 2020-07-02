@@ -68,6 +68,7 @@
     "react": "*",
     "react-burger-menu": "^2.6.17",
     "react-css-burger": "^0.2.0",
+    "react-custom-scroll": "^4.2.1",
     "react-dom": "*",
     "react-player": "^2.4.0",
     "react-redux": "*",

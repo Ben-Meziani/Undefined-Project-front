@@ -9,7 +9,7 @@ const initialState = {
   dice: 0,
   dicesResults: [
     {
-      result: 0,
+      result: null,
       id: 0,
     },
   ],
