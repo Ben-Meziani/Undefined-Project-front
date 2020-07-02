@@ -109,7 +109,7 @@
     position: relative;
     top: 0;
     left: 0;
-    margin: 6em auto;
+    margin: 3em auto;
 
     &-toggle {
       display: flex;
@@ -119,9 +119,6 @@
       border: .1em solid $main-color;
       width: 90%;
       height: 50%;
-
- 
-
     }
 
     button {

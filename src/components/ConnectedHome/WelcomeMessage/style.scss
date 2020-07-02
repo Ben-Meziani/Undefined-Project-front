@@ -117,3 +117,29 @@
   }
 }
 
+
+@media (min-width: 1600px) {
+  .connected-home-message {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 30em;
+    margin: 6em auto;
+    padding: 1em;
+    border-radius: 3px;
+  
+    h2 {
+      display: inline-block;
+      flex: 1;
+      font-size: 1.6em;
+      text-align: center;
+    }
+  
+    &-content {
+      flex: 2;
+      margin: 1em 0;
+      text-align: justify;
+    }
+  }
+}
+

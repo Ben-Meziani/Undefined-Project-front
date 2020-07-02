@@ -5,6 +5,8 @@ import { toggleOpenDice } from '../../../actions';
 
 const mapStateToProps = (state) => ({
   diceOpen: state.room.diceOpen,
+  dice: state.dices.dice,
+  dicesResults: state.dices.dicesResults,
 });
 
 const mapDispatchToProps = (dispatch) => ({

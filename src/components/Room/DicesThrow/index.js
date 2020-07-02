@@ -13,9 +13,11 @@ const DicesThrow = ({
   rollDice,
   diceOpen,
   toggleOpenDice,
+  saveResults,
 }) => {
   const handleClick = () => {
     rollDice();
+    saveResults(dice);
   };
   return (
     <div className="dices-container">
@@ -40,6 +42,7 @@ DicesThrow.propTypes = {
   rollDice: PropTypes.func.isRequired,
   diceOpen: PropTypes.bool.isRequired,
   toggleOpenDice: PropTypes.func.isRequired,
+  saveResults: PropTypes.func.isRequired,
 };
 
 export default DicesThrow;

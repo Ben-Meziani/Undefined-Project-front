@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import './style.scss';
 
-const Media = ({ fileURL }) => {
+const Media = ({ blob }) => {
   return (
     <div className="media-blob">
       <img className="avatar" src={blob} alt="unknown" />

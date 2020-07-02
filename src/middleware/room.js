@@ -14,7 +14,7 @@ const room = (store) => (next) => (action) => {
         name: state.room.roomName,
         player_number: state.room.playersNb,
         theme: 'default',
-        role: state.room.role,
+        game_master: state.user.pseudo,
       }, {
         withCredentials: true,
       })

@@ -39,7 +39,8 @@
 @media (min-width: 1600px) {
 
   .shared-view {
-    width: 40%;
+    width: 45%;
+    height: 50%;
     margin: 0 auto;
     border: 0.2em dashed $main-color;
     padding: .5em;
@@ -47,7 +48,7 @@
 
   .shared-view-media {
     width: 100%;
-    height: 30vh;
+    height: 100%;
     margin: 0 auto;
     left: 50%;
     background-size: cover;

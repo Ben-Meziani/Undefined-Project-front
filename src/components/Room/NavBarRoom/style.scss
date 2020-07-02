@@ -122,6 +122,29 @@
 
 @media (min-width: 1600px) {
 
+  .navBarRoom {
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vw;
+    width: 100%;
+    top: 0;
+  
+    &-title {
+      width: 70vw;
+      align-self: center;
+      
+      h1 {
+      margin: 0 auto;
+      width: 60vw;
+      font-weight: bold;
+      font-size: 0.9em;
+      color: white;
+      }
+    }
+  }
+
   .toggle-menu {
     position: absolute;
     width: 100vw;
@@ -135,7 +158,7 @@
   right: 0;
   width: 20%;
   height: 100vh;
-  background: rgb(241, 230, 219);
+  background: #f6e7bc;
   opacity: 0.8;
   color: black;
   display: flex;
