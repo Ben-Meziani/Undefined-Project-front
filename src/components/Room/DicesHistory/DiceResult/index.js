@@ -6,7 +6,7 @@ import './style.scss';
 const DiceResult = ({ result }) => (
   <div className="dices-history-result">
     <div className="dices-history-result-item">
-      {!(result === null) ? (
+      {!(result === 0) ? (
         <p>Un dé de {result} a été lancé.</p>)
         : ''}
     </div>

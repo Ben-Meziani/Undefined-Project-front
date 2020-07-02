@@ -9,7 +9,7 @@ const initialState = {
   dice: 0,
   dicesResults: [
     {
-      result: null,
+      result: 0,
       id: 0,
     },
   ],
@@ -44,6 +44,5 @@ const diceReducer = (state = initialState, action = {}) => {
       return state;
   }
 };
-
 
 export default diceReducer;

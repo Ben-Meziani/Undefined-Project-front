@@ -15,8 +15,8 @@ const PlayersList = ({
   masterRole,
 }) => (
   <div className="players-list-container">
-    <h1 className="players-list-title">Players'list</h1>
     <div className={!playersOpen ? 'players-list-toggle players-list' : 'players-list'}>
+      <h1 className="players-list-title">Players'list</h1>
       <button type="button" onClick={toggleOpenPlayers}><Icon name="close" size="large" /></button>
       {playersList.map((player) => (
         <>

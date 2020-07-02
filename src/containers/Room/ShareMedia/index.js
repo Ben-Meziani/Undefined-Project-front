@@ -6,6 +6,7 @@ import { toggleOpenShare, changeFileUrl, addFile } from '../../../actions';
 const mapStateToProps = (state) => ({
   pictureOpen: state.room.pictureOpen,
   fileURL: state.upload.fileURL,
+  files: state.upload.files,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -17,8 +18,8 @@ const mapDispatchToProps = (dispatch) => ({
     const action = changeFileUrl(fileURL);
     dispatch(action);
   },
-  addFile: (file) => {
-    const action = addFile(file);
+  addFile: () => {
+    const action = addFile();
     dispatch(action);
   },
 });

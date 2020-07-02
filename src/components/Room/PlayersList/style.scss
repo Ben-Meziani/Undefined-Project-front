@@ -7,6 +7,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  background-color: white;
   align-items: center;
   padding: 0.2em;
   bottom: 0;
@@ -21,13 +22,13 @@
   }
 
   button {
-    color: #708cb3;
+    color: $main-color;
     position: absolute;
     height: 1em;
     background: none;
     border: none;
     top: 0;
-    left: 0;
+    right: 1em;
   }
 }
 

@@ -4,7 +4,8 @@
   position: absolute;
   width: 100vw;
   height: 50vh;
-  background-color: #f2e9da;
+  background-color: #d2b181;
+  opacity: 0.9;
   top: 0;
 
   &-toggle {
@@ -16,7 +17,7 @@
     background: none;
     border: none;
     top: 0;
-    left: 0;
+    right: 1em;
     color: #6b8971;
   }
 

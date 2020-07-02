@@ -4,16 +4,17 @@ import PropTypes from 'prop-types';
 
 import './style.scss';
 
-const Media = ({ blob }) => {
+const Media = ({ file, id }) => {
   return (
-    <div className="media-blob">
-      <img className="avatar" src={blob} alt="unknown" />
+    <div className="media-picture">
+      {!(id === 0) ? (<img className="share-picture" src={file} alt="unknown" />) : ''}
     </div>
   );
 };
 
 Media.propTypes = {
-  blob: PropTypes.string.isRequired,
+  file: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 export default Media;
