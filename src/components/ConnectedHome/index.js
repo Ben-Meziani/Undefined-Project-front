@@ -14,22 +14,25 @@ import './style.scss';
 const ConnectedHome = ({ logged, loading, id }) => {
   // console.log(logged);
   return (
-    <div className="connected-home">
-      <Switch>
-        <Route exact path="/dashboard">
-          <Header />
-         {/*  <RainDropAnimation /> */}
-          <WelcomeMessage />
-          <NavBar />
-        </Route>
-        {/* TODO passer userId en props */}
-        <Route exact path={`/dashboard/user/${id}/edit`}>
-          <Header />
-          <EditProfile />
-        </Route>
-      </Switch>
-      {!logged && !loading ? <Redirect to="/" /> : <Redirect to="/dashboard" />}
-    </div>
+    <Switch>
+      <Route exact path="/dashboard">
+        <div className="dashboard">
+          <div className="dashboard-header">
+            <Header />
+          </div>
+          <div className="dashboard-main">
+            <div className="dashboard-main-container">
+              <div className="dashboard-main-container-display">
+                <WelcomeMessage />
+              </div>
+              <div className="dashboard-main-container-nav">
+                <NavBar />
+              </div>
+            </div>
+          </div>
+        </div>
+      </Route>
+    </Switch>
   );
 };
 
