@@ -20,11 +20,11 @@ const Header = ({
           <li><Link to={`/dashboard/user/${id}/edit`}>Modifier son profil</Link></li>
         </Menu>
       </div> */}
-      <div className="dashboard-header">
         <div className="dashboard-header-title">
-          <h1>Undefined::Role-Play</h1>
+          <Link to="/">
+            <h1>Undefined::Role-Play</h1>
+          </Link>
         </div>
-      </div>
     </>
   );
 };

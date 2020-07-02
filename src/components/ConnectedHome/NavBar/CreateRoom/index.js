@@ -32,7 +32,7 @@ const CreateRoom = ({
   return (
     <Modal
       className="create-room-modal"
-      trigger={<div className="create"><p>Créer</p><img src={createIcon} alt="create" /></div>}
+      trigger={<div className="create"><div className="create-container"><p>Créer</p><div className="create-img"><img src={createIcon} alt="create" /></div></div></div>}
     >
       <Modal.Header>Créer une Salle</Modal.Header>
 

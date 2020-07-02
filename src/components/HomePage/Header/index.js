@@ -4,11 +4,11 @@ import './style.scss';
 
 const Header = () => (
   <div className="homePage-header">
-    <h1 className="homePage-header-title">
+    <div className="homePage-header-title">
       <Link to="/">
-        Undefined::Role-Play
+        <h1>Undefined::Role-Play</h1>
       </Link>
-    </h1>
+    </div>
   </div>
 );
 

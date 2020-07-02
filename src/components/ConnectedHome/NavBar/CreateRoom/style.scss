@@ -12,13 +12,25 @@
     transform: scale(1.1);
     cursor: pointer;
   }
+  @include m767() {
+    height: 15vh;
+    width: 25vw;
+    padding: .7em;
+  };
+
   img {
     width: 100%;
     border: dashed white .1em;
     padding: 1em;
+    @include m767() {
+      border: 0;
+    };
   }
   p{
     display: none;
+    @include m767() {
+      display: flex;
+    };
   }
 
   &-room-modal{

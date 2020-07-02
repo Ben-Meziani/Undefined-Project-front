@@ -122,5 +122,11 @@
   border: solid 0.1em white;
   padding: .7em;
   margin: 0 auto;
+  @include m767() {
+    font-size: 1.7em;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  };
 }
 

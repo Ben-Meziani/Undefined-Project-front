@@ -1,7 +1,9 @@
 @import 'src/styles/vars';
 
 .homePage{
-
+  font-family: 'Roboto Mono', monospace;
+  height: 100vh;
+  
   &-container{
     border: .2em solid black;
     margin: 0 auto;
