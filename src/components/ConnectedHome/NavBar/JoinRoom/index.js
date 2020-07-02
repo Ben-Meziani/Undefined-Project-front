@@ -6,7 +6,7 @@ import joinIcon from '../../../../assets/icons/bookmenu.svg';
 import './style.scss';
 
 const JoinRoomIcon = () => (
-  <Modal className="join-room-modal" trigger={<div className="join"><img src={joinIcon} alt="join" /></div>}>
+  <Modal className="join-room-modal" trigger={<div className="join"><img src={joinIcon} alt="join" /><p>Rejoindre</p></div>}>
     <Modal.Header>Rejoindre une salle de jeu</Modal.Header>
     <Modal.Content image>
       <Modal.Description>

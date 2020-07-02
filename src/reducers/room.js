@@ -43,6 +43,7 @@ const initialState = {
   active: false,
   logged: false,
   roomName: 'Harry Pouffeur et la Chambre des Kékés',
+  roomPass: '',
   roomId: 0,
   masterRole: false,
   playersNb: 0,

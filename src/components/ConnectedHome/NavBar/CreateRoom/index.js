@@ -14,6 +14,7 @@ const CreateRoom = ({
   changeValue,
   handleDropdown,
   roomName,
+  roomPass,
   playersNb,
   createRoom,
   masterRole,
@@ -31,11 +32,11 @@ const CreateRoom = ({
   return (
     <Modal
       className="create-room-modal"
-      trigger={<div className="create"><img src={createIcon} alt="create" /></div>}
+      trigger={<div className="create"><p>Créer</p><img src={createIcon} alt="create" /></div>}
     >
-      <Modal.Header>Créer une salle de jeu</Modal.Header>
+      <Modal.Header>Créer une Salle</Modal.Header>
 
-      {!masterRole && (
+      {masterRole && (
         <Modal.Content image>
           <Modal.Description>
             <form className="ui form" onSubmit={handleSubmit}>
@@ -52,18 +53,36 @@ const CreateRoom = ({
                   value={roomName}
                 />
               </div>
-              <Dropdown
-                onChange={dropdownChange}
-                options={[
-                  { key: 1, text: '1', value: 1 },
-                  { key: 2, text: '2', value: 2 },
-                  { key: 3, text: '3', value: 3 },
-                  { key: 4, text: '4', value: 4 },
-                ]}
-                placeholder="Indiquez le nombre de joueurs"
-                selection
-                value={playersNb}
-              />
+              <div>
+                <label htmlFor="room-password">
+                  Choisissez un mot de passe pour vos joueurs
+                </label>
+                <Field
+                  className="create-room-form-input"
+                  type="text"
+                  placeholder="Mot de passe"
+                  name="roomPass"
+                  changeValue={changeValue}
+                  value={roomPass}
+                />
+              </div>
+              <div className="field">
+                <label htmlFor="room-players">
+                  Indiquez votre nombre de joueurs
+                </label>
+                <Dropdown
+                  onChange={dropdownChange}
+                  options={[
+                    { key: 1, text: '1', value: 1 },
+                    { key: 2, text: '2', value: 2 },
+                    { key: 3, text: '3', value: 3 },
+                    { key: 4, text: '4', value: 4 },
+                  ]}
+                  placeholder="Indiquez le nombre de joueurs"
+                  selection
+                  value={playersNb}
+                />
+              </div>
               <div className="field">
                 <button
                   className="ui button create-room-submit"
@@ -76,8 +95,14 @@ const CreateRoom = ({
           </Modal.Description>
         </Modal.Content>
       )}
-      {masterRole && (
-        <Link to="/room">Rejoignez votre room!</Link>
+      {!masterRole && (
+        <div className="success">
+          <p>Vous avez déjà une Salle en cours.</p>
+          <Link className="go" to="/room">
+            Rejoignez la !
+          </Link>
+        </div>
+
       )}
     </Modal>
   );
@@ -90,6 +115,7 @@ CreateRoom.propTypes = {
   handleDropdown: PropTypes.func.isRequired,
   createRoom: PropTypes.func.isRequired,
   masterRole: PropTypes.bool.isRequired,
+  roomPass: PropTypes.string.isRequired,
 };
 
 CreateRoom.defaultProps = {

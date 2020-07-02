@@ -38,6 +38,10 @@
     border: dashed white .1em;
     padding: 1em;
   }
+
+  p{
+    display: none;
+  }
   &:hover {
     transform: scale(1.1);
     cursor: pointer;

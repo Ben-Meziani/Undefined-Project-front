@@ -12,6 +12,7 @@ const room = (store) => (next) => (action) => {
       const state = store.getState();
       axios.post(`${serverURI}/room/add`, {
         name: state.room.roomName,
+        password: state.room.roomPass,
         player_number: state.room.playersNb,
         theme: 'default',
         role: state.room.role,

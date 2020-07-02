@@ -17,6 +17,27 @@
     border: dashed white .1em;
     padding: 1em;
   }
+  p{
+    display: none;
+  }
+
+  &-room-modal{
+    height: 60%;
+    background: black;
+    display: flex;
+    justify-content: center;
+
+  }
+}
+
+.success{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.go{
 }
 
 .ui.button.create-room-submit {
