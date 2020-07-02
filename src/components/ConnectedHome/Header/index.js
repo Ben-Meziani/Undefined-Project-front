@@ -14,17 +14,17 @@ const Header = ({
 }) => {
   return (
     <>
-    <div className="connecter-home-header">
-      <Menu>
-        <li><Link to="/" onClick={handleLogout}>Se déconnecter</Link></li>
-        <li><Link to={`/dashboard/user/${id}/edit`}>Modifier son profil</Link></li>
-      </Menu>
-    </div>
-    <div className="dashboard-header">
-      <div className="dashboard-header-title">
-        <h1>Undefined::Role-Play</h1>
+      <div className="connected-home-header">
+        <Menu>
+          <li><Link to="/" onClick={handleLogout}>Se déconnecter</Link></li>
+          <li><Link to={`/dashboard/user/${id}/edit`}>Modifier son profil</Link></li>
+        </Menu>
       </div>
-    </div>
+      <div className="dashboard-header">
+        <div className="dashboard-header-title">
+          <h1>Undefined::Role-Play</h1>
+        </div>
+      </div>
     </>
   );
 };
