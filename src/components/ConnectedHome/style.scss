@@ -1,6 +1,6 @@
 @import 'src/styles/vars';
 
-.connected-home {
+/* .connected-home {
   background-color: black;
   position: relative;
   display: flex;
@@ -114,17 +114,19 @@
     font-size: 2em;
     color: rgb(94, 92, 92);
     }
-  
+    
     &-notification {
       margin: 2em 0;
     }
   }
-}
+} */
 
 .dashboard {
   font-family: 'Roboto Mono', monospace;
+  height: 100vh;
+
   &-header{
-    height: 15vh;
+    height: 8vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -134,9 +136,8 @@
   &-main{
     background-color: black;
     color:white;
-    height: 100vh;
-    padding: 4em 1.5em 0 1.5em;
-
+    height: 92vh;
+    padding: 7.5em 1.5em 0 1.5em;
 
     &-container{
       background-color: white;
@@ -146,7 +147,9 @@
       height: 100%;
 
       &-nav{
-        
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2em;;
       }
 
       &-display{
@@ -155,8 +158,6 @@
         height: 50vh;
         padding: 0.5em;
       }
-
     }
   }      
-
 }

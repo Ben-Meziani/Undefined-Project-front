@@ -6,9 +6,9 @@ import PropTypes from 'prop-types';
 import RainDropAnimation from './RaindropAnimation';
 import Header from '../../containers/ConnectedHome/Header';
 import EditProfile from '../../containers/ConnectedHome/EditProfile';
-import NavBar from './NavBar';
+/* import NavBar from './NavBar'; */
 import WelcomeMessage from './WelcomeMessage';
-import CreateRoom from '../ConnectedHome/NavBar/CreateRoom';
+import CreateRoom from '../../containers/ConnectedHome/CreateRoom';
 import JoinRoomIcon from '../ConnectedHome/NavBar/JoinRoom';
 
 import './style.scss';
