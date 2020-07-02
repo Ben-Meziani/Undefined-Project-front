@@ -13,6 +13,24 @@
   }
 }
 
+@mixin m1024($size: 1024px) {
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin m1200($size: 1200px) {
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin m1600($size: 1600px) {
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
 @mixin mqb($size: 1200px) {
   @media (min-width: $size) {
     @content;

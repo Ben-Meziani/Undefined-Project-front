@@ -18,18 +18,39 @@
     padding: .7em;
   };
 
+  &-container{
+    @include m767() {
+      padding: .5em;
+      border: dashed white .2em;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-between;
+    };
+  }
+
   img {
     width: 100%;
     border: dashed white .1em;
     padding: 1em;
     @include m767() {
       border: 0;
+      position: relative;
+      padding: 0;
+      display: inline;
+      height: 7em;
+      width: 7em;
     };
   }
-  p{
-    display: none;
+  &-text{
+    margin-bottom: .2em;
     @include m767() {
-      display: flex;
+      font-size: 3em;
+      display: inline;
+      margin:0;
+      margin-left: 2.6em;
     };
   }
 
@@ -49,8 +70,6 @@
   align-items: center;
 }
 
-.go{
-}
 
 .ui.button.create-room-submit {
   margin-top: 1em;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route, Redirect, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 // import components
@@ -16,26 +16,43 @@ import './style.scss';
 const ConnectedHome = ({ logged, loading, id }) => {
   // console.log(logged);
   return (
-    <Switch>
-      <Route exact path="/dashboard">
-        <div className="dashboard">
-          <div className="dashboard-header">
-            <Header />
-          </div>
-          <div className="dashboard-main">
-            <div className="dashboard-main-container">
-              <div className="dashboard-main-container-display">
-                <WelcomeMessage />
+    <>
+      <Switch>
+        <Route exact path="/dashboard">
+          <div className="dashboard">
+            <div className="dashboard-header">
+              <Header />
+              <div className="dashboard-header-title">
+                <Link to="/">
+                  <h1>Undefined::Role-Play</h1>
+                </Link>
               </div>
-              <div className="dashboard-main-container-nav">
-                <JoinRoomIcon />
-                <CreateRoom />
+            </div>
+            <div className="dashboard-main">
+              <div className="dashboard-main-container">
+                <div className="dashboard-main-container-display">
+                  <WelcomeMessage />
+                </div>
+                <div className="dashboard-main-container-nav">
+                  <JoinRoomIcon />
+                  <CreateRoom />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </Route>
-    </Switch>
+        </Route>
+        <Route exact path={`/dashboard/user/${id}/edit`}>
+          <Header />
+          <div className="dashboard-header-title">
+            <Link to="/">
+              <h1>Undefined::Role-Play</h1>
+            </Link>
+          </div>
+          <EditProfile />
+        </Route>
+      </Switch>
+      {!logged && !loading ? <Redirect to="/" /> : <Redirect to="/dashboard" />}
+    </>
   );
 };
 

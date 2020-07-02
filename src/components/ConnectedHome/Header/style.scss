@@ -1,12 +1,5 @@
 @import 'src/styles/vars';
 
-.dashboard-header-title{
-  width: 100%;
-  text-align: center;
-  @include m767() {
-
-  };
-}
 
 .connected-home-header {
   width: 100%;
@@ -17,7 +10,7 @@
   @keyframes fadeIn2 {
     from {background-color:black;}
     to {background-color:white;}
-  }
+  } 
 
   // SIDEBAR
 

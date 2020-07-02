@@ -40,8 +40,14 @@
 
   &-container{
     @include m767() {
-      padding: em;
+      padding: 1em;
       border: dashed white .2em;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-between;
     };
   }
 
@@ -51,13 +57,19 @@
     padding: 1em;
     @include m767() {
       border: 0;
+      position: relative;
+      padding: 0;
+      height: 7em;
+      width: 7em;
     };
   }
 
-  p{
-    display: none;
+  &-text{
+    margin-top: .2em;
     @include m767() {
-      display: flex;
+      font-size: 3em;
+      display: inline;
+      margin: 0;
     };
   }
   &:hover {
