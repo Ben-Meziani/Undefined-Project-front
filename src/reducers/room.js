@@ -42,7 +42,8 @@ const initialState = {
   playersOpen: false,
   active: false,
   logged: false,
-  roomName: 'Harry Pouffeur et la Chambre des Kekes',
+  roomName: '',
+  roomPass: '',
   roomId: 0,
   masterRole: false,
   playersNb: 0,
@@ -148,12 +149,13 @@ const room = (state = initialState, action = {}) => {
     case CREATE_ROOM:
       return {
         ...state,
-        playersNb: action.playersNb,
         masterRole: true,
       };
     case JOIN_ROOM:
       return {
         ...state,
+        player: action.pseudo,
+        playerIcon: action.icon,
         playerRole: true,
       };
     case SAVE_ROOM_ID:

@@ -16,15 +16,16 @@ const CreateRoom = ({
   playersNb,
   createRoom,
   masterRole,
+  roomPass,
 }) => {
   const dropdownChange = (evt, value) => {
+    evt.preventDefault();
     handleDropdown(value.value);
   };
   const handleSubmit = (evt) => {
-    // console.log('je lance la requête de création de room');
+    console.log('je lance la requête de création de room');
     evt.preventDefault();
     createRoom();
-    // console.log(roomName);
   };
 
   return (
@@ -34,7 +35,7 @@ const CreateRoom = ({
     >
       <Modal.Header>Créer une salle de jeu</Modal.Header>
 
-      {!masterRole && (
+      {masterRole && (
         <Modal.Content image>
           <Modal.Description>
             <form className="ui form" onSubmit={handleSubmit}>
@@ -49,6 +50,19 @@ const CreateRoom = ({
                   name="roomName"
                   changeValue={changeValue}
                   value={roomName}
+                />
+              </div>
+              <div className="field">
+                <label htmlFor="room-pass">
+                  Choisissez un mot de passe
+                </label>
+                <Field
+                  className="create-room-form-input"
+                  type="password"
+                  placeholder="Mot de passe"
+                  name="roomPass"
+                  changeValue={changeValue}
+                  value={roomPass}
                 />
               </div>
               <Dropdown
@@ -75,7 +89,7 @@ const CreateRoom = ({
           </Modal.Description>
         </Modal.Content>
       )}
-      {masterRole &&(
+      {!masterRole && (
         <Link to="/room">Rejoignez la room!</Link>
       )}
     </Modal>
@@ -89,6 +103,7 @@ CreateRoom.propTypes = {
   handleDropdown: PropTypes.func.isRequired,
   createRoom: PropTypes.func.isRequired,
   masterRole: PropTypes.bool.isRequired,
+  roomPass: PropTypes.string.isRequired,
 };
 
 CreateRoom.defaultProps = {
