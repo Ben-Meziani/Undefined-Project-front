@@ -4,6 +4,7 @@ import React from 'react';
 import { Modal, Dropdown } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import createIcon from '../../../../assets/icons/feather.svg';
 
 import Field from '../../../HomePage/Forms/Field';
 
@@ -30,7 +31,7 @@ const CreateRoom = ({
   return (
     <Modal
       className="create-room-modal"
-      trigger={<div className="create-room-button">Créer une room</div>}
+      trigger={<div className="create"><img src={createIcon} alt="create" /></div>}
     >
       <Modal.Header>Créer une salle de jeu</Modal.Header>
 
@@ -75,8 +76,8 @@ const CreateRoom = ({
           </Modal.Description>
         </Modal.Content>
       )}
-      {masterRole &&(
-        <Link to="/room">Rejoignez la room!</Link>
+      {masterRole && (
+        <Link to="/room">Rejoignez votre room!</Link>
       )}
     </Modal>
   );

@@ -143,7 +143,11 @@
       color: black;
       margin: 0 auto;
       padding: 1.5em;
-      height: 100vh;
+      height: 100%;
+
+      &-nav{
+        
+      }
 
       &-display{
         background-color: black;
@@ -151,11 +155,8 @@
         height: 50vh;
         padding: 0.5em;
       }
-      &-nav{
-        display: inline-block;
-        display:flex;
-        justify-content: space-around;
-      }
+
     }
-  }
+  }      
+
 }

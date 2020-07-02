@@ -8,6 +8,8 @@ import Header from '../../containers/ConnectedHome/Header';
 import EditProfile from '../../containers/ConnectedHome/EditProfile';
 import NavBar from './NavBar';
 import WelcomeMessage from './WelcomeMessage';
+import CreateRoom from '../ConnectedHome/NavBar/CreateRoom';
+import JoinRoomIcon from '../ConnectedHome/NavBar/JoinRoom';
 
 import './style.scss';
 
@@ -26,7 +28,8 @@ const ConnectedHome = ({ logged, loading, id }) => {
                 <WelcomeMessage />
               </div>
               <div className="dashboard-main-container-nav">
-                <NavBar />
+                <JoinRoomIcon />
+                <CreateRoom />
               </div>
             </div>
           </div>
