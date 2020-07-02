@@ -2,6 +2,10 @@
 
 .dashboard-header-title{
   width: 100%;
+  text-align: center;
+  @include m767() {
+    font-size:3em;
+  };
 }
 
 .connected-home-header {

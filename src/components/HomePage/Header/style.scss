@@ -16,7 +16,7 @@
     to {background-color:black;}
   } 
 
-  @include mq() {
+  @include m767() {
     margin: 0 auto;
     width : 100%;
     height: 15vh;
@@ -29,7 +29,7 @@
     font-size: 2em;
     font-family: 'Roboto Mono', monospace;
     text-align: center;
-    @include mq() {
+    @include m767() {
       font-size:3.3em;
     };
   }

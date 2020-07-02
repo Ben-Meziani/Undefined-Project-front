@@ -7,6 +7,12 @@
   }
 }
 
+@mixin m767($size: 767px) {
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
 @mixin mqb($size: 1200px) {
   @media (min-width: $size) {
     @content;
