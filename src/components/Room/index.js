@@ -13,18 +13,20 @@ import ToolsMenu from '../../containers/Room/ToolsMenu';
 import './style.scss';
 
 const Room = () => (
-  <div className="static-room">
-    <NavBarRoom />
-    <PlayersList />
-    <SharedView />
-    <Chatroom />
-    <div className="tools">
-      <ToolsMenu />
-      <SharedFiles />
-      <DicesThrow />
-      <DicesHistory />
-      <PlayerNotes />
-      <ShareMedia />
+  <div className="room-container">
+    <div className="static-room">
+      <NavBarRoom />
+      <PlayersList />
+      <SharedView />
+      <Chatroom />
+      <div className="tools">
+        <ToolsMenu />
+        <SharedFiles />
+        <DicesThrow />
+        <DicesHistory />
+        <PlayerNotes />
+        <ShareMedia />
+      </div>
     </div>
   </div>
 );

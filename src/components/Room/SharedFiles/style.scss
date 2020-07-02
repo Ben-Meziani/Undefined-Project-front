@@ -67,24 +67,17 @@
 @media (min-width: 1024px) {
   
   .shared-files {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    bottom: 0;
-    background-color: white;
-    border: .1em solid grey;
-    width: 25%;
-    height: 30vh;
-    top: 60%;
-    left: 1em;
 
     &-toggle {
+      position: relative;
       display: flex;
-      position: absolute;
-      margin-bottom: 0;
-      left: 1em;
-      height: 30vh;
-      top: 65%;
+      justify-content: center;
+      bottom: 0;
+      background-color: white;
+      border: .1em solid grey;
+      width: 25%;
+      height: 20vh;
+
     }
 
     button {
@@ -92,34 +85,40 @@
     }
 
     img {
-      width: 3em;
+      width: 2em;
       margin: 0.5em;
     }
   }
 }
 
 @media (min-width: 1600px) {
+
+  .shared-files-container {
+    width: 20%;
+    height: 25vh;
+    border: 1px solid $main-color;
+    margin-left: 2em;
+
+    h1 {
+      font-family: 'Chuck Noon';
+      font-size: 3em;
+    }
+  }
   
   .shared-files {
-  /*   position: absolute; */
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    bottom: 0;
-    background-color: white;
-    border: .1em solid grey;
-    width: 25%;
-    height: 30vh;
-    top: 50%;
-    left: 1em;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 3em auto;
 
     &-toggle {
       display: flex;
-      /* position: absolute; */
-      margin-bottom: 0;
-      left: 1em;
-      height: 30vh;
-      top: 50%;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: transparent;
+      border: .1em solid $main-color;
+      width: 90%;
+      height: 50%;
     }
 
     button {
@@ -127,8 +126,12 @@
     }
 
     img {
-      width: 4em;
+      width: 2em;
       margin: 0.5em;
+
+      &:hover {
+        background-color: black;
+      }
     }
   }
 }

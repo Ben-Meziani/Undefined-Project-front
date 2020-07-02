@@ -22,7 +22,6 @@ const ConnectedHome = ({ logged, loading, id }) => {
           <WelcomeMessage />
           <NavBar />
         </Route>
-        {/* TODO passer userId en props */}
         <Route exact path={`/dashboard/user/${id}/edit`}>
           <Header />
           <EditProfile />

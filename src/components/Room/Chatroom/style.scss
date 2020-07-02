@@ -152,7 +152,7 @@
       }
       &-content {
         padding-left: 1rem;
-        background-color: white;
+        /* background-color: white; */
         display: inline-block;
         border-radius: 5px;
         line-height: 1.3em;
@@ -163,9 +163,11 @@
   @media (min-width: 1024px) {
 
     .chatroom {
+      position: absolute;
       width: 25%;
       height: 30vh;
-      top: 6em;
+      top: 0;
+      left: 0;
       display: flex;
       flex-direction: column;
       text-align: left;
@@ -173,7 +175,7 @@
       &-toggle {
       width: 25%;
       height: 30vh;
-      top: 6em;
+      top: 0;
       display: flex;
       flex-direction: column;
       text-align: left;
@@ -223,7 +225,7 @@
       }
       &-content {
         padding-left: 1rem;
-        background-color: white;
+        /* background-color: white; */
         display: inline-block;
         border-radius: 5px;
         line-height: 1.3em;
@@ -236,7 +238,6 @@
     .chatroom {
       width: 15%;
       height: 30vh;
-      top: 9.5em;
       margin-right: 2em;
       display: flex;
       flex-direction: column;
@@ -245,8 +246,6 @@
       &-toggle {
         width: 15%;
         height: 30vh;
-        top: 9.5em;
-        right: 0;
         display: flex;
         flex-direction: column;
         text-align: left;
@@ -294,6 +293,7 @@
       &-content {
         padding-left: 1rem;
         background-color: white;
+        opacity: 0.8;
         display: inline-block;
         border-radius: 5px;
         line-height: 1.3em;
@@ -304,25 +304,65 @@
   @media (min-width: 1600px) {
 
     .chatroom {
-      width: 15%;
-      height: 30vh;
-      top: 13.5%;
-      margin-right: 2em;
+      position: absolute;
+      right: 14%;
+      top: 20%;
+      left: 4%;
+      width: 16%;
+      height: 40%;
       display: flex;
       flex-direction: column;
       text-align: left;
-      display: none;
-
+     
       &-toggle {
-
         width: 15%;
         height: 30vh;
-        top: 13.5%;
-        margin-right: 2em;
         display: flex;
         flex-direction: column;
         text-align: left;
-        display: none;
+        background-color: transparent;
+        }
+
+        &-form {
+          position: relative;
+          width: 100%;
+          max-height: 2em;
+          margin-top: 0;
+          left: 0;
+          display: flex;
+          border-top: 1px solid #f2e9da;
+        }
+        
+          &-field {
+            width: 100%;
+            padding: .5rem .5rem;
+          }
+        
+          &-send {
+            padding: .4rem .4rem;
+            line-height: 0.8;
+            outline: none;
+            background-color : #2f544c;
+            color: white;
+            border: 0;
+          }
+      }
+
+      .message {
+        margin: 1rem;
+        max-width: 100vw;
+      
+        &-author {
+          padding: .3rem 0;
+          color: $main-color;
+        }
+        &-content {
+          padding-left: 1rem;
+          background-color: snow;
+          opacity: 0.8;
+          display: inline-block;
+          border-radius: 5px;
+          line-height: 1.3em;
         }
       }
   }

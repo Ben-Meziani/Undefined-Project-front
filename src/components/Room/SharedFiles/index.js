@@ -15,18 +15,26 @@ import './style.scss';
 
 const SharedFiles = ({ toggleOpenBook, bookOpen }) => {
   return (
-    <div className={!bookOpen ? 'shared-files-toggle shared-files' : 'shared-files '}>
-      <button type="button" onClick={toggleOpenBook}><Icon name="close" size="large" /></button>
-      <div><img src={Book2} alt="book" /></div>
-      <div><img src={Book5} alt="book" /></div>
-      <div><img src={Album} alt="book" /></div>
-      <div><img src={News} alt="book" /></div>
-      <div><img src={Book2} alt="book" /></div>
-      <div><img src={Papyrus} alt="book" /></div>
-      <div><img src={Story} alt="book" /></div>
-      <div><img src={Book2} alt="book" /></div>
-      <div><img src={ReadingBook} alt="book" /></div>
-    </div>
+    <>
+      <div className="shared-files-subcontent">
+        <p>Gringotts Bank Robbery : All the details</p>
+      </div>
+      <div className="shared-files-container">
+        <h1 className="shared-files-title">Your files</h1>
+        <div className={!bookOpen ? 'shared-files-toggle shared-files' : 'shared-files '}>
+          <button type="button" onClick={toggleOpenBook}><Icon name="close" size="large" /></button>
+          <div><img src={Book2} alt="book" /></div>
+          <div><img src={Book5} alt="book" /></div>
+          <div><img src={Album} alt="book" /></div>
+          <div><img src={News} alt="book" /></div>
+          <div><img src={Book2} alt="book" /></div>
+          <div><img src={Papyrus} alt="book" /></div>
+          <div><img src={Story} alt="book" /></div>
+          <div><img src={Book2} alt="book" /></div>
+          <div><img src={ReadingBook} alt="book" /></div>
+        </div>
+      </div>
+    </>
   );
 };
 

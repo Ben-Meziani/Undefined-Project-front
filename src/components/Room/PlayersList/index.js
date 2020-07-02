@@ -14,15 +14,18 @@ const PlayersList = ({
   toggleOpenPlayers,
   masterRole,
 }) => (
-  <div className={!playersOpen ? 'players-list-toggle players-list' : 'players-list'}>
-    <button type="button" onClick={toggleOpenPlayers}><Icon name="close" size="large" /></button>
-    {playersList.map((player) => (
-      <>
-        <div className="master">
-        </div>
-        <Player key={player.id} {...player} />
-      </>
-    ))}
+  <div className="players-list-container">
+    <h1 className="players-list-title">Players'list</h1>
+    <div className={!playersOpen ? 'players-list-toggle players-list' : 'players-list'}>
+      <button type="button" onClick={toggleOpenPlayers}><Icon name="close" size="large" /></button>
+      {playersList.map((player) => (
+        <>
+          <div className="master">
+          </div>
+          <Player key={player.id} {...player} />
+        </>
+      ))}
+    </div>
   </div>
 );
 

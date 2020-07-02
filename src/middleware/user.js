@@ -11,9 +11,6 @@ const user = (store) => (next) => (action) => {
       // ACCESS TO THE STATE TO GET THE USER ID
       const state = store.getState();
       const userId = state.user.id;
-      console.log('++++ requête : j\'envoie toutes les données modifiées au serveur ++++');
-      console.log('iconFile envoyé vaut ', state.upload.iconFile);
-
       const formData = new FormData();
       formData.append('icon', state.upload.iconFile);
       formData.append('email', state.user.email);
@@ -26,7 +23,8 @@ const user = (store) => (next) => (action) => {
           headers: {
             'content-type': 'multipart/form-data',
           },
-        })
+        },
+      )
         .then((response) => {
           console.log(response);
         })

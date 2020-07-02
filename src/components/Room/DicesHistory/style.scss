@@ -1,3 +1,7 @@
+@import 'src/styles/vars';
+
+
+
 .dices-history {
   position:absolute;
   width: 100vw;
@@ -8,6 +12,8 @@
   top: 50%;
 
   &-title {
+    font-family: 'Steelfish';
+    font-size: 1.8em;
     color: rgb(173, 58, 58);
   }
 
@@ -16,6 +22,8 @@
     height: 48vh;
     padding: 0.5em;
     border: 0.2em solid rgb(173, 58, 58); */
+    height: 90%;
+    overflow: scroll;
   }
 
   &-toggle {
@@ -33,15 +41,7 @@
     left: 60%;
     padding: 0.5em;
     font-weight: bold;
-  /*   box-shadow:
-    0 0.4px 2.2px rgba(0, 0, 0, 0.02),
-    0 1.1px 5.3px rgba(0, 0, 0, 0.028),
-    0 2px 10px rgba(0, 0, 0, 0.035),
-    0 3.6px 17.9px rgba(0, 0, 0, 0.042),
-    0 6.7px 33.4px rgba(0, 0, 0, 0.05),
-    0 16px 80px rgba(0, 0, 0, 0.07)
-    ; */
-
+ 
     &-toggle {
       display: none;
     }
@@ -51,16 +51,18 @@
 @media (min-width: 1024px) {
 
   .dices-history {
-    position:absolute;
+    position: relative;
     width: 20vw;
     height: 30vh;
-    background-color: white;
-    top: 65%;
-    left: 30%;
+   
+    left: 0;
+    top: 0;
 
     &-toggle {
       display: block;
       margin-right: 1em;
+      background-color: transparent;
+      border: 0.3em solid $main-color;
     }
   }
 }
@@ -68,18 +70,23 @@
 @media (min-width: 1600px) {
 
   .dices-history {
-    position:absolute;
-    width: 10vw;
-    height: 30vh;
-    background-color: #f2e9da;
+    width: 12vw;
+    height: 60%;
+    align-self: center;
     color: #494052;
     border: none;
     border-radius: 4px;
-    top: 65%;
-    left: 5%;
 
     &-toggle {
       display: block;
+      border: 0.2em dotted $main-color;
+    }
+
+    &-content {
+
+      .scrollbar {
+        
+      }
     }
   }
 }

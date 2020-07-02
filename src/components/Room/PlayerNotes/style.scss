@@ -83,15 +83,14 @@
 @media (min-width: 1024px) {
   
   .player-notes {
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: center;
     bottom: 0;
     background-color: white;
     width: 25%;
     height: 30vh;
-    top: 65%;
-    left: 73%;
+    top: 0;
     align-self: flex-end;
 
     &-toggle {
@@ -108,14 +107,11 @@
 @media (min-width: 1400px) {
   
   .player-notes {
-    position: absolute;
     display: flex;
     justify-content: center;
     background-color: #f2e9da;
     width: 25%;
     height: 30vh;
-    top: 65%;
-    left: 73.5%;
     margin-right: 2em;
     align-self: flex-end;
 
@@ -137,14 +133,12 @@
 @media (min-width: 1600px) {
   
   .player-notes {
-    position: absolute;
     display: flex;
     justify-content: center;
     background-color: #f2e9da;
-    width: 15%;
+    border: none;
+    width: 20%;
     height: 30vh;
-    top: 65%;
-    left: 10%;
     margin-right: 2em;
     align-self: flex-end;
 
