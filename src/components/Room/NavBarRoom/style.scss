@@ -6,7 +6,7 @@
   justify-content: space-between;
   align-items: center;
   background: #23253a;
-  height: 12.5vw;
+  height: 10vh;
   width: 100%;
   top: 0;
 
@@ -24,8 +24,11 @@
 
     .room-name {
       font-weight: bold;
-      font-size: 1em;
-      color: white;
+      font-size: 2em;
+      color: $sixth-color;
+      margin-left: 2em;
+      font-family: 'Triumph wheels rough';
+
     }
   }
 }
@@ -37,7 +40,7 @@
     border: none;
 
     img {
-      width: 2em;
+      width: 3em;
     }
   }
 }
@@ -98,7 +101,7 @@
       .room-name {
         font-weight: bold;
         font-size: 1em;
-        color: #292820;
+
         font-family: 'Triumph wheels rough';
         font-size: 3em;
       }

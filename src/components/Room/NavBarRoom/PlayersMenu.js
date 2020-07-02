@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Friends from '../../../assets/icons/teammate.svg';
+import Friends from '../../../assets/icons/jobless.png';
 
 const PlayersMenu = ({ toggleOpenPlayers }) => {
   return (

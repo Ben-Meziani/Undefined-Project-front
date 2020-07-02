@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 
 import './style.scss';
 
-import Dice from '../../../assets/icons/dice.svg';
-import Book from '../../../assets/icons/magic.svg';
-import Notes from '../../../assets/icons/contract.svg';
-import Chat from '../../../assets/icons/rating.svg';
+import Dice from '../../../assets/icons/dices.png';
+import Book from '../../../assets/icons/magic-book.png';
+import Notes from '../../../assets/icons/notepad.png';
+import Chat from '../../../assets/icons/chat.png';
 
 const ToolsMenu = ({
   toggleOpenBook,

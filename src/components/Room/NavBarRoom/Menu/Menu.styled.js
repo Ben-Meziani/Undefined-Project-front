@@ -5,8 +5,8 @@ export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background: rgb(241, 230, 219);
-  opacity: 0.9;
+  background: #d2b181;
+  opacity: 0.5;
   height: 100vh;
   text-align: left;
   padding: 2rem;

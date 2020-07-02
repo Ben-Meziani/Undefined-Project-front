@@ -5,15 +5,27 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 100%;
+    width: 100%;
     height: 100vh;
     top: 0;
     background-color: white;
+    opacity: 0.9;
+    z-index: 105;
+
+    &-subcontent {
+      display: none;
+    }
+
+    h1 {
+      font-family: 'Chuck Noon';
+      font-size: 3em;
+      color: #842413;
+    }
 
     button {
       position: fixed;
       top: 0;
-      left: 0;
+      right: 1em;
       color: #d6ad75;
       height: 1em;
       background: none;
@@ -28,6 +40,19 @@
     width: 4em;
     margin: 0.5em;
   }
+}
+
+.shared-files-container {
+  margin: 1em;
+  width: 100%;
+  height: 90vh;
+  border: 0.3em dashed #842413;
+  border-top: 0.3em solid #842413;
+  border-bottom: 0.3em solid #842413;
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
 }
 
 @media (min-width: 767px) {

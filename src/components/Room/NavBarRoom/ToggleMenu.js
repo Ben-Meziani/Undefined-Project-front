@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import React, { useState, useRef } from 'react';
-import { useOnClickOutside } from '../../../Hooks/hooks';
+import { useOnClickOutside } from '../../../hooks/hooks';
 
 import Burger from './Burger';
 import Menu from '../../../containers/Room/NavBarRoom/Menu';

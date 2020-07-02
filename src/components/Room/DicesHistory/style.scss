@@ -2,15 +2,16 @@
 
 .dices-history {
   position:absolute;
+
   width: 100vw;
   height: 50vh;
-  background-color: #d2b181;
+  background-color: white;
   opacity: 0.9;
   top: 50%;
 
   &-title {
-    font-family: 'Steelfish';
-    font-size: 1.8em;
+    font-family: 'Black Quality';
+    font-size: 2em;
     color: rgb(173, 58, 58);
   }
 
@@ -19,8 +20,10 @@
     height: 48vh;
     padding: 0.5em;
     border: 0.2em solid rgb(173, 58, 58); */
-    height: 90%;
+    height: 80%;
     overflow: scroll;
+    border: 1px solid black;
+    margin: 1em;
   }
 
   &-toggle {

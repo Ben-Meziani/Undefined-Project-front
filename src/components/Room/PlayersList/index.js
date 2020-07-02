@@ -12,7 +12,6 @@ const PlayersList = ({
   playersList,
   playersOpen,
   toggleOpenPlayers,
-  masterRole,
 }) => (
   <div className="players-list-container">
     <div className={!playersOpen ? 'players-list-toggle players-list' : 'players-list'}>
@@ -37,7 +36,6 @@ PlayersList.propTypes = {
   ).isRequired,
   playersOpen: PropTypes.bool.isRequired,
   toggleOpenPlayers: PropTypes.func.isRequired,
-  masterRole: PropTypes.bool.isRequired,
 };
 
 export default PlayersList;
