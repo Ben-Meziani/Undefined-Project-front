@@ -5,7 +5,7 @@ import { createStore, compose, applyMiddleware } from 'redux';
 import rootReducer from '../reducers';
 import auth from '../middleware/auth';
 import user from '../middleware/user';
-/* import room from '../middleware/room'; */
+import room from '../middleware/room';
 /* import socket from '../middleware/socket'; */
 import upload from '../middleware/upload';
 /* import dices from '../middleware/dices'; */
@@ -17,7 +17,7 @@ const enhancers = composeEnhancers(
   applyMiddleware(
     auth,
     user,
-    /* room, */
+    room,
     upload,
     /* dices, */
     /*  socket, */

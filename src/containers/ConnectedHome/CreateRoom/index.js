@@ -6,6 +6,7 @@ import { changeValue, dropdownChange, createRoom } from '../../../actions';
 
 const mapStateToProps = (state) => ({
   roomName: state.user.roomName,
+  roomPass: state.user.roomPass,
   playersNb: state.room.playersNb,
   masterRole: state.user.masterRole,
 });
