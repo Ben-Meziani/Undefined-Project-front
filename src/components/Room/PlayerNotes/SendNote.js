@@ -26,8 +26,7 @@ const SendNote = ({ sendNote, changeTextNote, inputValue }) => {
         className="form-button"
         type="submit"
       >
-        {/* <img src={IconNotes} alt="send" /> */}
-        Send
+        <img src={IconNotes} alt="send" />
       </button>
     </form>
   );

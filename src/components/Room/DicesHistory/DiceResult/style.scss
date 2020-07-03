@@ -1,0 +1,13 @@
+@import 'src/styles/vars';
+
+.dices-history-result-item {
+  display: inline-block;
+  line-height: 1.4em;
+  font-family: 'Montserrat', sans-serif;
+
+  hr {
+    border-top: 0.2em dotted $sixth-color;
+    border-bottom: none;
+  }
+}
+

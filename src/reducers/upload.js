@@ -6,14 +6,18 @@ import {
   SAVE_ICON,
 } from '../actions';
 
+import { getNextId } from '../selectors';
+
 const initialState = {
   icon: '',
   iconFile: {
   },
   imgURL: '',
+  fileURL: '',
   files: [
     {
-      blob: {},
+      file: '',
+      id: 0,
     },
   ],
 };
@@ -36,17 +40,18 @@ const upload = (state = initialState, action = {}) => {
         fileURL: action.fileURL,
       };
     case ADD_FILE: {
-      console.log('reducer ADD_FILES', action.fileURL);
+      console.log('reducer ADD_FILES', state.fileURL);
+      const id = getNextId(state.files);
       const newFiles = [
         ...state.files,
       ];
       const newFile = {
-        ...action.fileURL,
+        file: state.fileURL,
+        id,
       };
       newFiles.push(newFile);
-      console.log(newFiles);
+      console.log('reducer ADD_FILES newFile vaut', newFile);
 
-      console.log('reducer ADD_FILE', action.fileURL);
       return {
         ...state,
         files: newFiles,

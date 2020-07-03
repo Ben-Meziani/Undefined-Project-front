@@ -5,15 +5,27 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 100%;
+    width: 100%;
     height: 100vh;
     top: 0;
     background-color: white;
+    opacity: 0.9;
+    z-index: 105;
+
+    &-subcontent {
+      display: none;
+    }
+
+    h1 {
+      font-family: 'Chuck Noon';
+      font-size: 3em;
+      color: #842413;
+    }
 
     button {
       position: fixed;
       top: 0;
-      left: 0;
+      right: 1em;
       color: #d6ad75;
       height: 1em;
       background: none;
@@ -28,6 +40,19 @@
     width: 4em;
     margin: 0.5em;
   }
+}
+
+.shared-files-container {
+  margin: 1em;
+  width: 100%;
+  height: 90vh;
+  border: 0.3em dashed #842413;
+  border-top: 0.3em solid #842413;
+  border-bottom: 0.3em solid #842413;
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
 }
 
 @media (min-width: 767px) {
@@ -67,24 +92,15 @@
 @media (min-width: 1024px) {
   
   .shared-files {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    bottom: 0;
-    background-color: white;
-    border: .1em solid grey;
-    width: 25%;
-    height: 30vh;
-    top: 60%;
-    left: 1em;
 
     &-toggle {
+      position: relative;
       display: flex;
-      position: absolute;
-      margin-bottom: 0;
-      left: 1em;
-      height: 30vh;
-      top: 65%;
+      justify-content: center;
+      bottom: 0;
+      background-color: white;
+      width: 25%;
+      height: 20vh;
     }
 
     button {
@@ -92,36 +108,73 @@
     }
 
     img {
-      width: 3em;
+      width: 2em;
       margin: 0.5em;
     }
   }
 }
 
 @media (min-width: 1600px) {
+
+  .shared-files-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 68%;
+    margin-left: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    border: none;
+  }
   
   .shared-files {
-  /*   position: absolute; */
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    bottom: 0;
-    background-color: white;
-    border: .1em solid grey;
-    width: 25%;
-    height: 30vh;
-    top: 50%;
-    left: 1em;
-
+    position: relative;
+    top: 0;
+    left: 0;
+ 
     &-toggle {
       display: flex;
-      /* position: absolute; */
-      margin-bottom: 0;
-      left: 1em;
-      height: 30vh;
-      top: 50%;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: transparent;
+      border: .1em solid $main-color;
+      width: 32%;
+      height: 50%;
     }
 
+    h1 {
+      color: $main-color;
+
+      &:hover {
+        color: #33648d;
+        transition: 1s ease;
+      }
+    }
+
+    &-subcontent {
+      display: block;
+      position: absolute;
+      bottom: 30%;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      width: 20%;
+      height: 10%;
+      color: $main-color;
+      font-family: 'Blacklet';
+      text-align: left;
+      padding-left: 0.2em;
+      padding-top: 0.2em;
+
+      .subcontent-title {
+        font-size: 3.6em;
+      }
+
+      .subcontent-content {
+        font-size: 2.4em;
+      }
+    }
     button {
       display: none;
     }
@@ -129,6 +182,28 @@
     img {
       width: 4em;
       margin: 0.5em;
+
+      &:hover {
+        background-color: black;
+      }
     }
+  }
+
+  .subcontent-border-large {
+    width: 1%;
+    height: 15%;
+    background-color: $main-color;
+    position: absolute;
+    bottom: 28%;
+    left: 35%;
+  }
+
+  .subcontent-border-thin {
+    width: 0.2%;
+    height: 15%;
+    background-color: $main-color;
+    position: absolute;
+    bottom: 28%;
+    left: 36.5%;
   }
 }

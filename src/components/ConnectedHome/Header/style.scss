@@ -4,7 +4,7 @@
 .connected-home-header {
   width: 100%;
   top: 0;
-  animation: fadeIn2 3s ease;
+  animation: fadeIn2 2s ease;
   animation-fill-mode: forwards;
 
   @keyframes fadeIn2 {
@@ -39,7 +39,7 @@
   
   /* Color/shape of close button cross */
   .bm-cross {
-    background: #bdc3c7;
+    background: white;
   }
 
   .bm-menu-wrap {
@@ -55,7 +55,7 @@
   }
 
   .bm-item-list {
-    color: #b8b7ad;
+    color: white;
     padding: 0.8em;
   }
   
@@ -63,6 +63,8 @@
   .bm-item {
     display: inline-block;
     padding: 1em;
+    font-size: 1.4em;
+    text-align: left
   }
   
   /* Styling of overlay */

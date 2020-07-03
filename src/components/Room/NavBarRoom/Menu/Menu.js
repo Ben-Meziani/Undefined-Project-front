@@ -16,6 +16,6 @@ const Menu = ({ handleLogout, toggleOpenShare, open }) => {
 Menu.propTypes = {
   handleLogout: PropTypes.func.isRequired,
   toggleOpenShare: PropTypes.func.isRequired,
-  open: PropTypes.func.isRequired,
+  open: PropTypes.bool.isRequired,
 };
 export default Menu;

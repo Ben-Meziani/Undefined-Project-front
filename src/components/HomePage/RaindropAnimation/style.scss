@@ -1,4 +1,4 @@
-@import 'src/styles/vars';
+/* @import 'src/styles/vars';
 
 // RAINDROPS FALL ANIMATION
 
@@ -8,40 +8,80 @@
 
 .raindrop1 {
   margin: 0 auto;
-  margin-top: -0.3em;
+  margin-top: -0.7em;
+  z-index: 2;
 
   & img {
     width: 2em;
+    z-index: 2;
   }
 }
 
 .raindrop2 {
-  margin-top: -0.3em;
-  margin-left: -10em;
+  margin-top: -0.5em;
+  margin-left: 10em;
+  z-index: 2;
 
   & img {
     width: 1.3em;
+    z-index: 2;
   }
 }
 .raindrop3 {
   margin-top: -0.3em;
-  margin-left: 10em;
+  margin-left: 17em;
+  z-index: 2;
 
   & img {
-    width: 2em;
+    width: 1em;
+    z-index: 2;
   }
 }
 
 .raindrop4 {
-  margin-top: -0.3em;
-  margin-left: 17em;
+  margin-top: -0.6em;
+  margin-left: 22em;
+  z-index: 1;
 
   & img {
-    width: 2em;
+    width: 2.4em;
+    z-index: 1;
   }
 }
 
-.raindrop1, .raindrop2, .raindrop3, .raindrop4 {
+.raindrop5 {
+  margin-top: -0.9em;
+  margin-left: 26em;
+  z-index: 1;
+
+  & img {
+    width: 1.8em;
+  }
+}
+
+.raindrop6 {
+  margin-top: -0.3em;
+  margin-left: 31em;
+  z-index: 1;
+
+  & img {
+    width: 2.8em;
+    z-index: 1;
+  }
+}
+
+.raindrop7 {
+  margin-top: -0.8em;
+  margin-left: 39em;
+  z-index: 1;
+
+  & img {
+    width: 0.7em;
+    
+  }
+}
+
+.raindrop1, .raindrop2, .raindrop3, .raindrop4, .raindrop5, .raindrop6, .raindrop7 {
   position: relative;
 
   & img {
@@ -97,6 +137,7 @@
       width: 2.1em;
     }
   }
+}
   
   .raindrop1, .raindrop2, .raindrop3, .raindrop4 {
     position: relative;
@@ -113,8 +154,6 @@
       }
     }
   }
-  
-}
 
 
 @media (min-width: 1024px) {
@@ -173,5 +212,63 @@
       }
     }
   }
-  
 }
+
+@media (min-width: 1600px) {
+
+  .raindrop-animation {
+    position: absolute;
+    top: 11em;
+  }
+  .raindrop1 {
+    margin: 0 auto;
+    margin-top: -0.7em;
+  
+    & img {
+      width: 1.8em;
+    }
+  }
+  
+  .raindrop2 {
+    margin-top: -1.2em;
+    margin-left: -10em;
+  
+    & img {
+      width: 1.7em;
+    }
+  }
+  .raindrop3 {
+    margin-top: -2em;
+    margin-left: 10em;
+  
+    & img {
+      width: 2em;
+    }
+  }
+  
+  .raindrop4 {
+    margin-top: -1.7em;
+    margin-left: 17em;
+  
+    & img {
+      width: 2.1em;
+    }
+  }
+  
+  .raindrop1, .raindrop2, .raindrop3, .raindrop4 {
+    position: relative;
+  
+    & img {
+      transform: translateY(0);
+      animation: falldown 1.2s linear;
+      animation-fill-mode: forwards;
+    }
+  
+    @keyframes falldown {
+      100% {
+        transform: translateY(+780%);
+      }
+    }
+  }
+}
+} */

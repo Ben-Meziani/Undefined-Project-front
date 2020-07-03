@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import { Icon } from 'semantic-ui-react';
 
-import Dices from '../../../assets/icons/dices.svg';
+import Dices from '../../../assets/icons/dicesthrow.png';
 
 import './style.scss';
 
@@ -13,21 +13,27 @@ const DicesThrow = ({
   rollDice,
   diceOpen,
   toggleOpenDice,
+  saveResults,
 }) => {
   const handleClick = () => {
     rollDice();
+    saveResults(dice);
   };
+  console.log(dice);
   return (
-    <div className={!diceOpen ? 'dices-toggle dices' : 'dices'}>
-      <button type="button" onClick={toggleOpenDice}><Icon name="close" size="large" /></button>
-      <div className="dices-result">
-        <div>{dice}</div>
-      </div>
-      <div
-        onClick={handleClick}
-        className="dices-throw"
-      >
-        <div><img src={Dices} alt="throw" /></div>
+    <div className="dices-container">
+      <div className={!diceOpen ? 'dices-toggle dices' : 'dices'}>
+        <button type="button" onClick={toggleOpenDice}><Icon name="close" size="large" /></button>
+        <div className="dices-result">
+          <div>{dice}</div>
+        </div>
+        <div
+          onClick={handleClick}
+          className="dices-throw"
+        >
+          <div><img src={Dices} alt="throw" /></div>
+          <div><p></p></div>
+        </div>
       </div>
     </div>
   );
@@ -38,6 +44,7 @@ DicesThrow.propTypes = {
   rollDice: PropTypes.func.isRequired,
   diceOpen: PropTypes.bool.isRequired,
   toggleOpenDice: PropTypes.func.isRequired,
+  saveResults: PropTypes.func.isRequired,
 };
 
 export default DicesThrow;

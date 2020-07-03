@@ -5,8 +5,8 @@ export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background: rgb(241, 230, 219);
-  opacity: 0.9;
+  background: #d2b181;
+  opacity: 0.7;
   height: 100vh;
   text-align: left;
   padding: 2rem;
@@ -36,13 +36,14 @@ export const StyledMenu = styled.nav`
   }
 
   .menu-dropdown-item {
-    font-size: 1em;
+    font-size: 1.2em;
     padding: 2rem 0;
     font-weight: bold;
     letter-spacing: 0.5rem;
     text-decoration: none;
     transition: color 0.3s linear;
     text-align: left;
+    color: #231f20;
 
     button {
       margin-top: 2em;

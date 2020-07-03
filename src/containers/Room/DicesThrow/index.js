@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import DicesThrow from '../../../components/Room/DicesThrow';
 // eslint-disable-next-line import/named
-import { rollDice, toggleOpenDice } from '../../../actions';
+import { rollDice, toggleOpenDice, saveResults } from '../../../actions';
 
 const mapStateToProps = (state) => ({
   dice: state.dices.dice,
@@ -19,6 +19,10 @@ const mapDispatchToProps = (dispatch) => ({
   },
   toggleOpenDice: () => {
     const action = toggleOpenDice();
+    dispatch(action);
+  },
+  saveResults: () => {
+    const action = saveResults();
     dispatch(action);
   },
 });

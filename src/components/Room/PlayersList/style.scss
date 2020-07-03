@@ -1,42 +1,61 @@
 @import 'src/styles/vars';
 
-.players-list {
+.players-list-container {
   position: absolute;
   width: 100vw;
   height: 100vh;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
+/*   flex-direction: column; */
+  flex-wrap: wrap;
+  z-index: 50;
+}
+
+.players-list {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
   align-items: center;
   padding: 0.2em;
-  background-color: white;
   bottom: 0;
+
+  &-items {
+    width: 4em;
+    display: flex;
+  }
 
   &-toggle {
     display: none;
   }
 
+  &-title {
+    display: inline-block;
+    font-family: 'Campanile';
+    color: #33648d;
+    font-size: 2.5em;
+    margin-top: 1em;
+  }
+
   button {
-    color: #708cb3;
+    color: $main-color;
     position: absolute;
     height: 1em;
     background: none;
     border: none;
     top: 0;
-    left: 0;
+    right: 1em;
   }
 }
 
 @media (min-width: 1024px) {
 
   .players-list {
-    border: 1px solid #708cb3;
+    border: 0.2em solid $main-color;
     border-radius: 2px;
     position: absolute;
     width: 25%;
     height: 50vh;
     top: 6em;
-    margin-left: 1em;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -50,11 +69,9 @@
 @media (min-width: 1400px) {
 
   .players-list {
-    border: 1px solid #96b1d6;
     width: 25%;
     height: 30vh;
     top: 9.5em;
-    margin-left: 1em;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -65,14 +82,69 @@
 @media (min-width: 1600px) {
 
   .players-list {
-    border: 1px solid #96b1d6;
-    width: 15%;
-    height: 30vh;
-    top: 13.5%;
-    margin-left: 1em;
+    background-color: transparent;
+    height: 100%;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
-    align-items: center;
+    &-toggle {
+      top: 0;
+      width: 98%;
+      height: 100%;
+    }
+
+    &-container h1 {
+      max-width: 100%;
+      font-family: 'Zoika';
+      position: relative;
+      z-index: 3;
+
+      &:hover {
+        color: $seventh-color;
+        transition: 1s ease;
+      }
+    }
+    &-container h1:before {
+      content: "";
+      display: block;
+      width: 14%;
+      height: 0.1em;
+      position: absolute;
+      background: $main-color;
+      left: 0;
+      top: 23%;
+      z-index: 1;
+    }
+
+    &-container h1:after {
+      content: "";
+      display: block;
+      width: 14%;
+      height: 0.1em;
+      position: absolute;
+      background: $main-color;
+      right: 0;
+      top: 23%;
+      z-index: 1;
+    }
+
+    &-title {
+      display: inline-block;
+      margin: 0 auto;
+      height: 2em;
+      width: 100%;
+      font-family: 'Zoika';
+      font-size: 2.8em;
+    }
+
+    &-container {
+      position: absolute;
+      width: 17%;
+      height: 40%;
+      top: 15%;
+      display: flex; 
+      flex-direction: column;
+      align-items: center;
+    }
+
+
   }
 }

@@ -1,10 +1,13 @@
+@import 'src/styles/vars';
+
 .dices {
   position: absolute;
   width: 100vw;
-  height: 50vh;
-  background-color: #f2e9da;
-  border-radius: 5px;
+  height: 40vh;
+  background-color: white;
+  opacity: 0.9;
   top: 0;
+  z-index: 103;
 
   &-toggle {
     display: none;
@@ -15,8 +18,8 @@
     background: none;
     border: none;
     top: 0;
-    left: 0;
-    color: #6b8971;
+    right: 1em;
+    color: $sixth-color;
   }
 
   &-result{
@@ -25,11 +28,11 @@
     justify-content: center;
     width: 40vw;
     height: 20vh;
+    border-radius: 50%;
+    background-color: $seventh-color;
     margin: 1em auto;
-    font-size: 2em;
-    color: white;
-    background-color:rgb(173, 58, 58);
-    border-radius: 5px;
+    font-size: 2.2em;
+    color: $sixth-color;
   }
 
   &-throw{
@@ -38,26 +41,27 @@
     color: black;
     text-align: center;
     width: 50%;
+    margin-bottom: 2em;
 
     img {
       width: 14vw;
 
       &:hover {
-        animation: shake 3s;
+        animation: shake 2s;
        /*  animation-iteration-count: infinite; */
 
         @keyframes shake {
-          0% { transform: translate(0.2em, 0.2em) rotate(360deg); }
-          10% { transform: translate(-0.2em, -0.2em) /* rotate(-45deg) */; }
-          20% { transform: translate(-0.4em, 0) /* rotate(45deg) */; }
-          30% { transform: translate(0.4em, 0.3em) /* rotate(0deg) */; }
-          40% { transform: translate(0.2em, -0.2em) /* rotate(90deg) */; }
-          50% { transform: translate(-0.2em, 0.3em) rotate(-360deg); }
-          60% { transform: translate(-0.4em, 0.2em) /* rotate(0deg) */; }
-          70% { transform: translate(0.4em, 0.2em) /* rotate(-45deg) */; }
-          80% { transform: translate(-0.2em, -0.2em) /* rotate(45deg) */; }
-          90% { transform: translate(0.2em, 0.2em) /* rotate(0deg) */; }
-          100% { transform: translate(0.2em, -0.2em) rotate(360deg); }
+          0% { transform: translate(0.5em, 0.1em) rotate(90deg); }
+          10% { transform: translate(1em, -0.1em) rotate(180deg); }
+          20% { transform: translate(1.4em, 0.1em) rotate(360deg); }
+          30% { transform: translate(2em, -0.2em) rotate(90deg) ; }
+          40% { transform: translate(2.4em, 0.2em) rotate(180deg); }
+          50% { transform: translate(3em, 0em) rotate(360deg); }
+          60% { transform: translate(3.5em, 0.2em) rotate(-180deg); }
+          70% { transform: translate(3em, -0.1em) rotate(-360deg); }
+          80% { transform: translate(2.6em, -0.2em) rotate(-180deg); }
+          90% { transform: translate(1.8em, 0.2em) rotate(-90deg); }
+          100% { transform: translate(0.5em, -0.2em) rotate(75deg); }
         }
       }
     }
@@ -67,24 +71,14 @@
 @media (min-width: 767px) {
 
   .dices {
-    position: absolute;
     width: 40%;
     height: 18%;
     border: none;
     top: 72%;
     left: 6em;
-   /*  box-shadow:
-      0 0.4px 2.2px rgba(0, 0, 0, 0.02),
-      0 1.1px 5.3px rgba(0, 0, 0, 0.028),
-      0 2px 10px rgba(0, 0, 0, 0.035),
-      0 3.6px 17.9px rgba(0, 0, 0, 0.042),
-      0 6.7px 33.4px rgba(0, 0, 0, 0.05),
-      0 16px 80px rgba(0, 0, 0, 0.07)
-      ; */
 
     button {
       position: absolute;
-      color: rgb(173, 58, 58);
       background: none;
       border: none;
       top: 0;
@@ -124,13 +118,7 @@
 @media (min-width: 1024px) {
 
   .dices {
-    /* position: absolute; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 20vw;
-    height: 30vh;
-    border: none;
+    position: relative;
 
     &-toggle {
       display: flex;
@@ -140,8 +128,6 @@
       width: 20vw;
       height: 30vh;
       border: none;
-      top: 65%;
-      left: 50%;
     }
 
     &-result {
@@ -166,70 +152,55 @@
 
 @media (min-width: 1600px) {
 
+  .dices-container {
+    width: 18%;
+    height: 30%;
+    display: flex;
+    margin-bottom: 12%;
+    padding: 0.5em;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 0.4em solid $main-color;
+  }
+
   .dices  {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #f2e9da;
-    align-items: center;
-    width: 10vw;
-    height: 30vh;
-    top: 65%;
-    left: 20%;
-
+    bottom: 5%;
+   
     &-toggle {
+      position: relative;
       display: flex;
-      box-shadow:
-      0 0.4px 2.2px rgba(0, 0, 0, 0.02),
-      0 1.1px 5.3px rgba(0, 0, 0, 0.028),
-      0 2px 10px rgba(0, 0, 0, 0.035),
-      0 3.6px 17.9px rgba(0, 0, 0, 0.042),
-      0 6.7px 33.4px rgba(0, 0, 0, 0.05),
-      0 16px 80px rgba(0, 0, 0, 0.07)
-      ;
+      flex-direction: column;
+      justify-content: space-between;
+      top: 0;
+      left: 0;
+      margin: 0.2em;
+      background-color: transparent;
+      align-items: center;
+      height: 98%;
+      width: 98%;
     }
 
     &-result {
       width: 80%;
       height: 10vh;
-      font-size: 1.4em;
-      color: white;
-      background-color:rgb(173, 58, 58);
-      border-radius: 5px;
+      font-size: 2em;
+      color: $main-color;
+      background-color: transparent;
     }
   
     &-throw {
       height: 10vh;
       width: 60%;
-      /* color: white; */
-      /* background: #bb2c0e; */
+      background-color: transparent;
      
       img {
         width: 3vw;
-
-        &:hover {
-          animation: shake 1s;
-         /*  animation-iteration-count: infinite; */
-
-          @keyframes shake {
-            0% { transform: translate(0.2em, 0.2em) rotate(0deg); }
-            10% { transform: translate(-0.2em, -0.2em) rotate(-45deg); }
-            20% { transform: translate(-0.4em, 0) rotate(45deg); }
-            30% { transform: translate(0.4em, 0.3em) rotate(0deg); }
-            40% { transform: translate(0.2em, -0.2em) rotate(90deg); }
-            50% { transform: translate(-0.2em, 0.3em) rotate(-180deg); }
-            60% { transform: translate(-0.4em, 0.2em) rotate(0deg); }
-            70% { transform: translate(0.4em, 0.2em) rotate(-45deg); }
-            80% { transform: translate(-0.2em, -0.2em) rotate(45deg); }
-            90% { transform: translate(0.2em, 0.2em) rotate(0deg); }
-            100% { transform: translate(0.2em, -0.2em) rotate(-45deg); }
-          }
-        }
       }
     }
+  }
 
     button {
       display: none;
-    }
   }
 }

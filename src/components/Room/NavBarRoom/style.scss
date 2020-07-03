@@ -5,8 +5,8 @@
   display:flex;
   justify-content: space-between;
   align-items: center;
-  background: #d6ad75;
-  height: 12.5vw;
+  background: #23253a;
+  height: 10vh;
   width: 100%;
   top: 0;
 
@@ -24,9 +24,15 @@
 
     .room-name {
       font-weight: bold;
-      font-size: 1em;
-      color: white;
+      font-size: 2em;
+      color: $sixth-color;
+      margin-left: 1.8em;
+      font-family: 'Triumph wheels rough';
     }
+  }
+  
+  &-ornament {
+    display: none;
   }
 }
 
@@ -37,7 +43,7 @@
     border: none;
 
     img {
-      width: 2em;
+      width: 3em;
     }
   }
 }
@@ -82,6 +88,7 @@
     align-items: center;
     padding: .5em;
     height: 6vw;
+    background: none;
     &-title{
       margin: 0 auto;
       width: 75vw;
@@ -93,7 +100,13 @@
       width: 75vw;
       font-weight: bold;
       font-size: 1.8em;
-      color: white;
+
+      .room-name {
+        font-weight: bold;
+        font-size: 1em;
+        font-family: 'Triumph wheels rough';
+        font-size: 3em;
+      }
     }
   }
 
@@ -114,6 +127,44 @@
 
 @media (min-width: 1600px) {
 
+  .navBarRoom {
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 14vw;
+    width: 100%;
+    top: 0;
+    margin-bottom: 1em;
+  
+    &-title {
+      width: 70vw;
+      align-self: center;
+      
+      h1 {
+      margin: 0 auto;
+      width: 60vw;
+      font-weight: bold;
+      font-size: 0.9em;
+      color: white;
+      }
+
+      .room-name {
+        color: $main-color;
+        margin: 0 auto;
+      }
+    }
+    &-ornament {
+      position: absolute;
+      top: 10%;
+      left: 35%;
+      img {
+        width: 22%;
+      }
+     
+    }
+  }
+
   .toggle-menu {
     position: absolute;
     width: 100vw;
@@ -127,7 +178,7 @@
   right: 0;
   width: 20%;
   height: 100vh;
-  background: rgb(241, 230, 219);
+  background: #f6e7bc;
   opacity: 0.8;
   color: black;
   display: flex;
@@ -152,6 +203,7 @@
         background: none;
         border: none;
         color: black;
+        z-index: 1010;
           }
         }
       }

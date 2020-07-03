@@ -1,3 +1,5 @@
+@import 'src/styles/vars';
+
 .share-media {
   position: absolute;
   display: flex;
@@ -7,18 +9,40 @@
   height: 100vh;
   top: 0;
   background-color: white;
-  border: 0.2em solid #708cb3;
+  opacity: 0.9;
+  border: 0.3em solid $fifth-color;
   padding: 1em;
+  z-index: 103;
+
+  &-toggle {
+    display: none;
+  }
 
   button {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 1em;
     height: 1em;
     width: 1em;
     background: none;
     border: none;
-    color: #708cb3;
+    color: $main-color;
+  }
+
+  .label-file {
+    text-align: center;
+    color: $main-color;
+    font-size: 1.2em;
+    padding: 1em 0;
+
+    &:hover {
+      color: $fifth-color;
+      transition: hover 1s ease;
+    }
+  }
+
+  input {
+    display: none;
   }
 
   &-list {
@@ -26,7 +50,6 @@
     flex-direction: column;
     flex-wrap: wrap;
     height: 80vh;
-    border: 0.1em solid #96b1d6;
     border-radius: 4px;
     padding: 0.2em;
 
@@ -36,7 +59,7 @@
   }
 
   &-files {
-    border: 1px solid black;
+    border: 0.3em dotted #e1b713;
     width: 100%;
     flex: 1;
     display: flex;
@@ -45,28 +68,63 @@
     padding: .5em;
 
     &-title {
-      font-size: 1.2em;
+      font-size: 3em;
+      font-family: 'Cairlinn';
     }
 
     &-item {
     margin-top: .5em;
+    width: 100%;
     display: flex;
+    flex-direction: space-between;
     flex-wrap: wrap;
     }
   }
 
-  &-videos {
-    border: 1px solid black;
-    width: 100%;
-    flex: 1;
+  // SHARED MEDIA ITEM
 
-    &-title {
-      font-size: 1.2em;
+  .media-picture {
+    border: 0.1em solid $main-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0.2em;
+
+    &:first-child {
+      display: none;
     }
   }
 
-  &-toggle {
-    display: none;
+  .share-picture {
+    max-height: 90%;
+    padding: 0.2em;
+  }
+
+  // SHARE VIDEOS LIST
+
+  &-videos {
+    border: 0.3em solid #e1b713;
+    border-top: none;
+    width: 100%;
+    flex: 1;
+    padding: 0.5em;
+    overflow: scroll;
+
+    a {
+      color: black;
+
+      &:hover {
+        color: $fifth-color;
+      }
+    }
+
+    &-title {
+      font-family: 'Cairlinn';
+      background-color: white;
+      color: black;
+      font-size: 3em;
+      width: 100%;
+    }
   }
 }
 
@@ -75,14 +133,137 @@
 }
 
 @media (min-width: 1024px) {
+  .share-media {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    background-color: white;
+    border: 0.2em solid $main-color;
+    padding: 1em;
 
-}
+    &-toggle {
+      display: none;
+      }
+    }
+  }
 
 
 @media (min-width: 1400px) {
-  
+  .share-media {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    background-color: white;
+    border: 0.2em solid $main-color;
+    padding: 1em;
+
+    &-toggle {
+      display: none;
+    }
+  }
 }
 
 @media (min-width: 1600px) {
+  .share-media {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    background-color: white;
+    border: 0.2em solid $main-color;
+    padding: 1em;
+    margin: 0 auto;
+    z-index: 1004;
+
+    &-toggle {
+      display: none;
+    }
+
+    button {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 1em;
+      width: 1em;
+      background: none;
+      border: none;
+      color: $main-color;
+    }
   
+    &-list {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 80vh;
+      border-radius: 4px;
+      padding: 0.2em;
+  
+      img {
+        width: 6em;
+      }
+    }
+  
+    &-files {
+      width: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: .5em;
+  
+      &-title {
+        font-size: 3em;
+        font-family: 'Cairlinn';
+      }
+  
+      &-item {
+      margin-top: .5em;
+      width: 100%;
+      display: flex;
+      flex-direction: space-between;
+      flex-wrap: wrap;
+      }
+    }
+  
+    &-videos {
+      width: 100%;
+      flex: 1;
+  
+      &-title {
+        font-size: 3em;
+      }
+    }
+
+     // SHARED MEDIA ITEM
+
+  .media-picture {
+    border: 0.1em solid $main-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20%;
+    margin: 0.2em;
+
+    &:first-child {
+      display: none;
+    }
+  }
+
+  .share-picture {
+    width: 100%;
+    max-height: 100%;
+    padding: 0.2em;
+  }
+  }
 }

@@ -19,6 +19,7 @@ const ConnectedHome = ({ logged, loading, id }) => {
     <>
       <Switch>
         <Route exact path="/dashboard">
+
           <div className="dashboard">
             <div className="dashboard-header">
               {/* <Header /> */}
@@ -41,6 +42,7 @@ const ConnectedHome = ({ logged, loading, id }) => {
             </div>
           </div>
         </Route>
+    
         <Route exact path={`/dashboard/user/${id}/edit`}>
           <Header />
           <div className="dashboard-header-title">

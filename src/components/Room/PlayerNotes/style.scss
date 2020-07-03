@@ -1,39 +1,76 @@
+@import 'src/styles/vars';
+
 .player-notes {
   position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   width: 100%;
   height: 100vh;
   top: 0;
-  background-color: #f2e9da;
+  background-color: white;
+
+  opacity: 0.9;
   padding: 1em;
 
   button {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 1em;
     height: 1em;
     width: 1em;
     background: none;
     border: none;
-    color: #494052;
+    color: $sixth-color;
+  }
+
+  &-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    height: 2em;
+    font-family: 'Chuck Noon';
+    font-size: 3em;
+    background-color: $main-color;
+    color: $fourth-color;
   }
 
   &-notes {
-    height: 80vh;
+    margin-top: 1.5em;
+    border: 0.3em dotted $main-color;
+    height: 100vh;
     border-radius: 4px;
     padding: 0.2em;
+
+    p {
+      margin-top: 0.5em;
+      text-align: left;
+      font-family: 'Quicksand';
+    }
   }
 
   &-toggle {
     display: none;
   }
 
-  input {
-    height: 1em;
+  .form {
+    width: 100%;
+  }
+
+  .form-button {
+    position: relative;
+  }
+
+  .form-input {
+    position: relative;
+    height: 3em;
+    width: 100%;
     outline: none;
     border: none;
+    background-color: $main-color;
+    color: #e1b713;
+    padding-left: 0.4em;
   }
 }
 
@@ -83,15 +120,14 @@
 @media (min-width: 1024px) {
   
   .player-notes {
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: center;
     bottom: 0;
     background-color: white;
     width: 25%;
     height: 30vh;
-    top: 65%;
-    left: 73%;
+    top: 0;
     align-self: flex-end;
 
     &-toggle {
@@ -108,14 +144,11 @@
 @media (min-width: 1400px) {
   
   .player-notes {
-    position: absolute;
     display: flex;
     justify-content: center;
     background-color: #f2e9da;
     width: 25%;
     height: 30vh;
-    top: 65%;
-    left: 73.5%;
     margin-right: 2em;
     align-self: flex-end;
 
@@ -137,14 +170,13 @@
 @media (min-width: 1600px) {
   
   .player-notes {
-    position: absolute;
     display: flex;
     justify-content: center;
     background-color: #f2e9da;
-    width: 15%;
-    height: 30vh;
-    top: 65%;
-    left: 10%;
+    opacity: 0.9;
+    border: none;
+    width: 20%;
+    height: 80%;
     margin-right: 2em;
     align-self: flex-end;
 
@@ -153,8 +185,29 @@
       margin-right: 2em;
     }
 
+    &-title {
+      font-size: 2.4em;
+      background-color: transparent;
+      color: $main-color;
+      &:hover {
+        color: $fourth-color;
+        transition: 1s ease;
+      }
+    }
+
     &-notes {
-      background-color: white;
+      background-color: transparent;
+    }
+
+    .form-input {
+      position: relative;
+      height: 3em;
+      width: 100%;
+      outline: none;
+      border: none;
+      background-color: $main-color;
+      color: $first-color;
+      padding-left: 0.4em;
     }
 
     button {

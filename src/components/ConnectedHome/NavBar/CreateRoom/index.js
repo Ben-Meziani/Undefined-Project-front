@@ -18,15 +18,16 @@ const CreateRoom = ({
   playersNb,
   createRoom,
   masterRole,
+  roomPass,
 }) => {
   const dropdownChange = (evt, value) => {
+    evt.preventDefault();
     handleDropdown(value.value);
   };
   const handleSubmit = (evt) => {
-    // console.log('je lance la requête de création de room');
+    console.log('je lance la requête de création de room');
     evt.preventDefault();
     createRoom();
-    // console.log(roomName);
   };
 
   return (
@@ -53,19 +54,22 @@ const CreateRoom = ({
                   value={roomName}
                 />
               </div>
-              <div>
-                <label htmlFor="room-password">
-                  Choisissez un mot de passe pour vos joueurs
+
+              <div className="field">
+                <label htmlFor="room-pass">
+                  Choisissez un mot de passe
                 </label>
                 <Field
                   className="create-room-form-input"
-                  type="text"
+                  type="password"
+
                   placeholder="Mot de passe"
                   name="roomPass"
                   changeValue={changeValue}
                   value={roomPass}
                 />
               </div>
+
               <div className="field">
                 <label htmlFor="room-players">
                   Indiquez votre nombre de joueurs
@@ -83,6 +87,7 @@ const CreateRoom = ({
                   value={playersNb}
                 />
               </div>
+
               <div className="field">
                 <button
                   className="ui button create-room-submit"
@@ -102,7 +107,6 @@ const CreateRoom = ({
             Rejoignez la !
           </Link>
         </div>
-
       )}
     </Modal>
   );

@@ -10,12 +10,14 @@ const room = (store) => (next) => (action) => {
     case CREATE_ROOM: {
       console.log('je crée une room');
       const state = store.getState();
+      const userId = state.user.id;
       axios.post(`${serverURI}/room/add`, {
         name: state.room.roomName,
         password: state.room.roomPass,
         player_number: state.room.playersNb,
+        password: state.room.roomPass,
         theme: 'default',
-        role: state.room.role,
+        gameMaster: userId,
       }, {
         withCredentials: true,
       })

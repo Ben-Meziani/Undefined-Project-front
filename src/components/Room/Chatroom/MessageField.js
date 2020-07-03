@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Icon } from 'semantic-ui-react';
 import './style.scss';
 import IconSend from '../../../assets/icons/message.svg';
+import Send from '../../../assets/icons/paper-plane.png';
 
 const MessageField = ({ sendMessage, inputValue, changeTextChat }) => {
   const handleSubmit = (event) => {
@@ -22,7 +22,7 @@ const MessageField = ({ sendMessage, inputValue, changeTextChat }) => {
         <input
           className="chatroom-field"
           type="text"
-          placeholder="Veuillez saisir un message..."
+          placeholder="Une soufflante..?"
           onChange={handleChange}
           value={inputValue}
         />
@@ -30,8 +30,7 @@ const MessageField = ({ sendMessage, inputValue, changeTextChat }) => {
           type="submit"
           className="chatroom-send"
         >
-          Send
-          {/* <img src={IconSend} alt="send" /> */}
+          <img src={Send} alt="book" />
         </button>
       </form>
     </div>

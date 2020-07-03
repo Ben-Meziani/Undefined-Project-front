@@ -35,31 +35,6 @@ const user = (store) => (next) => (action) => {
       next(action);
       break;
     }
-    case SEND_ICON: {
-      // ACCESS TO THE STATE TO GET THE USER ID
-      const state = store.getState();
-      const userId = state.user.id;
-      console.log('++++ iconFile dans le middleware upload ++++' + state.upload.iconFile);
-      console.log('++++ requête : j\'envoie l\'icon modifié au serveur ++++');
-      const formData = new FormData();
-      formData.append('file', state.upload.iconFile);
-      console.log('formData dans la requête vaut ' + formData);
-      axios.post(`${serverURI}/user/${userId}/icon`, {
-        icon: formData,
-      }, {
-        headers: {
-          'content-type': 'multipart/form-data',
-        },
-      })
-        .then((response) => {
-          console.log(response);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-      next(action);
-      break;
-    }
     default:
       next(action);
   }

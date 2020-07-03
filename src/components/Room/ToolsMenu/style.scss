@@ -1,16 +1,18 @@
+@import 'src/styles/vars';
+
 // General Styles
 
 .toolsMenu {
   position: fixed;
-  background-color: none;
+  background-color: $main-color;
+  opacity: 0.8;
   bottom: 0;
   width: 100vw;
-  height: 3em;
+  height: 8%;
  
   &:hover {
-    background-color: #494052;
-    opacity: 0.9;
-    transition: background-color 1s;
+    opacity: 1;
+    transition: opacity 1s;
   }
 
   &-list {
@@ -33,7 +35,7 @@
     }
 
     img {
-      width: 2em;
+      width: 3em;
       color: white;
       z-index: 1001;
 

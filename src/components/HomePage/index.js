@@ -10,16 +10,17 @@ import ButtonsNav from './ButtonsNav';
 import Presentation from '../HomePage/Carousel/Presentation';
 import Rain from '../HomePage/RaindropAnimation';
 import './style.scss';
+import RainDropAnimation from '../ConnectedHome/RaindropAnimation';
 
 const HomePage = ({ logged }) => {
 console.log(logged);
 
   return (
     <Switch>
-
       <Route path="/" exact>
         <div className="homePage">
           <Header />
+
           <div className="homePage-main">
             <div className="homePage-container">
               <div className="homePage-buttons">

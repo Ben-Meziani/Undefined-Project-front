@@ -29,6 +29,7 @@ const initialState = {
 
   open: false,
   roomName: '',
+  roomPass: '',
   roomId: '',
   playersNb: 0,
   loading: false,
