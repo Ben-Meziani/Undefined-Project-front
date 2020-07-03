@@ -4,10 +4,10 @@ import React from 'react';
 import CreateRoom from '../../../containers/ConnectedHome/CreateRoom';
 import JoinRoomIcon from './JoinRoom';
 
-import './style.scss';
+/* import './style.scss'; */
 
 const NavBar = () => (
-  <div className="navbar-menu">
+  <div>
     <CreateRoom />
     <JoinRoomIcon />
   </div>
