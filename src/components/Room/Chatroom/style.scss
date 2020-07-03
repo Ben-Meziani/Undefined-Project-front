@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   text-align: left;
-  font-family: 'Nunito', msans-serif;
+  font-family: 'Quicksand';
   top: 0;
   display: none;
   border: 0.2m solid #e7cdaa;
@@ -22,7 +22,7 @@
       background: none;
       border: none;
       position: absolute;
-      color: #708cb3;
+      color: $main-color;
       top: 0;
       right: 0;
       z-index: 1000;
@@ -30,7 +30,7 @@
   }
 
   button {
-    background-color: #708cb3;
+    background-color: $first-color;;
   }
 
   &-form {
@@ -40,21 +40,26 @@
     bottom: 0;
     display: flex;
     border-top: 0.2em solid #aca5b3;
+
+    img {
+      width: 2em;
+    }
   }
 
   &-field {
     width: 100%;
     padding: .5rem .5rem;
     border: none;
+    height: 2.5em;
   }
 
   &-send {
     padding: .4rem .4rem;
-    line-height: 0.8;
+    line-height: 1;
     outline: none;
-    background-color : #2f544c;
     color: white;
     border: 0;
+    height: 2.5em;
   }
 }
 
@@ -63,7 +68,7 @@
   overflow-x: visible;
   overflow-y: auto;
   background-color: white;
-  font-family: 'Nunito', msans-serif;
+  font-family: 'Nunito', sans-serif;
   border: 0.2m solid #e7cdaa;
 }
 
@@ -106,7 +111,7 @@
         background: none;
         border: none;
         position: absolute;
-        color: #708cb3;
+        color: $main-color;
         top: 0;
         right: 0;
         z-index: 1000;
@@ -152,7 +157,7 @@
       }
       &-content {
         padding-left: 1rem;
-        /* background-color: white; */
+        background-color: white;
         display: inline-block;
         border-radius: 5px;
         line-height: 1.3em;
@@ -203,7 +208,6 @@
         padding: .4rem .4rem;
         line-height: 0.8;
         outline: none;
-        background-color : #2f544c;
         color: white;
         border: 0;
       }
@@ -270,7 +274,6 @@
         padding: .4rem .4rem;
         line-height: 0.8;
         outline: none;
-        background-color : #2f544c;
         color: white;
         border: 0;
       }
@@ -306,7 +309,7 @@
     .chatroom {
       position: absolute;
       right: 14%;
-      top: 20%;
+      top: 16%;
       left: 4%;
       width: 16%;
       height: 40%;
@@ -336,21 +339,31 @@
           &-field {
             width: 100%;
             padding: .5rem .5rem;
+            border-bottom-left-radius: 15px;
+            font-family: 'Quicksand';
+            font-style: italic;
           }
         
           &-send {
+            border-bottom-right-radius: 15px;
             padding: .4rem .4rem;
             line-height: 0.8;
             outline: none;
-            background-color : #2f544c;
             color: white;
             border: 0;
           }
       }
 
+      .messages{
+        opacity: 0.5;
+        border-top-left-radius: 15px;
+      }
+
       .message {
         margin: 1rem;
         max-width: 100vw;
+        font-family: 'Quicksand';
+        font-weight: bold;
       
         &-author {
           padding: .3rem 0;

@@ -42,7 +42,7 @@ const initialState = {
   playersOpen: false,
   active: false,
   logged: false,
-  roomName: '',
+  roomName: 'Harry Pouffeur and the Haunted Dungeons',
   roomPass: '',
   roomId: 0,
   masterRole: false,

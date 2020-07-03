@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import { Icon } from 'semantic-ui-react';
 
-import Dices from '../../../assets/icons/dices.svg';
+import Dices from '../../../assets/icons/dicesthrow.png';
 
 import './style.scss';
 
@@ -19,6 +19,7 @@ const DicesThrow = ({
     rollDice();
     saveResults(dice);
   };
+  console.log(dice);
   return (
     <div className="dices-container">
       <div className={!diceOpen ? 'dices-toggle dices' : 'dices'}>
@@ -31,6 +32,7 @@ const DicesThrow = ({
           className="dices-throw"
         >
           <div><img src={Dices} alt="throw" /></div>
+          <div><p></p></div>
         </div>
       </div>
     </div>

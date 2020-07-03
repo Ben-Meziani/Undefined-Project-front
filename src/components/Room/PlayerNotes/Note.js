@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Note = ({ content }) => (
-  <div>
+  <div className="players-notes-notes-item">
     <p>{content}</p>
   </div>
 );

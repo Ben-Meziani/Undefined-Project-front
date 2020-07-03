@@ -13,18 +13,19 @@ import Rain from '../HomePage/RaindropAnimation';
 import CarouselMenu from './Carousel/CarouselMenu';
 import Team from '../HomePage/Carousel/Team'; */
 import './style.scss';
+import RainDropAnimation from '../ConnectedHome/RaindropAnimation';
 
 const HomePage = ({ logged }) => {
 console.log(logged);
 
   return (
     <Switch>
-
       <Route path="/" exact>
         <div className="homePage">
           <Header />
           <div className="homePage-container">
             <div className="homePage-buttons">
+            {/*   <RainDropAnimation /> */}
               <ButtonsNav />
             </div>
             <div className="homePage-display-container">
