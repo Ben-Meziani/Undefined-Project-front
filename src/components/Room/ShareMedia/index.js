@@ -40,8 +40,8 @@ const ShareMedia = ({ pictureOpen, toggleOpenShare, changeFileUrl, addFile, file
           </div>
           <div className="share-media-videos-item" />
           <ul>
-            <li><Link to="/video/hoglib">Hogwart Library</Link></li>
-            <li><Link to="/video/charmsclass">Charms Classroom</Link></li>
+            <li><Link to="room/video/hoglib">Hogwart Library</Link></li>
+            <li><Link to="room/video/charmsclass">Charms Classroom</Link></li>
             <li><Link to="/video/gryffcommon">Gryffindor Commonroom</Link></li>
             <li><Link to="/video/huffcommon">Hufflepuff Commonroom</Link></li>
             <li><Link to="/video/ravcommon">Ravenclaw Commonroom</Link></li>
