@@ -167,7 +167,7 @@ const room = (state = initialState, action = {}) => {
         ...state,
         roomId: action.roomId,
       };
-    case SAVE_ROOM_PASSWORDS:
+    case SAVE_ROOM_PASSWORD:
       return {
         ...state,
         roomPassword: action.roomPassword,

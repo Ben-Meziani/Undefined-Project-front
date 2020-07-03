@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import axios from 'axios';
 
-import { CREATE_ROOM, saveRoomId, saveRoomPassword,  loading } from '../actions';
+import { CREATE_ROOM, saveRoomId, saveRoomPassword, loading } from '../actions';
 
 const serverURI = 'https://undefined-project.tk/api';
 
@@ -24,8 +24,9 @@ const room = (store) => (next) => (action) => {
           console.log(response.data);
           // récupérer l'id unique de la room
           const saveRoomNumber = saveRoomId(response.data.uniqueId);
-          const saveRoomPassword = saveRoomPassword(response.data.password);
+          const saveRoomPass = saveRoomPassword(response.data.password);
           store.dispatch(saveRoomNumber);
+          store.dispatch(saveRoomPass);
         })
         .catch((error) => {
           console.error(error);
