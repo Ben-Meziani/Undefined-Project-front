@@ -30,9 +30,6 @@ const initialState = {
   roomId: '',
 
   open: false,
-/*   roomName: '',
-  roomPassword: '',
-  roomId: '', */
   playersNb: 0,
   loading: false,
 

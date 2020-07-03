@@ -34,6 +34,7 @@ const user = (store) => (next) => (action) => {
       // ACCESS TO THE STATE TO GET THE USER ID
       const state = store.getState();
       const { roomId } = state.user;
+      console.log(state.upload.iconFile);
       console.log(roomId);
       const formData = new FormData();
       formData.append('roomImage', state.upload.iconFile);
