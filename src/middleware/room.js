@@ -1,6 +1,5 @@
 /* eslint-disable no-console */
 import axios from 'axios';
-import { response } from 'express';
 import {
   CREATE_ROOM,
   JOIN_ROOM,
@@ -31,9 +30,9 @@ const room = (store) => (next) => (action) => {
         })
         .catch((error) => {
           console.error(error);
-          if (response.status === 401) {
+          /* if (response.status === 401) {
             console.log('Vous n\'êtes pas autorisé');
-          }
+          } */
         })
         .finally(() => {
           // loading is done
