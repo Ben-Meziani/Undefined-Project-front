@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import { Modal } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import joinIcon from '../../../../assets/icons/bookmenu.svg';
 import Field from '../../../HomePage/Forms/Field';
@@ -11,6 +12,9 @@ const JoinRoom = ({
   changeValue,
   idForJoin,
   passForJoin,
+  roomId,
+  joinedRoom,
+  errorJoinedRoom,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -20,10 +24,12 @@ const JoinRoom = ({
   return (
     <Modal
       className="join-room-modal"
-      trigger={<div className="join"><div className="join-container"><img src={joinIcon} alt="join" /><div className="join-text">Rejoindre</div></div></div>}>
+      trigger={<div className="join"><div className="join-container"><img src={joinIcon} alt="join" /><div className="join-text">Rejoindre</div></div></div>}
+    >
       <Modal.Header>Rejoindre une Salle</Modal.Header>
       <Modal.Content image>
         <Modal.Description>
+          {/* { !joinedRoom && ( */}
           <form className="ui form" onSubmit={handleSubmit}>
             <div className="field">
               <label htmlFor="idForJoin">
@@ -50,10 +56,11 @@ const JoinRoom = ({
               />
             </div>
             <div className="field">
-              <button className="ui button join-room-submit" type="submit">Rejoindre la salle</button>
+              <button className="ui button join-room-submit" type="submit">Valider</button>
             </div>
           </form>
-          {/* <Link to="/room">Rejoindre la room!</Link> */}
+          )}
+          {joinedRoom && !errorJoinedRoom && (<Link to={`/${roomId}/room`}>Rejoindre la Salle!</Link>) }
         </Modal.Description>
       </Modal.Content>
     </Modal>
@@ -65,6 +72,9 @@ JoinRoom.propTypes = {
   changeValue: PropTypes.func.isRequired,
   passForJoin: PropTypes.string.isRequired,
   idForJoin: PropTypes.string.isRequired,
+  roomId: PropTypes.string.isRequired,
+  joinedRoom: PropTypes.bool.isRequired,
+  errorJoinedRoom: PropTypes.bool.isRequired,
 };
 
 export default JoinRoom;

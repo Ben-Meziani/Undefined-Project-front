@@ -27,7 +27,7 @@ const Login = ({
   };
   return (
     <div className="login">
-      {/* {!logged && ( */}
+      {!logged && (
       <Grid className="center aligned login-form">
         <Form autoComplete="off" onSubmit={handleSubmit}>
           <Form.Field required>
@@ -61,14 +61,14 @@ const Login = ({
           </Button>
         </Form>
       </Grid>
-    {/*   )} */}
+      )}
       {loading && (
       <>
         <Loader active inline="centered" />
       </>
       )}
-      {/* {logged && !loading ? <Redirect to="/dashboard" /> : <Redirect to="/login" />} */}
-    {/*   {logged && !loading && ( */}
+      {logged && !loading ? <Redirect to="/dashboard" /> : <Redirect to="/login" />}
+      {logged && !loading && (
       <div className="homepage-links">
         <p>Vous êtes bien connecté !</p>
         <Link to="/room">
@@ -78,7 +78,7 @@ const Login = ({
           <p>dashboard</p>
         </Link>
       </div>
-     {/*  )} */}
+      )}
     </div>
   );
 };

@@ -7,6 +7,7 @@ import {
 /*   saveRoomId,
   saveRoomPassword, */
   loading,
+  errorJoinRoom,
 } from '../actions';
 
 const serverURI = 'https://undefined-project.tk/api';
@@ -61,6 +62,9 @@ const room = (store) => (next) => (action) => {
         })
         .catch((error) => {
           console.error(error);
+          if (error.response) {
+            store.dispatch(errorJoinRoom());
+          }
         })
         .finally(() => {
           // loading is done

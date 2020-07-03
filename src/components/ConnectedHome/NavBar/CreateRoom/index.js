@@ -17,15 +17,16 @@ const CreateRoom = ({
   roomPassword,
   roomId,
   playersNb,
-  createRoom,
+  createdRoom,
   loading,
+  createRoom,
 }) => {
   const dropdownChange = (evt, value) => {
     evt.preventDefault();
     handleDropdown(value.value);
   };
   const handleSubmit = (evt) => {
-    console.log('je lance la requête de création de room');
+    // console.log('je lance la requête de création de room');
     evt.preventDefault();
     createRoom();
   };
@@ -43,7 +44,7 @@ const CreateRoom = ({
         </>
       )}
 
-      {!loading && { role: 2 } ? (<div>Vous êtes déjà Game Master : allez dans votre Salle ici</div>) : ''}
+      {!loading && { role: 2 } && createdRoom && (<div>Vous êtes Game Master : <Link to={`/${roomId}/room`}> Rejoindre votre Salle!</Link></div> )}
       {{ role: 0 } && { role: 1 } && !loading && (
         <Modal.Content image>
           <Modal.Description>
@@ -123,6 +124,7 @@ CreateRoom.propTypes = {
   roomName: PropTypes.string.isRequired,
   handleDropdown: PropTypes.func.isRequired,
   createRoom: PropTypes.func.isRequired,
+  createdRoom: PropTypes.bool.isRequired,
   roomPassword: PropTypes.string.isRequired,
   roomId: PropTypes.string.isRequired,
   loading: PropTypes.bool.isRequired,
