@@ -23,7 +23,7 @@ const room = (store) => (next) => (action) => {
         password: state.room.roomPass,
         player_number: state.room.playersNb,
         gameMaster: userId,
-        role: state.user.role,
+        role: 2,
       }, {
         withCredentials: true,
       })
@@ -54,7 +54,7 @@ const room = (store) => (next) => (action) => {
       axios.post(`${serverURI}/room/${userId}/join`, {
         uniqueId: state.room.idForJoin,
         password: state.room.passForJoin,
-        role: state.user.role,
+        role: 1,
       }, {
         withCredentials: true,
       })
