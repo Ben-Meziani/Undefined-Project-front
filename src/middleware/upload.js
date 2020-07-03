@@ -33,7 +33,8 @@ const user = (store) => (next) => (action) => {
     case SEND_IMAGE: {
       // ACCESS TO THE STATE TO GET THE USER ID
       const state = store.getState();
-      const { roomId } = state.room;
+      const { roomId } = state.user;
+      console.log(roomId);
       const formData = new FormData();
       formData.append('roomImage', state.upload.iconFile);
       axios.post(

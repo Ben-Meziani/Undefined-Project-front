@@ -27,6 +27,7 @@ const initialState = {
   image: '',
   logged: true,
   errorToLog: false,
+  roomId: '',
 
   open: false,
 /*   roomName: '',
