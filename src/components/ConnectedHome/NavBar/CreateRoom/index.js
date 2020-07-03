@@ -18,7 +18,6 @@ const CreateRoom = ({
   playersNb,
   createRoom,
   masterRole,
-  roomPass,
 }) => {
   const dropdownChange = (evt, value) => {
     evt.preventDefault();
