@@ -10,13 +10,15 @@ import { Icon } from 'semantic-ui-react';
 
 import './style.scss';
 
-const ShareMedia = ({ pictureOpen, toggleOpenShare, changeFileUrl, addFile, files, fileURL }) => {
+const ShareMedia = ({ pictureOpen, toggleOpenShare, changeFileUrl, addFile, files, fileURL, sendImage }) => {
   const handleChange = (evt) => {
     evt.preventDefault();
     console.log(evt.target.files[0]);
     const newFileUrl = URL.createObjectURL(evt.target.files[0]);
     changeFileUrl(newFileUrl);
     addFile(fileURL);
+    console.log('je veux envoyer l\'image au serveur');
+    sendImage();
   };
   console.log('fileURL dans component ShareMedia vaut', fileURL);
   console.log('pictureOpen vaut', pictureOpen);
@@ -76,6 +78,7 @@ ShareMedia.propTypes = {
   toggleOpenShare: PropTypes.func.isRequired,
   changeFileUrl: PropTypes.func.isRequired,
   addFile: PropTypes.func.isRequired,
+  sendImage: PropTypes.func.isRequired,
   fileURL: PropTypes.string.isRequired,
   files: PropTypes.arrayOf(
     PropTypes.shape({

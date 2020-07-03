@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { StyledMenu } from './Menu.styled';
 
 const Menu = ({ handleLogout, toggleOpenShare, open }) => {
+  console.log(open);
   return (
     <StyledMenu open={open}>
       <div className="menu-dropdown-item"><Link to="/" onClick={handleLogout}><button className="share-media-button" type="button">Se déconnecter</button></Link></div>

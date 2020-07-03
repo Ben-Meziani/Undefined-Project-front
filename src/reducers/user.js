@@ -24,6 +24,7 @@ const initialState = {
   id: 0,
   icon: '',
   role: 0,
+  image: '',
   logged: true,
   errorToLog: false,
 

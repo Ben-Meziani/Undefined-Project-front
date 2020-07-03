@@ -2,7 +2,7 @@
 /* eslint-disable no-console */
 import axios from 'axios';
 
-import { SEND_ICON, FETCH_ICON, saveIcon } from '../actions';
+import { SEND_IMAGE, FETCH_ICON, saveIcon } from '../actions';
 
 const serverURI = 'https://undefined-project.tk/api';
 
@@ -16,7 +16,6 @@ const user = (store) => (next) => (action) => {
       axios.get(`${serverURI}/user/${userId}/icon/${userIcon}`, {
       }, {
         withCredentials: true,
-        /* responseType: 'blob', */
       })
         .then((response) => {
           const blob = new Blob([response.data]);
@@ -24,6 +23,30 @@ const user = (store) => (next) => (action) => {
           console.log('--- url vaut --- ' + url);
           const saveCurrentIcon = saveIcon(url);
           store.dispatch(saveCurrentIcon);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      next(action);
+      break;
+    }
+    case SEND_IMAGE: {
+      // ACCESS TO THE STATE TO GET THE USER ID
+      const state = store.getState();
+      const { roomId } = state.room;
+      const formData = new FormData();
+      formData.append('image', state.upload.iconFile);
+      axios.post(
+        `${serverURI}/room/${roomId}/edit`,
+        formData,
+        {
+          headers: {
+            'content-type': 'multipart/form-data',
+          },
+        },
+      )
+        .then((response) => {
+          console.log(response);
         })
         .catch((error) => {
           console.log(error);
