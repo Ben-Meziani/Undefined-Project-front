@@ -5,6 +5,8 @@ import PropTypes from 'prop-types';
 import './style.scss';
 
 const Media = ({ file, id, fileURL }) => {
+  console.log('COMPONENT MEDIA fileURL vaut', fileURL);
+  console.log('COMPONENT MEDIA file vaut', file);
   return (
     <div className="media-picture">
       {!fileURL && !(id === 0) ? (<img className="share-picture" src={file} alt="unknown" />) : <img className="image" src={fileURL} alt="unknown" />}

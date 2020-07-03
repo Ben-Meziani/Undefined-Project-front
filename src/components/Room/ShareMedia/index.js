@@ -18,7 +18,7 @@ const ShareMedia = ({
   files,
   fileURL,
   sendImage,
-  changeIconFile,
+  changeImageFile,
 }) => {
   const handleChange = (evt) => {
     evt.preventDefault();
@@ -26,7 +26,7 @@ const ShareMedia = ({
     const newImageFile = evt.target.files[0];
     const newFileUrl = URL.createObjectURL(evt.target.files[0]);
     changeFileUrl(newFileUrl);
-    changeIconFile(newImageFile);
+    changeImageFile(newImageFile);
     console.log('dans le component newImageFile vaut', newImageFile);
     addFile(fileURL);
     console.log('je veux envoyer l\'image au serveur');
@@ -87,7 +87,7 @@ ShareMedia.propTypes = {
   pictureOpen: PropTypes.bool.isRequired,
   toggleOpenShare: PropTypes.func.isRequired,
   changeFileUrl: PropTypes.func.isRequired,
-  changeIconFile: PropTypes.func.isRequired,
+  changeImageFile: PropTypes.func.isRequired,
   addFile: PropTypes.func.isRequired,
   sendImage: PropTypes.func.isRequired,
   fileURL: PropTypes.string.isRequired,

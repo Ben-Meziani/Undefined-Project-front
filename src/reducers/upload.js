@@ -44,6 +44,8 @@ const upload = (state = initialState, action = {}) => {
         fileURL: action.fileURL,
       };
     case CHANGE_IMAGE_FILE:
+      console.log('reducer UPLOAD CHANGE_IMAGE_FILE action.imageFile', action.imageFile);
+      console.log('reducer UPLOAD CHANGE_IMAGE_FILE action.fileURL', action.fileURL);
       return {
         ...state,
         imageFile: action.imageFile,

@@ -1,7 +1,13 @@
 import { connect } from 'react-redux';
 
 import SharedMedia from '../../../components/Room/ShareMedia';
-import { toggleOpenShare, changeFileUrl, addFile, sendImage } from '../../../actions';
+import {
+  toggleOpenShare,
+  changeFileUrl,
+  addFile,
+  sendImage,
+  changeImageFile,
+} from '../../../actions';
 
 const mapStateToProps = (state) => ({
   pictureOpen: state.room.pictureOpen,
@@ -18,8 +24,8 @@ const mapDispatchToProps = (dispatch) => ({
     const action = changeFileUrl(fileURL);
     dispatch(action);
   },
-  changeIconFile: (imageFile) => {
-    const action = changeFileUrl(imageFile);
+  changeImageFile: (imageFile) => {
+    const action = changeImageFile(imageFile);
     dispatch(action);
   },
   addFile: () => {
