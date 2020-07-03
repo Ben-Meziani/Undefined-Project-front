@@ -23,14 +23,15 @@ const initialState = {
   pseudo: 'Undefined',
   id: 0,
   icon: '',
+  role: 0,
   image: '',
   logged: true,
   errorToLog: false,
 
   open: false,
-  roomName: '',
+/*   roomName: '',
   roomPassword: '',
-  roomId: '',
+  roomId: '', */
   playersNb: 0,
   loading: false,
 
@@ -45,7 +46,6 @@ const initialState = {
 
   sendedEmail: '',
   send: false,
-  role: 0,
 
 };
 

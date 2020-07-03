@@ -9,7 +9,7 @@ import EditProfile from '../../containers/ConnectedHome/EditProfile';
 /* import NavBar from './NavBar'; */
 import WelcomeMessage from './WelcomeMessage';
 import CreateRoom from '../../containers/ConnectedHome/CreateRoom';
-import JoinRoomIcon from '../ConnectedHome/NavBar/JoinRoom';
+import JoinRoomIcon from '../../containers/ConnectedHome/JoinRoom';
 
 import './style.scss';
 
@@ -42,7 +42,7 @@ const ConnectedHome = ({ logged, loading, id }) => {
             </div>
           </div>
         </Route>
-    
+
         <Route exact path={`/dashboard/user/${id}/edit`}>
           <Header />
           <div className="dashboard-header-title">

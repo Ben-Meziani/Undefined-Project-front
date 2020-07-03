@@ -2,11 +2,14 @@ import { connect } from 'react-redux';
 
 import JoinRoom from '../../../components/ConnectedHome/NavBar/JoinRoom';
 
-import { changeValue, joinRoom } from '../../../actions';
+import {
+  changeValue,
+  joinRoom,
+} from '../../../actions';
 
 const mapStateToProps = (state) => ({
-  roomName: state.room.roomName,
-  roomPassword: state.room.roomPassword,
+  idForJoin: state.room.idForJoin,
+  passForJoin: state.room.passForJoin,
   role: state.user.role,
 });
 
