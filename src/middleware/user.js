@@ -12,6 +12,7 @@ const user = (store) => (next) => (action) => {
       const state = store.getState();
       const userId = state.user.id;
       const formData = new FormData();
+      console.log('iconFile dans la requête senUserData vaut', state.upload.iconFile);
       formData.append('icon', state.upload.iconFile);
       formData.append('email', state.user.email);
       formData.append('pseudo', state.user.pseudo);
