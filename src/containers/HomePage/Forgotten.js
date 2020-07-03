@@ -9,6 +9,7 @@ const mapStateToProps = (state) => ({
   loading: state.user.loading,
   send: state.user.send,
   errorRegPass: state.user.errorRegPass,
+  userRegistered: state.user.userRegistered,
 });
 
 const mapDispatchToProps = (dispatch) => ({

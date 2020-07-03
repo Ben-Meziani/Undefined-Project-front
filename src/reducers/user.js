@@ -134,6 +134,7 @@ const user = (state = initialState, action = {}) => {
         logged: false,
         userRegistered: false,
         loading: true,
+        send: false,
       };
     }
     case ERROR_PASSWORD_CHECK: {
@@ -149,6 +150,7 @@ const user = (state = initialState, action = {}) => {
       return {
         ...state,
         loading: true,
+        send: true,
       };
     }
     default:
