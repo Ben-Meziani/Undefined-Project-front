@@ -67,15 +67,13 @@
 @media (min-width: 1600px) {
 
   .players-list {
-    background-color: none;
-    top: 17%;
+    background-color: transparent;
+    height: 100%;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
-    align-items: center;
     &-toggle {
+      top: 0;
       width: 98%;
-      height: 80%;
+      height: 100%;
     }
 
     &-container h1 {
@@ -83,50 +81,55 @@
       font-family: 'Zoika';
       position: relative;
       z-index: 3;
+
+      &:hover {
+        color: $seventh-color;
+        transition: 1s ease;
+      }
     }
     &-container h1:before {
       content: "";
       display: block;
-      width: 18%;
-      height: 0.2em;
+      width: 14%;
+      height: 0.1em;
       position: absolute;
-      background: black;
+      background: $main-color;
       left: 0;
-      top: 13%;
+      top: 23%;
       z-index: 1;
     }
 
     &-container h1:after {
       content: "";
       display: block;
-      width: 18%;
-      height: 0.2em;
+      width: 14%;
+      height: 0.1em;
       position: absolute;
-      background: black;
+      background: $main-color;
       right: 0;
-      top: 13%;
+      top: 23%;
       z-index: 1;
-    }
-    span {
-      background: #fff;
     }
 
     &-title {
       display: inline-block;
       margin: 0 auto;
-      height: 3em;
+      height: 2em;
       width: 100%;
+      font-family: 'Zoika';
+      font-size: 2.8em;
     }
 
     &-container {
       position: absolute;
       width: 17%;
       height: 40%;
-      top: 18%;
+      top: 15%;
       display: flex; 
       flex-direction: column;
-      justify-content: space-between;
       align-items: center;
     }
+
+
   }
 }

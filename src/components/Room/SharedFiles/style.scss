@@ -99,10 +99,8 @@
       justify-content: center;
       bottom: 0;
       background-color: white;
-      border: .1em solid grey;
       width: 25%;
       height: 20vh;
-
     }
 
     button {
@@ -119,44 +117,86 @@
 @media (min-width: 1600px) {
 
   .shared-files-container {
-    width: 20%;
-    height: 25vh;
-    border: 1px solid $main-color;
-    margin-left: 2em;
-
-    h1 {
-      font-family: 'Chuck Noon';
-      font-size: 3em;
-    }
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 68%;
+    margin-left: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    border: none;
   }
   
   .shared-files {
     position: relative;
     top: 0;
     left: 0;
-    margin: 3em auto;
-
+ 
     &-toggle {
       display: flex;
+      flex-direction: column;
       justify-content: flex-start;
       align-items: center;
       background-color: transparent;
       border: .1em solid $main-color;
-      width: 90%;
+      width: 32%;
       height: 50%;
     }
 
+    h1 {
+      color: $main-color;
+
+      &:hover {
+        color: #33648d;
+        transition: 1s ease;
+      }
+    }
+
+    &-subcontent {
+      display: block;
+      position: absolute;
+      bottom: 30%;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      width: 20%;
+      height: 10%;
+      color: $main-color;
+      font-family: 'Blacklet';
+      font-size: 2.8em;
+      text-align: left;
+      padding-left: 0.2em;
+      padding-top: 0.2em;
+    }
     button {
       display: none;
     }
 
     img {
-      width: 2em;
+      width: 3em;
       margin: 0.5em;
 
       &:hover {
         background-color: black;
       }
     }
+  }
+
+  .subcontent-border-large {
+    width: 1%;
+    height: 15%;
+    background-color: $main-color;
+    position: absolute;
+    bottom: 28%;
+    left: 35%;
+  }
+
+  .subcontent-border-thin {
+    width: 0.2%;
+    height: 15%;
+    background-color: $main-color;
+    position: absolute;
+    bottom: 28%;
+    left: 36.5%;
   }
 }

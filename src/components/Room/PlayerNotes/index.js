@@ -22,7 +22,7 @@ const PlayerNotes = ({ editOpen, toggleOpenEdit, playerNotes }) => {
         className="player-notes-notes"
         ref={containerElement}
       >
-        <p className="player-notes-title">Your Notes</p>
+        <h1 className="player-notes-title">Notes</h1>
         {playerNotes.map((note) => (
           <Note key={note.id} {...note} />
         ))}

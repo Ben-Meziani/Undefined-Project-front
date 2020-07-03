@@ -3,7 +3,7 @@
 .dices {
   position: absolute;
   width: 100vw;
-  height: 50vh;
+  height: 40vh;
   background-color: white;
   opacity: 0.9;
   top: 0;
@@ -19,7 +19,7 @@
     border: none;
     top: 0;
     right: 1em;
-    color: $main-color;
+    color: $sixth-color;
   }
 
   &-result{
@@ -28,10 +28,11 @@
     justify-content: center;
     width: 40vw;
     height: 20vh;
+    border-radius: 50%;
+    background-color: $seventh-color;
     margin: 1em auto;
     font-size: 2.2em;
-    color: rgb(173, 58, 58);
-    
+    color: $sixth-color;
   }
 
   &-throw{
@@ -40,26 +41,27 @@
     color: black;
     text-align: center;
     width: 50%;
+    margin-bottom: 2em;
 
     img {
       width: 14vw;
 
       &:hover {
-        animation: shake 3s;
+        animation: shake 2s;
        /*  animation-iteration-count: infinite; */
 
         @keyframes shake {
-          0% { transform: translate(0.2em, 0.2em) rotate(360deg); }
-          10% { transform: translate(-0.2em, -0.2em) /* rotate(-45deg) */; }
-          20% { transform: translate(-0.4em, 0) /* rotate(45deg) */; }
-          30% { transform: translate(0.4em, 0.3em) /* rotate(0deg) */; }
-          40% { transform: translate(0.2em, -0.2em) /* rotate(90deg) */; }
-          50% { transform: translate(-0.2em, 0.3em) rotate(-360deg); }
-          60% { transform: translate(-0.4em, 0.2em) /* rotate(0deg) */; }
-          70% { transform: translate(0.4em, 0.2em) /* rotate(-45deg) */; }
-          80% { transform: translate(-0.2em, -0.2em) /* rotate(45deg) */; }
-          90% { transform: translate(0.2em, 0.2em) /* rotate(0deg) */; }
-          100% { transform: translate(0.2em, -0.2em) rotate(360deg); }
+          0% { transform: translate(0.5em, 0.1em) rotate(90deg); }
+          10% { transform: translate(1em, -0.1em) rotate(180deg); }
+          20% { transform: translate(1.4em, 0.1em) rotate(360deg); }
+          30% { transform: translate(2em, -0.2em) rotate(90deg) ; }
+          40% { transform: translate(2.4em, 0.2em) rotate(180deg); }
+          50% { transform: translate(3em, 0em) rotate(360deg); }
+          60% { transform: translate(3.5em, 0.2em) rotate(-180deg); }
+          70% { transform: translate(3em, -0.1em) rotate(-360deg); }
+          80% { transform: translate(2.6em, -0.2em) rotate(-180deg); }
+          90% { transform: translate(1.8em, 0.2em) rotate(-90deg); }
+          100% { transform: translate(0.5em, -0.2em) rotate(75deg); }
         }
       }
     }
@@ -152,15 +154,19 @@
 
   .dices-container {
     width: 20%;
-    height: 30vh;
+    height: 30%;
     display: flex;
+    margin-bottom: 12%;
     padding: 0.5em;
-    background-color: $main-color;
+    background-color: white;
+    opacity: 0.5;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
 
   .dices  {
-   
     display: flex;
+    bottom: 5%;
    
     &-toggle {
       position: relative;
@@ -180,7 +186,7 @@
       width: 80%;
       height: 10vh;
       font-size: 2em;
-      color: snow;
+      color: $main-color;
       background-color: transparent;
     }
   
@@ -191,29 +197,11 @@
      
       img {
         width: 3vw;
-
-        &:hover {
-          animation: shake 1s;
-
-          @keyframes shake {
-            0% { transform: translate(0.2em, 0.2em) rotate(0deg); }
-            10% { transform: translate(-0.2em, -0.2em) rotate(-45deg); }
-            20% { transform: translate(-0.4em, 0) rotate(45deg); }
-            30% { transform: translate(0.4em, 0.3em) rotate(0deg); }
-            40% { transform: translate(0.2em, -0.2em) rotate(90deg); }
-            50% { transform: translate(-0.2em, 0.3em) rotate(-180deg); }
-            60% { transform: translate(-0.4em, 0.2em) rotate(0deg); }
-            70% { transform: translate(0.4em, 0.2em) rotate(-45deg); }
-            80% { transform: translate(-0.2em, -0.2em) rotate(45deg); }
-            90% { transform: translate(0.2em, 0.2em) rotate(0deg); }
-            100% { transform: translate(0.2em, -0.2em) rotate(-45deg); }
-          }
-        }
       }
     }
+  }
 
     button {
       display: none;
-    }
   }
 }

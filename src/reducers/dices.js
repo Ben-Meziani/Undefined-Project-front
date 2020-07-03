@@ -37,7 +37,6 @@ const diceReducer = (state = initialState, action = {}) => {
       return {
         ...state,
         dicesResults: newResults,
-        dice: 0,
       };
     }
     default:

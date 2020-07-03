@@ -15,14 +15,12 @@ const PlayersList = ({
 }) => (
   <div className="players-list-container">
     <div className={!playersOpen ? 'players-list-toggle players-list' : 'players-list'}>
-      <h1 className="players-list-title">Players'list</h1>
+      <h1 className="players-list-title">Players's list</h1>
       <button type="button" onClick={toggleOpenPlayers}><Icon name="close" size="large" /></button>
       {playersList.map((player) => (
-        <>
-          <div className="master">
-          </div>
+        <div className="players-list-items">
           <Player key={player.id} {...player} />
-        </>
+        </div>
       ))}
     </div>
   </div>

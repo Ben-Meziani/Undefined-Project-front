@@ -7,7 +7,7 @@ const DiceResult = ({ result }) => (
   <div className="dices-history-result">
     <div className="dices-history-result-item">
       {!(result === 0) ? (
-        <p>Un dé de {result} a été lancé.</p>)
+        <><p>Vous avez lancé un dé de {result}.</p><hr /></>)
         : ''}
     </div>
   </div>

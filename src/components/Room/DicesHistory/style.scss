@@ -2,32 +2,51 @@
 
 .dices-history {
   position:absolute;
-
   width: 100vw;
-  height: 50vh;
+  height: 62vh;
   background-color: white;
   opacity: 0.9;
-  top: 50%;
+  top: 40%;
+ /*  background-image: url(../../../assets/frame3.png);
+  background-size: 94%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: -8em; */
 
-  &-title {
-    font-family: 'Black Quality';
-    font-size: 2em;
-    color: rgb(173, 58, 58);
+  h1 {
+    display: inline-block;
+    font-family: 'Chuck Noon';
+    font-size: 2.8em;
+    color: $seventh-color;
+    margin-top: 0.4em;
+    background-color: $main-color;
+    padding: 0.5em;
+    border: 0.1em dashed $seventh-color;
   }
 
   &-content {
-  /*   width: 90vw;
-    height: 48vh;
-    padding: 0.5em;
-    border: 0.2em solid rgb(173, 58, 58); */
-    height: 80%;
+    border: 0.4em solid $seventh-color;
+    position: relative;
+    height: 50%;
+    margin: 0 auto;
+    top: 4em;
     overflow: scroll;
-    border: 1px solid black;
     margin: 1em;
+    padding: 0.1em;
+
+    &-border {
+      height: 100%;
+      border: 0.2em solid $main-color;
+    }
   }
 
   &-toggle {
     display: none;
+    h1 {
+      font-family: 'Black Quality';
+      font-size: 1.2em;
+      color: $seventh-color;
+    }
   }
 }
 
@@ -79,14 +98,52 @@
 
     &-toggle {
       display: block;
-      border: 0.2em dotted $main-color;
+      border: 0.3em double $main-color;
     }
+  }
 
+  .dices-history {
+    width: 17%;
+    height: 70%;
+    background-color: transparent;
+    opacity: 0.9;
+    top: 15%;
+
+    h1 {
+      display: inline-block;
+      font-family: 'Chuck Noon';
+      font-size: 3em;
+      margin-top: 0.4em;
+      background-color: $main-color;
+      padding: 0.5em;
+
+    }
+  
     &-content {
-
-      .scrollbar {
-        
+      position: relative;
+      width: 100%;
+      height: 80%;
+      margin: 0 auto;
+      top: 2em;
+      overflow: scroll;
+      padding: 0.1em;
+      border: none;
+      font-size: 0.8em;
+  
+      &-border {
+        height: 100%;
+        border: none;
+      }
+    }
+  
+    &-toggle {
+      
+      h1 {
+        font-family: 'Black Quality';
+        font-size: 1.4em;
+        color: $first-color;
       }
     }
   }
+  
 }

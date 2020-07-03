@@ -20,6 +20,8 @@ const SharedFiles = ({ toggleOpenBook, bookOpen }) => {
         <h1 className="subcontent-title">Break-in at Gringotts</h1>
         <p className="subcontent-content">Gringott Security breached</p>
       </div>
+      <div className="subcontent-border-large" />
+      <div className="subcontent-border-thin" />
       <div className={!bookOpen ? 'shared-files-toggle shared-files' : 'shared-files '}>
         <h1 className="shared-files-title">Your files</h1>
         <div className="shared-files-container">

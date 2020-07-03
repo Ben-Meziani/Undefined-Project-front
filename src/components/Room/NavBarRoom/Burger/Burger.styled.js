@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const StyledBurger = styled.button`
 position: absolute;
 top: 1%;
-left: 0.2%;
+left: 0.4%;
 display: flex;
 flex-direction: column;
 justify-content: space-around;
@@ -14,11 +14,17 @@ background: transparent;
 border: none;
 cursor: pointer;
 padding: 0;
-z-index: 20;
+z-index: 210;
 
 @media (min-width: 1024px) {
   position: relative;
   left: 1em;
+  top: 2%;
+}
+
+@media (min-width: 1600px) {
+  position: relative;
+  left: 0.2%;
   top: 2%;
 }
 
