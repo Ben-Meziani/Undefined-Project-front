@@ -29,11 +29,11 @@ export const StyledMenu = styled.nav`
     width: 30%;
   }
 
-  @media (min-width: 1600px) {
+ /*  @media (min-width: 1600px) {
     font-size: 1.5em;
     text-align: center;
     width: 20%;
-  }
+  } */
 
   .menu-dropdown-item {
     font-size: 1.2em;

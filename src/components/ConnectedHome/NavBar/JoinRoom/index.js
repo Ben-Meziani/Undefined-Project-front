@@ -14,8 +14,8 @@ const JoinRoomIcon = () => (
       <Modal.Description>
         <form className="ui form">
           <div className="field">
-            <label htmlFor="room-name">Rejoindre :</label>
-            <input type="text" name="room-name" placeholder="Indiquez le nom de la salle" />
+            <label htmlFor="room-id">Rejoindre :</label>
+            <input type="number" name="room-id" placeholder="Indiquez le numéro de la salle à rejoindre" />
           </div>
           <div className="field">
             <label htmlFor="room-password">Mot de passe :</label>
