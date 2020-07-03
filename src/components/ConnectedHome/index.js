@@ -21,7 +21,7 @@ const ConnectedHome = ({ logged, loading, id }) => {
         <Route exact path="/dashboard">
           <div className="dashboard">
             <div className="dashboard-header">
-              <Header />
+              {/* <Header /> */}
               <div className="dashboard-header-title">
                 <Link to="/">
                   <h1>Undefined::Role-Play</h1>

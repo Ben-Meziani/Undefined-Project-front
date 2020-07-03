@@ -10,9 +10,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5em;
+    font-size: 1.3em;
     @include m767() {
-      font-size: 3em;
+      font-size: 3.3em;
+      height: 15vh;
     };
 
   }
@@ -20,7 +21,7 @@
     background-color: black;
     color:white;
     height: 91vh;
-    padding: 7em 1.5em 0 1.5em;
+    padding: 7em 1.5em 0em 1.5em;
     @include m767() {
        padding-top: 10em;
        padding-bottom: 6em;

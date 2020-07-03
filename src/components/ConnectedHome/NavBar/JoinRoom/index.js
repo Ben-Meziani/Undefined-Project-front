@@ -9,13 +9,17 @@ const JoinRoomIcon = () => (
   <Modal
     className="join-room-modal"
     trigger={<div className="join"><div className="join-container"><img src={joinIcon} alt="join" /><div className="join-text">Rejoindre</div></div></div>}>
-    <Modal.Header>Rejoindre une salle de jeu</Modal.Header>
+    <Modal.Header>Rejoindre une Salle</Modal.Header>
     <Modal.Content image>
       <Modal.Description>
         <form className="ui form">
           <div className="field">
             <label htmlFor="room-name">Rejoindre :</label>
             <input type="text" name="room-name" placeholder="Indiquez le nom de la salle" />
+          </div>
+          <div className="field">
+            <label htmlFor="room-password">Mot de passe :</label>
+            <input type="password" name="room-password" placeholder="Indiquez le mot de passe" />
           </div>
           <div className="field">
             <button className="ui button join-room-submit" type="submit">Rejoindre la salle</button>
