@@ -165,13 +165,16 @@ const room = (state = initialState, action = {}) => {
         player: action.pseudo,
         playerIcon: action.icon,
         joinedRoom: true,
+        loading: true,
+        errorJoinedRoom: false,
         /* playerRole: true, */
       };
     case ERROR_JOIN_ROOM:
       return {
         ...state,
-        loading: true,
+        loading: false,
         errorJoinedRoom: true,
+        joinedRoom: false,
       };
     case TOGGLE_OPEN_CHAT:
       return {

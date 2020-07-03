@@ -17,6 +17,7 @@ const Forgotten = ({
   logged,
   send,
   sendEmail,
+  errorRegPass,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -37,6 +38,9 @@ const Forgotten = ({
               changeValue={changeValue}
               value={sendedEmail}
             />
+            {errorRegPass && !loading && (
+              <p className="register-password-int"> Cet utilisateur ne semble pas être enregistré.</p>
+            )}
           </Form.Field>
           <Button color="black" type="submit">
             Récupérer le mot de passe
@@ -65,6 +69,7 @@ Forgotten.propTypes = {
   loading: PropTypes.bool,
   send: PropTypes.bool.isRequired,
   sendEmail: PropTypes.func.isRequired,
+  errorRegPass: PropTypes.bool.isRequired,
 };
 
 Forgotten.defaultProps = {

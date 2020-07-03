@@ -33,7 +33,10 @@ const App = ({ id, roomId }) => (
 
 App.propTypes = {
   id: PropTypes.number.isRequired,
-  roomId: PropTypes.string.isRequired,
+  roomId: PropTypes.string,
+};
+App.defaultProps = {
+  roomId: '',
 };
 
 // == Export

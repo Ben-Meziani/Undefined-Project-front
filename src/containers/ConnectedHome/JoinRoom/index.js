@@ -15,6 +15,7 @@ const mapStateToProps = (state) => ({
   roomId: state.user.roomId,
   joinedRoom: state.room.joinedRoom,
   errorJoinedRoom: state.room.errorJoinedRoom,
+  loading: state.user.loading,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -26,8 +27,8 @@ const mapDispatchToProps = (dispatch) => ({
     const action = changeValue(name, value);
     dispatch(action);
   },
-  errorJoinRoom: (value, name) => {
-    const action = errorJoinRoom(name, value);
+  errorJoinRoom: () => {
+    const action = errorJoinRoom();
     dispatch(action);
   },
 });

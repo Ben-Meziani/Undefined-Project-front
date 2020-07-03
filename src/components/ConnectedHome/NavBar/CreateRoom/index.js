@@ -44,8 +44,8 @@ const CreateRoom = ({
         </>
       )}
 
-      {!loading && { role: 2 } && createdRoom && (<div>Vous êtes Game Master : <Link to={`/${roomId}/room`}> Rejoindre votre Salle!</Link></div> )}
-      {{ role: 0 } && { role: 1 } && !loading && (
+      {!loading && { role: 2 } && (<div>Vous êtes Game Master : <Link to={`/${roomId}/room`}> Rejoindre votre Salle!</Link></div> )}
+      {{ role: 0 } && { role: 1 } && !loading && !{ role: 2 } && (
         <Modal.Content image>
           <Modal.Description>
             <form className="ui form" onSubmit={handleSubmit}>
@@ -126,12 +126,13 @@ CreateRoom.propTypes = {
   createRoom: PropTypes.func.isRequired,
   createdRoom: PropTypes.bool.isRequired,
   roomPassword: PropTypes.string.isRequired,
-  roomId: PropTypes.string.isRequired,
+  roomId: PropTypes.string,
   loading: PropTypes.bool.isRequired,
 };
 
 CreateRoom.defaultProps = {
   playersNb: 0,
+  roomId: '',
 };
 
 export default CreateRoom;

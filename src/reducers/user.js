@@ -20,11 +20,11 @@ const initialState = {
   currentUser: [],
   email: '',
   password: '',
-  pseudo: 'Undefined',
+  pseudo: '',
   id: 0,
   icon: '',
   role: 0,
-  logged: true,
+  logged: false,
   errorToLog: false,
 
   open: false,
