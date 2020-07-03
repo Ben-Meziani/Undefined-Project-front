@@ -32,6 +32,7 @@ const DicesThrow = ({
           className="dices-throw"
         >
           <div><img src={Dices} alt="throw" /></div>
+          <div><p></p></div>
         </div>
       </div>
     </div>

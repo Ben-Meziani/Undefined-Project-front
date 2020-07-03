@@ -153,15 +153,14 @@
 @media (min-width: 1600px) {
 
   .dices-container {
-    width: 20%;
+    width: 18%;
     height: 30%;
     display: flex;
     margin-bottom: 12%;
     padding: 0.5em;
-    background-color: white;
-    opacity: 0.5;
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 0.4em solid $main-color;
   }
 
   .dices  {

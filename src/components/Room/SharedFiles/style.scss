@@ -163,17 +163,24 @@
       height: 10%;
       color: $main-color;
       font-family: 'Blacklet';
-      font-size: 2.8em;
       text-align: left;
       padding-left: 0.2em;
       padding-top: 0.2em;
+
+      .subcontent-title {
+        font-size: 3.6em;
+      }
+
+      .subcontent-content {
+        font-size: 2.4em;
+      }
     }
     button {
       display: none;
     }
 
     img {
-      width: 3em;
+      width: 4em;
       margin: 0.5em;
 
       &:hover {
