@@ -44,7 +44,7 @@ const auth = (store) => (next) => (action) => {
           }
         })
         .finally(() => {
-          // je veux dire que le chargement est fini
+          // loading is done
           store.dispatch(loading());
         });
       next(action);

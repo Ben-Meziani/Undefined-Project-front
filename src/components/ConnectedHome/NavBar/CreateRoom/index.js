@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-import { Modal, Dropdown } from 'semantic-ui-react';
+import { Modal, Dropdown, Loader } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import createIcon from '../../../../assets/icons/feather.svg';
@@ -14,10 +14,12 @@ const CreateRoom = ({
   changeValue,
   handleDropdown,
   roomName,
-  roomPass,
+  roomPassword,
+  roomId,
   playersNb,
   createRoom,
   masterRole,
+  loading,
 }) => {
   const dropdownChange = (evt, value) => {
     evt.preventDefault();
@@ -34,9 +36,18 @@ const CreateRoom = ({
       className="create-room-modal"
       trigger={<div className="create"><div className="create-container"><div className="create-text">Créer</div><img src={createIcon} alt="create" /></div></div>}
     >
+
+      {loading && (
+        <>
+          <Loader active inline="centered" />
+        </>
+      )}
+
+      {roomId && !loading ? (<div>C'est ok</div>) : ''}
+
       <Modal.Header>Créer une Salle</Modal.Header>
 
-      {masterRole && (
+      {!masterRole && !loading && (
         <Modal.Content image>
           <Modal.Description>
             <form className="ui form" onSubmit={handleSubmit}>
@@ -63,9 +74,9 @@ const CreateRoom = ({
                   type="password"
 
                   placeholder="Mot de passe"
-                  name="roomPass"
+                  name="roomPassword"
                   changeValue={changeValue}
-                  value={roomPass}
+                  value={roomPassword}
                 />
               </div>
 
@@ -124,7 +135,9 @@ CreateRoom.propTypes = {
   handleDropdown: PropTypes.func.isRequired,
   createRoom: PropTypes.func.isRequired,
   masterRole: PropTypes.bool.isRequired,
-  roomPass: PropTypes.string.isRequired,
+  roomPassword: PropTypes.string.isRequired,
+  roomId: PropTypes.string.isRequired,
+  loading: PropTypes.bool.isRequired,
 };
 
 CreateRoom.defaultProps = {

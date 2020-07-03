@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import axios from 'axios';
 
-import { CREATE_ROOM, saveRoomId } from '../actions';
+import { CREATE_ROOM, saveRoomId, saveRoomPassword,  loading } from '../actions';
 
 const serverURI = 'https://undefined-project.tk/api';
 
@@ -11,6 +11,7 @@ const room = (store) => (next) => (action) => {
       console.log('je crée une room');
       const state = store.getState();
       const userId = state.user.id;
+      console.log(userId);
       axios.post(`${serverURI}/room/add`, {
         name: state.room.roomName,
         password: state.room.roomPass,
@@ -22,11 +23,16 @@ const room = (store) => (next) => (action) => {
         .then((response) => {
           console.log(response.data);
           // récupérer l'id unique de la room
-          const saveRoomNumber = saveRoomId(response.data);
+          const saveRoomNumber = saveRoomId(response.data.uniqueId);
+          const saveRoomPassword = saveRoomPassword(response.data.password);
           store.dispatch(saveRoomNumber);
         })
         .catch((error) => {
           console.error(error);
+        })
+        .finally(() => {
+          // loading is done
+          store.dispatch(loading());
         });
       next(action);
       break;
