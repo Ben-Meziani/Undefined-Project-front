@@ -36,10 +36,6 @@ const mapDispatchToProps = (dispatch) => ({
     const action = toggleOpenDice();
     dispatch(action);
   },
-  toggleOpenPicture: () => {
-    const action = toggleOpenPicture();
-    dispatch(action);
-  },
   toggleOpenChat: () => {
     const action = toggleOpenChat();
     dispatch(action);
