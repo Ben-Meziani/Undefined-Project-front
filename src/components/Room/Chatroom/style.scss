@@ -69,6 +69,7 @@
   overflow-y: auto;
   background-color: white;
   font-family: 'Nunito', sans-serif;
+  font-size: 0.8em;
   border: 0.2m solid #e7cdaa;
 }
 
@@ -320,9 +321,9 @@
 
     .chatroom {
       position: absolute;
-      right: 14%;
-      top: 16%;
-      left: 4%;
+      right: 0;
+      top: 14%;
+      left: 50%;
       width: 16%;
       height: 40%;
       display: flex;
