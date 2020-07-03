@@ -24,7 +24,7 @@ const initialState = {
   pseudo: 'Undefined',
   id: 0,
   icon: '',
-  logged: true,
+  logged: false,
   errorToLog: false,
 
   open: false,
