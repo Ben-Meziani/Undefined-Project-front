@@ -16,6 +16,7 @@ const ShareMedia = ({ pictureOpen, toggleOpenShare, changeFileUrl, addFile, file
     console.log(evt.target.files[0]);
     const newFileUrl = URL.createObjectURL(evt.target.files[0]);
     changeFileUrl(newFileUrl);
+    console.log('dans le component image vaut', newFileUrl);
     addFile(fileURL);
     console.log('je veux envoyer l\'image au serveur');
     sendImage();

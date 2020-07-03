@@ -89,23 +89,13 @@
     padding: .5em;
     height: 6vw;
     background: none;
+   
     &-title{
       margin: 0 auto;
       width: 75vw;
-      font-weight: bold;
-    }
-
-    &-title{
-      margin: 0 auto;
-      width: 75vw;
-      font-weight: bold;
-      font-size: 1.8em;
 
       .room-name {
-        font-weight: bold;
-        font-size: 1em;
-        font-family: 'Triumph wheels rough';
-        font-size: 3em;
+        font-size: 2em;
       }
     }
   }

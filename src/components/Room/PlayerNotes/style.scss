@@ -126,7 +126,7 @@
     bottom: 0;
     background-color: white;
     width: 25%;
-    height: 30vh;
+    height: 37vh;
     top: 0;
     align-self: flex-end;
 
@@ -135,7 +135,64 @@
     }
 
     button {
-      display: none;
+      position: absolute;
+      top: 0;
+      right: 1em;
+      height: 1em;
+      width: 1em;
+      background: none;
+      border: none;
+      color: $sixth-color;
+    }
+  
+    &-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      margin: 0 auto;
+      height: 1em;
+      font-family: 'Chuck Noon';
+      font-size: 2em;
+      background-color: $main-color;
+      color: $fourth-color;
+    }
+  
+    &-notes {
+      margin-top: 1.5em;
+      border: 0.3em dotted $main-color;
+      height: 100vh;
+      border-radius: 4px;
+      padding: 0.2em;
+  
+      p {
+        margin-top: 0.5em;
+        text-align: left;
+        font-family: 'Quicksand';
+      }
+    }
+  
+    &-toggle {
+      display: flex;
+    }
+  
+    .form {
+      width: 100%;
+    }
+  
+    .form-button {
+      position: relative;
+    }
+  
+    .form-input {
+      position: relative;
+      height: 3em;
+      width: 100%;
+      outline: none;
+      border: none;
+      background-color: $main-color;
+      color: #e1b713;
+      padding-left: 0.4em;
     }
   }
 }

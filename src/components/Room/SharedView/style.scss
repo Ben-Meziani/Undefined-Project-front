@@ -1,7 +1,14 @@
 @import 'src/styles/vars';
 
 .shared-view {
-  width: 25%;
+  width: 100%;
+  min-height: 100%;
+  background-color: $main-color;
+
+  &-picture {
+    width: 100vw;
+    height: 100vh;
+  }
 }
 
 .shared-stars {
@@ -11,17 +18,33 @@
 .shared-view-media {
   width: 100vw;
   height: 93vh;
-  /* background-image: url("../../../../src/assets/HPbg-mobile.jpg");
-  background-size: 100%; */
+  margin: 0 auto;
+  background-image: url("../../../../src/assets/HPbg-mobile.jpg");
+  background-size: 100%;
 }
 
   // MEDIA QUERIES
 
 @media (min-width: 767px) {
 
+  .shared-view {
+    width: 100%;
+    height: 100vh;
+    background-color: $main-color;
+  
+    &-picture {
+      width: 100vw;
+      height: 100vh;
+    }
+  }
+  
+  .shared-stars {
+    display: none;
+  }
+
   .shared-view-media {
     width: 60vh;
-    height: 60vh;
+    height: 30vh;
     margin: 0 auto;
     margin-top: 2em;
     background-size: cover;
@@ -31,12 +54,28 @@
 
 @media (min-width: 1024px) {
 
+  .shared-view {
+    width: 45%;
+    min-height: 15%;
+    height: 30%;
+    margin: 2em auto;
+    border: 0.2em dashed $main-color;
+    padding: .5em;
+    background-color: none;
+
+    &-picture {
+      width: 100vw;
+      height: 100vh;
+    }
+  }
+
   .shared-view-media {
-    width: 20%;
+    width: 100%;
     height: 30vh;
     margin: 0 auto;
     margin-top: 2em;
     background-size: cover;
+    background-color: none;
   }
 }
 
