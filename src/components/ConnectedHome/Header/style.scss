@@ -1,5 +1,6 @@
 @import 'src/styles/vars';
 
+
 .connected-home-header {
   width: 100%;
   top: 0;
@@ -9,7 +10,7 @@
   @keyframes fadeIn2 {
     from {background-color:black;}
     to {background-color:white;}
-  }
+  } 
 
   // SIDEBAR
 
@@ -161,7 +162,7 @@
   }
 }
 
-// BURGER DROPDOWN MENU
+/* // BURGER DROPDOWN MENU
 
 .dropdown {
   position: fixed;
@@ -215,7 +216,7 @@
 
 .burger_hamburger--spring__lGgOO {
   margin-top: 0;
-}
+} */
 
 // MEDIA QUERIES
 

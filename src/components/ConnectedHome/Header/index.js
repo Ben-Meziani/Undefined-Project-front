@@ -13,15 +13,14 @@ const Header = ({
   id,
 }) => {
   return (
-    <div className="connected-home-header">
-      <Menu>
-        <li><Link to="/" onClick={handleLogout}>Se déconnecter</Link></li>
-        <li><Link to={`/dashboard/user/${id}/edit`}>Modifier son profil</Link></li>
-      </Menu>
-      <div className="connected-home-title">
-        <h1>UNDEFINED::ROLE PLAY</h1>
+    <>
+      <div className="connected-home-header">
+        <Menu>
+          <li><Link to="/" onClick={handleLogout}>Se déconnecter</Link></li>
+          <li><Link to={`/dashboard/user/${id}/edit`}>Modifier son profil</Link></li>
+        </Menu>
       </div>
-    </div>
+    </>
   );
 };
 
