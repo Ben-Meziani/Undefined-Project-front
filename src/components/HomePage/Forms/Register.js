@@ -36,10 +36,12 @@ const Register = ({
     }
   };
 
+  console.log(logged);
+
   return (
 
     <div className="register">
-      {!userRegistered && !logged && (
+   {/*    {!userRegistered && !logged && ( */}
         <>
           <Form autoComplete="off" onSubmit={handleSubmit}>
             <Form.Field required>
@@ -93,7 +95,7 @@ const Register = ({
             </Button>
           </Form>
         </>
-      )}
+     {/*  )} */}
       {loading && (
       <div className="register-loader">
         <Loader active inline="centered" />

@@ -18,7 +18,7 @@ const CreateRoom = ({
   roomId,
   playersNb,
   createRoom,
-  masterRole,
+  role,
   loading,
 }) => {
   const dropdownChange = (evt, value) => {
@@ -44,8 +44,8 @@ const CreateRoom = ({
         </>
       )}
 
-     {/*  {!loading && masterRole ? (<div>C'est ok!</div>) : ''}
-      {!masterRole && !loading && (
+      {!loading && { role: 2 } ? (<div>Vous êtes déjà Game Master : allez dans votre Salle ici</div>) : ''}
+      {{ role: 0 } && { role: 1 } && !loading && (
         <Modal.Content image>
           <Modal.Description>
             <form className="ui form" onSubmit={handleSubmit}>
@@ -114,14 +114,6 @@ const CreateRoom = ({
           </Modal.Description>
         </Modal.Content>
       )}
-   {/*    {masterRole && (
-        <div className="success">
-          <p>Vous avez déjà une Salle en cours.</p>
-          <Link className="go" to="/room">
-            Rejoignez la !
-          </Link>
-        </div>
-      )} */}
     </Modal>
   );
 };
@@ -132,7 +124,7 @@ CreateRoom.propTypes = {
   roomName: PropTypes.string.isRequired,
   handleDropdown: PropTypes.func.isRequired,
   createRoom: PropTypes.func.isRequired,
-  masterRole: PropTypes.bool.isRequired,
+  role: PropTypes.number.isRequired,
   roomPassword: PropTypes.string.isRequired,
   roomId: PropTypes.string.isRequired,
   loading: PropTypes.bool.isRequired,

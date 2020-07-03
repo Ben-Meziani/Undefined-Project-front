@@ -6,10 +6,11 @@ import { changeValue, dropdownChange, createRoom } from '../../../actions';
 
 const mapStateToProps = (state) => ({
   roomName: state.user.roomName,
-  roomPass: state.user.roomPass,
+  roomPassword: state.room.roomPassword,
   playersNb: state.room.playersNb,
-  masterRole: state.user.masterRole,
+  role: state.user.role,
   loading: state.room.loading,
+  roomId: state.room.roomId,
 });
 
 const mapDispatchToProps = (dispatch) => ({

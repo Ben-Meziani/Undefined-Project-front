@@ -3,8 +3,6 @@ import {
   CREATE_ROOM,
   JOIN_ROOM,
   DROPDOWN_CHANGE,
-  SAVE_ROOM_ID,
-  SAVE_ROOM_PASSWORD,
   CHANGE_TEXT_CHAT,
   CHANGE_TEXT_NOTE,
   RECEIVE_MESSAGE,
@@ -44,11 +42,11 @@ const initialState = {
   playersOpen: false,
   active: false,
   logged: false,
+
   roomName: 'Harry Pouffeur and the Haunted Dungeons',
-  roomPass: '',
   roomId: '',
   roomPassword: '',
-  masterRole: false,
+
   playersNb: 0,
   playersList: [
     {
@@ -161,16 +159,6 @@ const room = (state = initialState, action = {}) => {
         player: action.pseudo,
         playerIcon: action.icon,
         playerRole: true,
-      };
-    case SAVE_ROOM_ID:
-      return {
-        ...state,
-        roomId: action.roomId,
-      };
-    case SAVE_ROOM_PASSWORD:
-      return {
-        ...state,
-        roomPassword: action.roomPassword,
       };
     case TOGGLE_OPEN_CHAT:
       return {

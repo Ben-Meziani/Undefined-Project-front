@@ -3,8 +3,8 @@
 // GENERAL
 export const CREATE_ROOM = 'CREATE_ROOM';
 export const JOIN_ROOM = 'JOIN_ROOM';
-export const SAVE_ROOM_ID = 'SAVE_ROOM_ID';
-export const SAVE_ROOM_PASSWORD = 'SAVE_ROOM_PASSWORD';
+
+// TOGGLES
 export const TOGGLE_OPEN_CHAT = 'TOGGLE_OPEN_CHAT';
 export const TOGGLE_OPEN_BOOK = 'TOGGLE_OPEN_BOOK';
 export const TOGGLE_OPEN_EDIT = 'TOGGLE_OPEN_EDIT';
@@ -36,15 +36,7 @@ export const joinRoom = () => ({
   type: JOIN_ROOM,
 });
 
-export const saveRoomId = (roomId) => ({
-  type: SAVE_ROOM_ID,
-  roomId,
-});
-
-export const saveRoomPassword = (roomPassword) => ({
-  type: SAVE_ROOM_ID,
-  roomPassword,
-});
+// TOGGLE
 
 export const toggleOpenChat = () => ({
   type: TOGGLE_OPEN_CHAT,

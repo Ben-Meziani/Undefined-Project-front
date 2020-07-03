@@ -14,7 +14,6 @@ import {
   ERROR_REG_PASSWORD,
   ERROR_PASSWORD_CHECK,
   SEND_EMAIL,
-  CREATE_ROOM,
 } from '../actions';
 
 const initialState = {
@@ -29,7 +28,7 @@ const initialState = {
 
   open: false,
   roomName: '',
-  roomPass: '',
+  roomPassword: '',
   roomId: '',
   playersNb: 0,
   loading: false,
@@ -45,8 +44,7 @@ const initialState = {
 
   sendedEmail: '',
   send: false,
-
-  masterRole: true,
+  role: 0,
 
 };
 
@@ -152,11 +150,6 @@ const user = (state = initialState, action = {}) => {
         loading: true,
       };
     }
-    case CREATE_ROOM:
-      return {
-        ...state,
-        masterRole: true,
-      };
     default:
       return state;
   }
