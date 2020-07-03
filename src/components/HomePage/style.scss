@@ -10,6 +10,7 @@
     margin-top: 2em;
     margin-bottom: 1.5em;
     background-color: black;
+    z-index: 10;
     @include mq() {
       display: flex;
       justify-content: space-between;
@@ -24,6 +25,7 @@
   &-buttons{
     margin-bottom: 1.5em;
     font-size: 1.5em;
+    z-index: 10;
     @include mq() {
       display: flex;
       flex-direction: column;
@@ -39,6 +41,7 @@
     display: flex;
     align-items: center;
     padding: 1em;
+    z-index:8;
     @include mq() {
       width: 100%;
       height: 100%;
