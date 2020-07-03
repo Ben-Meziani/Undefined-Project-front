@@ -7,13 +7,13 @@ import ShootingStar from '../../../assets/icons/shooting-stars.png';
 
 import './style.scss';
 
-const SharedView = ({ masterRole }) => {
+const SharedView = ({ masterRole, image }) => {
   console.log('masterRole dans le component vaut', masterRole);
 
   return (
     <>
       <div className="shared-view">
-
+        {!imgURL ? <img className="avatar" src={`https://undefined-project.tk/api/uploads/icons/${icon}`} alt="unknown" /> : <img className="avatar" src={imgURL} alt="unknown" />}
         <div className="shared-view-media">
           <Switch>
             <Route path="/room/hoglib" exact>

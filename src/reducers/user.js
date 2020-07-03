@@ -23,6 +23,7 @@ const initialState = {
   pseudo: 'Undefined',
   id: 0,
   icon: '',
+  image: '',
   logged: true,
   errorToLog: false,
 
