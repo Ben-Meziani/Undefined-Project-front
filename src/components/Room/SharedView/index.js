@@ -11,7 +11,7 @@ const SharedView = ({ image, imgURL }) => {
   return (
     <>
       <div className="shared-view">
-        {!imgURL ? <img className="avatar" src={`https://undefined-project.tk/api/uploads/files/${icon}`} alt="unknown" /> : <img className="avatar" src={imgURL} alt="unknown" />}
+        {!imgURL ? <img className="shared-view-picture" src={`https://undefined-project.tk/api/uploads/files/${image}`} alt="unknown" /> : <img className="shared-view-picture" src={imgURL} alt="unknown" />}
         <div className="shared-view-media">
           <Switch>
             <Route path="/room/hoglib" exact>
@@ -101,6 +101,8 @@ const SharedView = ({ image, imgURL }) => {
 };
 
 SharedView.propTypes = {
+  image: PropTypes.string.isRequired,
+
 };
 
 export default SharedView;

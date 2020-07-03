@@ -20,6 +20,7 @@ const initialState = {
       id: 0,
     },
   ],
+  roomImage: '',
 };
 
 const upload = (state = initialState, action = {}) => {

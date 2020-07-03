@@ -35,9 +35,9 @@ const user = (store) => (next) => (action) => {
       const state = store.getState();
       const { roomId } = state.room;
       const formData = new FormData();
-      formData.append('image', state.upload.iconFile);
+      formData.append('roomImage', state.upload.iconFile);
       axios.post(
-        `${serverURI}/room/${roomId}/edit`,
+        `${serverURI}/room/${roomId}/upload`,
         formData,
         {
           headers: {

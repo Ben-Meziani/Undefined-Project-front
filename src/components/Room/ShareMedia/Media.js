@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 
 import './style.scss';
 
-const Media = ({ file, id, image }) => {
+const Media = ({ file, id }) => {
   return (
     <div className="media-picture">
-      {!image && !(id === 0) ? (<img className="share-picture" src={file} alt="unknown" />) : <img className="image" src={`https://undefined-project.tk/api/uploads/image/${image}`} alt="unknown" />}
+    {/*   {!image && !(id === 0) ? (<img className="share-picture" src={file} alt="unknown" />) : <img className="image" src={`https://undefined-project.tk/api/uploads/image/${image}`} alt="unknown" />} */}
     </div>
   );
 };
@@ -15,7 +15,7 @@ const Media = ({ file, id, image }) => {
 Media.propTypes = {
   file: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
-  image: PropTypes.string.isRequired,
+/*   image: PropTypes.string.isRequired, */
 };
 
 export default Media;

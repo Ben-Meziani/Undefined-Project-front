@@ -112,6 +112,9 @@ const user = (state = initialState, action = {}) => {
         pseudo: action.currentUser.pseudo,
         id: action.currentUser.id,
         icon: action.currentUser.icon,
+        roomId: action.currentUser.roomId,
+        role: action.currentUser.role,
+        image: action.currentUser.roomImage,
         errorPassCheck: false,
       };
     }
