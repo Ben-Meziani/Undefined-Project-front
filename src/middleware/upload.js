@@ -19,12 +19,8 @@ const user = (store) => (next) => (action) => {
         /* responseType: 'blob', */
       })
         .then((response) => {
-          /* const url = window.URL.createObjectURL(new Blob([response.data])); */
           const blob = new Blob([response.data]);
           const url = URL.createObjectURL(blob);
-          /* const reader = new FileReader();
-          const url = reader.readAsDataURL(blob);
-          console.log('--- reader result vaut --- ' + reader.result); */
           console.log('--- url vaut --- ' + url);
           const saveCurrentIcon = saveIcon(url);
           store.dispatch(saveCurrentIcon);

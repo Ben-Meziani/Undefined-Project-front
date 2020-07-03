@@ -30,12 +30,13 @@ const CreateRoom = ({
     evt.preventDefault();
     createRoom();
   };
-
+  console.log(roomId);
   return (
     <Modal
       className="create-room-modal"
       trigger={<div className="create"><div className="create-container"><div className="create-text">Créer</div><img src={createIcon} alt="create" /></div></div>}
     >
+      <Modal.Header>Créer une Salle</Modal.Header>
 
       {loading && (
         <>
@@ -43,10 +44,7 @@ const CreateRoom = ({
         </>
       )}
 
-      {roomId && !loading ? (<div>C'est ok</div>) : ''}
-
-      <Modal.Header>Créer une Salle</Modal.Header>
-
+     {/*  {!loading && masterRole ? (<div>C'est ok!</div>) : ''} */}
       {!masterRole && !loading && (
         <Modal.Content image>
           <Modal.Description>
@@ -116,14 +114,14 @@ const CreateRoom = ({
           </Modal.Description>
         </Modal.Content>
       )}
-      {!masterRole && (
+   {/*    {masterRole && (
         <div className="success">
           <p>Vous avez déjà une Salle en cours.</p>
           <Link className="go" to="/room">
             Rejoignez la !
           </Link>
         </div>
-      )}
+      )} */}
     </Modal>
   );
 };

@@ -23,6 +23,7 @@ const room = (store) => (next) => (action) => {
         .then((response) => {
           console.log(response.data);
           // récupérer l'id unique de la room
+          console.log(response.data.uniqueId);
           const saveRoomNumber = saveRoomId(response.data.uniqueId);
           const saveRoomPass = saveRoomPassword(response.data.password);
           store.dispatch(saveRoomNumber);
