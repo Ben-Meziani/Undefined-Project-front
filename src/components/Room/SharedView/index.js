@@ -12,7 +12,7 @@ const SharedView = ({ image, imgURL }) => {
     <>
       <div className="shared-view">
         {!imgURL ? <img className="shared-view-picture" src={`https://undefined-project.tk/api/uploads/files/${image}`} alt="unknown" /> : <img className="shared-view-picture" src={imgURL} alt="unknown" />}
-        <div className="shared-view-media">
+       {/*  <div className="shared-view-media"> */}
           <Switch>
             <Route path="/room/hoglib" exact>
               <ReactPlayer url="https://www.youtube.com/watch?v=pAHciSqi1-8" width="100%" height="100%" />
@@ -88,7 +88,7 @@ const SharedView = ({ image, imgURL }) => {
             </Route>
           </Switch>
 
-        </div>
+       {/*  </div> */}
       </div>
       <>
         <div className="shared-view-line" />
