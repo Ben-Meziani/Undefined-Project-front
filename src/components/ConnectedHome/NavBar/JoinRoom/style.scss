@@ -1,6 +1,6 @@
 @import 'src/styles/vars';
 
-/* .join-room-button {
+.join-room-button {
   position: relative;
   background: white;
   color: black;
@@ -14,64 +14,6 @@
   padding: 0.3em;
   border: none;
   
-  &:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-  }
-
-  .ui.modal {
-    margin-top: -20em;
-  }
-} */
-
-.join{
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-  color: white;
-  width: 7em;
-  padding: .4em;
-  @include m767() {
-    height: 15vh;
-    width: 25vw;
-    padding: .7em;
-  };
-
-  &-container{
-    @include m767() {
-      padding: 1em;
-      border: dashed white .2em;
-      height: 100%;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      justify-content: space-between;
-    };
-  }
-
-  img {
-    width: 100%;
-    border: dashed white .1em;
-    padding: 1em;
-    @include m767() {
-      border: 0;
-      position: relative;
-      padding: 0;
-      height: 7em;
-      width: 7em;
-    };
-  }
-
-  &-text{
-    margin-top: .2em;
-    @include m767() {
-      font-size: 3em;
-      display: inline;
-      margin: 0;
-    };
-  }
   &:hover {
     transform: scale(1.1);
     cursor: pointer;

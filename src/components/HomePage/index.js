@@ -9,6 +9,9 @@ import Forgotten from '../../containers/HomePage/Forgotten';
 import ButtonsNav from './ButtonsNav';
 import Presentation from '../HomePage/Carousel/Presentation';
 import Rain from '../HomePage/RaindropAnimation';
+/* import Demonstration from '../HomePage/Carousel/Demonstration';
+import CarouselMenu from './Carousel/CarouselMenu';
+import Team from '../HomePage/Carousel/Team'; */
 import './style.scss';
 import RainDropAnimation from '../ConnectedHome/RaindropAnimation';
 
@@ -20,16 +23,15 @@ console.log(logged);
       <Route path="/" exact>
         <div className="homePage">
           <Header />
-
-          <div className="homePage-main">
-            <div className="homePage-container">
-              <div className="homePage-buttons">
-                <ButtonsNav />
-              </div>
-              <div className="homePage-display-container">
-                <div className="homePage-display">
-                  <Presentation />
-                </div>
+          <div className="homePage-container">
+            <div className="homePage-buttons">
+            {/*   <RainDropAnimation /> */}
+              <ButtonsNav />
+            </div>
+            <div className="homePage-display-container">
+              {/* <CarouselMenu /> */}
+              <div className="homePage-display">
+                <Presentation />
               </div>
             </div>
           </div>
@@ -39,15 +41,14 @@ console.log(logged);
       <Route path="/login" exact>
         <div className="homePage">
           <Header />
-          <div className="homePage-main">
-            <div className="homePage-container">
-              <div className="homePage-buttons">
-                <ButtonsNav />
-              </div>
-              <div>
-                <div className="homePage-display">
-                  <Login />
-                </div>
+          <div className="homePage-container">
+            <div className="homePage-buttons">
+              <ButtonsNav />
+            </div>
+            <div>
+              {/* <CarouselMenu /> */}
+              <div className="homePage-display">
+                <Login />
               </div>
             </div>
           </div>
@@ -57,38 +58,71 @@ console.log(logged);
       <Route path="/register" exact>
         <div className="homePage">
           <Header />
-          <div className="homePage-main">
-            <div className="homePage-container">
-              <div className="homePage-buttons">
-                <ButtonsNav />
+          <div className="homePage-container">
+            <div className="homePage-buttons">
+              <ButtonsNav />
+            </div>
+            <div>
+              {/* <CarouselMenu /> */}
+              <div className="homePage-display">
+                <Register />
               </div>
-              <div>
-                <div className="homePage-display">
-                  <Register />
-                </div>
+            </div>
+          </div>
+        </div>
+
+      </Route>
+      <Route path="/forgotten" exact>
+        <div className="homePage">
+          <Header />
+          <div className="homePage-container">
+            <div className="homePage-buttons">
+              <ButtonsNav />
+            </div>
+            <div>
+              {/* <CarouselMenu /> */}
+              <div className="homePage-display">
+                <Forgotten />
               </div>
             </div>
           </div>
         </div>
       </Route>
 
-      <Route path="/forgotten" exact>
+{/*       <Route path="/team" exact>
         <div className="homePage">
           <Header />
-          <div className="homePage-main">
-            <div className="homePage-container">
-              <div className="homePage-buttons">
-                <ButtonsNav />
-              </div>
-              <div>
-                <div className="homePage-display">
-                  <Forgotten />
-                </div>
+          <div className="homePage-container">
+            <div className="homePage-buttons">
+              <ButtonsNav />
+            </div>
+            <div>
+              {<CarouselMenu />}
+              <div className="homePage-display">
+                <Team />
               </div>
             </div>
           </div>
         </div>
-      </Route>
+      </Route> */}
+
+{/*       <Route path="/demonstration" exact>
+        <div className="homePage">
+          <Header />
+          <div className="homePage-container">
+            <div className="homePage-buttons">
+              <ButtonsNav />
+            </div>
+            <div>
+              <CarouselMenu />
+              <div className="homePage-display">
+                <Demonstration />
+              </div>
+            </div>
+          </div>
+        </div>
+      </Route> */}
+
     </Switch>
   );
 };
