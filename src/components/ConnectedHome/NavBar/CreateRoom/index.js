@@ -18,7 +18,6 @@ const CreateRoom = ({
   roomId,
   playersNb,
   createRoom,
-  role,
   loading,
 }) => {
   const dropdownChange = (evt, value) => {
@@ -124,7 +123,6 @@ CreateRoom.propTypes = {
   roomName: PropTypes.string.isRequired,
   handleDropdown: PropTypes.func.isRequired,
   createRoom: PropTypes.func.isRequired,
-  role: PropTypes.number.isRequired,
   roomPassword: PropTypes.string.isRequired,
   roomId: PropTypes.string.isRequired,
   loading: PropTypes.bool.isRequired,

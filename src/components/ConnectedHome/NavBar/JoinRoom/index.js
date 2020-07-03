@@ -6,7 +6,12 @@ import joinIcon from '../../../../assets/icons/bookmenu.svg';
 import Field from '../../../HomePage/Forms/Field';
 import './style.scss';
 
-const JoinRoom = ({ joinRoom, changeValue, roomPassword }) => {
+const JoinRoom = ({
+  joinRoom,
+  changeValue,
+  idForJoin,
+  passForJoin,
+}) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     joinRoom();
@@ -21,12 +26,27 @@ const JoinRoom = ({ joinRoom, changeValue, roomPassword }) => {
         <Modal.Description>
           <form className="ui form" onSubmit={handleSubmit}>
             <div className="field">
+              <label htmlFor="idForJoin">
+                Indiquez le code-name que votre M-J vous a communiqué
+              </label>
+              <Field
+                type="text"
+                placeholder="Code Name de la room"
+                name="idForJoin"
+                changeValue={changeValue}
+                value={idForJoin}
+              />
+            </div>
+            <div className="field">
+              <label htmlFor="idForPass">
+                Indiquez le mot de passe que votre M-J vous a communiqué
+              </label>
               <Field
                 type="password"
                 placeholder="Mot de passe"
-                name="roomPassword"
+                name="passForJoin"
                 changeValue={changeValue}
-                value={roomPassword}
+                value={passForJoin}
               />
             </div>
             <div className="field">
@@ -42,8 +62,9 @@ const JoinRoom = ({ joinRoom, changeValue, roomPassword }) => {
 
 JoinRoom.propTypes = {
   joinRoom: PropTypes.func.isRequired,
-  roomPassword: PropTypes.string.isRequired,
   changeValue: PropTypes.func.isRequired,
+  passForJoin: PropTypes.string.isRequired,
+  idForJoin: PropTypes.string.isRequired,
 };
 
 export default JoinRoom;

@@ -1,7 +1,13 @@
 /* eslint-disable no-console */
 import axios from 'axios';
 
-import { CREATE_ROOM, JOIN_ROOM, saveRoomId, saveRoomPassword, loading } from '../actions';
+import {
+  CREATE_ROOM,
+  JOIN_ROOM,
+/*   saveRoomId,
+  saveRoomPassword, */
+  loading,
+} from '../actions';
 
 const serverURI = 'https://undefined-project.tk/api';
 
@@ -17,6 +23,7 @@ const room = (store) => (next) => (action) => {
         password: state.room.roomPass,
         player_number: state.room.playersNb,
         gameMaster: userId,
+        role: state.user.role,
       }, {
         withCredentials: true,
       })
@@ -24,10 +31,11 @@ const room = (store) => (next) => (action) => {
           console.log(response.data);
           // récupérer l'id unique de la room
           console.log(response.data.uniqueId);
-          const saveRoomNumber = saveRoomId(response.data.uniqueId);
-          const saveRoomPass = saveRoomPassword(response.data.password);
+          const saveRoomNumber = response.data.uniqueId;
+          /* const saveRoomPass = saveRoomPassword(response.data.password); */
+          console.log(saveRoomNumber);
           store.dispatch(saveRoomNumber);
-          store.dispatch(saveRoomPass);
+          /* store.dispatch(saveRoomPass); */
         })
         .catch((error) => {
           console.error(error);
@@ -42,10 +50,11 @@ const room = (store) => (next) => (action) => {
     case JOIN_ROOM: {
       console.log('je rejoins une room');
       const state = store.getState();
-      const { roomId } = state.room;
-      axios.post(`${serverURI}/room/${roomId}/join`, {
-        uniqueId: roomId,
-        password: state.room.roomPass,
+      const userId = state.user.id;
+      axios.post(`${serverURI}/room/${userId}/join`, {
+        uniqueId: state.room.idForJoin,
+        password: state.room.passForJoin,
+        role: state.user.role,
       }, {
         withCredentials: true,
       })

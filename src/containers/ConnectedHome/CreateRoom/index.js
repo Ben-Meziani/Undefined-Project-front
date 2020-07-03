@@ -5,7 +5,7 @@ import CreateRoom from '../../../components/ConnectedHome/NavBar/CreateRoom';
 import { changeValue, dropdownChange, createRoom } from '../../../actions';
 
 const mapStateToProps = (state) => ({
-  roomName: state.user.roomName,
+  roomName: state.room.roomName,
   roomPassword: state.room.roomPassword,
   playersNb: state.room.playersNb,
   role: state.user.role,

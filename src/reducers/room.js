@@ -41,11 +41,13 @@ const initialState = {
   pictureOpen: false,
   playersOpen: false,
   active: false,
-  logged: false,
+  /* logged: false, */
 
   roomName: 'Harry Pouffeur and the Haunted Dungeons',
   roomId: '',
   roomPassword: '',
+  idForJoin: '',
+  passForJoin: '',
 
   playersNb: 0,
   playersList: [
@@ -150,7 +152,7 @@ const room = (state = initialState, action = {}) => {
     case CREATE_ROOM:
       return {
         ...state,
-        masterRole: true,
+        role: 2,
         loading: true,
       };
     case JOIN_ROOM:
@@ -158,7 +160,7 @@ const room = (state = initialState, action = {}) => {
         ...state,
         player: action.pseudo,
         playerIcon: action.icon,
-        playerRole: true,
+        /* playerRole: true, */
       };
     case TOGGLE_OPEN_CHAT:
       return {
