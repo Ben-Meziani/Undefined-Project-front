@@ -23,7 +23,7 @@ z-index: 210;
 }
 
 @media (min-width: 1600px) {
-  position: relative;
+  position: absolute;
   left: 0.2%;
   top: 2%;
 }

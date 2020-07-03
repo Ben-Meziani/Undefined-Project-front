@@ -6,7 +6,6 @@ export const StyledMenu = styled.nav`
   flex-direction: column;
   justify-content: flex-start;
   background: #d2b181;
-  opacity: 0.7;
   height: 100vh;
   text-align: left;
   padding: 2rem;
@@ -29,11 +28,11 @@ export const StyledMenu = styled.nav`
     width: 30%;
   }
 
- /*  @media (min-width: 1600px) {
+ @media (min-width: 1600px) {
     font-size: 1.5em;
     text-align: center;
-    width: 20%;
-  } */
+    width: 15%;
+  }
 
   .menu-dropdown-item {
     font-size: 1.2em;
@@ -43,13 +42,13 @@ export const StyledMenu = styled.nav`
     text-decoration: none;
     transition: color 0.3s linear;
     text-align: left;
-    color: #231f20;
+    color: black;
 
     button {
       margin-top: 2em;
       border: none;
       background: none;
-      color: #494052;
+      color: #231f20;
 
       @media (max-width: 400px) {
         margin-top: 0.5em;

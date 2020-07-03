@@ -44,7 +44,7 @@ const CreateRoom = ({
         </>
       )}
 
-     {/*  {!loading && masterRole ? (<div>C'est ok!</div>) : ''} */}
+     {/*  {!loading && masterRole ? (<div>C'est ok!</div>) : ''}
       {!masterRole && !loading && (
         <Modal.Content image>
           <Modal.Description>
