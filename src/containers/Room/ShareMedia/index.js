@@ -18,6 +18,10 @@ const mapDispatchToProps = (dispatch) => ({
     const action = changeFileUrl(fileURL);
     dispatch(action);
   },
+  changeIconFile: (imageFile) => {
+    const action = changeFileUrl(imageFile);
+    dispatch(action);
+  },
   addFile: () => {
     const action = addFile();
     dispatch(action);

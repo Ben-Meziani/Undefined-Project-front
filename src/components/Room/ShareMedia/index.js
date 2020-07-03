@@ -10,19 +10,28 @@ import { Icon } from 'semantic-ui-react';
 
 import './style.scss';
 
-const ShareMedia = ({ pictureOpen, toggleOpenShare, changeFileUrl, addFile, files, fileURL, sendImage }) => {
+const ShareMedia = ({
+  pictureOpen,
+  toggleOpenShare,
+  changeFileUrl,
+  addFile,
+  files,
+  fileURL,
+  sendImage,
+  changeIconFile,
+}) => {
   const handleChange = (evt) => {
     evt.preventDefault();
-    console.log(evt.target.files[0]);
+    console.log('COMPONENT SHARE MEDIA: fichier sélectionné vaut', evt.target.files[0]);
+    const newImageFile = evt.target.files[0];
     const newFileUrl = URL.createObjectURL(evt.target.files[0]);
     changeFileUrl(newFileUrl);
-    console.log('dans le component image vaut', newFileUrl);
+    changeIconFile(newImageFile);
+    console.log('dans le component newImageFile vaut', newImageFile);
     addFile(fileURL);
     console.log('je veux envoyer l\'image au serveur');
     sendImage();
   };
-  console.log('fileURL dans component ShareMedia vaut', fileURL);
-  console.log('pictureOpen vaut', pictureOpen);
   return (
     <div className={!pictureOpen ? 'share-media-toggle share-media' : 'share-media'}>
       <button type="button" onClick={toggleOpenShare}><Icon name="close" size="large" /></button>
@@ -78,6 +87,7 @@ ShareMedia.propTypes = {
   pictureOpen: PropTypes.bool.isRequired,
   toggleOpenShare: PropTypes.func.isRequired,
   changeFileUrl: PropTypes.func.isRequired,
+  changeIconFile: PropTypes.func.isRequired,
   addFile: PropTypes.func.isRequired,
   sendImage: PropTypes.func.isRequired,
   fileURL: PropTypes.string.isRequired,

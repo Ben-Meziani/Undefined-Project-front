@@ -34,10 +34,10 @@ const user = (store) => (next) => (action) => {
       // ACCESS TO THE STATE TO GET THE USER ID
       const state = store.getState();
       const { roomId } = state.user;
-      console.log('dans la requête fileURL vaut', state.upload.fileURL);
-      console.log('dans la requête roomId vaut', roomId);
+      console.log('dans la requête SEND_IMAGE imageFile vaut', state.upload.imageFile);
+      console.log('dans la requête SEND_IMAGE roomId vaut', roomId);
       const formData = new FormData();
-      formData.append('roomImage', state.upload.fileURL);
+      formData.append('roomImage', state.upload.imageFile);
       axios.post(
         `${serverURI}/room/${roomId}/upload`,
         formData,

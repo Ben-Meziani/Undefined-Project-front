@@ -17,7 +17,6 @@ const mapStateToProps = (state) => ({
   pseudo: state.user.pseudo,
   icon: state.user.icon,
   id: state.user.id,
-  iconFile: state.upload.iconFile,
   imgURL: state.upload.imgURL,
 });
 

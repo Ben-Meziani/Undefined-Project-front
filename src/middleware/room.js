@@ -1,11 +1,9 @@
 /* eslint-disable no-console */
 import axios from 'axios';
-
+import { response } from 'express';
 import {
   CREATE_ROOM,
   JOIN_ROOM,
-/*   saveRoomId,
-  saveRoomPassword, */
   loading,
 } from '../actions';
 
@@ -13,11 +11,11 @@ const serverURI = 'https://undefined-project.tk/api';
 
 const room = (store) => (next) => (action) => {
   switch (action.type) {
+    // CREATE A ROOM
     case CREATE_ROOM: {
-      console.log('je crée une room');
+      console.log('Requête de création de room lancée');
       const state = store.getState();
       const userId = state.user.id;
-      console.log(userId);
       axios.post(`${serverURI}/room/add`, {
         name: state.room.roomName,
         password: state.room.roomPassword,
@@ -28,16 +26,14 @@ const room = (store) => (next) => (action) => {
       })
         .then((response) => {
           console.log(response.data);
-          // récupérer l'id unique de la room
-          console.log(response.data.uniqueId);
           const saveRoomNumber = response.data.uniqueId;
-          /* const saveRoomPass = saveRoomPassword(response.data.password); */
-          console.log(saveRoomNumber);
           store.dispatch(saveRoomNumber);
-          /* store.dispatch(saveRoomPass); */
         })
         .catch((error) => {
           console.error(error);
+          if (response.status === 401) {
+            console.log('Vous n\'êtes pas autorisé');
+          }
         })
         .finally(() => {
           // loading is done
@@ -46,8 +42,9 @@ const room = (store) => (next) => (action) => {
       next(action);
       break;
     }
+    // JOIN A ROOM
     case JOIN_ROOM: {
-      console.log('je rejoins une room');
+      console.log('Requête pour rejoindre une room lancée');
       const state = store.getState();
       const userId = state.user.id;
       axios.post(`${serverURI}/room/${userId}/join`, {
@@ -61,6 +58,9 @@ const room = (store) => (next) => (action) => {
         })
         .catch((error) => {
           console.error(error);
+          if (response.status === 401) {
+            console.log('Vous n\'êtes pas autorisé');
+          }
         })
         .finally(() => {
           // loading is done
