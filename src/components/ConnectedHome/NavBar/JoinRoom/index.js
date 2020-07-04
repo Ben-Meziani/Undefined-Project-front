@@ -55,15 +55,15 @@ const JoinRoom = ({
                 value={passForJoin}
               />
             </div>
-            <div className="field">
-              <button className="ui button join-room-submit" type="submit">Valider</button>
-            </div>
             {errorJoinedRoom && !loading && (<p> La Salle n'existe pas, ou les identifiants sont erronés.</p>) }
+            {/* <div className="field"> */}
+              <button className="ui button join-room-submit" type="submit">Valider</button>
+            {/* </div> */}
           </form>
           <div className="register-loader">
             <Loader active inline="centered" />
           </div>
-          <Link to={`/room/${roomId}/view`}>Rejoindre la Salle!</Link>
+          {joinedRoom && <a href={`/room/${roomId}/view`}>Rejoindre la Salle!</a>}
         </Modal.Description>
       </Modal.Content>
     </Modal>
@@ -79,6 +79,7 @@ JoinRoom.propTypes = {
   joinedRoom: PropTypes.bool.isRequired,
   errorJoinedRoom: PropTypes.bool.isRequired,
   loading: PropTypes.bool.isRequired,
+  role: PropTypes.number.isRequired,
 };
 
 JoinRoom.defaultProps = {

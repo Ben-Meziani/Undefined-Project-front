@@ -34,9 +34,8 @@ export const createRoom = () => ({
   type: CREATE_ROOM,
 });
 
-export const joinRoom = (joinedRoom) => ({
+export const joinRoom = () => ({
   type: JOIN_ROOM,
-  joinedRoom,
 });
 
 export const errorJoinRoom = () => ({
