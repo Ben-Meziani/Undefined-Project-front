@@ -61,7 +61,6 @@ const room = (store) => (next) => (action) => {
 
           if (error.status !== 200) {
             store.dispatch(errorJoinRoom());
-
           }
         })
         .finally(() => {

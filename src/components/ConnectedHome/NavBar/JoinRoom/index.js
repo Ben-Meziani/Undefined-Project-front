@@ -21,7 +21,7 @@ const JoinRoom = ({
     evt.preventDefault();
     joinRoom();
   };
-
+  console.log('joinedRoom dans la modale vaut', joinedRoom);
   return (
     <Modal
       className="join-room-modal"
@@ -56,10 +56,10 @@ const JoinRoom = ({
                   value={passForJoin}
                 />
               </div>
-              {errorJoinedRoom && !loading && (<p> La Salle n'existe pas, ou les identifiants sont erronés.</p>) }
               <div className="field">
                 <button className="ui button join-room-submit" type="submit">Valider</button>
               </div>
+              {errorJoinedRoom && !loading && (<p> La Salle n'existe pas, ou les identifiants sont erronés.</p>) }
             </form>
           )}
           {loading && (
@@ -67,7 +67,7 @@ const JoinRoom = ({
               <Loader active inline="centered" />
             </div>
           )}
-          {joinedRoom && !loading && (<Link to={`/${roomId}/room`}>Rejoindre la Salle!</Link>) }
+          {joinedRoom && !loading && (<Link to={`/room/${roomId}/view`}>Rejoindre la Salle!</Link>) }
         </Modal.Description>
       </Modal.Content>
     </Modal>

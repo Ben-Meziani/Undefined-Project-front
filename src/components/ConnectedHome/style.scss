@@ -1,6 +1,5 @@
 @import 'src/styles/vars';
 
-
 .dashboard {
   font-family: 'Roboto Mono', monospace;
   height: 100vh;
@@ -26,6 +25,10 @@
        padding-top: 10em;
        padding-bottom: 6em;
     };
+    @include m1600() {
+      padding-top: 6em;
+      padding-bottom: 6em;
+   };
 
     &-container{
       background-color: white;
@@ -36,6 +39,17 @@
 
 
       @include m767() {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 auto;  
+        padding-left: 5em;
+        padding-right: 5em;     
+      };
+
+      @include m1600() {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -65,6 +79,14 @@
         height: 45vh;
         padding: 0.5em;
         @include m767() {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          margin-top: 0;
+          width: 40vw;
+          padding: 1em;
+        };
+        @include m1600() {
           display: flex;
           flex-direction: column;
           justify-content: space-around;
