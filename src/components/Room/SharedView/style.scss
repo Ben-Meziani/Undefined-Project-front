@@ -83,7 +83,7 @@
 
   .shared-view {
     max-width: 45%;
-    height: 90%;
+    max-height: 90%;
     margin: 0 auto;
     border: 0.2em dashed $main-color;
     padding: .5em;
@@ -96,6 +96,12 @@
     left: 50%;
     background-size: cover;
     border: 0.2em solid $main-color;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
   }
 
   .shared-view-line {
