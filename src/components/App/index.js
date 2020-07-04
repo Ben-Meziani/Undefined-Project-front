@@ -17,7 +17,7 @@ const App = ({ id }) => (
   <div className="app">
     <HomePage />
     <Switch>
-      <Route path="/dashboard" exact>
+      <Route path={`/dashboard/user/${id}`} exact>
         <ConnectedHome />
       </Route>
 
