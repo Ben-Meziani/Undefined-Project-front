@@ -1,7 +1,7 @@
 @import 'src/styles/vars';
 
-.connected-home-header {
-  width: 100%;
+/* .connected-home-header {
+  width: 40%;
   top: 0;
   animation: fadeIn2 2s ease;
   animation-fill-mode: forwards;
@@ -9,7 +9,7 @@
   @keyframes fadeIn2 {
     from {background-color:black;}
     to {background-color:white;}
-  } 
+  }
 
   // SIDEBAR
 
@@ -30,13 +30,11 @@
     background: black;
   }
   
-  /* Position and sizing of clickable cross button */
   .bm-cross-button {
     height: 24px;
     width: 24px;
   }
   
-  /* Color/shape of close button cross */
   .bm-cross {
     background: white;
   }
@@ -46,7 +44,6 @@
     height: 100%;
   }
   
-  /* General sidebar styles */
   .bm-menu {
     background: black;
     padding: 2.5em 1.5em 0;
@@ -58,7 +55,6 @@
     padding: 0.8em;
   }
   
-  /* Individual item */
   .bm-item {
     display: inline-block;
     padding: 1em;
@@ -66,7 +62,6 @@
     text-align: left
   }
   
-  /* Styling of overlay */
   .bm-overlay {
     background: rgba(0, 0, 0, 0.3);
   }
@@ -85,6 +80,7 @@
     max-width: 100%;
   }
 }
+
 
 .connected-home-title {
   display: flex;
@@ -107,6 +103,7 @@
     width: 100vw;
   }
 }
+*/
 
 // RAINDROPS FALL ANIMATION
 

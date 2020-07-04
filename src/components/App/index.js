@@ -29,9 +29,9 @@ const App = ({ id, roomId }) => (
         <Room />
       </Route>
 
-      <Route>
+     {/*  <Route>
         <Error404 />
-      </Route>
+      </Route> */}
     </Switch>
   </div>
 );

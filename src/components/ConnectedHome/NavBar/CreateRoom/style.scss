@@ -63,6 +63,20 @@
   }
 }
 
+.gm-join {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  p {
+    font-size: 2em;
+
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
 .success{
   display: flex;
   flex-wrap: wrap;

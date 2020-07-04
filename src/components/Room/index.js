@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import NavBarRoom from '../../containers/Room/NavBarRoom';
 import SharedView from '../../containers/Room/SharedView';
 import Chatroom from '../../containers/Room/Chatroom';
@@ -12,23 +14,30 @@ import ToolsMenu from '../../containers/Room/ToolsMenu';
 
 import './style.scss';
 
-const Room = () => (
-  <div className="room-container">
-    <div className="static-room">
-      <NavBarRoom />
-      <PlayersList />
-      <SharedView />
-      <Chatroom />
-      <div className="tools">
-        <ToolsMenu />
-        <SharedFiles />
-        <DicesThrow />
-        <DicesHistory />
-        <PlayerNotes />
-        <ShareMedia />
+const Room = ({ logged }) => {
+  console.log('dans la room logged vaut', logged);
+  return (
+    <div className="room-container">
+      <div className="static-room">
+        <NavBarRoom />
+        <PlayersList />
+        <SharedView />
+        <Chatroom />
+        <div className="tools">
+          <ToolsMenu />
+          <SharedFiles />
+          <DicesThrow />
+          <DicesHistory />
+          <PlayerNotes />
+          <ShareMedia />
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
+
+Room.propTypes = {
+  logged: PropTypes.bool.isRequired,
+};
 
 export default Room;

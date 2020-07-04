@@ -1,4 +1,4 @@
-/* @import 'src/styles/vars';
+@import 'src/styles/vars';
 
 // RAINDROPS FALL ANIMATION
 
@@ -27,6 +27,7 @@
     z-index: 2;
   }
 }
+
 .raindrop3 {
   margin-top: -0.3em;
   margin-left: 17em;
@@ -137,8 +138,6 @@
       width: 2.1em;
     }
   }
-}
-  
   .raindrop1, .raindrop2, .raindrop3, .raindrop4 {
     position: relative;
   
@@ -154,7 +153,8 @@
       }
     }
   }
-
+}
+  
 
 @media (min-width: 1024px) {
 
@@ -220,6 +220,7 @@
     position: absolute;
     top: 11em;
   }
+
   .raindrop1 {
     margin: 0 auto;
     margin-top: -0.7em;
@@ -271,4 +272,3 @@
     }
   }
 }
-} */

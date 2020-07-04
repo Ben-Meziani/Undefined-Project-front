@@ -19,12 +19,15 @@ const Login = ({
   logged,
   loading,
   errorToLog,
+  id,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     login();
     // console.log(errorToLog);
   };
+  console.log('Dans homepage logged vaut', logged);
+  console.log('Dans homepage loading vaut', loading);
   return (
     <div className="login">
       {!logged && (
@@ -67,18 +70,18 @@ const Login = ({
         <Loader active inline="centered" />
       </>
       )}
-      {logged && !loading ? <Redirect to="/dashboard" /> : <Redirect to="/login" />}
-      {logged && !loading && (
+      {logged && !loading ? <Redirect to={`/dashboard/user/${id}`} /> : <Redirect to="/login" />}
+      {/* {logged && !loading && ( */}
       <div className="homepage-links">
         <p>Vous êtes bien connecté !</p>
         <Link to="/room">
           Allez sur la chatroom.
         </Link>
-        <Link to="/dashboard">
+        <Link to={`/dashboard/user/${id}`}>
           <p>dashboard</p>
         </Link>
       </div>
-      )}
+     {/*  )} */}
     </div>
   );
 };
@@ -91,6 +94,7 @@ Login.propTypes = {
   loading: PropTypes.bool,
   login: PropTypes.func.isRequired,
   errorToLog: PropTypes.bool.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 Login.defaultProps = {

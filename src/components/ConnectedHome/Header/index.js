@@ -16,8 +16,8 @@ const Header = ({
     <>
       <div className="connected-home-header">
         <Menu>
-          <li><Link to="/" onClick={handleLogout}>Se déconnecter</Link></li>
-          <li><Link to={`/dashboard/user/${id}/edit`}>Modifier son profil</Link></li>
+         {/*  <li><Link to="/" onClick={handleLogout}>Se déconnecter</Link></li>
+          <li><Link to={`/dashboard/user/${id}/edit`}>Modifier son profil</Link></li> */}
         </Menu>
       </div>
     </>

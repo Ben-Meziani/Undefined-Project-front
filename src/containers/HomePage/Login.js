@@ -10,6 +10,7 @@ const mapStateToProps = (state) => ({
   loading: state.user.loading,
   /* errorFalse: state.user.errorFalse, */
   errorToLog: state.user.errorToLog,
+  id: state.user.id,
 });
 
 const mapDispatchToProps = (dispatch) => ({

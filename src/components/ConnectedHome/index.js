@@ -19,11 +19,13 @@ import JoinRoomIcon from '../../containers/ConnectedHome/JoinRoom';
 import './style.scss';
 
 const ConnectedHome = ({ logged, loading, id }) => {
-  // console.log(logged);
+  console.log('logged dans Connected-home vaut', logged);
+  console.log('loading dans Connected-home vaut', loading);
+  console.log('id dans Connected-home vaut', id);
   return (
     <>
       <Switch>
-        <Route exact path="/dashboard">
+        <Route exact path={`/dashboard/user/${id}`}>
 
           <div className="dashboard">
             <div className="dashboard-header">
@@ -58,7 +60,7 @@ const ConnectedHome = ({ logged, loading, id }) => {
           <EditProfile />
         </Route>
       </Switch>
-      {!logged && !loading ? <Redirect to="/" /> : <Redirect to="/dashboard" />}
+      {!logged && !loading ? <Redirect to="/" /> : <Redirect to={`/dashboard/user/${id}`} />}
     </>
   );
 };
