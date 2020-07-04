@@ -1,9 +1,12 @@
 export const CHANGE_ICON_FILE = 'CHANGE_ICON_FILE';
 export const CHANGE_ICON_URL = 'CHANGE_ICON_URL';
 export const CHANGE_FILE_URL = 'CHANGE_FILE_URL';
+export const CHANGE_IMAGE_FILE = 'CHANGE_IMAGE_FILE';
+
 export const FETCH_ICON = 'FETCH_ICON';
 export const SAVE_ICON = 'SAVE_ICON';
 export const ADD_FILE = 'ADD_FILE';
+export const SEND_IMAGE = 'SEND_IMAGE';
 
 export const changeIconFile = (iconFile) => ({
   type: CHANGE_ICON_FILE,
@@ -20,9 +23,18 @@ export const changeFileUrl = (fileURL) => ({
   fileURL,
 });
 
+export const changeImageFile = (imageFile) => ({
+  type: CHANGE_IMAGE_FILE,
+  imageFile,
+});
+
 export const addFile = (fileURL) => ({
   type: ADD_FILE,
   fileURL,
+});
+
+export const sendImage = () => ({
+  type: SEND_IMAGE,
 });
 
 export const fetchIcon = () => ({

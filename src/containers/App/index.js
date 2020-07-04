@@ -8,7 +8,9 @@ const mapStateToProps = (state) => ({
   /* logged: state.user.logged, */
 });
 
+
 const mapDispatchToProps = null;
+
 
 export default connect(
   mapStateToProps,

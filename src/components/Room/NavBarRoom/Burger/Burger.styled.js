@@ -14,17 +14,17 @@ background: transparent;
 border: none;
 cursor: pointer;
 padding: 0;
-z-index: 210;
+z-index: 2100;
 
-@media (min-width: 1024px) {
-  position: relative;
+@media (min-width: 767px) {
+  position: absolute;
   left: 1em;
-  top: 2%;
+  top: 3%;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1024px) {
   position: absolute;
-  left: 0.2%;
+  left: 1em;
   top: 2%;
 }
 

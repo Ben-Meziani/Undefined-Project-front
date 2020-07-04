@@ -7,103 +7,102 @@ import ShootingStar from '../../../assets/icons/shooting-stars.png';
 
 import './style.scss';
 
-const SharedView = ({ masterRole }) => {
-  console.log('masterRole dans le component vaut', masterRole);
-
+const SharedView = ({ image, fileURL }) => {
+  console.log('COMPONENT SHAREVIEW fileURL vaut', fileURL);
+  console.log('COMPONENT SHAREVIEW image vaut', image);
   return (
-    <>
-      <div className="shared-view">
-
-        <div className="shared-view-media">
-          <Switch>
-            <Route path="/room/hoglib" exact>
+    <div className="shared-view">
+      <div className="shared-view-media">
+        {!fileURL ? <img className="shared-view-picture" src={`https://undefined-project.tk/api/uploads/files/${image}`} alt="unknown" /> : ''}
+        <Switch>
+          <Route path="/room/shareview">
+            <img className="share-picture" src={fileURL} alt="unknown" />}
+          </Route>
+          <Route path="/room/hoglib" exact>
               <ReactPlayer url="https://www.youtube.com/watch?v=pAHciSqi1-8" width="100%" height="100%" />
             </Route>
-            <Route path="/room/charmsclass" exact>
+          <Route path="/room/charmsclass" exact>
               <ReactPlayer url="https://www.youtube.com/watch?v=8Te8ndpLzz0" width="100%" height="100%" />
             </Route>
-            <Route path="/room/gryffcommon" exact>
+          <Route path="/room/gryffcommon" exact>
               <ReactPlayer url="https://www.youtube.com/watch?v=X1PS6PF76-Y" width="100%" height="100%" />
             </Route>
-            <Route path="/room/huffcommon" exact>
+          <Route path="/room/huffcommon" exact>
               <ReactPlayer url="https://www.youtube.com/watch?v=-KzNeM2LkqM&list=PLjFwUFnGRUqN9pIvCq6TS1FMaJNxX0KEv&index=3" width="100%" height="100%" />
             </Route>
-            <Route path="/room/slythcommon" exact>
+          <Route path="/room/slythcommon" exact>
               <ReactPlayer url="https://www.youtube.com/watch?v=wIOc_6QZ3AI&list=PLjFwUFnGRUqN9pIvCq6TS1FMaJNxX0KEv&index=8" width="100%" height="100%" />
             </Route>
-            <Route path="/room/ravcommon" exact>
+          <Route path="/room/ravcommon" exact>
               <ReactPlayer url="https://www.youtube.com/watch?v=fCMybQ9cG4w&list=PLjFwUFnGRUqN9pIvCq6TS1FMaJNxX0KEv&index=4" width="100%" height="100%" />
             </Route>
-            <Route path="/room/hogtrain" exact>
+          <Route path="/room/hogtrain" exact>
               <ReactPlayer url="https://www.youtube.com/watch?v=yXq2ziVkK38&list=PLjFwUFnGRUqN9pIvCq6TS1FMaJNxX0KEv&index=6" width="100%" height="100%" />
             </Route>
-            <Route path="/room/potionclass" exact>
+          <Route path="/room/potionclass" exact>
               <ReactPlayer url="https://www.youtube.com/watch?v=eyYB-txU6Jg&list=PLjFwUFnGRUqN9pIvCq6TS1FMaJNxX0KEv&index=16" width="100%" height="100%" />
             </Route>
-            <Route path="/room/threebrooms" exact>
+          <Route path="/room/threebrooms" exact>
               <ReactPlayer url="https://www.youtube.com/watch?v=yhp9b00ziPs&list=PLjFwUFnGRUqN9pIvCq6TS1FMaJNxX0KEv&index=7" width="100%" height="100%" />
             </Route>
-            <Route path="/room/diagonalley" exact>
+          <Route path="/room/diagonalley" exact>
               <ReactPlayer url="https://www.youtube.com/watch?v=ZlS71cADdDY&list=PLjFwUFnGRUqN9pIvCq6TS1FMaJNxX0KEv&index=13" width="100%" height="100%" />
             </Route>
-            <Route path="/room/hagrid" exact>
+          <Route path="/room/hagrid" exact>
               <ReactPlayer url="https://www.youtube.com/watch?v=k8jdOkuhIxU&list=PLjFwUFnGRUqN9pIvCq6TS1FMaJNxX0KEv&index=31" width="100%" height="100%" />
             </Route>
-            <Route path="/room/lakenight" exact>
+          <Route path="/room/lakenight" exact>
               <ReactPlayer url="https://www.youtube.com/watch?v=RIemLUQk5Dc&list=PLjFwUFnGRUqN9pIvCq6TS1FMaJNxX0KEv&index=14" width="100%" height="100%" />
             </Route>
-            <Route path="/room/lakeday" exact>
+          <Route path="/room/lakeday" exact>
               <ReactPlayer url="https://www.youtube.com/watch?v=QQRHobcT1_A&list=PLjFwUFnGRUqN9pIvCq6TS1FMaJNxX0KEv&index=32" width="100%" height="100%" />
             </Route>
-            <Route path="/room/prefectbath" exact>
+          <Route path="/room/prefectbath" exact>
               <ReactPlayer url="https://www.youtube.com/watch?v=HJrMtZvXy8c&list=PLjFwUFnGRUqN9pIvCq6TS1FMaJNxX0KEv&index=33" width="100%" height="100%" />
             </Route>
-            <Route path="/room/kitchens" exact>
+          <Route path="/room/kitchens" exact>
               <ReactPlayer url="https://www.youtube.com/watch?v=3esrCPM53v0&list=PLjFwUFnGRUqN9pIvCq6TS1FMaJNxX0KEv&index=37" width="100%" height="100%" />
             </Route>
-            <Route path="/room/defdark" exact>
+          <Route path="/room/defdark" exact>
               <ReactPlayer url="https://www.youtube.com/watch?v=LPoaNHkY36U&list=PLjFwUFnGRUqN9pIvCq6TS1FMaJNxX0KEv&index=43" width="100%" height="100%" />
             </Route>
-            <Route path="/room/firenzeclass" exact>
+          <Route path="/room/firenzeclass" exact>
               <ReactPlayer url="https://www.youtube.com/watch?v=xmeWkSbb3xA&list=PLjFwUFnGRUqN9pIvCq6TS1FMaJNxX0KEv&index=46" width="100%" height="100%" />
             </Route>
-            <Route path="/room/hogheadinn" exact>
+          <Route path="/room/hogheadinn" exact>
               <ReactPlayer url="https://www.youtube.com/watch?v=FjjQgKdDqMw&list=PLjFwUFnGRUqN9pIvCq6TS1FMaJNxX0KEv&index=51&t=0s" width="100%" height="100%" />
             </Route>
-            <Route path="/room/hospital" exact>
+          <Route path="/room/hospital" exact>
               <ReactPlayer url="https://www.youtube.com/watch?v=SVS9xh3nHjU&list=PLjFwUFnGRUqN9pIvCq6TS1FMaJNxX0KEv&index=53&t=18s" width="100%" height="100%" />
             </Route>
-            <Route path="/room/moaningmyrtle" exact>
+          <Route path="/room/moaningmyrtle" exact>
               <ReactPlayer url="https://www.youtube.com/watch?v=6sPJKTIHF2o&list=PLjFwUFnGRUqN9pIvCq6TS1FMaJNxX0KEv&index=54&t=0s" width="100%" height="100%" />
             </Route>
-            <Route path="/room/greathall" exact>
+          <Route path="/room/greathall" exact>
               <ReactPlayer url="https://www.youtube.com/watch?v=4qxUAoFOd4s" />
             </Route>
-            <Route path="/room/forbiddenforestnight" exact>
+          <Route path="/room/forbiddenforestnight" exact>
               <ReactPlayer url="https://www.youtube.com/watch?v=liq9KeAsNB4" />
             </Route>
-            <Route path="/room/astrology" exact>
+          <Route path="/room/astrology" exact>
               <ReactPlayer url="https://www.youtube.com/watch?v=AUKqsr05Az8" />
             </Route>
-            <Route path="/room/herbology" exact>
+          <Route path="/room/herbology" exact>
               <ReactPlayer url="https://www.youtube.com/watch?v=ElG_yRX_ZqI" />
             </Route>
-          </Switch>
-
-        </div>
+        </Switch>
       </div>
-      <>
-        <div className="shared-view-line" />
-        <div className="shared-stars">
-          <img src={ShootingStar} alt="star" />
-        </div>
-      </>
-    </>
+      <div className="shared-view-line" />
+      <div className="shared-stars">
+        <img src={ShootingStar} alt="star" />
+      </div>
+    </div>
   );
 };
 
 SharedView.propTypes = {
-  masterRole: PropTypes.bool.isRequired,
+  fileURL: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
 };
 
 export default SharedView;

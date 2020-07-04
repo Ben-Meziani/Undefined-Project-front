@@ -4,6 +4,7 @@ import {
   CHANGE_FILE_URL,
   ADD_FILE,
   SAVE_ICON,
+  CHANGE_IMAGE_FILE,
 } from '../actions';
 
 import { getNextId } from '../selectors';
@@ -20,6 +21,9 @@ const initialState = {
       id: 0,
     },
   ],
+  roomImage: '',
+  imageFile: {
+  },
 };
 
 const upload = (state = initialState, action = {}) => {
@@ -38,6 +42,12 @@ const upload = (state = initialState, action = {}) => {
       return {
         ...state,
         fileURL: action.fileURL,
+      };
+    case CHANGE_IMAGE_FILE:
+      console.log('reducer UPLOAD CHANGE_IMAGE_FILE action.imageFile', action.imageFile);
+      return {
+        ...state,
+        imageFile: action.imageFile,
       };
     case ADD_FILE: {
       console.log('reducer ADD_FILES', state.fileURL);

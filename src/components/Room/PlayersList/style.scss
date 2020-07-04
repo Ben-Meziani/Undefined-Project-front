@@ -5,9 +5,12 @@
   width: 100vw;
   height: 100vh;
   display: flex;
-/*   flex-direction: column; */
   flex-wrap: wrap;
-  z-index: 50;
+  z-index: 20;
+
+  &-toggle {
+    display: none;
+  }
 }
 
 .players-list {
@@ -15,13 +18,18 @@
   width: 100vw;
   height: 100vh;
   background-color: white;
+  opacity: 0.9;
   align-items: center;
+
   padding: 0.2em;
   bottom: 0;
 
   &-items {
-    width: 4em;
+    margin: 1em auto;
     display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
   }
 
   &-toggle {
@@ -44,52 +52,30 @@
     border: none;
     top: 0;
     right: 1em;
+    z-index: 100;
   }
 }
 
 @media (min-width: 1024px) {
 
   .players-list {
-    border: 0.2em solid $main-color;
-    border-radius: 2px;
-    position: absolute;
-    width: 25%;
-    height: 50vh;
-    top: 6em;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-   
-    button {
-     display: none;
-    }
-  }
-}
-
-@media (min-width: 1400px) {
-
-  .players-list {
-    width: 25%;
-    height: 30vh;
-    top: 9.5em;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-
-@media (min-width: 1600px) {
-
-  .players-list {
     background-color: transparent;
     height: 100%;
     display: flex;
+    flex-flow: row wrap;
     &-toggle {
       top: 0;
       width: 98%;
       height: 100%;
-    }
+  }
+
+  &-items {
+    width: 100%;
+    height: 70%;
+    margin: 0.3em;
+    display: flex;
+    flex-wrap: wrap;
+  }
 
     &-container h1 {
       max-width: 100%;
@@ -132,6 +118,90 @@
       height: 2em;
       width: 100%;
       font-family: 'Zoika';
+      font-size: 1.6em;
+    }
+
+    &-container {
+      width: 18%;
+      height: 30%;
+      top: 15%;
+      display: flex; 
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+
+  .players-list {
+    width: 25%;
+    height: 30vh;
+    top: 9.5em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1600px) {
+
+  .players-list {
+    background-color: transparent;
+    height: 100%;
+    display: flex;
+    &-toggle {
+      top: 0;
+      width: 98%;
+      height: 100%;
+    }
+
+    &-items {
+      width: 100%;
+      height: 70%;
+      display: flex;
+    }
+
+    &-container h1 {
+      max-width: 100%;
+      font-family: 'Zoika';
+      position: relative;
+      z-index: 3;
+
+      &:hover {
+        color: $seventh-color;
+        transition: 1s ease;
+      }
+    }
+    &-container h1:before {
+      content: "";
+      display: block;
+      width: 12%;
+      height: 0.1em;
+      position: absolute;
+      background: $main-color;
+      left: 0;
+      top: 23%;
+    }
+
+    &-container h1:after {
+      content: "";
+      display: block;
+      width: 12%;
+      height: 0.1em;
+      position: absolute;
+      background: $main-color;
+      right: 0;
+      top: 23%;
+    }
+
+    &-title {
+      display: inline-block;
+      margin: 0 auto;
+      height: 2em;
+      width: 100%;
+      font-family: 'Zoika';
       font-size: 2.8em;
     }
 
@@ -139,7 +209,7 @@
       position: absolute;
       width: 17%;
       height: 40%;
-      top: 15%;
+      top: 12%;
       display: flex; 
       flex-direction: column;
       align-items: center;

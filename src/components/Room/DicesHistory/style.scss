@@ -7,11 +7,6 @@
   background-color: white;
   opacity: 0.9;
   top: 40%;
- /*  background-image: url(../../../assets/frame3.png);
-  background-size: 94%;
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: -8em; */
 
   h1 {
     display: inline-block;
@@ -71,11 +66,10 @@
 
   .dices-history {
     position: relative;
-    width: 20vw;
+    width: 15vw;
     height: 30vh;
-   
+    top: 30%;
     left: 0;
-    top: 0;
 
     &-toggle {
       display: block;
@@ -83,31 +77,45 @@
       background-color: transparent;
       border: 0.3em solid $main-color;
     }
+
+    &-content {
+      position: relative;
+      width: 100%;
+      height: 70%;
+      margin: 0 auto;
+      top: 1em;
+      overflow: scroll;
+      padding: 0.1em;
+      border: none;
+      font-size: 0.8em;
+  
+      &-border {
+        height: 100%;
+        border: none;
+      }
+    }
+  
+    &-toggle {
+      display: block;
+      border: 0.3em double $main-color;
+      
+      h1 {
+        font-family: 'Black Quality';
+        font-size: 1.4em;
+        color: $first-color;
+      }
+    }
   }
 }
 
 @media (min-width: 1600px) {
 
   .dices-history {
-    width: 12vw;
-    height: 60%;
-    align-self: center;
-    color: #494052;
-    border: none;
-    border-radius: 4px;
-
-    &-toggle {
-      display: block;
-      border: 0.3em double $main-color;
-    }
-  }
-
-  .dices-history {
     width: 17%;
     height: 70%;
     background-color: transparent;
     opacity: 0.9;
-    top: 15%;
+    top: 0;
 
     h1 {
       display: inline-block;
@@ -137,6 +145,8 @@
     }
   
     &-toggle {
+      display: block;
+      border: 0.3em double $main-color;
       
       h1 {
         font-family: 'Black Quality';

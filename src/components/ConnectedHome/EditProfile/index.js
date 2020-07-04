@@ -17,14 +17,10 @@ const EditProfile = ({
   email,
   pseudo,
   icon,
-  iconFile,
   imgURL,
   changeValue,
   sendUserData,
 }) => {
-  console.log('icon vaut ' + icon);
-  console.log('imgURL vaut ' + imgURL);
-  console.log('iconFile vaut ' + iconFile);
   // PREVIEW THE NEW AVATAR AND SEND TO SERVER
   const handleChange = (evt) => {
     console.log('---- je récupère le nom du fichier sélectionné par le user ----');
@@ -94,13 +90,11 @@ EditProfile.propTypes = {
   email: PropTypes.string.isRequired,
   pseudo: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
-  iconFile: PropTypes.object.isRequired,
   imgURL: PropTypes.string.isRequired,
   changeIconFile: PropTypes.func.isRequired,
   changeIconUrl: PropTypes.func.isRequired,
   changeValue: PropTypes.func.isRequired,
   sendUserData: PropTypes.func.isRequired,
-  sendIcon: PropTypes.func.isRequired,
 };
 
 export default EditProfile;

@@ -8,7 +8,7 @@
   opacity: 0.8;
   bottom: 0;
   width: 100vw;
-  height: 8%;
+  height: 10%;
  
   &:hover {
     opacity: 1;
@@ -16,7 +16,7 @@
   }
 
   &-list {
-    height: 1em;
+    height: 2em;
     margin: 0 auto;
     display: flex;
     padding: .5em;
@@ -37,7 +37,7 @@
     img {
       width: 3em;
       color: white;
-      z-index: 1001;
+      z-index: 2000;
 
       &:hover {
         transform: scale(1.1);

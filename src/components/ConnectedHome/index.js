@@ -27,7 +27,7 @@ const ConnectedHome = ({ logged, loading, id }) => {
 
           <div className="dashboard">
             <div className="dashboard-header">
-              {/* <Header /> */}
+              <Header />
               <div className="dashboard-header-title">
                 <Link to="/">
                   <h1>Undefined::Role-Play</h1>

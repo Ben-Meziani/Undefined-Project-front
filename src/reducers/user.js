@@ -26,12 +26,11 @@ const initialState = {
   role: 0,
   logged: false,
   errorToLog: false,
-
+  roomId: '',
   open: false,
   roomId: '',
   playersNb: 0,
   loading: false,
-
   userRegistered: false,
   regPassword: '',
   regPasswordCheck: '',

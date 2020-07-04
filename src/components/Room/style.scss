@@ -1,9 +1,29 @@
 @import 'src/styles/vars';
 
 .static-room {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   font-family: 'Nunito', sans-serif;
+  background-image: url("../../../src/assets/HPbg-mobile.jpg");
+  background-size: 100%;
+}
+
+
+@media (min-width: 767px) {
+
+  .room-container {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .static-room {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../../../src/assets/HPbg1.jpg');
+    background-size: 100%;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -17,20 +37,40 @@
   .static-room {
     padding: 0.5em;
     width: 70%;
+    height: 100vh;
     margin: 0 auto;
     background-image: url('../../assets/oldpaper2BG.jpg');
     background-size: cover;
 
     .tools {
       width: 100%;
-      height: 40%;
-      margin-top: 4em;
+      height: 45%;
+      margin-top: 7%;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
     }
   }
 }
+
+@media (min-width: 1400px) {
+
+  .static-room {
+    width: 70%;
+    height: 100vh;
+
+    .tools {
+      width: 100%;
+      height: 50%;
+      margin-top: 2em;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+}
+
 
 @media (min-width: 1600px) {
 

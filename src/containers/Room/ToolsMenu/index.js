@@ -6,7 +6,6 @@ import {
   toggleOpenEdit,
   toggleOpenBomb,
   toggleOpenDice,
-  toggleOpenPicture,
   toggleOpenChat,
 } from '../../../actions';
 
@@ -18,7 +17,6 @@ const mapStateToProps = (state) => ({
   pictureOpen: state.room.pictureOpen,
   masterRole: state.user.masterRole,
   chatOpen: state.room.chatOpen,
-
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -36,10 +34,6 @@ const mapDispatchToProps = (dispatch) => ({
   },
   toggleOpenDice: () => {
     const action = toggleOpenDice();
-    dispatch(action);
-  },
-  toggleOpenPicture: () => {
-    const action = toggleOpenPicture();
     dispatch(action);
   },
   toggleOpenChat: () => {
