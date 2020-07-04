@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-import { Modal, Loader } from 'semantic-ui-react';
+import { Modal, Loader, Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import joinIcon from '../../../../assets/icons/bookmenu.svg';
@@ -24,10 +24,9 @@ const JoinRoom = ({
   console.log('joinedRoom dans la modale vaut', joinedRoom);
   return (
     <Modal
-      className="join-room-modal"
       trigger={<div className="join"><div className="join-container"><img src={joinIcon} alt="join" /><div className="join-text">Rejoindre</div></div></div>}
     >
-      <Modal.Header>Rejoindre une Salle</Modal.Header>
+      <Modal.Header>Rejoindre une salle</Modal.Header>
       <Modal.Content image>
         <Modal.Description>
           <form className="ui form" onSubmit={handleSubmit}>
@@ -55,15 +54,15 @@ const JoinRoom = ({
                 value={passForJoin}
               />
             </div>
-            {errorJoinedRoom && !loading && (<p> La Salle n'existe pas, ou les identifiants sont erronés.</p>) }
-            {/* <div className="field"> */}
-              <button className="ui button join-room-submit" type="submit">Valider</button>
-            {/* </div> */}
+            {errorJoinedRoom && !loading && (<p> La Salle n'existe pas, ou les identifiants sont erronés.</p>)}
+            <Modal.Actions>
+              <Button type="submit">Rejoindre la salle</Button>
+              {joinedRoom && <a href={`/room/${roomId}/view`}>Rejoindre la Salle!</a>}
+            </Modal.Actions>
           </form>
           <div className="register-loader">
             <Loader active inline="centered" />
           </div>
-          {joinedRoom && <a href={`/room/${roomId}/view`}>Rejoindre la Salle!</a>}
         </Modal.Description>
       </Modal.Content>
     </Modal>

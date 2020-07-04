@@ -90,3 +90,49 @@ JoinRoom.defaultProps = {
 };
 
 export default JoinRoom;
+
+
+/*     <Modal
+      className="join-room-modal"
+      trigger={<div className="join"><div className="join-container"><img src={joinIcon} alt="join" /><div className="join-text">Rejoindre</div></div></div>}
+    >
+      <Modal.Header>Rejoindre une Salle</Modal.Header>
+      <Modal.Content image>
+        <Modal.Description>
+          <form className="ui form" onSubmit={handleSubmit}>
+            <div className="field">
+              <label htmlFor="idForJoin">
+                Indiquez le code-name que votre M-J vous a communiqué
+              </label>
+              <Field
+                type="text"
+                placeholder="Code Name de la room"
+                name="idForJoin"
+                changeValue={changeValue}
+                value={idForJoin}
+              />
+            </div>
+            <div className="field">
+              <label htmlFor="idForPass">
+                Indiquez le mot de passe que votre M-J vous a communiqué
+              </label>
+              <Field
+                type="password"
+                placeholder="Mot de passe"
+                name="passForJoin"
+                changeValue={changeValue}
+                value={passForJoin}
+              />
+            </div>
+            {errorJoinedRoom && !loading && (<p> La Salle n'existe pas, ou les identifiants sont erronés.</p>) }
+            {/* <div className="field"> */}
+             /*  <button className="ui button join-room-submit" type="submit">Valider</button> */
+            {/* </div> */}
+      /*     </form>
+          <div className="register-loader">
+            <Loader active inline="centered" />
+          </div>
+          {joinedRoom && <a href={`/room/${roomId}/view`}>Rejoindre la Salle!</a>}
+        </Modal.Description>
+      </Modal.Content>
+    </Modal> */
