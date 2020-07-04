@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import HomePage from '../../containers/HomePage';
 import ConnectedHome from '../../containers/ConnectedHome';
 import EditProfile from '../../containers/ConnectedHome/EditProfile';
+import Error404 from '../Error404';
 import Room from '../Room';
 
 // == Import
@@ -26,6 +27,10 @@ const App = ({ id }) => (
 
       <Route path="/room">
         <Room />
+      </Route>
+
+      <Route>
+        <Error404 />
       </Route>
     </Switch>
   </div>
