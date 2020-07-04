@@ -21,7 +21,7 @@ const JoinRoom = ({
     evt.preventDefault();
     joinRoom();
   };
-  console.log('joinedRoom dans la modale vaut', joinedRoom);
+
   return (
     <Modal
       trigger={<div className="join"><div className="join-container"><img src={joinIcon} alt="join" /><div className="join-text">Rejoindre</div></div></div>}
@@ -32,7 +32,7 @@ const JoinRoom = ({
           <form className="ui form" onSubmit={handleSubmit}>
             <div className="field">
               <label htmlFor="idForJoin">
-                Indiquez le code-name que votre M-J vous a communiqué
+                Indiquez le code-name que votre Maître de Jeu vous a communiqué
               </label>
               <Field
                 type="text"
@@ -44,7 +44,7 @@ const JoinRoom = ({
             </div>
             <div className="field">
               <label htmlFor="idForPass">
-                Indiquez le mot de passe que votre M-J vous a communiqué
+                Mot de Passe
               </label>
               <Field
                 type="password"
@@ -54,10 +54,11 @@ const JoinRoom = ({
                 value={passForJoin}
               />
             </div>
-            {errorJoinedRoom && !loading && (<p> La Salle n'existe pas, ou les identifiants sont erronés.</p>)}
+            {errorJoinedRoom && !loading
+            && (<p> La Salle n'existe pas, ou les identifiants sont erronés.</p>)}
             <Modal.Actions>
               <Button type="submit">Rejoindre la salle</Button>
-              {joinedRoom && <a href={`/room/${roomId}/view`}>Rejoindre la Salle!</a>}
+              {joinedRoom && <a href={`/api/room/${roomId}/view`}>Rejoindre la Salle</a>}
             </Modal.Actions>
           </form>
           <div className="register-loader">
