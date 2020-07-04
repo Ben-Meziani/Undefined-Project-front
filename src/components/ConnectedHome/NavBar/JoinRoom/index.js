@@ -30,44 +30,40 @@ const JoinRoom = ({
       <Modal.Header>Rejoindre une Salle</Modal.Header>
       <Modal.Content image>
         <Modal.Description>
-          { !joinedRoom && (
-            <form className="ui form" onSubmit={handleSubmit}>
-              <div className="field">
-                <label htmlFor="idForJoin">
-                  Indiquez le code-name que votre M-J vous a communiqué
-                </label>
-                <Field
-                  type="text"
-                  placeholder="Code Name de la room"
-                  name="idForJoin"
-                  changeValue={changeValue}
-                  value={idForJoin}
-                />
-              </div>
-              <div className="field">
-                <label htmlFor="idForPass">
-                  Indiquez le mot de passe que votre M-J vous a communiqué
-                </label>
-                <Field
-                  type="password"
-                  placeholder="Mot de passe"
-                  name="passForJoin"
-                  changeValue={changeValue}
-                  value={passForJoin}
-                />
-              </div>
-              <div className="field">
-                <button className="ui button join-room-submit" type="submit">Valider</button>
-              </div>
-              {errorJoinedRoom && !loading && (<p> La Salle n'existe pas, ou les identifiants sont erronés.</p>) }
-            </form>
-          )}
-          {loading && (
-            <div className="register-loader">
-              <Loader active inline="centered" />
+          <form className="ui form" onSubmit={handleSubmit}>
+            <div className="field">
+              <label htmlFor="idForJoin">
+                Indiquez le code-name que votre M-J vous a communiqué
+              </label>
+              <Field
+                type="text"
+                placeholder="Code Name de la room"
+                name="idForJoin"
+                changeValue={changeValue}
+                value={idForJoin}
+              />
             </div>
-          )}
-          {joinedRoom && !loading && (<Link to={`/room/${roomId}/view`}>Rejoindre la Salle!</Link>) }
+            <div className="field">
+              <label htmlFor="idForPass">
+                Indiquez le mot de passe que votre M-J vous a communiqué
+              </label>
+              <Field
+                type="password"
+                placeholder="Mot de passe"
+                name="passForJoin"
+                changeValue={changeValue}
+                value={passForJoin}
+              />
+            </div>
+            <div className="field">
+              <button className="ui button join-room-submit" type="submit">Valider</button>
+            </div>
+            {errorJoinedRoom && !loading && (<p> La Salle n'existe pas, ou les identifiants sont erronés.</p>) }
+          </form>
+          <div className="register-loader">
+            <Loader active inline="centered" />
+          </div>
+          <Link to={`/room/${roomId}/view`}>Rejoindre la Salle!</Link>
         </Modal.Description>
       </Modal.Content>
     </Modal>

@@ -3,6 +3,7 @@ import axios from 'axios';
 import {
   CREATE_ROOM,
   JOIN_ROOM,
+  saveRole,
   loading,
   errorJoinRoom,
 } from '../actions';
@@ -26,8 +27,6 @@ const room = (store) => (next) => (action) => {
       })
         .then((response) => {
           console.log(response.data);
-          const saveRoomNumber = response.data.uniqueId;
-          store.dispatch(saveRoomNumber);
         })
         .catch((error) => {
           console.error(error);

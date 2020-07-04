@@ -3,6 +3,7 @@
 // GENERAL
 export const CREATE_ROOM = 'CREATE_ROOM';
 export const JOIN_ROOM = 'JOIN_ROOM';
+export const SAVE_ROLE = 'SAVE_ROLE';
 export const ERROR_JOIN_ROOM = 'ERROR_JOIN_ROOM';
 
 // TOGGLES
@@ -33,8 +34,9 @@ export const createRoom = () => ({
   type: CREATE_ROOM,
 });
 
-export const joinRoom = () => ({
+export const joinRoom = (joinedRoom) => ({
   type: JOIN_ROOM,
+  joinedRoom,
 });
 
 export const errorJoinRoom = () => ({
