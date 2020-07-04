@@ -17,7 +17,8 @@ const App = ({ id }) => (
   <div className="app">
     <HomePage />
     <Switch>
-      <Route path={`/dashboard/user/${id}`} exact>
+      {/* <Route path={`/dashboard/user/${id}`} exact> */}
+      <Route path="/dashboard" exact>
         <ConnectedHome />
       </Route>
 
@@ -29,9 +30,9 @@ const App = ({ id }) => (
         <Room />
       </Route>
 
-      <Route>
+      {/* <Route>
         <Error404 />
-      </Route>
+      </Route> */}
     </Switch>
   </div>
 );

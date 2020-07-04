@@ -20,6 +20,7 @@ console.log(logged);
       <Route path="/" exact>
         <div className="homePage">
           <Header />
+          <RainDropAnimation />
 
           <div className="homePage-main">
             <div className="homePage-container">
