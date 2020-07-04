@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import Media from 'src/components/Room/ShareMedia/Media';
 
 import { Icon } from 'semantic-ui-react';
+import Vif from '../../../assets/icons/golden-snitch2.png';
 
 import './style.scss';
 
@@ -79,6 +80,7 @@ const ShareMedia = ({
       </div>
       <label htmlFor="mediaFile" className="label-file">Choisissez des images à partager</label>
       <input type="file" id="mediaFile" name="mediaFile" className="media-choice-input" onChange={handleChange} />
+      <div className="icon-vif-or"><img src={Vif} alt="vif-or" /></div>
     </div>
   );
 };

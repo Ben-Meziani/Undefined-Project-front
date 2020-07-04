@@ -7,9 +7,12 @@ import './style.scss';
 const Media = ({ file, id, fileURL }) => {
   console.log('COMPONENT MEDIA fileURL vaut', fileURL);
   console.log('COMPONENT MEDIA file vaut', file);
+  const handleShareOnView = () => {
+    console.log('j\'envoie dans shareView');
+  };
   return (
     <div className="media-picture">
-      {!fileURL && !(id === 0) ? (<img className="share-picture" src={file} alt="unknown" />) : <img className="image" src={fileURL} alt="unknown" />}
+      {!fileURL && !(id === 0) ? (<button type="button" onClick={handleShareOnView}><img className="share-picture" src={file} alt="unknown" /></button>) : <img className="image" src={fileURL} alt="unknown" />}
     </div>
   );
 };

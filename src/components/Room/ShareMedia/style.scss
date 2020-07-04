@@ -41,6 +41,22 @@
     }
   }
 
+  .icon-vif-or img {
+    position: absolute;
+    left: 2em;
+    width: 3em;
+    transform: rotate(-20deg);
+    &:hover {
+      transform: rotate(0);
+     /*  animation: fly 3s ease;
+
+      @keyframes fly {
+        0% {transform: translate(1em) rotate(45deg)}
+        100% { transform: translate(1.5em) rotate(75deg); }
+      } */
+    }
+  }
+
   input {
     display: none;
   }
@@ -148,8 +164,20 @@
     &-toggle {
       display: none;
       }
+
+    button {
+      position: absolute;
+      display: block;
+      top: 0;
+      right: 1em;
+      height: 1em;
+      width: 1em;
+      background: none;
+      border: none;
+      color: $main-color;
     }
   }
+}
 
 
 @media (min-width: 1400px) {
@@ -191,7 +219,7 @@
     }
 
     button {
-      position: absolute;
+      position: relative;
       top: 0;
       left: 0;
       height: 1em;

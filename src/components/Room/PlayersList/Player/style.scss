@@ -6,13 +6,13 @@
   justify-content: center;
   align-items: center;
   width: 12%;
-  margin: 0 1em;
+  margin: 0 2em;
   
   &-icon {
-    height: 4em;
-    width: 4em;
+    height: 5em;
+    width: 5em;
     border-radius: 5%;
-    margin-top: 0.5em;
+    margin: 0.5em;
     overflow: hidden;
 
    img {
@@ -45,14 +45,15 @@
 @media (min-width: 1024px) {
 
   .player {
-    width: 6em;
+    width: 3em;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
     
     &-icon {
-      width: 2.8em;
-      height: 2.8em;
+      width: 2em;
+      height: 2em;
       overflow: hidden;
 
       img {
@@ -91,9 +92,11 @@
 
   .player {
     width: 4em;
+    height: 4em;
     
     &-icon {
-      height: 3em;
+      width: 2.4em;
+      height: 2.4em;
       overflow: hidden;
       margin: 0.2em 0.2em;
     }

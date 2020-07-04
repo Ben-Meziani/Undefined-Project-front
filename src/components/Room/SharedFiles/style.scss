@@ -10,7 +10,7 @@
     top: 0;
     background-color: white;
     opacity: 0.9;
-    z-index: 105;
+  /*   z-index: 104; */
 
     &-subcontent {
       display: none;
@@ -250,7 +250,7 @@
     }
 
     img {
-      width: 4em;
+      width: 3em;
       margin: 0.5em;
 
       &:hover {

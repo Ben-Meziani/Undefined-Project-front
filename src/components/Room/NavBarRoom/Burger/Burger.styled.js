@@ -16,6 +16,12 @@ cursor: pointer;
 padding: 0;
 z-index: 2100;
 
+@media (min-width: 767px) {
+  position: absolute;
+  left: 1em;
+  top: 3%;
+}
+
 @media (min-width: 1024px) {
   position: absolute;
   left: 1em;
