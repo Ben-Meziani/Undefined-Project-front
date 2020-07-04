@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StyledMenu } from './Menu.styled';
 
-const Menu = ({ handleLogout, toggleOpenShare, setOpen, open }) => {
+const Menu = ({ handleLogout, toggleOpenShare, setOpen, open, id }) => {
   const handleClose = () => {
     toggleOpenShare();
     setOpen(!open);
@@ -12,7 +12,7 @@ const Menu = ({ handleLogout, toggleOpenShare, setOpen, open }) => {
       <a href="/" onClick={handleLogout}>
         <span role="img" aria-label="deconnect">Se déconnecter</span>
       </a>
-      <a href="/dashboard">
+      <a href={`/dashboard/user/${id}`}>
         <span role="img" aria-label="leave">Quitter la room</span>
       </a>
       <a href="#" onClick={handleClose}>
@@ -27,5 +27,6 @@ Menu.propTypes = {
   toggleOpenShare: PropTypes.func.isRequired,
   open: PropTypes.bool.isRequired,
   setOpen: PropTypes.func.isRequired,
+  id: PropTypes.number.isRequired,
 };
 export default Menu;

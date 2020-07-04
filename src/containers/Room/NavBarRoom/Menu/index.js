@@ -6,6 +6,7 @@ import { logout, toggleOpenShare, toggleOpen } from '../../../../actions';
 const mapStateToProps = (state) => ({
   roomName: state.room.roomName,
   playersOpen: state.room.playersOpen,
+  id: state.user.id,
 });
 const mapDispatchToProps = (dispatch) => ({
   handleLogout: () => {
