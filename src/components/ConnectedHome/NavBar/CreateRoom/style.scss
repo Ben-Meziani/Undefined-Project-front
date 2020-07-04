@@ -64,15 +64,26 @@
 }
 
 .gm-join {
+  margin-top: 1em;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: 'Nunito';
 
   p {
     font-size: 2em;
 
     span {
       font-weight: bold;
+    }
+  }
+
+  &-link {
+    display: inline-block;
+    width: 100%;
+
+    &:hover {
+      color: #e1b713;
     }
   }
 }

@@ -44,7 +44,7 @@ const CreateRoom = ({
         </>
       )}
 
-      {!loading && { role: 2 } && (<div className="gm-join"><p>Vous êtes <span>Game Master</span></p> : <Link to={`/${roomId}/room`}> Rejoignez votre Salle!</Link></div> )}
+      {!loading && { role: 2 } && (<div className="gm-join"><p>Vous êtes <span>Game Master</span></p> : <Link to={`/${roomId}/room`} className="gm-join-link"><p className="gm-join-link-text">Rejoignez votre Salle!</p></Link></div>)}
       {{ role: 0 } && { role: 1 } && !loading && !{ role: 2 } && (
         <Modal.Content image>
           <Modal.Description>
