@@ -9,10 +9,9 @@ import './style.scss';
 
 const SharedView = ({ roomImage, fileURL }) => {
   return (
-    <>
-      <div className="shared-view">
-        {!fileURL ? <img className="shared-view-picture" src={`https://undefined-project.tk/api/uploads/files/${roomImage}`} alt="unknown" /> : <img className="shared-view-picture" src={fileURL} alt="unknown" />}
-       {/*  <div className="shared-view-media"> */}
+    <div className="shared-view">
+      {/* {!fileURL ? <img className="shared-view-picture" src={`https://undefined-project.tk/api/uploads/files/${roomImage}`} alt="unknown" /> : <img className="shared-view-picture" src={fileURL} alt="unknown" />} */}
+      <div className="shared-view-media">
           <Switch>
             <Route path="/room/shareview">
               <img className="share-picture" src={fileURL} alt="unknown" />
@@ -90,16 +89,12 @@ const SharedView = ({ roomImage, fileURL }) => {
               <ReactPlayer url="https://www.youtube.com/watch?v=ElG_yRX_ZqI" />
             </Route>
           </Switch>
-
-       {/*  </div> */}
       </div>
-      <>
-        <div className="shared-view-line" />
-        <div className="shared-stars">
-          <img src={ShootingStar} alt="star" />
-        </div>
-      </>
-    </>
+      <div className="shared-view-line" />
+      <div className="shared-stars">
+        <img src={ShootingStar} alt="star" />
+      </div>
+    </div>
   );
 };
 

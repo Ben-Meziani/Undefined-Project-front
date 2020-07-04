@@ -82,7 +82,7 @@
 @media (min-width: 1600px) {
 
   .shared-view {
-    width: 45%;
+    max-width: 45%;
     height: 90%;
     margin: 0 auto;
     border: 0.2em dashed $main-color;
