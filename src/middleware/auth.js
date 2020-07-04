@@ -70,7 +70,7 @@ const auth = (store) => (next) => (action) => {
         })
         .catch((error) => {
           // console.error(error);
-          if (error.response.status === 400) {
+          if (error.status !== 200) {
             store.dispatch(errorRegPassword());
           }
         })
@@ -96,9 +96,9 @@ const auth = (store) => (next) => (action) => {
         })
         .catch((error) => {
           console.error(error);
-          // if (error.response.status === 400) {
-          // store.dispatch(errorRegPassword());
-          // }
+          if (error.status !== 200) {
+            store.dispatch(errorRegPassword());
+          }
         })
         .finally(() => {
           // loading is over.

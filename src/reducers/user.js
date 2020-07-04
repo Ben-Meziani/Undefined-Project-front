@@ -20,19 +20,17 @@ const initialState = {
   currentUser: [],
   email: '',
   password: '',
-  pseudo: 'Undefined',
+  pseudo: '',
   id: 0,
   icon: '',
   role: 0,
-  image: '',
-  logged: true,
+  logged: false,
   errorToLog: false,
   roomId: '',
-
   open: false,
+  roomId: '',
   playersNb: 0,
   loading: false,
-
   userRegistered: false,
   regPassword: '',
   regPasswordCheck: '',
@@ -135,6 +133,7 @@ const user = (state = initialState, action = {}) => {
         logged: false,
         userRegistered: false,
         loading: true,
+        send: false,
       };
     }
     case ERROR_PASSWORD_CHECK: {
@@ -150,6 +149,7 @@ const user = (state = initialState, action = {}) => {
       return {
         ...state,
         loading: true,
+        send: true,
       };
     }
     default:

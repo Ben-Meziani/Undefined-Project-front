@@ -8,8 +8,6 @@ import {
 } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import Field from './Field';
-import RegisterAvatar from './RegisterAvatar';
-import { errorRegPassword } from '../../../actions';
 
 const Register = ({
   regEmail,
@@ -41,7 +39,7 @@ const Register = ({
   return (
 
     <div className="register">
-   {/*    {!userRegistered && !logged && ( */}
+      {!userRegistered && !logged && (
         <>
           <Form autoComplete="off" onSubmit={handleSubmit}>
             <Form.Field required>
@@ -95,7 +93,7 @@ const Register = ({
             </Button>
           </Form>
         </>
-     {/*  )} */}
+      )}
       {loading && (
       <div className="register-loader">
         <Loader active inline="centered" />

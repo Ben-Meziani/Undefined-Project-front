@@ -4,6 +4,7 @@ import {
   CREATE_ROOM,
   JOIN_ROOM,
   loading,
+  errorJoinRoom,
 } from '../actions';
 
 const serverURI = 'https://undefined-project.tk/api';
@@ -57,8 +58,10 @@ const room = (store) => (next) => (action) => {
         })
         .catch((error) => {
           console.error(error);
-          if (response.status === 401) {
-            console.log('Vous n\'êtes pas autorisé');
+
+          if (error.status !== 200) {
+            store.dispatch(errorJoinRoom());
+
           }
         })
         .finally(() => {

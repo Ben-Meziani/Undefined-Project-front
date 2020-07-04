@@ -10,7 +10,8 @@ const mapStateToProps = (state) => ({
   playersNb: state.room.playersNb,
   role: state.user.role,
   loading: state.room.loading,
-  roomId: state.room.roomId,
+  roomId: state.user.roomId,
+  createdRoom: state.room.createdRoom,
 });
 
 const mapDispatchToProps = (dispatch) => ({

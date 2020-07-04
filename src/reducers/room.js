@@ -15,6 +15,7 @@ import {
   TOGGLE_OPEN_SHARE,
   TOGGLE_OPEN_PLAYERS,
   TOGGLE_OPEN_MENU,
+  ERROR_JOIN_ROOM,
 } from '../actions';
 
 import { getNextId } from '../selectors';
@@ -48,6 +49,9 @@ const initialState = {
   roomPassword: '',
   idForJoin: '',
   passForJoin: '',
+  joinedRoom: false,
+  errorJoinedRoom: false,
+  createdRoom: false,
 
   playersNb: 0,
   playersList: [
@@ -152,15 +156,25 @@ const room = (state = initialState, action = {}) => {
     case CREATE_ROOM:
       return {
         ...state,
-        role: 2,
         loading: true,
+        createdRoom: true,
       };
     case JOIN_ROOM:
       return {
         ...state,
         player: action.pseudo,
         playerIcon: action.icon,
+        joinedRoom: true,
+        loading: true,
+        errorJoinedRoom: false,
         /* playerRole: true, */
+      };
+    case ERROR_JOIN_ROOM:
+      return {
+        ...state,
+        loading: false,
+        errorJoinedRoom: true,
+        joinedRoom: false,
       };
     case TOGGLE_OPEN_CHAT:
       return {

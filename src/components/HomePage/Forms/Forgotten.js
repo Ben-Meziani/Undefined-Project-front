@@ -7,53 +7,80 @@ import {
   Grid,
   Loader,
 } from 'semantic-ui-react';
+import { Redirect } from 'react-router-dom';
 import Field from './Field';
 import './style.scss';
+import { errorRegPassword } from '../../../actions';
 
 const Forgotten = ({
   sendedEmail,
   changeValue,
   loading,
-  logged,
   send,
   sendEmail,
+  errorRegPass,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     console.log(sendedEmail);
     sendEmail();
   };
+
   return (
+
     <div className="forgotten">
-      <Grid className="center aligned">
-        <p className="forgotten-text">Indiquez l'email utilisé lors de la création de compte, un mot de passe vous sera renvoyé.</p>
-        <Form autoComplete="off" onSubmit={handleSubmit}>
-          <Form.Field required>
-            <label>E-mail</label>
-            <Field
-              type="email"
-              placeholder="Email"
-              name="sendedEmail"
-              changeValue={changeValue}
-              value={sendedEmail}
-            />
-          </Form.Field>
-          <Button color="black" type="submit">
-            Récupérer le mot de passe
-          </Button>
-        </Form>
-      </Grid>
+
+      {!loading && !send && (
+        <Grid className="center aligned">
+          <p className="forgotten-text">Indiquez l'email utilisé lors de la création de compte, un mot de passe vous sera renvoyé.</p>
+          <Form autoComplete="off" onSubmit={handleSubmit}>
+            <Form.Field required>
+              <label>E-mail</label>
+              <Field
+                type="email"
+                placeholder="Email"
+                name="sendedEmail"
+                changeValue={changeValue}
+                value={sendedEmail}
+              />
+            </Form.Field>
+            <Button color="black" type="submit">
+              Récupérer le mot de passe
+            </Button>
+          </Form>
+        </Grid>
+      )}
+
+      {!loading && send && errorRegPass && (
+        <Grid className="center aligned">
+          <p className="forgotten-text">Indiquez l'email utilisé lors de la création de compte, un mot de passe vous sera renvoyé.</p>
+          <Form autoComplete="off" onSubmit={handleSubmit}>
+            <Form.Field required>
+              <label>E-mail</label>
+              <Field
+                type="email"
+                placeholder="Email"
+                name="sendedEmail"
+                changeValue={changeValue}
+                value={sendedEmail}
+              />
+              <p className="register-password-int"> Cet utilisateur ne semble pas être enregistré.</p>
+            </Form.Field>
+            <Button color="black" type="submit">
+              Récupérer le mot de passe
+            </Button>
+          </Form>
+        </Grid>
+      )}
+
       {loading && (
       <>
         <Loader active inline="centered" />
       </>
       )}
-      {/* {logged && !loading ? <Redirect to="/dashboard" /> : <Redirect to="/login" />} */}
-{/*       {!loading && send && (
-      <>
+      {!loading && send && !errorRegPass && (
         <p className="forgotten-confirm">Un email vous a été envoyé !</p>
-      </>
-      )} */}
+      )}
     </div>
   );
 };
@@ -61,7 +88,6 @@ const Forgotten = ({
 Forgotten.propTypes = {
   sendedEmail: PropTypes.string.isRequired,
   changeValue: PropTypes.func.isRequired,
-  logged: PropTypes.bool.isRequired,
   loading: PropTypes.bool,
   send: PropTypes.bool.isRequired,
   sendEmail: PropTypes.func.isRequired,

@@ -13,7 +13,7 @@ import Room from '../Room';
 import './style.scss';
 
 // == Composant
-const App = ({ id }) => (
+const App = ({ id, roomId }) => (
   <div className="app">
     <HomePage />
     <Switch>
@@ -25,7 +25,7 @@ const App = ({ id }) => (
         <EditProfile />
       </Route>
 
-      <Route path="/room">
+      <Route path={`/${roomId}/room`}>
         <Room />
       </Route>
 
@@ -38,6 +38,10 @@ const App = ({ id }) => (
 
 App.propTypes = {
   id: PropTypes.number.isRequired,
+  roomId: PropTypes.string,
+};
+App.defaultProps = {
+  roomId: '',
 };
 
 // == Export
