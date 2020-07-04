@@ -7,13 +7,16 @@ import ShootingStar from '../../../assets/icons/shooting-stars.png';
 
 import './style.scss';
 
-const SharedView = ({ image, imgURL }) => {
+const SharedView = ({ roomImage, fileURL }) => {
   return (
     <>
       <div className="shared-view">
-        {!imgURL ? <img className="shared-view-picture" src={`https://undefined-project.tk/api/uploads/files/${image}`} alt="unknown" /> : <img className="shared-view-picture" src={imgURL} alt="unknown" />}
+        {!fileURL ? <img className="shared-view-picture" src={`https://undefined-project.tk/api/uploads/files/${roomImage}`} alt="unknown" /> : <img className="shared-view-picture" src={fileURL} alt="unknown" />}
        {/*  <div className="shared-view-media"> */}
           <Switch>
+            <Route path="/room/shareview">
+              <img className="share-picture" src={fileURL} alt="unknown" />
+            </Route>
             <Route path="/room/hoglib" exact>
               <ReactPlayer url="https://www.youtube.com/watch?v=pAHciSqi1-8" width="100%" height="100%" />
             </Route>
@@ -101,8 +104,8 @@ const SharedView = ({ image, imgURL }) => {
 };
 
 SharedView.propTypes = {
-  image: PropTypes.string.isRequired,
-
+  fileURL: PropTypes.string.isRequired,
+  roomImage: PropTypes.string.isRequired,
 };
 
 export default SharedView;
