@@ -84,13 +84,19 @@
   .ui.modal {
     margin-top: -20em;
   }
+
+  .ui.button {
+    margin-top: 1em;
+    background-color: black;
+    color: white;
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+  }
 }
 
-.ui.button {
-  margin-top: 1em;
-  background-color: black;
-  color: white;
-}
+
 
 @media (min-width: 767px) {
   .join-room-button {
