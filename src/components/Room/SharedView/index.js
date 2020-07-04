@@ -7,9 +7,9 @@ import ShootingStar from '../../../assets/icons/shooting-stars.png';
 
 import './style.scss';
 
-const SharedView = ({ roomImage, fileURL }) => {
-  console.log(fileURL);
-  console.log(roomImage);
+const SharedView = ({ image, fileURL }) => {
+  console.log('COMPONENT SHAREVIEW fileURL vaut', fileURL);
+  console.log('COMPONENT SHAREVIEW image vaut', image);
   return (
     <div className="shared-view">
       {/* {!fileURL ? <img className="shared-view-picture" src={`https://undefined-project.tk/api/uploads/files/${roomImage}`} alt="unknown" /> : <img className="shared-view-picture" src={fileURL} alt="unknown" />} */}
@@ -103,7 +103,7 @@ const SharedView = ({ roomImage, fileURL }) => {
 
 SharedView.propTypes = {
   fileURL: PropTypes.string.isRequired,
-  roomImage: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
 };
 
 export default SharedView;
