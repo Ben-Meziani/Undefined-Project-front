@@ -1,15 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import { StyledMenu } from './Menu.styled';
 
-const Menu = ({ handleLogout, toggleOpenShare, open }) => {
-  console.log(open);
+const Menu = ({ handleLogout, toggleOpenShare, setOpen, open }) => {
+  const handleClose = () => {
+    toggleOpenShare();
+    setOpen(!open);
+  };
   return (
     <StyledMenu open={open}>
-      <div className="menu-dropdown-item"><Link to="/" onClick={handleLogout}><button className="share-media-button" type="button">Se déconnecter</button></Link></div>
-      <div className="menu-dropdown-item"><Link to="/dashboard"><button className="share-media-button" type="button">Quitter la room</button></Link></div>
-      <div className="menu-dropdown-item"><button onClick={toggleOpenShare} className="share-media-button" type="button">Partager un media</button></div>
+      <a href="/" onClick={handleLogout}>
+        <span role="img" aria-label="deconnect">Se déconnecter</span>
+      </a>
+      <a href="/dashboard">
+        <span role="img" aria-label="leave">Quitter la room</span>
+      </a>
+      <a href="#" onClick={handleClose}>
+        <span role="img" aria-label="contact">Partager un media</span>
+      </a>
     </StyledMenu>
   );
 };
@@ -18,5 +26,6 @@ Menu.propTypes = {
   handleLogout: PropTypes.func.isRequired,
   toggleOpenShare: PropTypes.func.isRequired,
   open: PropTypes.bool.isRequired,
+  setOpen: PropTypes.func.isRequired,
 };
 export default Menu;

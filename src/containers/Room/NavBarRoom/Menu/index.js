@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import Menu from '../../../../components/Room/NavBarRoom/Menu';
-import { logout, toggleOpenShare } from '../../../../actions';
+import { logout, toggleOpenShare, toggleOpen } from '../../../../actions';
 
 const mapStateToProps = (state) => ({
   roomName: state.room.roomName,
@@ -14,6 +14,10 @@ const mapDispatchToProps = (dispatch) => ({
   },
   toggleOpenShare: () => {
     const action = toggleOpenShare();
+    dispatch(action);
+  },
+  toggleOpen: () => {
+    const action = toggleOpen();
     dispatch(action);
   },
 });
