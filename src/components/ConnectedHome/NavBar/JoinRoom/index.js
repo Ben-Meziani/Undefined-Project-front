@@ -3,7 +3,7 @@ import React from 'react';
 import { Modal, Loader, Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import joinIcon from '../../../../assets/icons/bookmenu.svg';
+import joinIcon from '../../../../assets/icons/books.png';
 import Field from '../../../HomePage/Forms/Field';
 import './style.scss';
 

@@ -50,6 +50,10 @@ const ConnectedHome = ({ logged, loading, id }) => {
                 </div>
               </div>
             </div>
+            <Link to="/room">
+              {/* <Link to={`/room/${roomId}/view`}> */}
+              Allez sur la chatroom.
+            </Link>
           </div>
         </Route>
 

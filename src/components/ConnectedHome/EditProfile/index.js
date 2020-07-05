@@ -20,6 +20,7 @@ const EditProfile = ({
   imgURL,
   changeValue,
   sendUserData,
+  id,
 }) => {
   // PREVIEW THE NEW AVATAR AND SEND TO SERVER
   const handleChange = (evt) => {
@@ -39,8 +40,7 @@ const EditProfile = ({
 
   return (
     <div className="edit-profile-section">
-      {/* ROUTE A CORRIGER !!*/}
-      <Link to="/dashboard">
+      <Link to={`/dashboard/user/${id}`}>
         <div className="home-button">
           <img src={homeIcon} alt="home" />
         </div>
@@ -97,6 +97,7 @@ EditProfile.propTypes = {
   changeIconUrl: PropTypes.func.isRequired,
   changeValue: PropTypes.func.isRequired,
   sendUserData: PropTypes.func.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 export default EditProfile;

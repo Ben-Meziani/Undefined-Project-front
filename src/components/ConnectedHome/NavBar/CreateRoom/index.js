@@ -4,7 +4,7 @@ import React from 'react';
 import { Modal, Dropdown, Loader } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import createIcon from '../../../../assets/icons/feather.svg';
+import createIcon from '../../../../assets/icons/ink.png';
 
 import Field from '../../../HomePage/Forms/Field';
 
