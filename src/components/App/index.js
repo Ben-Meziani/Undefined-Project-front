@@ -15,7 +15,7 @@ import Room from '../Room';
 import './style.scss';
 
 // == Composant
-const App = ({ id, roomId }) => (
+const App = ({ id, idForJoin }) => (
   <div className="app">
     <HomePage />
     <Switch>
@@ -27,7 +27,7 @@ const App = ({ id, roomId }) => (
         <EditProfile />
       </Route>
 
-      <Route path={`room/${roomId}/view`}>
+      <Route path={`room/${idForJoin}/view`}>
       {/* <Route path="/room"> */}
         <Room />
       </Route>
@@ -41,7 +41,7 @@ const App = ({ id, roomId }) => (
 
 App.propTypes = {
   id: PropTypes.number.isRequired,
-  roomId: PropTypes.string,
+  idForJoin: PropTypes.string.isRequired,
 };
 App.defaultProps = {
   roomId: '',

@@ -5,6 +5,7 @@ import App from '../../components/App';
 const mapStateToProps = (state) => ({
   id: state.user.id,
   roomId: state.user.roomId,
+  idForJoin: state.room.idForJoin,
   /* logged: state.user.logged, */
 });
 
