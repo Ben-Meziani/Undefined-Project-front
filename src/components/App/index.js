@@ -27,8 +27,8 @@ const App = ({ id, roomId }) => (
         <EditProfile />
       </Route>
 
-    {/*   <Route path={`room/${roomId}/view`}> */}
-      <Route path="/room">
+      <Route path={`room/${roomId}/view`}>
+      {/* <Route path="/room"> */}
         <Room />
       </Route>
 

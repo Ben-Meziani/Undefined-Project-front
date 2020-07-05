@@ -49,8 +49,6 @@ const room = (store) => (next) => (action) => {
       axios.post(`${serverURI}/room/${userId}/join`, {
         uniqueId: state.room.idForJoin,
         password: state.room.passForJoin,
-      }, {
-        withCredentials: true,
       })
         .then((response) => {
           console.log(response.data);

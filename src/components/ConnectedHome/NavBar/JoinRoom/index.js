@@ -21,7 +21,7 @@ const JoinRoom = ({
     evt.preventDefault();
     joinRoom();
   };
-
+console.log('idforjoin vaut', idForJoin);
   return (
     <Modal
       trigger={<div className="join"><div className="join-container"><img src={joinIcon} alt="join" /><div className="join-text">Rejoindre</div></div></div>}
@@ -58,7 +58,7 @@ const JoinRoom = ({
             && (<p> La Salle n'existe pas, ou les identifiants sont erronés.</p>)}
             <Modal.Actions>
               <Button type="submit" className="ui black button">Rejoindre la salle</Button>
-              {joinedRoom && <a href={`/room/${idForJoin}`}>Rejoindre la Salle</a>}
+              {joinedRoom && <Link to={`/room/${idForJoin}/view`}>Rejoindre la Salle</Link>}
             </Modal.Actions>
           </form>
           <div className="register-loader">
