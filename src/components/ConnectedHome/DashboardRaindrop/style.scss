@@ -12,69 +12,75 @@
 
 .white-raindrop1 {
   position: absolute;
-  left: 2em;
+  left: 3%;
   z-index: 1;
+  @include m767() {
+    left: 4%;
+  };
+  @include m1600() {
+    left: 10%;
+  };
   img {
-    width: 2em;
+    width: 1.2em;
     z-index: 1;
   }
 }
 
 .white-raindrop2 {
   position: absolute;
-  left: 14em;
+  left: 21%;
   z-index: 1;
   img {
-    width: 2.2em;
+    width: 1em;
     z-index: 1;
   }
 }
 
 .white-raindrop3 {
   position: absolute;
-  left: 6em;
+  left: 33%;
   z-index: 1;
   img {
-    width: 0.8em;
+    width: 0.6em;
     z-index: 1;
   }
 }
 
 .white-raindrop4 {
   position: absolute;
-  left: 9em;
+  left: 41%;
   z-index: 1;
   img {
-     width: 1.3em;
+     width: 0.3em;
      z-index: 1;
   }
 }
 
 .white-raindrop5 {
   position: absolute;
-  left: 11em;
+  left: 53%;
   z-index: 1;
   img {
-     width: 1.7em;
+     width: 1.1em;
      z-index: 1;
   }
 }
 .white-raindrop6 {
   position: absolute;
-  left: 16em;
+  left: 62%;
   z-index: 1;
   img {
-     width: 0.7em;
+     width: 0.8em;
      z-index: 1;
   }
 }
 
 .white-raindrop7 {
   position: absolute;
-  left: 4em;
+  left: 75%;
   z-index: 1;
   img {
-     width: 1.5em;
+     width: 1.2em;
      z-index: 1;
   }
 }
@@ -86,14 +92,14 @@ animation: fallup 2s linear;
   @keyframes fallup {
     0% {
       opacity: 0;
-      transform: translate(0, +500%) scale(1,1);
+      transform: translate(0, +500%) scale(0.8,1.2);
     }
     70% {
       opacity: 1;
     }
     100% {
       opacity: 0;
-      transform: translate(0, -100%) scale(0.8,1.2);
+      transform: translate(0, -100%) scale(1,1);
     }
   }
 }

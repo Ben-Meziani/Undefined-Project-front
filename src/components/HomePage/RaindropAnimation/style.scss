@@ -1,68 +1,110 @@
-/* @import 'src/styles/vars';
+@import 'src/styles/vars';
 
-// RAINDROPS FALL ANIMATION
-.raindrop-animation{
+// HOMEPAGE RAINDROP STYLES AND ANIMATION
+
+.raindrop1 {
   position: absolute;
-  top: 0;
-
-  .raindrop1 img{
-    width: 2em;
-    position: absolute;
-    left: 2em;
-    top: -10em;
-    
-  }
-  .raindrop2 img{
+  left: 3%;
+  z-index: 9;
+  @include m767() {
+    left: 4%;
+  };
+  @include m1600() {
+    left: 10%;
+  };
+  img {
     width: 3em;
-    position: absolute;
-    left: 4em;
-    top: -10.2em;
-  }
-  .raindrop3 img{
-    width: 1.7em;
-    position: absolute;
-    left: 7em;
-    top: -11em;
-  }
-  .raindrop4 img{
-    width: 2.3em;
-    position: absolute;
-    left: 14em;
-    top: -11.5em;
-  }
-  .raindrop5 img{
-    width: 1.2em;
-    position: absolute;
-    left: 20em;
-    top: -10.8;
-  }
-  .raindrop6 img{
-    width: 2.7em;
-    position: absolute;
-    left: 30em;
-    top: -0.2em;
-  }
-  .raindrop7 img{
-    width: 2em;
-  }
-  .raindrop8 img{
-    width: 2em;
   }
 }
 
-
-.raindrop1, .raindrop2, .raindrop3, .raindrop4, .raindrop6, .raindrop7 {
-  position: relative;
-
-  & img {
-    transform: translateY(0);
-    animation: falldown 1.2s linear;
-    animation-fill-mode: forwards;
+.raindrop2 {
+  position: absolute;
+  left: 21%;
+  z-index: 9;
+  img {
+    width: 2.8em;
   }
+}
+
+.raindrop3 {
+  position: absolute;
+  left: 33%;
+  z-index: 9;
+  img {
+    width: 1.2em;
+  }
+}
+
+.raindrop4 {
+  position: absolute;
+  left: 41%;
+  z-index: 9;
+  img {
+     width: 2.1em;
+  }
+}
+
+.raindrop5 {
+  position: absolute;
+  left: 53%;
+  z-index: 9;
+  img {
+     width: 1.9em;
+  }
+}
+.raindrop6 {
+  position: absolute;
+  left: 62%;
+  z-index: 9;
+  img {
+     width: 2.7em;
+  }
+}
+
+.raindrop7 {
+  position: absolute;
+  left: 75%;
+  z-index: 9;
+  img {
+     width: 1.6em;
+  }
+}
+
+.raindrop8 {
+  position: absolute;
+  left: 87%;
+  z-index: 9;
+  img {
+     width: 3em;
+  }
+}
+
+.raindrop1, .raindrop2, .raindrop3, .raindrop4, .raindrop5, .raindrop6, .raindrop7, .raindrop8 {
+animation: falldown 2s linear;
+  animation-fill-mode: forwards;
 
   @keyframes falldown {
+    0% {
+      opacity: 0;
+      transform: translate(0, -100%) scale(1,1);
+    }
     100% {
-      transform: translateY(+600%);
+      opacity: 1;
+      transform: translate(0, +500%) scale(0.8,1.2);
     }
   }
-} */
+
+  @include m1600() {
+    @keyframes falldown {
+      0% {
+        opacity: 0;
+        transform: translate(0, -100%) scale(1,1);
+      }
+      100% {
+        opacity: 1;
+        transform: translate(0, +650%) scale(0.8,1.2);
+      }
+    }
+  };
+}
+

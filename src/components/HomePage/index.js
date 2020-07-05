@@ -10,7 +10,6 @@ import Forgotten from '../../containers/HomePage/Forgotten';
 import ButtonsNav from './ButtonsNav';
 import Presentation from '../HomePage/Carousel/Presentation';
 
-
 import './style.scss';
 
 const HomePage = ({ logged }) => {
