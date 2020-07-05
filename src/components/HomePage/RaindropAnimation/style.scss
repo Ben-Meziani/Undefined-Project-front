@@ -49,17 +49,18 @@
     z-index: 1;
   }
 }
-
+/* 
 .raindrop5 {
   margin-top: -0.9em;
   margin-left: 26em;
   z-index: 1;
+  width: 1.8em;
 
   & img {
-    width: 1.8em;
+    width: 100%;
   }
 }
-
+ */
 .raindrop6 {
   margin-top: -0.3em;
   margin-left: 31em;
@@ -82,7 +83,7 @@
   }
 }
 
-.raindrop1, .raindrop2, .raindrop3, .raindrop4, .raindrop5, .raindrop6, .raindrop7 {
+.raindrop1, .raindrop2, .raindrop3, .raindrop4, .raindrop6, .raindrop7 {
   position: relative;
 
   & img {
@@ -138,7 +139,30 @@
       width: 2.1em;
     }
   }
-  .raindrop1, .raindrop2, .raindrop3, .raindrop4 {
+
+  .raindrop6 {
+    margin-top: -0.3em;
+    margin-left: 31em;
+    z-index: 1;
+  
+    & img {
+      width: 2.8em;
+      z-index: 1;
+    }
+  }
+  
+  .raindrop7 {
+    margin-top: -0.8em;
+    margin-left: 39em;
+    z-index: 1;
+  
+    & img {
+      width: 0.7em;
+      
+    }
+  }
+
+  .raindrop1, .raindrop2, .raindrop3, .raindrop4, .raindrop6, .raindrop7 {
     position: relative;
   
     & img {
@@ -174,6 +198,7 @@
   .raindrop2 {
     margin-top: -1.2em;
     margin-left: -10em;
+    width: 1.7em;
   
     & img {
       width: 1.7em;
@@ -182,6 +207,7 @@
   .raindrop3 {
     margin-top: -2em;
     margin-left: 10em;
+    width: 2em;
   
     & img {
       width: 2em;
@@ -196,8 +222,30 @@
       width: 2.1em;
     }
   }
+
+  .raindrop6 {
+    margin-top: -0.3em;
+    margin-left: 31em;
+    z-index: 1;
   
-  .raindrop1, .raindrop2, .raindrop3, .raindrop4 {
+    & img {
+      width: 2.8em;
+      z-index: 1;
+    }
+  }
+  
+  .raindrop7 {
+    margin-top: -0.8em;
+    margin-left: 39em;
+    z-index: 1;
+  
+    & img {
+      width: 0.7em;
+      
+    }
+  }
+  
+  .raindrop1, .raindrop2, .raindrop3, .raindrop4, .raindrop6, .raindrop7 {
     position: relative;
   
     & img {
@@ -255,8 +303,30 @@
       width: 2.1em;
     }
   }
+
+  .raindrop6 {
+    margin-top: -0.3em;
+    margin-left: 31em;
+    z-index: 1;
   
-  .raindrop1, .raindrop2, .raindrop3, .raindrop4 {
+    & img {
+      width: 2.8em;
+      z-index: 1;
+    }
+  }
+  
+  .raindrop7 {
+    margin-top: -0.8em;
+    margin-left: 39em;
+    z-index: 1;
+  
+    & img {
+      width: 0.7em;
+      
+    }
+  }
+  
+  .raindrop1, .raindrop2, .raindrop3, .raindrop4, .raindrop6, .raindrop7 {
     position: relative;
   
     & img {

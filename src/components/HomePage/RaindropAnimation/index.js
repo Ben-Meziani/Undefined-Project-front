@@ -19,7 +19,20 @@ const RainDropAnimation = () => {
       <div className="raindrop4">
         <img src={raindrop} alt="black raindrop" />
       </div>
+      <div className="raindrop5">
+        <img src={raindrop} alt="black raindrop" />
+      </div>
+      <div className="raindrop6">
+        <img src={raindrop} alt="black raindrop" />
+      </div>
+      <div className="raindrop7">
+        <img src={raindrop} alt="black raindrop" />
+      </div>
+      <div className="raindrop8">
+        <img src={raindrop} alt="black raindrop" />
+      </div>
     </div>
-  )};
+  );
+};
 
 export default RainDropAnimation;

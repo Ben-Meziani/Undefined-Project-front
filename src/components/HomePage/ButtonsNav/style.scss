@@ -14,12 +14,16 @@
     background-size: 200% 100%;
     background-position: right bottom;
     transition: all .5s ease-out;
-    margin-bottom: .5em;
-    height: 2em;
+    height: 2.2em;
+    display: flex;
+    align-items: center;
     @include mq() {
       height: 5em;
       width: 100%;
       display: flex;
+    };
+    @include m1024() {
+      font-size: 1.4em;
     };
     &:hover{
       background-color: black;
@@ -35,16 +39,21 @@
     border: solid .1em black;
     font-family: 'Roboto Mono', monospace;
     width: 100%;
-    height: 2em;
+    height: 2.2em;
     justify-content: center;
     background: linear-gradient(to right, black 50%, white 50%);
     background-size: 200% 100%;
     background-position: right bottom;
     transition: all .5s ease-out;
+    display: flex;
+    align-items: center;
     @include mq() {
       display: flex;
       height: 5em;
       width: 100%;
+    };
+    @include m1024() {
+      font-size: 1.4em;
     };
     &:hover{
       background-color: black;

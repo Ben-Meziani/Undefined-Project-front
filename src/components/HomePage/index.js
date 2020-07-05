@@ -8,9 +8,9 @@ import Register from '../../containers/HomePage/Register';
 import Forgotten from '../../containers/HomePage/Forgotten';
 import ButtonsNav from './ButtonsNav';
 import Presentation from '../HomePage/Carousel/Presentation';
-import Rain from '../HomePage/RaindropAnimation';
+/* import RainDropAnimation from '../ConnectedHome/RaindropAnimation'; */
+
 import './style.scss';
-import RainDropAnimation from '../ConnectedHome/RaindropAnimation';
 
 const HomePage = ({ logged }) => {
 console.log(logged);
@@ -20,7 +20,7 @@ console.log(logged);
       <Route path="/" exact>
         <div className="homePage">
           <Header />
-          <RainDropAnimation />
+          {/* <RainDropAnimation /> */}
           <div className="homePage-main">
             <div className="homePage-container">
               <div className="homePage-buttons">
@@ -44,7 +44,7 @@ console.log(logged);
               <div className="homePage-buttons">
                 <ButtonsNav />
               </div>
-              <div>
+              <div className="homePage-display-container">
                 <div className="homePage-display">
                   <Login />
                 </div>
@@ -62,7 +62,7 @@ console.log(logged);
               <div className="homePage-buttons">
                 <ButtonsNav />
               </div>
-              <div>
+              <div className="homePage-display-container">
                 <div className="homePage-display">
                   <Register />
                 </div>
@@ -102,6 +102,5 @@ console.log(logged);
 HomePage.propTypes = {
   logged: PropTypes.bool.isRequired,
 }; */
-
 
 export default HomePage;

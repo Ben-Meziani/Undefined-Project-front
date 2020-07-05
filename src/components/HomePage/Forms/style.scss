@@ -3,15 +3,18 @@
 // Login
 
 .login {
+  font-family: 'Roboto Mono', monospace;
   border : solid .1em black;
   margin: 0 auto;
   margin-top: .2em;
   padding: 1em;
   height: 50vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
+  background-color: white;
   @include mq() {
     height: 50vh;
     width: 100%;
@@ -48,7 +51,7 @@
     flex-direction: column;
     align-items: space-between ;
   };
-
+  
   &-password-int{
     color: red;
     font-style: italic;
@@ -113,23 +116,68 @@
       .ui.black.button {
         margin-top: 2em;
       }
-    }
 
-    .ui.form input[type="email"] {
-     margin-bottom: 1em;
-     width: 100%;
-    }
+      .ui.form {
+        margin-bottom: 4em;
+      }
+    
+      .ui.form input[type="email"] {
+       margin-bottom: 1em;
+       width: 100%;
+      }
+  
+      .ui.form  input[type="password"] {
+        margin-bottom: 1em;
+      }
+  
+      .ui.grid.center.aligned.login-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+      }
+    } 
+  }
 
-    .ui.form  input[type="password"] {
-      margin-bottom: 1em;
-    }
+  .register {
+    border : solid .1em black;
+    margin: 0 auto;
+    margin-top: .2em;
+    padding: 1em;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    @include mq() {
+      height: 40vh;
+      width: 100%;
 
-    .ui.grid.center.aligned.login-form {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      width: 140%;
-    }
+      .ui.black.button {
+        margin-top: 1em;
+      }
+
+      .ui.form {
+        margin-bottom: 0;
+        width: 90%;
+      }
+    
+      .ui.form input[type="email"] {
+       margin-bottom: 1em;
+       width: 100%;
+      }
+  
+      .ui.form  input[type="password"] {
+        margin-bottom: 1em;
+      }
+  
+      .ui.grid.center.aligned.login-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+      }
+    } 
   }
 }
 
@@ -168,7 +216,27 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      width: 140%;
+      width: 100%;
+      margin-top: 0.2em;
+    }
+  }
+
+  .register {
+    height: 100%;
+    .ui.form {
+      height: 100%;
+    }
+
+    .ui.form input[type="email"] {
+      margin-bottom: .5em;
+     }
+ 
+     .ui.form  input[type="password"] {
+       margin-bottom: .5em;
+     }
+
+     .ui.black.button {
+      margin-top: 0;
     }
   }
 }
@@ -180,13 +248,13 @@
     margin: 0 auto;
     margin-top: .2em;
     padding: 1em;
-    height: 50vh;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     @include mq() {
-      height: 50vh;
+      height: 100%;
       width: 100%;
 
       .ui.black.button {
@@ -197,7 +265,6 @@
     .ui.form input[type="email"] {
      margin-bottom: 1em;
      width: 100%;
-     
     }
 
     .ui.form  input[type="password"] {
@@ -208,19 +275,19 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      width: 140%;
+      width: 100%;
     }
   }
 }
 
 @media (min-width: 1600px) {
 
-  .login {
+  .register {
     border : solid .1em black;
     margin: 0 auto;
     margin-top: .2em;
     padding: 3em;
-    height: 50vh;
+    height: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -233,6 +300,19 @@
         margin-top: 2em;
       }
     }
+    @include m1600() {
+      height: 100%;
+      padding: 1em;
+
+      .ui.black.button {
+        margin-top: -0.2em;
+      }
+    }
+
+    .ui.form {
+      width: 80%;
+      height: 100%;
+    }
 
     .ui.form input[type="email"] {
      margin-bottom: 1em;
@@ -243,11 +323,8 @@
     }
 
     .ui.grid.center.aligned.login-form {
-      width: 140%;
+      width: 100%;
+      height: 100%;
     }
   }
 }
-
-
-
-

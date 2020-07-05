@@ -26,6 +26,9 @@
     width: 100%;
     text-align: center;
     color: white;
+    a:hover {
+      color: #FFD700;
+    }
     @include mq() {
       font-size:3.3em;
     };
