@@ -1,6 +1,6 @@
 import React from 'react';
 
-import raindrop from '../../../assets/white-raindrop.png';
+import raindrop from 'src/assets/white-raindrop.png';
 
 import './style.scss';
 
