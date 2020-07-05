@@ -7,15 +7,16 @@ import ShootingStar from '../../../assets/icons/shooting-stars.png';
 
 import './style.scss';
 
-const SharedView = ({ image, fileURL, roomId }) => {
+const SharedView = ({ image, fileURL, idForJoin }) => {
   console.log('COMPONENT SHAREVIEW fileURL vaut', fileURL);
   console.log('COMPONENT SHAREVIEW image vaut', image);
+  console.log('COMPONENT SHAREVIEW idForJoin vaut', idForJoin);
   return (
     <div className="shared-view">
       <div className="shared-view-media">
         {!fileURL ? <img className="shared-view-picture" src={`https://undefined-project.tk/api/uploads/files/${image}`} alt="unknown" /> : ''}
         <Switch>
-          <Route path={`/room/${roomId}/view/shareview`}>
+          <Route path={`/room/${idForJoin}/view/shareview`}>
             <img className="share-picture" src={fileURL} alt="unknown" />
           </Route>
           <Route path="/room/hoglib" exact>
@@ -103,7 +104,7 @@ const SharedView = ({ image, fileURL, roomId }) => {
 SharedView.propTypes = {
   fileURL: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  roomId: PropTypes.string.isRequired,
+  idForJoin: PropTypes.string.isRequired,
 };
 
 export default SharedView;

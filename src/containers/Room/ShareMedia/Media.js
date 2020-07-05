@@ -6,6 +6,7 @@ import { toggleOpenShare } from '../../../actions';
 const mapStateToProps = (state) => ({
   pictureOpen: state.room.pictureOpen,
   fileURL: state.upload.fileURL,
+  idForJoin: state.user.idForJoin,
 });
 
 const mapDispatchToProps = (dispatch) => ({
