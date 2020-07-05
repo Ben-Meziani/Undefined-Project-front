@@ -4,7 +4,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import Media from 'src/containers/Room/ShareMedia/Media';
+import Media from 'src/components/Room/ShareMedia/Media';
 
 import { Icon } from 'semantic-ui-react';
 import Vif from '../../../assets/icons/golden-snitch2.png';

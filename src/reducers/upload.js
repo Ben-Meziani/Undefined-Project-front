@@ -60,7 +60,6 @@ const upload = (state = initialState, action = {}) => {
         id,
       };
       newFiles.push(newFile);
-      console.log('reducer ADD_FILES newFile vaut', newFile);
 
       return {
         ...state,
