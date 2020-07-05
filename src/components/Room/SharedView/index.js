@@ -7,7 +7,7 @@ import ShootingStar from '../../../assets/icons/shooting-stars.png';
 
 import './style.scss';
 
-const SharedView = ({ image, fileURL }) => {
+const SharedView = ({ image, fileURL, roomId }) => {
   console.log('COMPONENT SHAREVIEW fileURL vaut', fileURL);
   console.log('COMPONENT SHAREVIEW image vaut', image);
   return (
@@ -15,8 +15,8 @@ const SharedView = ({ image, fileURL }) => {
       <div className="shared-view-media">
         {!fileURL ? <img className="shared-view-picture" src={`https://undefined-project.tk/api/uploads/files/${image}`} alt="unknown" /> : ''}
         <Switch>
-          <Route path="/room/shareview">
-            <img className="share-picture" src={fileURL} alt="unknown" />}
+          <Route path={`/room/${roomId}/view/shareview`}>
+            <img className="share-picture" src={fileURL} alt="unknown" />
           </Route>
           <Route path="/room/hoglib" exact>
               <ReactPlayer url="https://www.youtube.com/watch?v=pAHciSqi1-8" width="100%" height="100%" />
@@ -103,6 +103,7 @@ const SharedView = ({ image, fileURL }) => {
 SharedView.propTypes = {
   fileURL: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
+  roomId: PropTypes.string.isRequired,
 };
 
 export default SharedView;
