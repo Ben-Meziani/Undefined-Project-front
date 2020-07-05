@@ -20,30 +20,25 @@ import './style.scss';
 
 const Room = ({ logged, roomId }) => {
   console.log('dans la room logged vaut', logged);
+  console.log('dans la room roomId vaut', roomId);
+
   return (
-    <>
-      <Switch>
-        <Route exact path={`/room/${roomId}/view`}>
-       {/*  <Route exact path="/room"> */}
-          <div className="room-container">
-            <div className="static-room">
-              <NavBarRoom />
-              <PlayersList />
-              <SharedView />
-              <Chatroom />
-              <div className="tools">
-                <ToolsMenu />
-                <SharedFiles />
-                <DicesThrow />
-                <DicesHistory />
-                <PlayerNotes />
-                <ShareMedia />
-              </div>
-            </div>
-          </div>
-        </Route>
-      </Switch>
-    </>
+    <div className="room-container">
+      <div className="static-room">
+        <NavBarRoom />
+        <PlayersList />
+        <SharedView />
+        <Chatroom />
+        <div className="tools">
+          <ToolsMenu />
+          <SharedFiles />
+          <DicesThrow />
+          <DicesHistory />
+          <PlayerNotes />
+          <ShareMedia />
+        </div>
+      </div>
+    </div>
   );
 };
 
