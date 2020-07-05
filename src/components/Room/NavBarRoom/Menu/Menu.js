@@ -2,7 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StyledMenu } from './Menu.styled';
 
-const Menu = ({ handleLogout, toggleOpenShare, setOpen, open, id }) => {
+const Menu = ({
+  handleLogout,
+  toggleOpenShare,
+  setOpen,
+  open,
+  id }) => {
   const handleClose = () => {
     toggleOpenShare();
     setOpen(!open);

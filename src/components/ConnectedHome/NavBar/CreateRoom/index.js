@@ -20,6 +20,7 @@ const CreateRoom = ({
   createdRoom,
   loading,
   createRoom,
+  role,
 }) => {
   const dropdownChange = (evt, value) => {
     evt.preventDefault();
@@ -30,7 +31,7 @@ const CreateRoom = ({
     evt.preventDefault();
     createRoom();
   };
-  console.log(roomId);
+  console.log('dans la connected page role vaut ', role);
   return (
     <Modal
       className="create-room-modal"
@@ -44,7 +45,7 @@ const CreateRoom = ({
         </>
       )}
 
-      {!loading && { role: 2 } && (<div className="gm-join"><p>Vous êtes <span>Game Master</span></p> : <Link to={`/room/${roomId}/view`} className="gm-join-link"><p className="gm-join-link-text">Rejoignez votre Salle!</p></Link></div>)}
+      {!loading && { role: 2 } && (<div className="gm-join"><p>Vous êtes <span>Game Master</span></p> : <Link to={`/room/${roomId}`} className="gm-join-link"><p className="gm-join-link-text">Rejoignez votre Salle!</p></Link></div>)}
       {{ role: 0 } && { role: 1 } && !loading && !{ role: 2 } && (
         <Modal.Content image>
           <Modal.Description>
@@ -128,6 +129,7 @@ CreateRoom.propTypes = {
   roomPassword: PropTypes.string.isRequired,
   roomId: PropTypes.string,
   loading: PropTypes.bool.isRequired,
+  role: PropTypes.number.isRequired,
 };
 
 CreateRoom.defaultProps = {

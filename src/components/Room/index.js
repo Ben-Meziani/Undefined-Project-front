@@ -1,5 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {
+  Switch,
+  Route,
+} from 'react-router-dom';
 
 import NavBarRoom from '../../containers/Room/NavBarRoom';
 import SharedView from '../../containers/Room/SharedView';
@@ -14,30 +18,38 @@ import ToolsMenu from '../../containers/Room/ToolsMenu';
 
 import './style.scss';
 
-const Room = ({ logged }) => {
+const Room = ({ logged, roomId }) => {
   console.log('dans la room logged vaut', logged);
   return (
-    <div className="room-container">
-      <div className="static-room">
-        <NavBarRoom />
-        <PlayersList />
-        <SharedView />
-        <Chatroom />
-        <div className="tools">
-          <ToolsMenu />
-          <SharedFiles />
-          <DicesThrow />
-          <DicesHistory />
-          <PlayerNotes />
-          <ShareMedia />
-        </div>
-      </div>
-    </div>
+    <>
+      <Switch>
+        <Route exact path={`/room/${roomId}`}>
+          <div className="room-container">
+            <div className="static-room">
+              <NavBarRoom />
+              <PlayersList />
+              <SharedView />
+              <Chatroom />
+              <div className="tools">
+                <ToolsMenu />
+                <SharedFiles />
+                <DicesThrow />
+                <DicesHistory />
+                <PlayerNotes />
+                <ShareMedia />
+              </div>
+            </div>
+          </div>
+        </Route>
+      </Switch>
+    </>
   );
 };
 
 Room.propTypes = {
   logged: PropTypes.bool.isRequired,
+  roomId: PropTypes.number.isRequired,
+
 };
 
 export default Room;
