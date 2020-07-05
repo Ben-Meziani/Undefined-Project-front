@@ -92,6 +92,7 @@ const auth = (store) => (next) => (action) => {
         .then((response) => {
           if (response.data) {
             console.log(response);
+            // store.dispatch(sendEmail());
           }
         })
         .catch((error) => {

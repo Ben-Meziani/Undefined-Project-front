@@ -19,6 +19,7 @@ const mapStateToProps = (state) => ({
   loading: state.user.loading,
   userRegistered: state.user.userRegistered,
   logged: state.user.logged,
+  id: state.user.id,
 });
 
 const mapDispatchToProps = (dispatch) => ({
