@@ -22,6 +22,7 @@ const Register = ({
   logged,
   errorPasswordCheck,
   errorPassCheck,
+  id,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -102,7 +103,7 @@ const Register = ({
       {userRegistered && !loading && (
       <>
         <p>Enregistré!</p>
-        <Link to="/dashboard">
+        <Link to={`/dashboard/user/${id}`}>
           <p>Allez sur votre profil.</p>
         </Link>
       </>
@@ -115,6 +116,7 @@ Register.propTypes = {
   regEmail: PropTypes.string.isRequired,
   regPassword: PropTypes.string.isRequired,
   regPseudo: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
 
   regPasswordCheck: PropTypes.string.isRequired,
   errorRegPass: PropTypes.bool.isRequired,

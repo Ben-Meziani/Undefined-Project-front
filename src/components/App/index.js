@@ -26,7 +26,7 @@ const App = ({ id, roomId }) => (
       </Route>
 
       {/* <Route path={`room/${roomId}/view`}> */}
-      <Route path="/room" exact>
+      <Route path={`room/${roomId}`}>
         <Room />
       </Route>
 
