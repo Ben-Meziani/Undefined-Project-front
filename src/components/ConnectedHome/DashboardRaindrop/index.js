@@ -5,6 +5,7 @@ import raindrop from 'src/assets/white-raindrop.png';
 import './style.scss';
 
 const DashboardRainDrop = () => {
+  console.log('raindrop vaut', raindrop);
   return (
     <div className="dashboard-raindrop-animation">
       <div className="white-raindrop1">
