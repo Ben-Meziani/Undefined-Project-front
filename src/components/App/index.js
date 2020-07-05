@@ -25,8 +25,13 @@ const App = ({ id, roomId }) => (
         <EditProfile />
       </Route>
 
+<<<<<<< HEAD
       <Route path={`room/${roomId}`}>
      {/*  <Route path="/room" exact> */}
+=======
+      {/* <Route path={`room/${roomId}/view`}> */}
+      <Route path={`room/${roomId}`}>
+>>>>>>> 4445b86e54242ee08e4ce7d5ab7e2b30c9acdd60
         <Room />
       </Route>
 

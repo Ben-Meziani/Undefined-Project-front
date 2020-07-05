@@ -45,8 +45,13 @@ const CreateRoom = ({
         </>
       )}
 
+<<<<<<< HEAD
       {!loading && { role: 2 } && (<div className="gm-join"><p>Vous êtes <span>Game Master</span></p> : <Link to={`/room/${roomId}`} className="gm-join-link"><p className="gm-join-link-text">Rejoignez votre Salle!</p></Link></div>)}
       {{ role: 0 } && { role: 1 } && !loading && !{ role: 2 } && (
+=======
+      <div className="gm-join"><p>Vous êtes <span>Game Master</span></p> : <Link to={`/room/${roomId}`} className="gm-join-link"><p className="gm-join-link-text">Rejoignez votre Salle!</p></Link></div>
+      {{ role: 0 } && { role: 1 } && !loading && { role: 2 } && (
+>>>>>>> 4445b86e54242ee08e4ce7d5ab7e2b30c9acdd60
         <Modal.Content image>
           <Modal.Description>
             <form className="ui form" onSubmit={handleSubmit}>

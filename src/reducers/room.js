@@ -158,6 +158,7 @@ const room = (state = initialState, action = {}) => {
         ...state,
         loading: true,
         createdRoom: true,
+        roomId: action.roomId, // a delete si rien ne change
       };
     case JOIN_ROOM:
       return {
@@ -167,6 +168,7 @@ const room = (state = initialState, action = {}) => {
         joinedRoom: true,
         loading: true,
         errorJoinedRoom: false,
+        roomId: action.roomId,
         /* playerRole: true, */
       };
     case ERROR_JOIN_ROOM:
