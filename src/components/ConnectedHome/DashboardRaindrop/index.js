@@ -1,3 +1,5 @@
+/* eslint-disable import/no-unresolved */
+/* eslint-disable import/no-absolute-path */
 import React from 'react';
 
 import raindrop from 'src/assets/white-raindrop.png';
