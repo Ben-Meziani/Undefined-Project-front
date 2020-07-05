@@ -25,8 +25,7 @@ const Room = () => {
   return (
     <div className="room-container">
       <div className="static-room">
-        <p>Salut toto</p>
-{/*         <NavBarRoom />
+        <NavBarRoom />
         <PlayersList />
         <SharedView />
         <Chatroom />
@@ -36,16 +35,16 @@ const Room = () => {
           <DicesThrow />
           <DicesHistory />
           <PlayerNotes />
-          <ShareMedia /> */}
+          <ShareMedia />
         </div>
       </div>
-   /*  </div> */
+    </div>
   );
 };
 
 Room.propTypes = {
-  logged: PropTypes.bool.isRequired,
-  idForJoin: PropTypes.number.isRequired,
+/*   logged: PropTypes.bool.isRequired,
+  idForJoin: PropTypes.number.isRequired, */
 
 };
 
