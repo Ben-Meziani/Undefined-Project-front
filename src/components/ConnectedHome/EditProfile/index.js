@@ -46,7 +46,7 @@ const EditProfile = ({
           <img src={homeIcon} alt="home" />
         </div>
       </Link>
-      <Link to={`/room/${roomId}/view}`}>Rejoindre la Salle</Link>
+      <Link to={`/room/${roomId}/view`}>Rejoindre la Salle</Link>
       <div className="edit-profile-section-title">
         <p>Modifier vos informations</p>
       </div>
