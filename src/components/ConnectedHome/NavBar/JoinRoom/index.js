@@ -16,6 +16,7 @@ const JoinRoom = ({
   joinedRoom,
   errorJoinedRoom,
   loading,
+  id,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -58,7 +59,7 @@ console.log('idforjoin vaut', idForJoin);
             && (<p> La Salle n'existe pas, ou les identifiants sont erronés.</p>)}
             <Modal.Actions>
               <Button type="submit" className="ui black button">Rejoindre la salle</Button>
-              <Link to={`/room/${idForJoin}/view`}>Rejoindre la Salle</Link>
+              <Link to={`/dashboard/user/${id}`}>Rejoindre la Salle</Link>
             </Modal.Actions>
           </form>
           <div className="register-loader">
@@ -80,6 +81,7 @@ JoinRoom.propTypes = {
   errorJoinedRoom: PropTypes.bool.isRequired,
   loading: PropTypes.bool.isRequired,
   role: PropTypes.number.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 JoinRoom.defaultProps = {
