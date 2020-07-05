@@ -3,6 +3,8 @@ import axios from 'axios';
 import {
   CREATE_ROOM,
   JOIN_ROOM,
+  joinRoom,
+  createRoom,
   saveRole,
   loading,
   errorJoinRoom,
@@ -27,6 +29,7 @@ const room = (store) => (next) => (action) => {
       })
         .then((response) => {
           console.log(response.data);
+          store.dispatch(createRoom());
         })
         .catch((error) => {
           console.error(error);
@@ -54,6 +57,7 @@ const room = (store) => (next) => (action) => {
       })
         .then((response) => {
           console.log(response.data);
+          store.dispatch(joinRoom());
         })
         .catch((error) => {
           console.error(error);
