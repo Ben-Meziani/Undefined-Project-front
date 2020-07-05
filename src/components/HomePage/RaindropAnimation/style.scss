@@ -105,6 +105,19 @@ animation: falldown 2s linear;
         transform: translate(0, +700%) scale(0.8,1.2);
       }
     }
+  }
+
+   /*  @include m1900() {
+      @keyframes falldown {
+        0% {
+          opacity: 0;
+          transform: translate(0, -100%) scale(1,1);
+        }
+        100% {
+          opacity: 1;
+          transform: translate(0, +800%) scale(0.8,1.2);
+        }
+      } */
   };
-}
+
 

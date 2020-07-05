@@ -5,6 +5,7 @@ import JoinRoom from '../../../components/ConnectedHome/NavBar/JoinRoom';
 import {
   changeValue,
   joinRoom,
+  viewRoom,
   errorJoinRoom,
 } from '../../../actions';
 
@@ -21,6 +22,10 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   joinRoom: () => {
     const action = joinRoom();
+    dispatch(action);
+  },
+  viewRoom: () => {
+    const action = viewRoom();
     dispatch(action);
   },
   changeValue: (value, name) => {

@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-import { Modal, Dropdown, Loader } from 'semantic-ui-react';
+import { Modal, Dropdown, Loader, Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import createIcon from '../../../../assets/icons/ink.png';
@@ -20,6 +20,7 @@ const CreateRoom = ({
   createdRoom,
   loading,
   createRoom,
+  viewRoom,
   role,
 }) => {
   const dropdownChange = (evt, value) => {
@@ -30,6 +31,11 @@ const CreateRoom = ({
     // console.log('je lance la requête de création de room');
     evt.preventDefault();
     createRoom();
+    /* viewRoom(); */
+  };
+  const handleView = (evt) => {
+    evt.preventDefault();
+    viewRoom();
   };
   console.log('dans la connected page role vaut ', role);
   return (
@@ -45,7 +51,8 @@ const CreateRoom = ({
         </>
       )}
 
-      {!loading && { role: 2 } && (<div className="gm-join"><p>Vous êtes <span>Game Master</span></p> : <Link to={`/room/${roomId}/view`} className="gm-join-link"><p className="gm-join-link-text">Rejoignez votre Salle!</p></Link></div>)}
+      {!loading && { role: 2 } && (<div className="gm-join"><p>Vous êtes <span>Game Master</span></p> : <Link to={`/room/${roomId}`} className="gm-join-link"><p className="gm-join-link-text">Rejoignez votre Salle!</p></Link></div>)}
+      {!loading && { role: 2 } && (<div className="gm-join"><p>Vous êtes <span>Game Master</span></p> : <Button onClick={handleView}>Rejoignez votre salle</Button></div>)}
       {{ role: 0 } && { role: 1 } && !loading && !{ role: 2 } && (
         <Modal.Content image>
           <Modal.Description>
@@ -126,6 +133,7 @@ CreateRoom.propTypes = {
   handleDropdown: PropTypes.func.isRequired,
   createRoom: PropTypes.func.isRequired,
   createdRoom: PropTypes.bool.isRequired,
+  viewRoom: PropTypes.func.isRequired,
   roomPassword: PropTypes.string.isRequired,
   roomId: PropTypes.string,
   loading: PropTypes.bool.isRequired,
