@@ -7,6 +7,7 @@ const mapStateToProps = (state) => ({
   image: state.user.image,
   file: state.upload.file,
   idForJoin: state.room.idForJoin,
+  roomId: state.room.roomId,
 });
 
 const mapDispatchToProps = () => ({

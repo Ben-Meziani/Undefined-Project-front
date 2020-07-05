@@ -22,7 +22,8 @@ const JoinRoom = ({
     evt.preventDefault();
     joinRoom();
   };
-console.log('idforjoin vaut', idForJoin);
+console.log('COMPONENT JOIN ROOM idforjoin vaut', idForJoin);
+console.log('COMPONENT JOIN ROOM roomId vaut', idForJoin);
   return (
     <Modal
       trigger={<div className="join"><div className="join-container"><img src={joinIcon} alt="join" /><div className="join-text">Rejoindre</div></div></div>}

@@ -7,10 +7,11 @@ import ShootingStar from '../../../assets/icons/shooting-stars.png';
 
 import './style.scss';
 
-const SharedView = ({ image, fileURL, idForJoin }) => {
+const SharedView = ({ image, fileURL, idForJoin, roomId }) => {
   console.log('COMPONENT SHAREVIEW fileURL vaut', fileURL);
   console.log('COMPONENT SHAREVIEW image vaut', image);
   console.log('COMPONENT SHAREVIEW idForJoin vaut', idForJoin);
+  console.log('COMPONENT SHAREVIEW roomId vaut', roomId);
   return (
     <div className="shared-view">
       <div className="shared-view-media">
@@ -105,6 +106,7 @@ SharedView.propTypes = {
   fileURL: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   idForJoin: PropTypes.string.isRequired,
+  roomId: PropTypes.string.isRequired,
 };
 
 export default SharedView;

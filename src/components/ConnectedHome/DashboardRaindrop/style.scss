@@ -2,13 +2,8 @@
 
 // DASHBOARD RAINDROPS FALL ANIMATION
 
-/* .raindrop1, .raindrop2, .raindrop3, .raindrop4, .raindrop5, .raindrop6, .raindrop7, .raindrop8 {
-  img {
-    transform: rotateX(90deg);
-  }
-} */
-
 .dashboard-raindrop-animation {
+  z-index: 1;
 
 .white-raindrop1 {
   position: absolute;
@@ -18,7 +13,7 @@
     left: 4%;
   };
   @include m1600() {
-    left: 10%;
+    left: 15%;
   };
   img {
     width: 1.2em;
