@@ -11,6 +11,7 @@ const mapStateToProps = (state) => ({
   /* errorFalse: state.user.errorFalse, */
   errorToLog: state.user.errorToLog,
   id: state.user.id,
+  roomId: state.room.roomId,
 });
 
 const mapDispatchToProps = (dispatch) => ({

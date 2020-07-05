@@ -23,7 +23,8 @@ const Room = ({ logged, roomId }) => {
   return (
     <>
       <Switch>
-        <Route exact path={`/room/${roomId}/view`}>
+        {/* <Route exact path={`/room/${roomId}/view`}> */}
+        <Route exact path="/room">
           <div className="room-container">
             <div className="static-room">
               <NavBarRoom />

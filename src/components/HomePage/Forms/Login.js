@@ -20,6 +20,7 @@ const Login = ({
   loading,
   errorToLog,
   id,
+  roomId,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -75,6 +76,8 @@ const Login = ({
       <div className="homepage-links">
         <p>Vous êtes bien connecté !</p>
         <Link to="/room">
+        {/* <Link to={`/room/${roomId}/view`}> */}
+
           Allez sur la chatroom.
         </Link>
         <Link to={`/dashboard/user/${id}`}>
@@ -95,6 +98,7 @@ Login.propTypes = {
   login: PropTypes.func.isRequired,
   errorToLog: PropTypes.bool.isRequired,
   id: PropTypes.number.isRequired,
+  roomId: PropTypes.string.isRequired,
 };
 
 Login.defaultProps = {
