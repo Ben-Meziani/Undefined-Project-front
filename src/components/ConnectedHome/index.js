@@ -51,7 +51,7 @@ const ConnectedHome = ({ logged, loading, id, idForJoin }) => {
               </div>
             </div>
             <Link to="/room">
-            <Link to={`/room/${idForJoin}/view}`}>Rejoindre la Salle</Link>
+           
               {/* <Link to={`/room/${roomId}/view`}> */}
               Allez sur la chatroom.
             </Link>

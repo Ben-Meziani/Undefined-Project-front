@@ -18,6 +18,7 @@ const mapStateToProps = (state) => ({
   icon: state.user.icon,
   id: state.user.id,
   imgURL: state.upload.imgURL,
+  roomId: state.user.roomId,
 });
 
 const mapDispatchToProps = (dispatch) => ({

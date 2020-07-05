@@ -21,6 +21,7 @@ const EditProfile = ({
   changeValue,
   sendUserData,
   id,
+  roomId,
 }) => {
   // PREVIEW THE NEW AVATAR AND SEND TO SERVER
   const handleChange = (evt) => {
@@ -45,6 +46,7 @@ const EditProfile = ({
           <img src={homeIcon} alt="home" />
         </div>
       </Link>
+      <Link to={`/room/${roomId}/view}`}>Rejoindre la Salle</Link>
       <div className="edit-profile-section-title">
         <p>Modifier vos informations</p>
       </div>
@@ -98,6 +100,7 @@ EditProfile.propTypes = {
   changeValue: PropTypes.func.isRequired,
   sendUserData: PropTypes.func.isRequired,
   id: PropTypes.number.isRequired,
+  roomId: PropTypes.number.isRequired,
 };
 
 export default EditProfile;
