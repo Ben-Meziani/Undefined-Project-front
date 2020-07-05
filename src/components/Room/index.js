@@ -18,9 +18,9 @@ import ToolsMenu from '../../containers/Room/ToolsMenu';
 
 import './style.scss';
 
-const Room = ({ logged, roomId }) => {
+const Room = ({ logged, idForJoin }) => {
   console.log('dans la room logged vaut', logged);
-  console.log('dans la room roomId vaut', roomId);
+  console.log('dans la room roomId vaut', idForJoin);
 
   return (
     <div className="room-container">
@@ -44,7 +44,7 @@ const Room = ({ logged, roomId }) => {
 
 Room.propTypes = {
   logged: PropTypes.bool.isRequired,
-  roomId: PropTypes.number.isRequired,
+  idForJoin: PropTypes.number.isRequired,
 
 };
 
