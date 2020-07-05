@@ -25,7 +25,8 @@ const Room = ({ logged, idForJoin }) => {
   return (
     <div className="room-container">
       <div className="static-room">
-        <NavBarRoom />
+        <p>Salut toto</p>
+{/*         <NavBarRoom />
         <PlayersList />
         <SharedView />
         <Chatroom />
@@ -35,10 +36,10 @@ const Room = ({ logged, idForJoin }) => {
           <DicesThrow />
           <DicesHistory />
           <PlayerNotes />
-          <ShareMedia />
+          <ShareMedia /> */}
         </div>
       </div>
-    </div>
+   /*  </div> */
   );
 };
 

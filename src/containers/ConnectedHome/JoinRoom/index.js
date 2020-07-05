@@ -10,8 +10,8 @@ import {
 } from '../../../actions';
 
 const mapStateToProps = (state) => ({
-  idForJoin: state.user.idForJoin,
-  passForJoin: state.user.passForJoin,
+  idForJoin: state.room.idForJoin,
+  passForJoin: state.room.passForJoin,
   role: state.user.role,
   roomId: state.user.roomId,
   joinedRoom: state.room.joinedRoom,
