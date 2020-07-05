@@ -29,7 +29,8 @@ const room = (store) => (next) => (action) => {
       })
         .then((response) => {
           console.log(response.data);
-          store.dispatch(createRoom());
+          const saveRoom = createRoom(response.data);
+          store.dispatch(saveRoom);
         })
         .catch((error) => {
           console.error(error);
@@ -57,7 +58,8 @@ const room = (store) => (next) => (action) => {
       })
         .then((response) => {
           console.log(response.data);
-          store.dispatch(joinRoom());
+          const saveRoom = joinRoom(response.data);
+          store.dispatch(saveRoom);
         })
         .catch((error) => {
           console.error(error);
