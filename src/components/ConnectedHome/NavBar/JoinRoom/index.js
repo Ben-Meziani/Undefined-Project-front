@@ -59,7 +59,7 @@ console.log('idforjoin vaut', idForJoin);
             && (<p> La Salle n'existe pas, ou les identifiants sont erronés.</p>)}
             <Modal.Actions>
               <Button type="submit" className="ui black button">Rejoindre la salle</Button>
-              <Link to={`/dashboard/user/${id}`}>Rejoindre la Salle</Link>
+              <Link to={`/room/${idForJoin}/view}`}>Rejoindre la Salle</Link>
             </Modal.Actions>
           </form>
           <div className="register-loader">

@@ -19,7 +19,7 @@ import BurgerMenu from '../../containers/ConnectedHome/BurgerMenu';
 
 import './style.scss';
 
-const ConnectedHome = ({ logged, loading, id }) => {
+const ConnectedHome = ({ logged, loading, id, idForJoin }) => {
   console.log('logged dans Connected-home vaut', logged);
   console.log('loading dans Connected-home vaut', loading);
   console.log('id dans Connected-home vaut', id);
@@ -51,6 +51,7 @@ const ConnectedHome = ({ logged, loading, id }) => {
               </div>
             </div>
             <Link to="/room">
+            <Link to={`/room/${idForJoin}/view}`}>Rejoindre la Salle</Link>
               {/* <Link to={`/room/${roomId}/view`}> */}
               Allez sur la chatroom.
             </Link>
@@ -77,6 +78,7 @@ ConnectedHome.propTypes = {
   logged: PropTypes.bool.isRequired,
   loading: PropTypes.bool.isRequired,
   id: PropTypes.number.isRequired,
+  idForJoin: PropTypes.number.isRequired,
 };
 
 export default ConnectedHome;
