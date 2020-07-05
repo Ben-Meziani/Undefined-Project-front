@@ -8,7 +8,7 @@ import {
 import PropTypes from 'prop-types';
 
 // import components
-import RainDropAnimation from './RaindropAnimation';
+import DashboardRaindrop from './DashboardRaindrop';
 import Header from '../../containers/ConnectedHome/Header';
 import EditProfile from '../../containers/ConnectedHome/EditProfile';
 /* import NavBar from './NavBar'; */
@@ -31,6 +31,7 @@ const ConnectedHome = ({ logged, loading, id }) => {
           <div className="dashboard">
             <div className="dashboard-header">
               <Header />
+              <DashboardRaindrop />
               <BurgerMenu />
               <div className="dashboard-header-title">
                 <Link to="/">

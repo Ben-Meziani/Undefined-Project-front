@@ -7,14 +7,16 @@ import { Link } from 'react-router-dom';
 import './style.scss';
 
 const BurgerMenu = ({
-  toggleOpen,
+  /* toggleMenu, */
   handleLogout,
   id,
+ /*  isOpen */
 }) => {
+/*   console.log('isOpen dans burgermenu vaut', isOpen); */
   return (
     <>
       <div className="dashboard-header-menu">
-        <Menu isOpen={toggleOpen}>
+        <Menu /* isOpen={isOpen} onOpen={toggleMenu} onClose={toggleMenu} */>
           <li><Link to="/" onClick={handleLogout}>Se déconnecter</Link></li>
           <li><Link to={`/dashboard/user/${id}/edit`}>Modifier son profil</Link></li>
         </Menu>
@@ -26,7 +28,8 @@ const BurgerMenu = ({
 BurgerMenu.propTypes = {
   id: PropTypes.number.isRequired,
   handleLogout: PropTypes.func.isRequired,
-  toggleOpen: PropTypes.func.isRequired,
+ /*  toggleMenu: PropTypes.func.isRequired,
+  isOpen: PropTypes.bool.isRequired, */
 };
 
 export default BurgerMenu;

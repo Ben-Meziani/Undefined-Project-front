@@ -1,0 +1,100 @@
+ @import 'src/styles/vars';
+
+// DASHBOARD RAINDROPS FALL ANIMATION
+
+/* .raindrop1, .raindrop2, .raindrop3, .raindrop4, .raindrop5, .raindrop6, .raindrop7, .raindrop8 {
+  img {
+    transform: rotateX(90deg);
+  }
+} */
+
+.dashboard-raindrop-animation {
+
+.white-raindrop1 {
+  position: absolute;
+  left: 2em;
+  z-index: 1;
+  img {
+    width: 2em;
+    z-index: 1;
+  }
+}
+
+.white-raindrop2 {
+  position: absolute;
+  left: 14em;
+  z-index: 1;
+  img {
+    width: 2.2em;
+    z-index: 1;
+  }
+}
+
+.white-raindrop3 {
+  position: absolute;
+  left: 6em;
+  z-index: 1;
+  img {
+    width: 0.8em;
+    z-index: 1;
+  }
+}
+
+.white-raindrop4 {
+  position: absolute;
+  left: 9em;
+  z-index: 1;
+  img {
+     width: 1.3em;
+     z-index: 1;
+  }
+}
+
+.white-raindrop5 {
+  position: absolute;
+  left: 11em;
+  z-index: 1;
+  img {
+     width: 1.7em;
+     z-index: 1;
+  }
+}
+.white-raindrop6 {
+  position: absolute;
+  left: 16em;
+  z-index: 1;
+  img {
+     width: 0.7em;
+     z-index: 1;
+  }
+}
+
+.white-raindrop7 {
+  position: absolute;
+  left: 4em;
+  z-index: 1;
+  img {
+     width: 1.5em;
+     z-index: 1;
+  }
+}
+
+.white-raindrop1, .white-raindrop2, .white-raindrop3, .white-raindrop4, .white-raindrop5, .white-raindrop6, .white-raindrop7 {
+animation: fallup 2s linear;
+  animation-fill-mode: forwards;
+
+  @keyframes fallup {
+    0% {
+      opacity: 0;
+      transform: translate(0, +500%) scale(1,1);
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translate(0, -100%) scale(0.8,1.2);
+    }
+  }
+}
+}

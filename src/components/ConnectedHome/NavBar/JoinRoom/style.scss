@@ -43,6 +43,15 @@
       align-items: center;
       justify-content: space-around;
     };
+
+      .ui.black.button {
+        margin-top: 1em;
+        color: white;
+        &:hover {
+          background-color: white;
+          color: black;
+        }
+      }
   }
 
   img {
@@ -72,6 +81,10 @@
   }
 
   .ui.modal {
+    background: black;
+  }
+
+  .ui.modal {
     margin-top: -20em;
   }
 
@@ -87,42 +100,13 @@
 }
 
 @media (min-width: 767px) {
-  .join-room-button {
-    width: 12em;
-    height: 5em;
-
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
+ 
 }
 
 @media (min-width: 1024px) {
-  .join-room-button {
-    display: flex;
-    position: absolute;
-    width: 12em;
-    height: 5em;
-    top: 30em;
-    left: 2em;
-    
-  &:hover {
-    transform: scale(1.1);
-    }
-  }
+
 }
 
 @media (min-width: 1600px) {
-  .join-room-button {
-    display: flex;
-    position: absolute;
-    width: 12em;
-    height: 5em;
-    top: 40em;
-    left: 10em;
-    
-  &:hover {
-    transform: scale(1.1);
-    }
-  }
+
 }

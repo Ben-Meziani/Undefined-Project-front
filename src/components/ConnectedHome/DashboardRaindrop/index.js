@@ -1,0 +1,38 @@
+import React from 'react';
+
+import raindrop from '../../../assets/white-raindrop.png';
+
+import './style.scss';
+
+const DashboardRainDrop = () => {
+  return (
+    <div className="dashboard-raindrop-animation">
+      <div className="white-raindrop1">
+        <img src={raindrop} alt="white raindrop" />
+      </div>
+      <div className="white-raindrop2">
+        <img src={raindrop} alt="white raindrop" />
+      </div>
+      <div className="white-raindrop3">
+        <img src={raindrop} alt="white raindrop" />
+      </div>
+      <div className="white-raindrop4">
+        <img src={raindrop} alt="white raindrop" />
+      </div>
+      <div className="white-raindrop5">
+        <img src={raindrop} alt="white raindrop" />
+      </div>
+      <div className="white-raindrop6">
+        <img src={raindrop} alt="white raindrop" />
+      </div>
+      <div className="white-raindrop7">
+        <img src={raindrop} alt="white raindrop" />
+      </div>
+     {/*  <div className="white-raindrop8">
+        <img src={raindrop} alt="white raindrop" />
+      </div> */}
+    </div>
+  );
+};
+
+export default DashboardRainDrop;

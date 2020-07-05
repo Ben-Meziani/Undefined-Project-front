@@ -57,7 +57,7 @@ const JoinRoom = ({
             {errorJoinedRoom && !loading
             && (<p> La Salle n'existe pas, ou les identifiants sont erronés.</p>)}
             <Modal.Actions>
-              <Button type="submit">Rejoindre la salle</Button>
+              <Button type="submit" className="ui black button">Rejoindre la salle</Button>
               {joinedRoom && <a href={`/room/${roomId}/view`}>Rejoindre la Salle</a>}
             </Modal.Actions>
           </form>

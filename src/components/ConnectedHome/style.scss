@@ -10,6 +10,14 @@
     align-items: center;
     justify-content: center;
     font-size: 1.3em;
+    z-index: 11;
+    animation-name: fadeIn2;
+    animation-duration: 5s;
+  
+    @keyframes fadeIn2 {
+      from {background-color:black;}
+      to {background-color:white;}
+    } 
     @include m767() {
       font-size: 3.3em;
       height: 15vh;
@@ -17,6 +25,7 @@
 
   }
   &-main{
+    position: relative;
     background-color: black;
     color:white;
     height: 91vh;
@@ -31,11 +40,13 @@
    };
 
     &-container{
+      position: relative;
       background-color: white;
       color: black;
       margin: 0 auto;
       padding: 1.5em;
       height: 100%;
+      z-index: 10;
 
 
       @include m767() {

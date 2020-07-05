@@ -2,13 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Route, Redirect, Switch } from 'react-router-dom';
+import RainDropAnimation from './RaindropAnimation';
 import Header from './Header';
 import Login from '../../containers/HomePage/Login';
 import Register from '../../containers/HomePage/Register';
 import Forgotten from '../../containers/HomePage/Forgotten';
 import ButtonsNav from './ButtonsNav';
 import Presentation from '../HomePage/Carousel/Presentation';
-/* import RainDropAnimation from '../ConnectedHome/RaindropAnimation'; */
+
 
 import './style.scss';
 
@@ -20,7 +21,7 @@ console.log(logged);
       <Route path="/" exact>
         <div className="homePage">
           <Header />
-          {/* <RainDropAnimation /> */}
+          <RainDropAnimation />
           <div className="homePage-main">
             <div className="homePage-container">
               <div className="homePage-buttons">

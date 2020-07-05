@@ -104,7 +104,7 @@ const CreateRoom = ({
 
               <div className="field">
                 <button
-                  className="ui button create-room-submit"
+                  className="ui black button create-room-submit"
                   type="submit"
                 >
                   Créer la salle

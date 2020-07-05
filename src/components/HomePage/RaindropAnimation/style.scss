@@ -1,87 +1,55 @@
-@import 'src/styles/vars';
+/* @import 'src/styles/vars';
 
 // RAINDROPS FALL ANIMATION
-
-.raindrop-animation {
+.raindrop-animation{
+  position: absolute;
   top: 0;
-}
 
-.raindrop1 {
-  margin: 0 auto;
-  margin-top: -0.7em;
-  z-index: 2;
-
-  & img {
+  .raindrop1 img{
     width: 2em;
-    z-index: 2;
-  }
-}
-
-.raindrop2 {
-  margin-top: -0.5em;
-  margin-left: 10em;
-  z-index: 2;
-
-  & img {
-    width: 1.3em;
-    z-index: 2;
-  }
-}
-
-.raindrop3 {
-  margin-top: -0.3em;
-  margin-left: 17em;
-  z-index: 2;
-
-  & img {
-    width: 1em;
-    z-index: 2;
-  }
-}
-
-.raindrop4 {
-  margin-top: -0.6em;
-  margin-left: 22em;
-  z-index: 1;
-
-  & img {
-    width: 2.4em;
-    z-index: 1;
-  }
-}
-/* 
-.raindrop5 {
-  margin-top: -0.9em;
-  margin-left: 26em;
-  z-index: 1;
-  width: 1.8em;
-
-  & img {
-    width: 100%;
-  }
-}
- */
-.raindrop6 {
-  margin-top: -0.3em;
-  margin-left: 31em;
-  z-index: 1;
-
-  & img {
-    width: 2.8em;
-    z-index: 1;
-  }
-}
-
-.raindrop7 {
-  margin-top: -0.8em;
-  margin-left: 39em;
-  z-index: 1;
-
-  & img {
-    width: 0.7em;
+    position: absolute;
+    left: 2em;
+    top: -10em;
     
   }
+  .raindrop2 img{
+    width: 3em;
+    position: absolute;
+    left: 4em;
+    top: -10.2em;
+  }
+  .raindrop3 img{
+    width: 1.7em;
+    position: absolute;
+    left: 7em;
+    top: -11em;
+  }
+  .raindrop4 img{
+    width: 2.3em;
+    position: absolute;
+    left: 14em;
+    top: -11.5em;
+  }
+  .raindrop5 img{
+    width: 1.2em;
+    position: absolute;
+    left: 20em;
+    top: -10.8;
+  }
+  .raindrop6 img{
+    width: 2.7em;
+    position: absolute;
+    left: 30em;
+    top: -0.2em;
+  }
+  .raindrop7 img{
+    width: 2em;
+  }
+  .raindrop8 img{
+    width: 2em;
+  }
 }
+
 
 .raindrop1, .raindrop2, .raindrop3, .raindrop4, .raindrop6, .raindrop7 {
   position: relative;
@@ -97,248 +65,4 @@
       transform: translateY(+600%);
     }
   }
-}
-
-@media (min-width: 767px) {
-
-  .raindrop-animation {
-    position: absolute;
-    top: 11em;
-  }
-  .raindrop1 {
-    margin: 0 auto;
-    margin-top: -0.7em;
-  
-    & img {
-      width: 1.8em;
-    }
-  }
-  
-  .raindrop2 {
-    margin-top: -1.2em;
-    margin-left: -10em;
-  
-    & img {
-      width: 1.7em;
-    }
-  }
-  .raindrop3 {
-    margin-top: -2em;
-    margin-left: 10em;
-  
-    & img {
-      width: 2em;
-    }
-  }
-  
-  .raindrop4 {
-    margin-top: -1.7em;
-    margin-left: 17em;
-  
-    & img {
-      width: 2.1em;
-    }
-  }
-
-  .raindrop6 {
-    margin-top: -0.3em;
-    margin-left: 31em;
-    z-index: 1;
-  
-    & img {
-      width: 2.8em;
-      z-index: 1;
-    }
-  }
-  
-  .raindrop7 {
-    margin-top: -0.8em;
-    margin-left: 39em;
-    z-index: 1;
-  
-    & img {
-      width: 0.7em;
-      
-    }
-  }
-
-  .raindrop1, .raindrop2, .raindrop3, .raindrop4, .raindrop6, .raindrop7 {
-    position: relative;
-  
-    & img {
-      transform: translateY(0);
-      animation: falldown 1.2s linear;
-      animation-fill-mode: forwards;
-    }
-  
-    @keyframes falldown {
-      100% {
-        transform: translateY(+380%);
-      }
-    }
-  }
-}
-  
-
-@media (min-width: 1024px) {
-
-  .raindrop-animation {
-    position: absolute;
-    top: 11em;
-  }
-  .raindrop1 {
-    margin: 0 auto;
-    margin-top: -0.7em;
-  
-    & img {
-      width: 1.8em;
-    }
-  }
-  
-  .raindrop2 {
-    margin-top: -1.2em;
-    margin-left: -10em;
-    width: 1.7em;
-  
-    & img {
-      width: 1.7em;
-    }
-  }
-  .raindrop3 {
-    margin-top: -2em;
-    margin-left: 10em;
-    width: 2em;
-  
-    & img {
-      width: 2em;
-    }
-  }
-  
-  .raindrop4 {
-    margin-top: -1.7em;
-    margin-left: 17em;
-  
-    & img {
-      width: 2.1em;
-    }
-  }
-
-  .raindrop6 {
-    margin-top: -0.3em;
-    margin-left: 31em;
-    z-index: 1;
-  
-    & img {
-      width: 2.8em;
-      z-index: 1;
-    }
-  }
-  
-  .raindrop7 {
-    margin-top: -0.8em;
-    margin-left: 39em;
-    z-index: 1;
-  
-    & img {
-      width: 0.7em;
-      
-    }
-  }
-  
-  .raindrop1, .raindrop2, .raindrop3, .raindrop4, .raindrop6, .raindrop7 {
-    position: relative;
-  
-    & img {
-      transform: translateY(0);
-      animation: falldown 1.2s linear;
-      animation-fill-mode: forwards;
-    }
-  
-    @keyframes falldown {
-      100% {
-        transform: translateY(+780%);
-      }
-    }
-  }
-}
-
-@media (min-width: 1600px) {
-
-  .raindrop-animation {
-    position: absolute;
-    top: 11em;
-  }
-
-  .raindrop1 {
-    margin: 0 auto;
-    margin-top: -0.7em;
-  
-    & img {
-      width: 1.8em;
-    }
-  }
-  
-  .raindrop2 {
-    margin-top: -1.2em;
-    margin-left: -10em;
-  
-    & img {
-      width: 1.7em;
-    }
-  }
-  .raindrop3 {
-    margin-top: -2em;
-    margin-left: 10em;
-  
-    & img {
-      width: 2em;
-    }
-  }
-  
-  .raindrop4 {
-    margin-top: -1.7em;
-    margin-left: 17em;
-  
-    & img {
-      width: 2.1em;
-    }
-  }
-
-  .raindrop6 {
-    margin-top: -0.3em;
-    margin-left: 31em;
-    z-index: 1;
-  
-    & img {
-      width: 2.8em;
-      z-index: 1;
-    }
-  }
-  
-  .raindrop7 {
-    margin-top: -0.8em;
-    margin-left: 39em;
-    z-index: 1;
-  
-    & img {
-      width: 0.7em;
-      
-    }
-  }
-  
-  .raindrop1, .raindrop2, .raindrop3, .raindrop4, .raindrop6, .raindrop7 {
-    position: relative;
-  
-    & img {
-      transform: translateY(0);
-      animation: falldown 1.2s linear;
-      animation-fill-mode: forwards;
-    }
-  
-    @keyframes falldown {
-      100% {
-        transform: translateY(+780%);
-      }
-    }
-  }
-}
+} */
