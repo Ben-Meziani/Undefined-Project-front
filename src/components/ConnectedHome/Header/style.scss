@@ -1,109 +1,73 @@
 @import 'src/styles/vars';
 
-/* .connected-home-header {
-  width: 40%;
-  top: 0;
-  animation: fadeIn2 2s ease;
-  animation-fill-mode: forwards;
-
-  @keyframes fadeIn2 {
-    from {background-color:black;}
-    to {background-color:white;}
-  }
-
   // SIDEBAR
 
-  .bm-burger-button {
-    position: fixed;
-    width: 1.4em;
-    height: 1.2em;
-    left: 0.5em;
-    top: 1em;
-  }
+  .dashboard-header-menu {
 
-  .bm-burger-bars {
-    background: black;
-    border-radius: 5px;
-  }
-
-  .bm-burger-bars-hover {
-    background: black;
-  }
-  
-  .bm-cross-button {
-    height: 24px;
-    width: 24px;
-  }
-  
-  .bm-cross {
-    background: white;
-  }
-
-  .bm-menu-wrap {
-    position: fixed;
-    height: 100%;
-  }
-  
-  .bm-menu {
-    background: black;
-    padding: 2.5em 1.5em 0;
-    font-size: 1.15em;
-  }
-
-  .bm-item-list {
-    color: white;
-    padding: 0.8em;
-  }
-  
-  .bm-item {
-    display: inline-block;
-    padding: 1em;
-    font-size: 1.4em;
-    text-align: left
-  }
-  
-  .bm-overlay {
-    background: rgba(0, 0, 0, 0.3);
-  }
-}
-
-.home-button {
+  /* Position and sizing of burger button */
+.bm-burger-button {
   position: fixed;
-  display: flex;
-  justify-content: center;
-  width: 2em;
-  height: 2em;
-  top: 0.3em;
-  left: 0.2em;
-
-  & img {
-    max-width: 100%;
-  }
+  width: 1em;
+  height: 0.8em;
+  left: 1%;
+  top: 36px;
+  z-index: 2005;
 }
 
-
-.connected-home-title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.6em;
-  color: black;
-  width: 80%;
-  height: 3em;
-  margin: 0 auto;
-  margin-top: 2em;
- 
-
-  & h1 {
-  position: absolute;
-  }
-
-  & img {
-    width: 100vw;
-  }
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
 }
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #a90000;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
 */
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 0.7em;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+}
+
 
 // RAINDROPS FALL ANIMATION
 
@@ -158,7 +122,7 @@
   }
 }
 
-/* // BURGER DROPDOWN MENU
+// BURGER DROPDOWN MENU
 
 .dropdown {
   position: fixed;
@@ -212,7 +176,7 @@
 
 .burger_hamburger--spring__lGgOO {
   margin-top: 0;
-} */
+}
 
 // MEDIA QUERIES
 

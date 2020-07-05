@@ -2,17 +2,26 @@
 
 .edit-profile-section {
   margin-top: 3em;
-  background-color: white;
+  background-color: black;
+  padding: 1em;
   
   &-title {
     font-size: 1.4em;
     margin-bottom: 1em;
+    color: white
   }
 
   .ui.button {
-    background: black;
-    color: white;
+    background: white;
+    color: black;
     margin-top: 1em;
+  }
+
+  .home-button img {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    width: 2em;
   }
 }
 
@@ -22,8 +31,12 @@
   justify-content: space-around;
   align-items: center;
   height: 20em;
-  border: 1px solid black;
+  background-color: white;
   margin: 0.5em;
+
+  .label-file:hover {
+    font-weight: bold;
+  }
 }
 
 .avatar-preview img{
@@ -33,12 +46,14 @@
 
 .avatar-choice-input {
   border: none;
+  display: none;
 }
 
 .edit-profile-form {
   margin-top: 3em;
 
   .ui.form .field label {
+    color: white;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -71,6 +86,19 @@
 
 @media (min-width: 1600px) {
   .edit-profile-section {
+    margin-top: 8em;
     width: 40%;
+  }
+
+  .edit-profile-form {
+    margin-top: 3em;
+
+    .homePage-Field {
+      margin-top: 0.5em;
+    }
+  
+    &-input {
+      margin-top: 0.5em;
+    }
   }
 }

@@ -48,12 +48,6 @@
     transform: rotate(-20deg);
     &:hover {
       transform: rotate(0);
-     /*  animation: fly 3s ease;
-
-      @keyframes fly {
-        0% {transform: translate(1em) rotate(45deg)}
-        100% { transform: translate(1.5em) rotate(75deg); }
-      } */
     }
   }
 
@@ -220,7 +214,7 @@
 
     button {
       position: relative;
-      top: 0;
+      top: -2em;
       left: 0;
       height: 1em;
       width: 1em;

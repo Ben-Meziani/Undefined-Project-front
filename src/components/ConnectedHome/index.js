@@ -15,6 +15,7 @@ import EditProfile from '../../containers/ConnectedHome/EditProfile';
 import WelcomeMessage from './WelcomeMessage';
 import CreateRoom from '../../containers/ConnectedHome/CreateRoom';
 import JoinRoom from '../../containers/ConnectedHome/JoinRoom';
+import BurgerMenu from '../../containers/ConnectedHome/BurgerMenu';
 
 import './style.scss';
 
@@ -30,6 +31,7 @@ const ConnectedHome = ({ logged, loading, id }) => {
           <div className="dashboard">
             <div className="dashboard-header">
               <Header />
+              <BurgerMenu />
               <div className="dashboard-header-title">
                 <Link to="/">
                   <h1>Undefined::Role-Play</h1>
@@ -52,6 +54,7 @@ const ConnectedHome = ({ logged, loading, id }) => {
 
         <Route exact path={`/dashboard/user/${id}/edit`}>
           <Header />
+          <BurgerMenu />
           <div className="dashboard-header-title">
             <Link to="/">
               <h1>Undefined::Role-Play</h1>

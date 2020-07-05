@@ -39,6 +39,7 @@ const EditProfile = ({
 
   return (
     <div className="edit-profile-section">
+      {/* ROUTE A CORRIGER !!*/}
       <Link to="/dashboard">
         <div className="home-button">
           <img src={homeIcon} alt="home" />
@@ -48,6 +49,7 @@ const EditProfile = ({
         <p>Modifier vos informations</p>
       </div>
       <div className="edit-profile-avatar">
+        <label htmlFor="iconFile" className="label-file">Choisissez votre nouvel avatar</label>
         <input type="file" name="iconFile" className="avatar-choice-input" onChange={handleChange} />
         <div className="avatar-preview">
           {!imgURL ? <img className="avatar" src={`https://undefined-project.tk/api/uploads/icons/${icon}`} alt="unknown" /> : <img className="avatar" src={imgURL} alt="unknown" />}
