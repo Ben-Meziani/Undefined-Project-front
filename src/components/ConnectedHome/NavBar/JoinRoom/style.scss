@@ -1,29 +1,5 @@
 @import 'src/styles/vars';
 
-/* .join-room-button {
-  position: relative;
-  background: white;
-  color: black;
-  font-weight: 700;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 8em;
-  height: 4.3em;
-  margin: 0 3em;
-  padding: 0.3em;
-  border: none;
-  
-  &:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-  }
-
-  .ui.modal {
-    margin-top: -20em;
-  }
-} */
-
 .join{
   display: inline-flex;
   justify-content: center;
@@ -41,6 +17,12 @@
     width: 25vw;
     padding: .7em;
   };
+  @include m1024() {
+    width: 70%;
+  };
+  @include m1600() {
+    width: 60%;
+  };
 
   &-container{
     @include m767() {
@@ -49,9 +31,17 @@
       height: 100%;
       width: 100%;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       justify-content: space-between;
+    };
+    @include m1024() {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-around;
     };
   }
 
@@ -63,17 +53,17 @@
       border: 0;
       position: relative;
       padding: 0;
-      height: 7em;
-      width: 7em;
+      height: 5em;
+      width: 5em;
     };
   }
 
   &-text{
     margin-top: .2em;
     @include m767() {
-      font-size: 3em;
+      font-size: 2em;
       display: inline;
-      margin: 0;
+      margin-top: .4em;
     };
   }
   &:hover {

@@ -71,7 +71,7 @@ const Login = ({
       </>
       )}
       {logged && !loading ? <Redirect to={`/dashboard/user/${id}`} /> : <Redirect to="/login" />}
-      {/* {logged && !loading && ( */}
+     {/*  {logged && !loading && ( */}
       <div className="homepage-links">
         <p>Vous êtes bien connecté !</p>
         <Link to="/room">
@@ -81,7 +81,7 @@ const Login = ({
           <p>dashboard</p>
         </Link>
       </div>
-     {/*  )} */}
+      {/* )} */}
     </div>
   );
 };

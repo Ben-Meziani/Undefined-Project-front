@@ -10,11 +10,23 @@
   justify-content: center;
   align-items: center;
   @include m767() {
-    font-size: 1.7em;
+    font-size: 1.4em;
+    line-height: 1.2em;
     display:flex;
     justify-content: center;
     align-items: center;
   };
+
+  p {
+    @include m1024() {
+      font-size: 0.9em;
+      line-height: 1.2em;
+    };
+    @include m1600() {
+      font-size: 0.8em;
+      line-height: 1.6em;
+    };
+  }
 }
 
 
