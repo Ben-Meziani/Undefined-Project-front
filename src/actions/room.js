@@ -3,8 +3,7 @@
 // GENERAL
 export const CREATE_ROOM = 'CREATE_ROOM';
 export const JOIN_ROOM = 'JOIN_ROOM';
-export const VIEW_ROOM = 'VIEW_ROOM';
-export const SAVE_ROLE = 'SAVE_ROLE';
+export const SAVE_ROOM = 'SAVE_ROOM';
 export const ERROR_JOIN_ROOM = 'ERROR_JOIN_ROOM';
 
 // TOGGLES
@@ -39,8 +38,8 @@ export const joinRoom = () => ({
   type: JOIN_ROOM,
 });
 
-export const viewRoom = () => ({
-  type: VIEW_ROOM,
+export const saveRoom = () => ({
+  type: SAVE_ROOM,
 });
 
 export const errorJoinRoom = () => ({

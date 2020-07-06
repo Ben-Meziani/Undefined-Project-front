@@ -2,7 +2,7 @@ import {
   CHANGE_VALUE,
   CREATE_ROOM,
   JOIN_ROOM,
-  VIEW_ROOM,
+  SAVE_ROOM,
   DROPDOWN_CHANGE,
   CHANGE_TEXT_CHAT,
   CHANGE_TEXT_NOTE,
@@ -161,9 +161,10 @@ const room = (state = initialState, action = {}) => {
         createdRoom: true,
         roomId: action.roomId, // a delete si rien ne change
       };
-    case VIEW_ROOM:
+    case SAVE_ROOM:
       return {
         ...state,
+        roomId: action.uniqueId,
       };
     case JOIN_ROOM:
       return {

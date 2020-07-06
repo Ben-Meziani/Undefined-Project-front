@@ -60,7 +60,6 @@ const JoinRoom = ({
             {errorJoinedRoom && !loading
             && (<p> La Salle n'existe pas, ou les identifiants sont erronés.</p>)}
             <Modal.Actions>
-             {/*  <Button type="submit" className="ui black button">Rejoindre la salle</Button> */}
               <Link to={`/room/${idForJoin}/view`}><Button type="submit" className="ui black button">Rejoindre la salle</Button></Link>
             </Modal.Actions>
           </form>

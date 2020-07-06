@@ -107,6 +107,7 @@ const CreateRoom = ({
               >
                 Créer la salle
               </button>
+              <Link to={`/room/${roomId}/view`}><Button type="submit" className="ui black button">Créer la salle</Button></Link>
             </div>
           </form>
         </Modal.Description>

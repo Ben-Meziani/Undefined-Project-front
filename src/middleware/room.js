@@ -3,10 +3,9 @@ import axios from 'axios';
 import {
   CREATE_ROOM,
   JOIN_ROOM,
-  VIEW_ROOM,
   joinRoom,
   createRoom,
-  saveRole,
+  saveRoom,
   loading,
   errorJoinRoom,
 } from '../actions';
@@ -30,6 +29,8 @@ const room = (store) => (next) => (action) => {
       })
         .then((response) => {
           console.log(response.data);
+          const saveRoomNumber = saveRoom(response.data.uniqueId);
+          store.dispatch(saveRoomNumber);
         })
         .catch((error) => {
           console.error(error);
