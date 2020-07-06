@@ -43,7 +43,7 @@ const CreateRoom = ({
         </>
       )}
 
-      <div className="gm-join"><p>Vous êtes déjà <span>Game Master</span> ?</p> : <Link to={`/room/${roomId}`} className="gm-join-link"><p className="gm-join-link-text">Rejoignez votre Salle!</p></Link></div>
+      <div className="gm-join"><p>Vous êtes déjà <span>Game Master</span> ?</p> : <Link to={`/room/${roomId}/view`} className="gm-join-link"><p className="gm-join-link-text">Rejoignez votre Salle!</p></Link></div>
       <Modal.Content image>
         <Modal.Description>
           <form className="ui form" onSubmit={handleSubmit}>
