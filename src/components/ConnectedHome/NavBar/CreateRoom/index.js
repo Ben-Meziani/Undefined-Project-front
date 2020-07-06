@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-import { Modal, Dropdown, Loader } from 'semantic-ui-react';
+import { Modal, Dropdown, Loader, Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import createIcon from '../../../../assets/icons/ink.png';
