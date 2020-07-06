@@ -15,7 +15,7 @@ import Room from '../Room';
 import './style.scss';
 
 // == Composant
-const App = ({ id, idForJoin }) => (
+const App = ({ id, idForJoin, roomId }) => (
   <div className="app">
     <HomePage />
     <Switch>
@@ -28,7 +28,10 @@ const App = ({ id, idForJoin }) => (
       </Route>
 
       <Route path={`/room/${idForJoin}/view`} exact>
-    {/*   <Route path="/room"> */}
+        <Room />
+      </Route>
+
+      <Route path={`/room/${roomId}/view`} exact>
         <Room />
       </Route>
     </Switch>
@@ -38,9 +41,7 @@ const App = ({ id, idForJoin }) => (
 App.propTypes = {
   id: PropTypes.number.isRequired,
   idForJoin: PropTypes.string.isRequired,
-};
-App.defaultProps = {
-  roomId: '',
+  roomId: PropTypes.string.isRequired,
 };
 
 // == Export
