@@ -73,15 +73,6 @@ const Login = ({
       )}
       {logged && !loading ? <Redirect to={`/dashboard/user/${id}`} /> : <Redirect to="/login" />}
      {/*  {logged && !loading && ( */}
-      <div className="homepage-links">
-        <p>Vous êtes bien connecté !</p>
-        <Link to={`/room/${roomId}/view`}>
-          Room
-        </Link>
-        <Link to={`/dashboard/user/${id}`}>
-          <p>dashboard</p>
-        </Link>
-      </div>
       {/* )} */}
     </div>
   );

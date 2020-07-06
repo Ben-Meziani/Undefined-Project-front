@@ -100,12 +100,12 @@ const CreateRoom = ({
             </div>
 
             <div className="field">
-              <button
+              {/* <button
                 className="ui black button create-room-submit"
                 type="submit"
               >
                 Créer la salle
-              </button>
+              </button> */}
               <Link to={`/room/${roomId}/view`}><Button type="submit" className="ui black button">Créer la salle</Button></Link>
             </div>
           </form>

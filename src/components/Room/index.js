@@ -12,7 +12,13 @@ import SharedFiles from '../../containers/Room/SharedFiles';
 import ShareMedia from '../../containers/Room/ShareMedia';
 import ToolsMenu from '../../containers/Room/ToolsMenu';
 
+import Hallows from '../../assets/icons/deathly-hallows.png';
+import Star from '../../assets/icons/star.png';
+
 import './style.scss';
+
+const HallowsUrl = `https://undefined-project.tk/${Hallows}`;
+const StarUrl = `https://undefined-project.tk/${Star}`;
 
 const Room = () => {
   return (
@@ -22,6 +28,7 @@ const Room = () => {
         <PlayersList />
         <SharedView />
         <Chatroom />
+        <div className="hallows"><img src={HallowsUrl} alt="sigle" /></div>
         <div className="tools">
           <ToolsMenu />
           <SharedFiles />
@@ -29,6 +36,7 @@ const Room = () => {
           <DicesHistory />
           <PlayerNotes />
           <ShareMedia />
+          <div className="star"><img src={StarUrl} alt="star" /></div>
         </div>
       </div>
     </div>

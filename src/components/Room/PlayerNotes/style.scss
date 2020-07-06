@@ -34,6 +34,11 @@
     font-size: 3em;
     background-color: $main-color;
     color: $fourth-color;
+    transition: color 1s ease;
+
+    &:hover {
+      color: $first-color;
+    }
   }
 
   &-notes {
@@ -58,6 +63,13 @@
 
   .form {
     width: 100%;
+
+    .send-notes {
+      width: 2em;
+      position: absolute;
+      left: 12em;
+      bottom: 1.9em;
+    }
   }
 
   .form-button {

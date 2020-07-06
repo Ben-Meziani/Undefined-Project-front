@@ -7,6 +7,22 @@
   font-family: 'Nunito', sans-serif;
   background-image: url("../../../src/assets/HPbg-mobile.jpg");
   background-size: 100%;
+
+  .hallows img {
+    position: absolute;
+    opacity: 0.3;
+    top: 55%;
+    left: 45%;
+    width: 2em;
+  }
+
+  .star img {
+    position: absolute;
+    opacity: 0.3;
+    bottom: 2%;
+    left: 35%;
+    width: 2em;
+  }
 }
 
 
@@ -87,6 +103,22 @@
       justify-content: space-between;
       align-items: flex-end;
     }
+  }
+
+  .hallows img {
+    position: absolute;
+    opacity: 0.3;
+    top: 55%;
+    left: 45%;
+    width: 7em;
+  }
+
+  .star img {
+    position: absolute;
+    opacity: 0.3;
+    bottom: 2%;
+    left: 35%;
+    width: 7em;
   }
 }
 

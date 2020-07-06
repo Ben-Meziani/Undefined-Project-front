@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import IconNotes from '../../../assets/icons/scrollnotes.svg';
+import IconNotes from '../../../assets/icons/poetry.png';
+
+const NotesUrl = `https://undefined-project.tk/${IconNotes}`;
 
 const SendNote = ({ sendNote, changeTextNote, inputValue }) => {
   const handleSubmit = (event) => {
@@ -26,7 +28,7 @@ const SendNote = ({ sendNote, changeTextNote, inputValue }) => {
         className="form-button"
         type="submit"
       >
-        <img src={IconNotes} alt="send" />
+        <img src={NotesUrl} alt="send" className="send-notes" />
       </button>
     </form>
   );

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
 import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Icon } from 'semantic-ui-react';

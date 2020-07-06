@@ -8,6 +8,8 @@ import Ornament from '../../../assets/ornament1.png';
 
 import './style.scss';
 
+const OrnamentUrl = `https://undefined-project.tk/${Ornament}`;
+
 const NavBarRoom = ({ roomName }) => (
   <div className="navBarRoom">
     <>

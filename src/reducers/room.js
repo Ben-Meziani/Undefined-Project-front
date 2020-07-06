@@ -58,7 +58,7 @@ const initialState = {
   playersList: [
     {
       pseudo: 'Luna',
-      icon: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/7987a60d-5266-4eb6-9adf-ea9f92b38af1/dclxmrl-0f31717b-ab84-4f85-b2fc-7364492d0ef9.png',
+      icon: 'https://undefined-project',
       id: 7,
       role: '',
     },

@@ -20,7 +20,6 @@
   background-color: white;
   opacity: 0.9;
   align-items: center;
-
   padding: 0.2em;
   bottom: 0;
 
@@ -155,6 +154,7 @@
       top: 0;
       width: 98%;
       height: 100%;
+      border: 0.2em dashed $main-color;
     }
 
     &-items {
