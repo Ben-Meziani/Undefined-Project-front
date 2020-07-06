@@ -21,10 +21,6 @@ import {
 
 import { getNextId } from '../selectors';
 
-import magician from '../assets/icons/magician.png';
-
-const magicianUrl = `https://undefined-project.tk/${magician}`;
-
 const initialState = {
   open: false,
   chatOpen: false,
@@ -62,7 +58,7 @@ const initialState = {
   playersList: [
     {
       pseudo: 'Luna',
-      icon: `https://undefined-project.tk/${magicianUrl}`,
+      icon: '../../../../assets/icons/magician.png',
       id: 7,
       role: '',
     },
