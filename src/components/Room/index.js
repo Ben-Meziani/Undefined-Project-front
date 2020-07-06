@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { Route, Switch } from 'react-router-dom';
+
 import NavBarRoom from '../../containers/Room/NavBarRoom';
 import SharedView from '../../containers/Room/SharedView';
 import Chatroom from '../../containers/Room/Chatroom';
@@ -20,32 +22,35 @@ import './style.scss';
 const HallowsUrl = `https://undefined-project.tk/${Hallows}`;
 const StarUrl = `https://undefined-project.tk/${Star}`;
 
-const Room = () => {
+const Room = ({ idForJoin }) => {
   return (
     <div className="room-container">
       <div className="static-room">
-        <NavBarRoom />
-        <PlayersList />
-        <SharedView />
-        <Chatroom />
-        <div className="hallows"><img src={HallowsUrl} alt="sigle" /></div>
-        <div className="tools">
-          <ToolsMenu />
-          <SharedFiles />
-          <DicesThrow />
-          <DicesHistory />
-          <PlayerNotes />
-          <ShareMedia />
-          <div className="star"><img src={StarUrl} alt="star" /></div>
-        </div>
+        <Switch>
+          <NavBarRoom />
+          <PlayersList />
+          <Route path={`/room/${idForJoin}/view/shareview`} exact>
+            <SharedView />
+          </Route>
+          <Chatroom />
+          <div className="hallows"><img src={HallowsUrl} alt="sigle" /></div>
+          <div className="tools">
+            <ToolsMenu />
+            <SharedFiles />
+            <DicesThrow />
+            <DicesHistory />
+            <PlayerNotes />
+            <ShareMedia />
+            <div className="star"><img src={StarUrl} alt="star" /></div>
+          </div>
+        </Switch>
       </div>
     </div>
   );
 };
 
 Room.propTypes = {
-/*   logged: PropTypes.bool.isRequired,
-  idForJoin: PropTypes.number.isRequired, */
+  idForJoin: PropTypes.number.isRequired,
 
 };
 
