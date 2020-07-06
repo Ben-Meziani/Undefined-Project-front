@@ -7,8 +7,6 @@ import './style.scss';
 const imageUrl = `https://undefined-project.tk/${raindrop}`;
 
 const RainDropAnimation = () => {
-  console.log('image url genere', imageUrl);
-
   return (
     <div className="raindrop-animation">
       <div className="raindrop1">

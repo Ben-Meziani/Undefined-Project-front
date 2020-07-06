@@ -97,11 +97,14 @@ animation: falldown 2s linear;
   @include m1600() {
     @keyframes falldown {
       0% {
-        opacity: 0;
+        opacity: 1;
         transform: translate(0, -100%) scale(1,1);
       }
+      70% {
+        opacity: 0;
+      }
       100% {
-        opacity: 1;
+        opacity: 0;
         transform: translate(0, +700%) scale(0.8,1.2);
       }
     }

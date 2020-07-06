@@ -37,6 +37,12 @@
   }
 }
 
+@mixin m1900($size: 1900px) {
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
 // BASE_URL
 
 

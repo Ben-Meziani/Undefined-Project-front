@@ -7,6 +7,7 @@
 
 .white-raindrop1 {
   position: absolute;
+  width: 1.2em;
   left: 3%;
   z-index: 1;
   @include m767() {
@@ -14,6 +15,10 @@
   };
   @include m1600() {
     left: 15%;
+    width: 1em;
+  };
+  @include m1900() {
+    left: 20%;
     width: 1em;
   };
   img {
@@ -24,6 +29,7 @@
 
 .white-raindrop2 {
   position: absolute;
+  width: 1em;
   left: 21%;
   z-index: 1;
   img {
@@ -34,6 +40,7 @@
 
 .white-raindrop3 {
   position: absolute;
+  width: 0.6em;
   left: 33%;
   z-index: 1;
   img {
@@ -44,6 +51,7 @@
 
 .white-raindrop4 {
   position: absolute;
+  width: 0.3em;
   left: 41%;
   z-index: 1;
   img {
@@ -54,6 +62,7 @@
 
 .white-raindrop5 {
   position: absolute;
+  width: 1.1em;
   left: 53%;
   z-index: 1;
   img {
@@ -63,6 +72,7 @@
 }
 .white-raindrop6 {
   position: absolute;
+  width: 0.8em;
   left: 62%;
   z-index: 1;
   img {
@@ -73,6 +83,7 @@
 
 .white-raindrop7 {
   position: absolute;
+  width: 1.2em;
   left: 75%;
   z-index: 1;
   img {
@@ -82,16 +93,16 @@
 }
 
 .white-raindrop1, .white-raindrop2, .white-raindrop3, .white-raindrop4, .white-raindrop5, .white-raindrop6, .white-raindrop7 {
-animation: fallup 2s linear;
+animation: fallup 3s linear;
   animation-fill-mode: forwards;
 
   @keyframes fallup {
     0% {
-      opacity: 0;
+      opacity: 1;
       transform: translate(0, +500%) scale(0.8,1.2);
     }
-    70% {
-      opacity: 1;
+    80% {
+      opacity: 0;
     }
     100% {
       opacity: 0;

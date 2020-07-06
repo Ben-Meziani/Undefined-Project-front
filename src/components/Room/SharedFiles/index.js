@@ -21,8 +21,6 @@ const ReadingUrl = `https://undefined-project.tk/${ReadingBook}`;
 const StoryUrl = `https://undefined-project.tk/${Story}`;
 const Book2Url = `https://undefined-project.tk/${Book5}`;
 
-
-
 const SharedFiles = ({ toggleOpenBook, bookOpen }) => {
   return (
     <>
