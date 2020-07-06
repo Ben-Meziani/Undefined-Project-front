@@ -16,7 +16,7 @@ const Media = ({
   console.log('COMPONENT MEDIA idForJoin vaut', idForJoin);
   return (
     <div className="media-picture">
-      {!fileURL && !(id === 0) ? (<Link to={`/room/${idForJoin}/view/shareview`}><img className="share-picture" src={file} alt="unknown" /></Link>) : <img className="image" src={fileURL} alt="unknown" />}
+      {fileURL !== file && !(id === 0) ? (<Link to={`/room/${idForJoin}/view/shareview`}><img className="share-picture" src={file} alt="unknown" /></Link>) : <Link to={`/room/${idForJoin}/view/shareview`}><img className="image" src={fileURL} alt="unknown" /></Link>}
     </div>
   );
 };
