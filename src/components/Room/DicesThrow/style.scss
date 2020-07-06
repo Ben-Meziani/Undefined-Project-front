@@ -44,7 +44,7 @@
     margin-bottom: 2em;
 
     img {
-      width: 14vw;
+      width: 2vw;
 
       &:hover {
         animation: shake 2s;
@@ -177,7 +177,7 @@
   .dices-container {
     width: 18%;
     top: 0;
-    height: 30%;
+    height: 34%;
     display: flex;
     margin-bottom: 12%;
     padding: 0.5em;
@@ -218,6 +218,7 @@
       background-color: transparent;
      
       img {
+        top: 3em;
         width: 3vw;
       }
     }
