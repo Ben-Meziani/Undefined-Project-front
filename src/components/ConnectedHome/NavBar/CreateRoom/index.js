@@ -44,75 +44,73 @@ const CreateRoom = ({
       )}
 
       <div className="gm-join"><p>Vous êtes déjà <span>Game Master</span> ?</p> : <Link to={`/room/${roomId}`} className="gm-join-link"><p className="gm-join-link-text">Rejoignez votre Salle!</p></Link></div>
-      {{ role: 0 } && { role: 1 } && !loading && !{ role: 2 } && (
-        <Modal.Content image>
-          <Modal.Description>
-            <form className="ui form" onSubmit={handleSubmit}>
-              <div className="field">
-                <label htmlFor="room-name">
-                  Choisissez un nom pour votre salle
-                </label>
-                <Field
-                  className="create-room-form-input"
-                  type="text"
-                  placeholder="Nom de la salle"
-                  name="roomName"
-                  changeValue={changeValue}
-                  value={roomName}
-                />
-              </div>
+      <Modal.Content image>
+        <Modal.Description>
+          <form className="ui form" onSubmit={handleSubmit}>
+            <div className="field">
+              <label htmlFor="room-name">
+                Choisissez un nom pour votre salle
+              </label>
+              <Field
+                className="create-room-form-input"
+                type="text"
+                placeholder="Nom de la salle"
+                name="roomName"
+                changeValue={changeValue}
+                value={roomName}
+              />
+            </div>
 
-              <div className="field">
-                <label htmlFor="room-pass">
-                  Choisissez un mot de passe
-                </label>
-                <Field
-                  className="create-room-form-input"
-                  type="password"
+            <div className="field">
+              <label htmlFor="room-pass">
+                Choisissez un mot de passe
+              </label>
+              <Field
+                className="create-room-form-input"
+                type="password"
 
-                  placeholder="Mot de passe"
-                  name="roomPassword"
-                  changeValue={changeValue}
-                  value={roomPassword}
-                />
-              </div>
+                placeholder="Mot de passe"
+                name="roomPassword"
+                changeValue={changeValue}
+                value={roomPassword}
+              />
+            </div>
 
-              <div className="field">
-                <label htmlFor="room-players">
-                  Indiquez votre nombre de joueurs
-                </label>
-                <Dropdown
-                  onChange={dropdownChange}
-                  options={[
-                    { key: 1, text: '1', value: 1 },
-                    { key: 2, text: '2', value: 2 },
-                    { key: 3, text: '3', value: 3 },
-                    { key: 4, text: '4', value: 4 },
-                    { key: 5, text: '5', value: 5 },
-                    { key: 6, text: '6', value: 6 },
-                    { key: 7, text: '7', value: 7 },
-                    { key: 8, text: '8', value: 8 },
-                    { key: 9, text: '9', value: 9 },
-                    { key: 10, text: '10', value: 10 },
-                  ]}
-                  placeholder="Indiquez le nombre de joueurs"
-                  selection
-                  value={playersNb}
-                />
-              </div>
+            <div className="field">
+              <label htmlFor="room-players">
+                Indiquez votre nombre de joueurs
+              </label>
+              <Dropdown
+                onChange={dropdownChange}
+                options={[
+                  { key: 1, text: '1', value: 1 },
+                  { key: 2, text: '2', value: 2 },
+                  { key: 3, text: '3', value: 3 },
+                  { key: 4, text: '4', value: 4 },
+                  { key: 5, text: '5', value: 5 },
+                  { key: 6, text: '6', value: 6 },
+                  { key: 7, text: '7', value: 7 },
+                  { key: 8, text: '8', value: 8 },
+                  { key: 9, text: '9', value: 9 },
+                  { key: 10, text: '10', value: 10 },
+                ]}
+                placeholder="Indiquez le nombre de joueurs"
+                selection
+                value={playersNb}
+              />
+            </div>
 
-              <div className="field">
-                <button
-                  className="ui black button create-room-submit"
-                  type="submit"
-                >
-                  Créer la salle
-                </button>
-              </div>
-            </form>
-          </Modal.Description>
-        </Modal.Content>
-      )}
+            <div className="field">
+              <button
+                className="ui black button create-room-submit"
+                type="submit"
+              >
+                Créer la salle
+              </button>
+            </div>
+          </form>
+        </Modal.Description>
+      </Modal.Content>
     </Modal>
   );
 };
@@ -124,7 +122,6 @@ CreateRoom.propTypes = {
   handleDropdown: PropTypes.func.isRequired,
   createRoom: PropTypes.func.isRequired,
   createdRoom: PropTypes.bool.isRequired,
-  viewRoom: PropTypes.func.isRequired,
   roomPassword: PropTypes.string.isRequired,
   roomId: PropTypes.string,
   loading: PropTypes.bool.isRequired,

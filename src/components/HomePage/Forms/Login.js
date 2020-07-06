@@ -75,10 +75,8 @@ const Login = ({
      {/*  {logged && !loading && ( */}
       <div className="homepage-links">
         <p>Vous êtes bien connecté !</p>
-        <Link to="/room">
-        {/* <Link to={`/room/${roomId}/view`}> */}
-
-          Allez sur la chatroom.
+        <Link to={`/room/${roomId}/view`}>
+          Room
         </Link>
         <Link to={`/dashboard/user/${id}`}>
           <p>dashboard</p>
