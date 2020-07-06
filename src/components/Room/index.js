@@ -27,7 +27,7 @@ const Room = ({ idForJoin }) => {
     <div className="room-container">
       <div className="static-room">
         <Switch>
-          <Route path={`/room/${idForJoin}/view/shareview`} exact>
+          <Route path={`/room/${idForJoin}/view`} exact>
             <NavBarRoom />
             <PlayersList />
             <SharedView />
