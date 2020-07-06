@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { StyledMenu } from './Menu.styled';
+
 
 const Menu = ({
   handleLogout,
@@ -17,6 +19,7 @@ const Menu = ({
       <a href="/" onClick={handleLogout}>
         <span role="img" aria-label="deconnect">Se déconnecter</span>
       </a>
+      <Link to={`/dashboard/user/${id}`}>Quitter la room</Link>
       <a href={`/dashboard/user/${id}`}>
         <span role="img" aria-label="leave">Quitter la room</span>
       </a>
