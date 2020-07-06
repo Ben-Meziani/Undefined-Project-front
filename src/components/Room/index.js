@@ -27,22 +27,22 @@ const Room = ({ idForJoin }) => {
     <div className="room-container">
       <div className="static-room">
         <Switch>
-          <NavBarRoom />
-          <PlayersList />
           <Route path={`/room/${idForJoin}/view/shareview`} exact>
+            <NavBarRoom />
+            <PlayersList />
             <SharedView />
+            <Chatroom />
+            <div className="hallows"><img src={HallowsUrl} alt="sigle" /></div>
+            <div className="tools">
+              <ToolsMenu />
+              <SharedFiles />
+              <DicesThrow />
+              <DicesHistory />
+              <PlayerNotes />
+              <ShareMedia />
+              <div className="star"><img src={StarUrl} alt="star" /></div>
+            </div>
           </Route>
-          <Chatroom />
-          <div className="hallows"><img src={HallowsUrl} alt="sigle" /></div>
-          <div className="tools">
-            <ToolsMenu />
-            <SharedFiles />
-            <DicesThrow />
-            <DicesHistory />
-            <PlayerNotes />
-            <ShareMedia />
-            <div className="star"><img src={StarUrl} alt="star" /></div>
-          </div>
         </Switch>
       </div>
     </div>
