@@ -28,11 +28,11 @@ const initialState = {
   editOpen: false,
   playerNotes: [
     {
-      content: 'First note',
+      content: '',
       id: 3,
     },
     {
-      content: 'Second note',
+      content: '',
       id: 2,
     },
   ],
