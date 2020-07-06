@@ -18,7 +18,6 @@ const CreateRoom = ({
   roomPassword,
   roomId,
   playersNb,
-  createdRoom,
   loading,
   createRoom,
 }) => {

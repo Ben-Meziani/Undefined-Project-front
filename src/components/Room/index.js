@@ -15,9 +15,6 @@ import ToolsMenu from '../../containers/Room/ToolsMenu';
 import './style.scss';
 
 const Room = () => {
-/*   console.log('dans la room logged vaut', logged);
-  console.log('dans la room roomId vaut', idForJoin); */
-
   return (
     <div className="room-container">
       <div className="static-room">
