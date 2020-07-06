@@ -13,6 +13,7 @@ const mapStateToProps = (state) => ({
   pictureOpen: state.room.pictureOpen,
   fileURL: state.upload.fileURL,
   files: state.upload.files,
+  idForJoin: state.room.idForJoin,
 });
 
 const mapDispatchToProps = (dispatch) => ({
