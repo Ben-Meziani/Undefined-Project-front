@@ -68,30 +68,6 @@ const room = (store) => (next) => (action) => {
       next(action);
       break;
     }
-    case VIEW_ROOM: {
-      console.log('Requête pour afficher la room demandée');
-      const state = store.getState();
-      const { roomId } = state.room;
-      axios.get(`${serverURI}/room/${roomId}/view`, {
-      }, {
-        withCredentials: true,
-      })
-        .then((response) => {
-          console.log(response.data);
-        })
-        .catch((error) => {
-          console.error(error);
-          if (error.status !== 200) {
-            store.dispatch(errorJoinRoom());
-          }
-        })
-        .finally(() => {
-        // loading is done
-          store.dispatch(loading());
-        });
-      next(action);
-      break;
-    }
     default:
       next(action);
   }
