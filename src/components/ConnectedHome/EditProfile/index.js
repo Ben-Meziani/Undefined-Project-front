@@ -11,6 +11,8 @@ import homeIcon from '../../../assets/icons/home.svg';
 
 import './style.scss';
 
+const imageUrl = `https://undefined-project.tk/${homeIcon}`;
+
 const EditProfile = ({
   changeIconFile,
   changeIconUrl,
@@ -21,7 +23,6 @@ const EditProfile = ({
   changeValue,
   sendUserData,
   id,
-  roomId,
 }) => {
   // PREVIEW THE NEW AVATAR AND SEND TO SERVER
   const handleChange = (evt) => {
@@ -43,7 +44,7 @@ const EditProfile = ({
     <div className="edit-profile-section">
       <Link to={`/dashboard/user/${id}`}>
         <div className="home-button">
-          <img src={homeIcon} alt="home" />
+          <img src={imageUrl} alt="home" />
         </div>
       </Link>
       <div className="edit-profile-section-title">
@@ -51,7 +52,7 @@ const EditProfile = ({
       </div>
       <div className="edit-profile-avatar">
         <label htmlFor="iconFile" className="label-file">Choisissez votre nouvel avatar</label>
-        <input type="file" name="iconFile" className="avatar-choice-input" onChange={handleChange} />
+        <input type="file" id="iconFile" name="iconFile" className="avatar-choice-input" onChange={handleChange} />
         <div className="avatar-preview">
           {!imgURL ? <img className="avatar" src={`https://undefined-project.tk/api/uploads/icons/${icon}`} alt="unknown" /> : <img className="avatar" src={imgURL} alt="unknown" />}
         </div>

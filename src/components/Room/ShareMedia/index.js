@@ -9,6 +9,8 @@ import Media from 'src/containers/Room/ShareMedia/Media';
 import { Icon } from 'semantic-ui-react';
 import Vif from '../../../assets/icons/golden-snitch2.png';
 
+const imageUrl = `https://undefined-project.tk/${Vif}`;
+
 import './style.scss';
 
 const ShareMedia = ({
@@ -79,7 +81,7 @@ const ShareMedia = ({
       </div>
       <label htmlFor="mediaFile" className="label-file">Choisissez des images à partager</label>
       <input type="file" id="mediaFile" name="mediaFile" className="media-choice-input" onChange={handleChange} />
-      <div className="icon-vif-or"><img src={Vif} alt="vif-or" /></div>
+      <div className="icon-vif-or"><img src={imageUrl} alt="vif-or" /></div>
     </div>
   );
 };

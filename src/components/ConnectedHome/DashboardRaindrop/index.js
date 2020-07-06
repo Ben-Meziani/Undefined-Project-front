@@ -33,9 +33,6 @@ const DashboardRainDrop = () => {
       <div className="white-raindrop7">
         <img src={imageUrl} alt="white raindrop" />
       </div>
-     {/*  <div className="white-raindrop8">
-        <img src={raindrop} alt="white raindrop" />
-      </div> */}
     </div>
   );
 };

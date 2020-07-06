@@ -8,6 +8,8 @@ import Dices from '../../../assets/icons/dicesthrow.png';
 
 import './style.scss';
 
+const imageUrl = `https://undefined-project.tk/${Dices}`;
+
 const DicesThrow = ({
   dice,
   rollDice,
@@ -19,7 +21,6 @@ const DicesThrow = ({
     rollDice();
     saveResults(dice);
   };
-  console.log(dice);
   return (
     <div className="dices-container">
       <div className={!diceOpen ? 'dices-toggle dices' : 'dices'}>
@@ -31,8 +32,8 @@ const DicesThrow = ({
           onClick={handleClick}
           className="dices-throw"
         >
-          <div><img src={Dices} alt="throw" /></div>
-          <div><p></p></div>
+          <div><img src={imageUrl} alt="throw" /></div>
+          <div><p /></div>
         </div>
       </div>
     </div>

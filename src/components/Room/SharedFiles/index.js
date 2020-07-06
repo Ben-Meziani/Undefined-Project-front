@@ -10,8 +10,18 @@ import News from '../../../assets/icons/news.png';
 import ReadingBook from '../../../assets/icons/reading-book.svg';
 import Story from '../../../assets/icons/story.png';
 import Book5 from '../../../assets/icons/book5.png';
-
 import './style.scss';
+
+// IMPORT IMAGES URLS
+const BookUrl = `https://undefined-project.tk/${Book2}`;
+const PapyrusUrl = `https://undefined-project.tk/${Papyrus}`;
+const AlbumUrl = `https://undefined-project.tk/${Album}`;
+const NewsUrl = `https://undefined-project.tk/${News}`;
+const ReadingUrl = `https://undefined-project.tk/${ReadingBook}`;
+const StoryUrl = `https://undefined-project.tk/${Story}`;
+const Book2Url = `https://undefined-project.tk/${Book5}`;
+
+
 
 const SharedFiles = ({ toggleOpenBook, bookOpen }) => {
   return (
@@ -26,15 +36,15 @@ const SharedFiles = ({ toggleOpenBook, bookOpen }) => {
         <h1 className="shared-files-title">Your files</h1>
         <div className="shared-files-container">
           <button type="button" onClick={toggleOpenBook}><Icon name="close" size="large" /></button>
-          <div><img src={Book2} alt="book" /></div>
-          <div><img src={Book5} alt="book" /></div>
-          <div><img src={Album} alt="book" /></div>
-          <div><img src={News} alt="book" /></div>
-          <div><img src={Book2} alt="book" /></div>
-          <div><img src={Papyrus} alt="book" /></div>
-          <div><img src={Story} alt="book" /></div>
-          <div><img src={Book2} alt="book" /></div>
-          <div><img src={ReadingBook} alt="book" /></div>
+          <div><img src={BookUrl} alt="book" /></div>
+          <div><img src={Book2Url} alt="book" /></div>
+          <div><img src={AlbumUrl} alt="book" /></div>
+          <div><img src={NewsUrl} alt="book" /></div>
+          <div><img src={BookUrl} alt="book" /></div>
+          <div><img src={PapyrusUrl} alt="book" /></div>
+          <div><img src={StoryUrl} alt="book" /></div>
+          <div><img src={BookUrl} alt="book" /></div>
+          <div><img src={ReadingUrl} alt="book" /></div>
         </div>
       </div>
     </>

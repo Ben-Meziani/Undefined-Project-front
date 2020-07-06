@@ -7,6 +7,8 @@ import joinIcon from '../../../../assets/icons/books.png';
 import Field from '../../../HomePage/Forms/Field';
 import './style.scss';
 
+const imageUrl = `https://undefined-project.tk/${joinIcon}`;
+
 const JoinRoom = ({
   joinRoom,
   changeValue,
@@ -22,11 +24,10 @@ const JoinRoom = ({
     evt.preventDefault();
     joinRoom();
   };
-console.log('COMPONENT JOIN ROOM idforjoin vaut', idForJoin);
-console.log('COMPONENT JOIN ROOM roomId vaut', idForJoin);
+
   return (
     <Modal
-      trigger={<div className="join"><div className="join-container"><img src={joinIcon} alt="join" /><div className="join-text">Rejoindre</div></div></div>}
+      trigger={<div className="join"><div className="join-container"><img src={imageUrl} alt="join" /><div className="join-text">Rejoindre</div></div></div>}
     >
       <Modal.Header>Rejoindre une salle</Modal.Header>
       <Modal.Content image>
@@ -59,8 +60,8 @@ console.log('COMPONENT JOIN ROOM roomId vaut', idForJoin);
             {errorJoinedRoom && !loading
             && (<p> La Salle n'existe pas, ou les identifiants sont erronés.</p>)}
             <Modal.Actions>
-              <Button type="submit" className="ui black button">Rejoindre la salle</Button>
-              <Link to={`/room/${idForJoin}/view`}>Rejoindre la Salle</Link>
+             {/*  <Button type="submit" className="ui black button">Rejoindre la salle</Button> */}
+              <Link to={`/room/${idForJoin}/view`}><Button type="submit" className="ui black button">Rejoindre la salle</Button></Link>
             </Modal.Actions>
           </form>
           <div className="register-loader">

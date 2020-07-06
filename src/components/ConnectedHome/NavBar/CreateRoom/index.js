@@ -1,14 +1,19 @@
 /* eslint-disable no-console */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-import { Modal, Dropdown, Loader, Button } from 'semantic-ui-react';
+import { Modal, Dropdown, Loader } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import createIcon from '../../../../assets/icons/ink.png';
-
 import Field from '../../../HomePage/Forms/Field';
 
 import './style.scss';
+
+
+
+const imageUrl = `https://undefined-project.tk/${createIcon}`;
+
+
 
 const CreateRoom = ({
   changeValue,
@@ -20,24 +25,19 @@ const CreateRoom = ({
   createdRoom,
   loading,
   createRoom,
-  viewRoom,
-  role,
 }) => {
   const dropdownChange = (evt, value) => {
     evt.preventDefault();
     handleDropdown(value.value);
   };
   const handleSubmit = (evt) => {
-    // console.log('je lance la requête de création de room');
     evt.preventDefault();
     createRoom();
-    /* viewRoom(); */
   };
-  console.log('dans la connected page role vaut ', role);
   return (
     <Modal
       className="create-room-modal"
-      trigger={<div className="create"><div className="create-container"><div className="create-text">Créer</div><img src={createIcon} alt="create" /></div></div>}
+      trigger={<div className="create"><div className="create-container"><div className="create-text">Créer</div><img src={imageUrl} alt="create" /></div></div>}
     >
       <Modal.Header>Créer une Salle</Modal.Header>
 
