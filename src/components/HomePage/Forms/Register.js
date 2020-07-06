@@ -102,9 +102,9 @@ const Register = ({
       )}
       {userRegistered && !loading && (
       <>
-        <p>Enregistré!</p>
+        <p>Le compte a bien été créé</p>
         <Link to={`/dashboard/user/${id}`}>
-          <p>Allez sur votre profil.</p>
+          <p>Votre dashboard</p>
         </Link>
       </>
       )}

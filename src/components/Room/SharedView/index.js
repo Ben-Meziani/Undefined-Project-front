@@ -15,8 +15,9 @@ const SharedView = ({ image, fileURL, idForJoin }) => {
       <div className="shared-view-media">
         {!fileURL ? <img className="shared-view-picture" src={`https://undefined-project.tk/api/uploads/files/${image}`} alt="unknown" /> : ''}
         <Switch>
-          <Route path={`/room/${idForJoin}/view/shareview`}>
-            <img className="share-picture" src={fileURL} alt="unknown" />
+   {/*        <Route path={`/room/${idForJoin}/view/shareview`}> */}
+          <Route path="/room/view/shareview">
+            <img className="shared-view-picture" src={fileURL} alt="unknown" />
           </Route>
           <Route path="/room/hoglib" exact>
             <ReactPlayer url="https://www.youtube.com/watch?v=pAHciSqi1-8" width="100%" height="100%" />
