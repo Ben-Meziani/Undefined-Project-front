@@ -17,7 +17,6 @@ const Media = ({
   return (
     <div className="media-picture">
       {fileURL !== file && !(id === 0) ? (<Link to={`/room/${idForJoin}/view`}><img className="share-picture" src={file} alt="unknown" /></Link>) : <Link to={`/room/${idForJoin}/view`}><img className="image" src={fileURL} alt="unknown" /></Link>}
-{/*       {fileURL !== file && !(id === 0) ? (<Link to="/room/view/shareview"><img className="share-picture" src={file} alt="unknown" /></Link>) : <Link to="/room/view/shareview"><img className="image" src={fileURL} alt="unknown" /></Link>} */}
     </div>
   );
 };

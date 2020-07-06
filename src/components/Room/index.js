@@ -22,36 +22,27 @@ import './style.scss';
 const HallowsUrl = `https://undefined-project.tk/${Hallows}`;
 const StarUrl = `https://undefined-project.tk/${Star}`;
 
-const Room = ({ idForJoin }) => {
+const Room = () => {
   return (
     <div className="room-container">
       <div className="static-room">
-        <Switch>
-          <Route path={`/room/${idForJoin}/view`} exact>
-            <NavBarRoom />
-            <PlayersList />
-            <SharedView />
-            <Chatroom />
-            <div className="hallows"><img src={HallowsUrl} alt="sigle" /></div>
-            <div className="tools">
-              <ToolsMenu />
-              <SharedFiles />
-              <DicesThrow />
-              <DicesHistory />
-              <PlayerNotes />
-              <ShareMedia />
-              <div className="star"><img src={StarUrl} alt="star" /></div>
-            </div>
-          </Route>
-        </Switch>
+        <NavBarRoom />
+        <PlayersList />
+        <SharedView />
+        <Chatroom />
+        <div className="hallows"><img src={HallowsUrl} alt="sigle" /></div>
+        <div className="tools">
+          <ToolsMenu />
+          <SharedFiles />
+          <DicesThrow />
+          <DicesHistory />
+          <PlayerNotes />
+          <ShareMedia />
+          <div className="star"><img src={StarUrl} alt="star" /></div>
+        </div>
       </div>
     </div>
   );
-};
-
-Room.propTypes = {
-  idForJoin: PropTypes.number.isRequired,
-
 };
 
 export default Room;
